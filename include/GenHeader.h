@@ -22,9 +22,6 @@
 
 #include "exception/msgException.h"
 
-/// This file defines project wide pre-processor definitions
-#include "GeneralDefines.h"
-
 /// This defines the Standard Temaplate Library there are defines in General
 /// defines that control some of the includes that are in here
 #include "STLHeader.h"
@@ -42,8 +39,18 @@
 /// This defines program wide functions that are to be utilized
 #include "FunctionHeaders.h"
 
-/// This defines program wide structures that are used to encapsulate standard
-/// pieces of data
-#include "StructHeader.h"
+static void print_bytes(const void *object, size_t size)
+{
+  size_t i;
+
+  printf("[ ");
+  for(i = 0; i < size; i++)
+  {
+    printf("%02x ", (reinterpret_cast<const unsigned char *>(object)) [i] & 0xff);
+  }
+  printf("]\n");
+}
+
+
 
 #endif

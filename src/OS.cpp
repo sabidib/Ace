@@ -27,7 +27,7 @@ bool OS::_socket(baseSocket& socketToCreate_IN, INT flags_IN) {
     INT res = socket(static_cast<INT>(socketToCreate_IN.getFamily()),
                      static_cast<INT>(socketToCreate_IN.getType()), flags_IN);
     if (res == -1) {
-        throw ExceptionCreator::getAnException(errno);
+        ExceptionCreator::getAnException(errno);
         return false;
     } else {
         newSocketDescriptor.setSocketID(static_cast<UINT>(res));
@@ -37,18 +37,30 @@ bool OS::_socket(baseSocket& socketToCreate_IN, INT flags_IN) {
 }
 
 baseSocket* OS::_accept(baseSocket& socketToAccceptOn_IN) {
-    UINT nul;
+    UINT sizeOfSockAddr = sizeof(sockaddr);
     SocketFileDescriptor NewSocket;
-    SocketStructure* clientInfo_OUT = new SocketStructure();
+    SocketStructure clientInfo_OUT;
+    sockaddr connectingAddress;
     INT res = accept(
         static_cast<INT>(
             socketToAccceptOn_IN.getSocketFileDescriptor()->getSocketID()),
-        reinterpret_cast<sockaddr*>(&(clientInfo_OUT->m_structure)), &nul);
+        &connectingAddress, static_cast<socklen_t*>(&sizeOfSockAddr));
     if (res == -1) {
-        throw ExceptionCreator::getAnException(errno);
+        ExceptionCreator::getAnException(errno);
+        return nullptr;
     } else {
+        sockaddr_in* test = reinterpret_cast<sockaddr_in*>(&connectingAddress);
+
+        // print_bytes(test,sizeof(sockaddr_in));
+        clientInfo_OUT.setInternalInternetSocketAddressStructure(test);
+        INT type;
+        UINT length = sizeof(INT);
+
+        OS::_getsockopt(res, SOL_SOCKET, SO_TYPE, &type, &length);
+
+        clientInfo_OUT.setType(static_cast<UINT>(type));
+        baseSocket* SocketToRet = new baseSocket(clientInfo_OUT);
         NewSocket.setSocketID(static_cast<UINT>(res));
-        baseSocket* SocketToRet = new baseSocket(*clientInfo_OUT);
         SocketToRet->setSocketDescriptor(NewSocket);
         return SocketToRet;
     }
@@ -62,7 +74,7 @@ bool OS::_connect(baseSocket& SocketToConnect_IN) {
     socklen_t datsize = SocketToConnect_IN.getSocketStructure()->getSize();
     INT res = connect(sockfd, addrinfo, datsize);
     if (res == -1) {
-        throw ExceptionCreator::getAnException(errno);
+        ExceptionCreator::getAnException(errno);
         return false;
     } else {
         return true;
@@ -77,7 +89,7 @@ bool OS::_bind(baseSocket& SocketToBind_IN) {
                  &(SocketToBind_IN.getSocketStructure()->m_structure)),
              SocketToBind_IN.getSocketStructure()->getSize());
     if (res == -1) {
-        throw ExceptionCreator::getAnException(errno);
+        ExceptionCreator::getAnException(errno);
         return false;
     } else {
         return true;
@@ -89,7 +101,7 @@ UINT OS::_send(baseSocket& SocketToSend, char* array, UINT len, INT flags) {
         static_cast<INT>(SocketToSend.getSocketFileDescriptor()->getSocketID()),
         array, len, flags);
     if (res == -1) {
-        throw ExceptionCreator::getAnException(errno);
+        ExceptionCreator::getAnException(errno);
         return 0;
     } else {
         return static_cast<UINT>(res);
@@ -101,7 +113,7 @@ UINT OS::_recv(baseSocket& SocketToRecv, char* tmp, UINT len, INT flags) {
         static_cast<INT>(SocketToRecv.getSocketFileDescriptor()->getSocketID()),
         tmp, len, flags);
     if (res == -1) {
-        throw ExceptionCreator::getAnException(errno);
+        ExceptionCreator::getAnException(errno);
         return 0;
     } else {
         return static_cast<UINT>(res);
@@ -115,7 +127,7 @@ bool OS::_shutdown(baseSocket& SocketToShutdown, INT flags) {
                  flags);
 
     if (res == -1) {
-        throw ExceptionCreator::getAnException(errno);
+        ExceptionCreator::getAnException(errno);
         return false;
     } else {
         return true;
@@ -128,7 +140,7 @@ bool OS::_listen(baseSocket& SocketToListenOn, INT backlog) {
                    SocketToListenOn.getSocketFileDescriptor()->getSocketID()),
                backlog);
     if (res == -1) {
-        throw ExceptionCreator::getAnException(errno);
+        ExceptionCreator::getAnException(errno);
         return false;
     } else {
         return true;
@@ -137,37 +149,45 @@ bool OS::_listen(baseSocket& SocketToListenOn, INT backlog) {
 
 bool OS::_setsockopt(baseSocket& Socket, INT optionLevel, INT optionName,
                      void* setting, UINT length) {
-    INT res = setsockopt(
+    return _setsockopt(
         static_cast<INT>(Socket.getSocketFileDescriptor()->getSocketID()),
         optionLevel, optionName, setting, length);
+}
+
+bool OS::_setsockopt(INT fd, INT optionLevel, INT optionName, void* setting,
+                     UINT length) {
+    INT res = setsockopt(fd, optionLevel, optionName, setting, length);
     if (res == -1) {
-        throw ExceptionCreator::getAnException(errno);
+        ExceptionCreator::getAnException(errno);
         return false;
     } else {
         return true;
     }
 }
-
 
 bool OS::_getsockopt(baseSocket& Socket, INT optionLevel, INT optionName,
                      void* setting, UINT* length) {
-    INT res = getsockopt(
+    return _getsockopt(
         static_cast<INT>(Socket.getSocketFileDescriptor()->getSocketID()),
         optionLevel, optionName, setting, length);
+}
+
+bool OS::_getsockopt(INT fd, INT optionLevel, INT optionName, void* setting,
+                     UINT* length) {
+    INT res = getsockopt(fd, optionLevel, optionName, setting, length);
     if (res == -1) {
-        throw ExceptionCreator::getAnException(errno);
+        ExceptionCreator::getAnException(errno);
         return false;
     } else {
         return true;
     }
 }
-
 
 bool OS::_close(baseSocket& SocketToClose) {
     INT res = close(static_cast<INT>(
         SocketToClose.getSocketFileDescriptor()->getSocketID()));
     if (res == -1) {
-        throw ExceptionCreator::getAnException(errno);
+        ExceptionCreator::getAnException(errno);
         return false;
     } else {
         return true;

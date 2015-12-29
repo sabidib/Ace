@@ -29,7 +29,7 @@ Client::~Client() {
 }
 
 Client::Client(baseSocket* ServerSocket) {
-    if ((ServerSocket->isBound() || ServerSocket->isConnected())) {
+    if (ServerSocket->isBound()) {
         throw MsgException(
             "The destination is already connected or bound. Must be "
             "disconnected first.");
@@ -49,24 +49,24 @@ Client::Client(SocketStructure* connectionDestination) {
 }
 
 bool Client::connect() {
-    std::cerr << "Starting Connect...";
+    // std::clog << "Starting Connect..." << std::endl;
 
-    std::cerr << "Creating Socket...";
+    // std::clog << "Creating Socket..." << std::endl;
     if (!createSocket(
             *m_currentSocket)) {  // create the socket and check for errors
         throw MsgException("Socket creation failed.");
     }
 
-    std::cerr << "Connecting socket...";
+    // std::clog << "Connecting socket..." << std::endl;
     if (!connectSocket(*m_currentSocket)) {  /// call connect on the socket and
                                              /// check for errors
-        std::cerr << "Socket connection failed.";
-        std::cerr << "Closing socket.";
+        // std::clog << "Socket connection failed." << std::endl;
+        // std::clog << "Closing socket." << std::endl;
         closeSocket(*m_currentSocket);
-        std::cerr << "Creation of connection failed.";
+        // std::clog << "Creation of connection failed." << std::endl;
         throw MsgException("Socket connection failed.");
     }
-    std::cerr << "Connected successfully!";
+    // std::clog << "Connected successfully!" << std::endl;
     return true;
 }
 
@@ -101,8 +101,7 @@ bool Client::disconnect(std::string DataToSend) {
 
 bool Client::setSocket(baseSocket* destinationSocket) {
     if (destinationSocket->isBound()) {
-        throw MsgException(
-            "The new destination socket is bound.");
+        throw MsgException("The new destination socket is bound.");
     }
     m_currentSocket = destinationSocket;
     m_doesOwnSocket = false;
@@ -113,35 +112,37 @@ baseDataBuffer* Client::receive(UINT lentoAccept, INT flags) {
     return receiveData(*m_currentSocket, lentoAccept, flags);
 }
 
+baseDataBuffer* Client::receive(UINT lenToAccept) {
+    return receiveData(*m_currentSocket, lenToAccept, 0);
+}
+baseDataBuffer* Client::receive() {
+    return receiveData(*m_currentSocket, 256, 0);
+}
+
 UINT Client::send(std::string data, INT flags) {
     baseDataBuffer newBuffer(data);
     return sendData(*m_currentSocket, newBuffer, flags);
 }
 
+UINT Client::send(std::string data) {
+    baseDataBuffer newBuffer(data);
+    return sendData(*m_currentSocket, newBuffer, 0);
+}
+
 UINT Client::send(baseDataBuffer& data, INT flags) {
     return sendData(*m_currentSocket, data, flags);
 }
+UINT Client::send(baseDataBuffer& data) {
+    return sendData(*m_currentSocket, data,0);
+}
+
+
 
 baseSocket* Client::getSocket() { return m_currentSocket; }
 
-    
-void Client::relinquishOwnership(){
-    m_doesOwnSocket = false;
+void Client::relinquishOwnership() { m_doesOwnSocket = false; }
+
+void Client::transferOwnership() { m_doesOwnSocket = true; }
+
+bool Client::doesOwnSocket() { return m_doesOwnSocket; }
 }
-
-
-void Client::transferOwnership(){
-    m_doesOwnSocket = true;
-}
-
-
-bool Client::doesOwnSocket(){
-    return m_doesOwnSocket;
-}
-
-
-
-
-}
-
-

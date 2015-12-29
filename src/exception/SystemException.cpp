@@ -18,14 +18,10 @@
 // along with Ace.  If not, see <http://www.gnu.org/licenses/>.
 //
 
-#include "exception/msgException.h"
+#include "exception/SystemException.h"
 
 namespace Communication {
-MsgException::MsgException(std::string ss) : s(std::string("[")+ss+std::string("]") ) {}
-MsgException::~MsgException() throw() {}
-const char* MsgException::what() const throw() { return s.c_str(); }
-MsgException MsgException::operator+(const MsgException& a){
-	return MsgException( a.s + " then:" + s);
+namespace Exception {
+SystemException::SystemException(std::string d) : MsgException(d) {}
 }
-
 }

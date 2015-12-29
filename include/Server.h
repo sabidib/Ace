@@ -30,7 +30,8 @@
 namespace Communication {
 
 /**
- * @brief     Represents the implementation of an internet server. This will bind the
+ * @brief     Represents the implementation of an internet server. This will
+ * bind the
  * given socket to the local machine. The server can be set to listening
  * mode by using the Server::startServer() and can wait for incoming
  * connections with Server::startAccepting(). Finally, the server can be
@@ -73,11 +74,9 @@ class Server : baseGateway {
     /**
      * @brief      Attempts to accept a connection from the current socket.
      * the server must have been started, otherwise an exception is thrown.When
-     * a client is accepted it is added to the internal client list and then
-     * returned to the caller.This function may block if there are no clients
-     * to accept.
+     * a client is accepted it is added to the internal client list .This 
+     * function may block if there are no clients to accept.
      *
-     * @return     returns the new client connection socket.
      *
      * @throws  MsgException Throws an exception if any of the baseGateway
      * functions call a system error.
@@ -108,7 +107,7 @@ class Server : baseGateway {
     const baseSocket* getSocket();
 
     /**
-     * @brief      Returns a pointer a vector of all the currently connected 
+     * @brief      Returns a pointer a vector of all the currently connected
      * clients.
      *
      * @return     returns a pointer to a vector of baseSocket pointers.
@@ -137,11 +136,27 @@ class Server : baseGateway {
      */
     bool doesOwnSocket();
 
+    /**
+     * @brief      Checks if the server is currently accepting clients
+     *
+     * @return     returns true if the server is accepting clients,
+     * false otherwise.
+     */
+    bool isAccepting();
+
+    /**
+     * @brief      Checks if the server is currently set to listening mode.
+     *
+     * @return     returns true if the server is listening, false otherwise.
+     */
+    bool isRunning();
+
    private:
     baseSocket* m_toBind;
     std::vector<baseSocket*> m_connectedClients;
     bool m_doesOwnBoundSocket;
     bool m_isServerUp;
+    bool m_isAccepting;
 };
 
 }  /// namespace Communication

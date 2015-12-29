@@ -17,47 +17,19 @@
  * along with Ace.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#ifndef H_STRUCT_HEADER_H
-#define H_STRUCT_HEADER_H
+#ifndef H_SYSTEM_EXCEPTION_H
+#define H_SYSTEM_EXCEPTION_H
 
+#include "exception/msgException.h"
 
-struct RGBQUAD{
-	char R,G,B,A;
+namespace Communication {
+
+namespace Exception {
+class SystemException : public MsgException {
+   public:
+    SystemException(std::string d);
 };
-
-
-namespace Application{
-
-
-
-enum EMAILPROP{
-		FLAGGED = 1, 	///1
-		READ ,			///2
-		FLAGGEDANDREAD, ///3
-		UNREAD,			///4
-		FLAGGEDANDUNREAD,///5
-		ANSWERED,		///6
-		READANDANSWERED = 8, ///8
-		FLAGGEDANDREADANDANSWERED, ///9
-		DRAFT,			///10
-		FLAGGEDANDDRAFT, ///11
-		DELETED,		///12
-		FLAGGEDANDDDELETED,	///13
-		READANDDELETED,		///14
-		FLAGGEDANDREADANDDELETED,///15
-		UNREADANDDELETED, ///16
-		FLAGGEDANDUNREADANDDELETED, ///17
-		READANDANSWEREDANDDELETED = 20,	///20
-		FLAGGEDANDREADANDANSWEREDANDDELETED,///21
-		DRAFTANDDELETED,		///22
-		FLAGGEDANDDRAGEADNDELETED, ///23
-		RECENT			///24
-};
-
-
-
-
 }
-
+}
 
 #endif

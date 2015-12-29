@@ -82,6 +82,8 @@ void SocketStructure::setFamily(UINT set) { m_family = set; }
 void SocketStructure::setType(UINT set) { m_connectionType = set; }
 
 std::string SocketStructure::getIPS() const { return m_ipAddress.getIPS(); }
+std::string SocketStructure::getPortS() const {return m_port.getPortS();}
+
 
 void SocketStructure::updateStruct() {
     m_structure.sin_family = m_family;
@@ -102,4 +104,20 @@ UINT SocketStructure::getSize() const { return sizeof(m_structure); }
 const sockaddr_in* SocketStructure::getInternalStructure() const {
     return &m_structure;
 }
+
+void SocketStructure::setInternalInternetSocketAddressStructure(sockaddr_in* addr){
+    
+    setFamily(addr->sin_family);
+    
+    Port b;
+    b.setPortN(addr->sin_port);
+    m_port = b;
+    IP a;
+    a.setIPN(addr->sin_addr.s_addr);
+    m_ipAddress = a;
+
+    updateStruct();
+}
+
+
 }

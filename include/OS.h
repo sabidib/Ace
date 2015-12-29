@@ -172,9 +172,6 @@ class OS {
      */
     static bool _setsockopt(baseSocket& Socket, INT optionLevel, INT optionName,
                             void* setting, UINT length);
-    
-
-
 
     /**
      * @brief      Returns the socket options for a valid baseSocket.
@@ -191,7 +188,6 @@ class OS {
      */
     static bool _getsockopt(baseSocket& Socket, INT optionLevel, INT optionName,
                             void* setting, UINT* length);
-    
 
     /**
      * @brief      Closes the socket defined by baseSocket. This may block if
@@ -204,6 +200,12 @@ class OS {
      * fails.
      */
     static bool _close(baseSocket& SocketToClose);
+
+   private:
+    static bool _setsockopt(INT fd, INT optionLevel, INT optionName,
+                            void* setting, UINT length);
+    static bool _getsockopt(INT fd, INT optionLevel, INT optionName,
+                            void* setting, UINT* length);
 };
 }
 

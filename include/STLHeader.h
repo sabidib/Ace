@@ -37,12 +37,7 @@
 #include <memory>
 #include <deque>
 #include <map>
-
-
-
-#ifdef c11
-	#include <thread>
-#endif
+#include <thread>
 
 
 

@@ -26,10 +26,10 @@
 #include "OS.h"
 namespace Communication {
 
-
 /**
- * @brief      Defines the a base class for any kind of socket management gateway.
- * This wraps the functions in the OS class to make them available for such 
+ * @brief      Defines the a base class for any kind of socket management
+ * gateway.
+ * This wraps the functions in the OS class to make them available for such
  * management gateways.
  */
 class baseGateway {
@@ -41,14 +41,16 @@ class baseGateway {
      * reconnected. This functions makes use of OS::_socket().
      *
      * @param      SocketToCreate  The reference to a valid socket to create.
-     * @param[in]  flags           any flags to use in connecting.
+     * @param[in]  flags           any flags to use in connecting. If no flag is
+     * set then flags=0
      *
      * @return     returns true on successful creation.
      * @throws   MsgException An exception is thrown if any of the requirements
      * for the baseSocket object are not met, or if the operating system call
      * fails.
      */
-    bool createSocket(baseSocket& SocketToCreate, INT flags = 0);
+    bool createSocket(baseSocket& SocketToCreate, INT flags /*=0*/);
+    bool createSocket(baseSocket& SocketToCreate);
 
     /**
      * @brief      Binds a registered socket to the location outlined in the
@@ -126,7 +128,8 @@ class baseGateway {
      *
      * @param      SocketToSend  A reference valid socket to send data on.
      * @param      Data          A reference to a valid baseDataBuffer object.
-     * @param[in]  FLAGS         Any flags to set.
+     * @param[in]  FLAGS         Any flags to set. If no flags are set then
+     * FLAGS=0
      *
      * @return     returns the number of bytes of data sent through the socket.
      *
@@ -136,7 +139,8 @@ class baseGateway {
      *
      */
     UINT sendData(baseSocket& SocketToSend, baseDataBuffer& Data,
-                  INT FLAGS = 0);
+                  INT FLAGS /*=0*/);
+    UINT sendData(baseSocket& SocketToSend, baseDataBuffer& Data);
     /**
      * @brief      Receives a baseDataBuffer of length lenToAccept on the socket
      * specified. The socket must be valid, unbound, not listening, and should
@@ -145,10 +149,10 @@ class baseGateway {
      * than the maximum buffer length. This functions makes use of OS::_recv()
      *
      * @param      SocketToReceive  A reference to a valid socket to receive
-     * data
-     * one
-     * @param[in]  lenToAccept      The amount of data to receive.
-     * @param[in]  flags            Any flags to set.
+     * data on
+     * @param[in]  lenToAccept      The amount of data to receive. If not set
+     * then lenToAccept=0.
+     * @param[in]  flags            Any flags to set. IF not set then flags=0.
      *
      * @return     return a baseDataBuffer object containing the received data.
      * It may also return nullptr if there is an error.
@@ -159,19 +163,21 @@ class baseGateway {
      *
      */
     baseDataBuffer* receiveData(baseSocket& SocketToReceive,
-                                UINT lenToAccept = 256, INT flags = 0);
+                                UINT lenToAccept /*= 256*/, INT flags /*= 0*/);
+    baseDataBuffer* receiveData(baseSocket& SocketToReceive, UINT lenToAccept);
+    baseDataBuffer* receiveData(baseSocket& SocketToReceive);
 
     /**
      * @brief      Closes the socket by shutting it down then closing. The
-     * socket must be an valid and assigned socket. This call may block 
+     * socket must be an valid and assigned socket. This call may block
      * if there is still data in the socket buffer. This functions calls
      * both OS::_shutdown() for the flags and makes use of OS::_close to
-     * destroy the socket file descriptor.  
+     * destroy the socket file descriptor.
      *
-     * @param      SocketToClose  A reference to a valid socket.    
+     * @param      SocketToClose  A reference to a valid socket.
      * @param[in]  FLAGS          A flags to set for shutdown.
      *
-     * @return     return true if the socket is successfully destroyed 
+     * @return     return true if the socket is successfully destroyed
      *
      * @throws   MsgException An exception is thrown if any of the requirements
      * for the baseSocket object are not met, or if the operating system call

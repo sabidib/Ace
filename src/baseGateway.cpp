@@ -61,6 +61,11 @@ bool baseGateway::createSocket(baseSocket& SocketToCreate, INT flags) {
     }
 }
 
+
+bool baseGateway::createSocket(baseSocket& SocketToCreate ){
+    return createSocket(SocketToCreate,0);
+}
+
 bool baseGateway::bindSocket(baseSocket& SocketToBind) {
     if (!(SocketToBind.isValid())) {
         throw MsgException("ERROR: SocketToBind is invalid");
@@ -101,7 +106,7 @@ bool baseGateway::connectSocket(baseSocket& SocketToConnect) {
         OS::_connect(SocketToConnect);
     } catch (MsgException& e) {
         SocketToConnect.getConnectionStatus()->setIsConnected(false);
-        throw e;
+        throw;
     }
 
     SocketToConnect.getConnectionStatus()->setIsConnected(true);
@@ -113,7 +118,7 @@ bool baseGateway::listenForConnections(baseSocket& SocketToStartListening) {
         throw MsgException("ERROR: SocketToStartListening is invalid");
     } else if (!SocketToStartListening.isBound()) {
         throw MsgException("ERROR: SocketToStartListening is not bound");
-    } else if (!SocketToStartListening.isListening()) {
+    } else if (SocketToStartListening.isListening()) {
         throw MsgException(
             "ERROR: SocketToStartListening is already listening");
     } else if (SocketToStartListening.isConnected()) {
@@ -133,7 +138,7 @@ bool baseGateway::listenForConnections(baseSocket& SocketToStartListening) {
         OS::_listen(SocketToStartListening, MAX_BACKLOG);
     } catch (MsgException& e) {
         SocketToStartListening.getConnectionStatus()->setIsListening(false);
-        throw e;
+        throw;
     }
 
     SocketToStartListening.getConnectionStatus()->setIsListening(true);
@@ -161,7 +166,7 @@ baseSocket* baseGateway::acceptConnection(
             "ERROR: SocketToAcceptConnection is not an assigned socket.");
     }
 
-    try {
+    // try {
         baseSocket* SocketToStoreConnection =
             OS::_accept(SocketToAcceptConnection);
         int yes = 1;
@@ -173,11 +178,12 @@ baseSocket* baseGateway::acceptConnection(
             SocketToStoreConnection->getConnectionStatus()->setIsAssigned(true);
             return SocketToStoreConnection;
         } else {
+            throw MsgException("Invalid socket to store was received!");
             return nullptr;
         }
-    } catch (std::exception& e) {
-        throw e;
-    }
+    // } catch (std::exception& e) {
+    //     throw;
+    // }
 }
 
 UINT baseGateway::sendData(baseSocket& SocketToSend, baseDataBuffer& data,
@@ -224,6 +230,11 @@ UINT baseGateway::sendData(baseSocket& SocketToSend, baseDataBuffer& data,
     return lengthSent;
 }
 
+UINT baseGateway::sendData(baseSocket& SocketToSend, baseDataBuffer& Data){
+    return sendData(SocketToSend,Data,0);
+}
+
+
 baseDataBuffer* baseGateway::receiveData(baseSocket& SocketToReceive,
                                          UINT lenToAccept, INT flags) {
     if (!(SocketToReceive.isValid())) {
@@ -263,6 +274,14 @@ baseDataBuffer* baseGateway::receiveData(baseSocket& SocketToReceive,
     }
     return nullptr;
 }
+baseDataBuffer* baseGateway::receiveData(baseSocket& SocketToReceive) {
+    return receiveData(SocketToReceive,256,0);
+}
+
+baseDataBuffer* baseGateway::receiveData(baseSocket& SocketToReceive,UINT lenToAccept) {
+    return receiveData(SocketToReceive,lenToAccept,0);
+}
+
 
 bool baseGateway::closeSocket(baseSocket& SocketToClose, INT Flags) {
     if (!SocketToClose.isAssigned()) {
@@ -272,14 +291,14 @@ bool baseGateway::closeSocket(baseSocket& SocketToClose, INT Flags) {
     }
     try {
         OS::_shutdown(SocketToClose, Flags);
-    } catch (Exception::SystemExceptionENOTCONN& e) {
-    }
+    } catch (const Exception::SystemExceptionENOTCONN& e) {
+    } 
     
     try{
         OS::_close(SocketToClose);
         SocketToClose._resetSocket();
     } catch (MsgException& e) {
-        throw e;
+        throw ;
     }
 
     return true;

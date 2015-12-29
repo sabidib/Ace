@@ -38,7 +38,7 @@ class IP {
      *
      * @param[in]  ipAddress  A host order UINT representing the IP address.
      */
-    IP(UINT ipAddress) { this->m_ipAddress = htonl(ipAddress); }
+    IP(UINT ipAddress);
     IP(std::string ipAddress);
 
     /**

@@ -18,7 +18,12 @@
 // along with Ace.  If not, see <http://www.gnu.org/licenses/>.
 //
 
+
+
+#include "UnitTest++/UnitTest++.h"
+#include "baseSocketTEST.cpp"
 #include "baseClientTEST.cpp"
+
 
 int main()
 {

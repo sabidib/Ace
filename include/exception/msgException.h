@@ -23,16 +23,16 @@
 #include <exception>
 #include <string>
 
-namespace Communication{
+namespace Communication {
 
-    class MsgException : public std::exception
-    {
-        public:
-            std::string s;
-            MsgException(std::string ss);
-            ~MsgException() throw ();
-            const char* what() const throw();
-    };
+class MsgException : public std::exception {
+   public:
+    std::string s;
+    MsgException(std::string ss);
+    ~MsgException() throw();
+    const char* what() const throw();
+    MsgException operator+(const MsgException& a);
+};
 }
 
 #endif

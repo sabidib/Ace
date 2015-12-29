@@ -41,9 +41,9 @@ namespace Communication {
  * When the Client object is destroyed it will delete the current socket
  * it is pointing to unless the socket has been explicitly set. Therefore
  * one must be careful when using Client::getSocket() as the socket may
- * be delete once Client goes out of scope. Functions such as 
+ * be delete once Client goes out of scope. Functions such as
  * Client::relinquishOwnership() and Client::transferOwnership() are useful
- * in coercing the Client to handle object destruction. 
+ * in coercing the Client to handle object destruction.
  *
  */
 class Client : baseGateway {
@@ -78,8 +78,9 @@ class Client : baseGateway {
      * baseGateway::receiveData().
      *
      *
-     * @param[in]  lenToAccept  The length in bytes of data to accept
-     * @param[in]  flags        Any flags to be used.
+     * @param[in]  lenToAccept  The length in bytes of data to accept if not set
+     * lentToAccept = 256
+     * @param[in]  flags        Any flags to be used.  if not set flags = 0
      *
      * @return     A pointer to a baseDataBuffer containing the received data.
      *
@@ -88,7 +89,9 @@ class Client : baseGateway {
      * fails.
      *
      */
-    baseDataBuffer* receive(UINT lenToAccept = 256, INT flags = 0);
+    baseDataBuffer* receive(UINT lenToAccept /*= 256*/, INT flags /*= 0*/);
+    baseDataBuffer* receive(UINT lenToAccept);
+    baseDataBuffer* receive();
 
     /**
      * @brief      Sends data in the string to the connected socket. This call
@@ -96,7 +99,7 @@ class Client : baseGateway {
      * baseGateway::sendData().
      *
      * @param[in]  data   The data to send.
-     * @param[in]  flags  Any flags to set.
+     * @param[in]  flags  Any flags to set, if not set flags = 0
      *
      * @return     returns the number of bytes sent by the socket.
      *
@@ -104,7 +107,8 @@ class Client : baseGateway {
      * for the baseSocket object are not met, or if the operating system call
      * fails.
      */
-    UINT send(std::string data, INT flags = 0);
+    UINT send(std::string data);
+    UINT send(std::string data, INT flags /*=0*/);
 
     /**
      * @brief      Sends the data in baseDataBuffer to the connected socket.
@@ -112,7 +116,7 @@ class Client : baseGateway {
      * use of baseGateway::sendData().
      *
      * @param[in]  data   The data buffer to send.
-     * @param[in]  flags  Any flags to set.
+     * @param[in]  flags  Any flags to set, if not set flags = 0
      *
      * @return     returns the number of bytes sent by the socket.
      *
@@ -120,7 +124,8 @@ class Client : baseGateway {
      * for the baseSocket object are not met, or if the operating system call
      * fails.
      */
-    UINT send(baseDataBuffer& data, INT flags = 0);
+    UINT send(baseDataBuffer& data, INT flags /*= 0*/);
+    UINT send(baseDataBuffer& data);
 
     /**
      * @brief      Disconnects the socket completely. This function can block

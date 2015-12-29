@@ -80,28 +80,35 @@ bool Server::startServer() {
         return false;
     }
 
+
+    if(!m_toBind->isAssigned()){
+        createSocket(*m_toBind);
+    }
+
     if (!m_toBind->isBound()) {
         try {
             bindSocket(*m_toBind);
         } catch (Exception::SystemExceptionEINVAL& e) {
-        } catch (std::exception& e2) {
+        } catch (MsgException& e2) {
             closeSocket(*m_toBind);
             m_toBind = new baseSocket();
             m_doesOwnBoundSocket = true;
-            throw e2;
-            return false;
+            throw;
         }
     }
 
     if (!m_toBind->isListening()) {
         try {
             listenForConnections(*m_toBind);
-        } catch (std::exception& e) {
-            closeSocket(*m_toBind);
+        } catch (MsgException& e) {
+            try{
+                closeSocket(*m_toBind);
+            } catch(MsgException &e2){
+                throw e2+e;
+            }
             m_toBind = new baseSocket();
             m_doesOwnBoundSocket = true;
-            throw e;
-            return false;
+            throw;
         }
     }
     m_isServerUp = true;
@@ -111,19 +118,38 @@ bool Server::startServer() {
 const baseSocket* Server::getSocket() { return m_toBind; }
 
 baseSocket* Server::startAccepting() {
-    baseSocket* a = acceptConnection(*m_toBind);
-    m_connectedClients.push_back(a);
-    return a;
+    // std::cout << "Is accepting" << std::endl;
+    m_isAccepting = true;
+    try {
+        // std::cout << "Is about to accept" << std::endl;
+        baseSocket* a = acceptConnection(*m_toBind);
+        // std::cout << "Accepted!" << std::endl;
+        m_connectedClients.push_back(a);
+        m_isAccepting = false;
+        return a;
+    } catch (MsgException& e) {
+        // std::cout << "caught exception!" << std::endl;
+        m_isAccepting = false;
+        throw;
+    }    
+    // std::cout << "Done!" << std::endl;
 }
 
 bool Server::shutdownServer() {
+    // std::cout << m_connectedClients[0] << std::endl;
     for (baseSocket* i : m_connectedClients) {
+        // std::cout << "Attempting to close" << std::endl;
+        // std::cout << m_connectedClients.size() << std::endl;
+
         closeSocket(*i);
     }
+        
     m_connectedClients = std::vector<baseSocket*>();
     closeSocket(*m_toBind);
     m_toBind = new baseSocket();
     m_doesOwnBoundSocket = true;
+    m_isServerUp = false;
+    m_isAccepting = false;
     return false;
 }
 
@@ -131,5 +157,7 @@ std::vector<baseSocket*>* Server::getClientList() {
     return &m_connectedClients;
 }
 
-/// namespace Communication
+bool Server::isAccepting() { return m_isAccepting; }
+
+bool Server::isRunning() { return m_toBind->isListening(); }
 }

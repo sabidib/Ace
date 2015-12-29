@@ -21,758 +21,759 @@
 #define H_ALL_SYSTEM_EXCEPTIONS_H
 
 #include "GenHeader.h"
-#include "exception/msgException.h"
+#include "exception/SystemException.h"
 
 namespace Communication {
 
 namespace Exception {
+
 /* No such file or directory */
-class SystemExceptionENOENT : public MsgException {
+class SystemExceptionENOENT : public SystemException {
    public:
-    SystemExceptionENOENT(std::string d) : MsgException(d){};
-    const char* what() const throw();
+    SystemExceptionENOENT(std::string d);
+    // const char* what() const throw();
 };
 
 /* No such process */
-class SystemExceptionESRCH : public MsgException {
+class SystemExceptionESRCH : public SystemException {
    public:
-    SystemExceptionESRCH(std::string d) : MsgException(d){};
-    const char* what() const throw();
+    SystemExceptionESRCH(std::string d);
+    // const char* what() const throw();
 };
 
 /* Interrupted system call */
-class SystemExceptionEINTR : public MsgException {
+class SystemExceptionEINTR : public SystemException {
    public:
-    SystemExceptionEINTR(std::string d) : MsgException(d){};
-    const char* what() const throw();
+    SystemExceptionEINTR(std::string d);
+    // const char* what() const throw();
 };
 
 /* Input/output error */
-class SystemExceptionEIO : public MsgException {
+class SystemExceptionEIO : public SystemException {
    public:
-    SystemExceptionEIO(std::string d) : MsgException(d){};
-    const char* what() const throw();
+    SystemExceptionEIO(std::string d);
+    // const char* what() const throw();
 };
 
 /* Device not configured */
-class SystemExceptionENXIO : public MsgException {
+class SystemExceptionENXIO : public SystemException {
    public:
-    SystemExceptionENXIO(std::string d) : MsgException(d){};
-    const char* what() const throw();
+    SystemExceptionENXIO(std::string d);
+    // const char* what() const throw();
 };
 
 /* Argument list too long */
-class SystemExceptionE2BIG : public MsgException {
+class SystemExceptionE2BIG : public SystemException {
    public:
-    SystemExceptionE2BIG(std::string d) : MsgException(d){};
-    const char* what() const throw();
+    SystemExceptionE2BIG(std::string d);
+    // const char* what() const throw();
 };
 
 /* Exec format error */
-class SystemExceptionENOEXEC : public MsgException {
+class SystemExceptionENOEXEC : public SystemException {
    public:
-    SystemExceptionENOEXEC(std::string d) : MsgException(d){};
-    const char* what() const throw();
+    SystemExceptionENOEXEC(std::string d);
+    // const char* what() const throw();
 };
 
 /* Bad file descriptor */
-class SystemExceptionEBADF : public MsgException {
+class SystemExceptionEBADF : public SystemException {
    public:
-    SystemExceptionEBADF(std::string d) : MsgException(d){};
-    const char* what() const throw();
+    SystemExceptionEBADF(std::string d);
+    // const char* what() const throw();
 };
 
 /* No child processes */
-class SystemExceptionECHILD : public MsgException {
+class SystemExceptionECHILD : public SystemException {
    public:
-    SystemExceptionECHILD(std::string d) : MsgException(d){};
-    const char* what() const throw();
+    SystemExceptionECHILD(std::string d);
+    // const char* what() const throw();
 };
 
 /* Resource deadlock avoided */
-class SystemExceptionEDEADLK : public MsgException {
+class SystemExceptionEDEADLK : public SystemException {
    public:
-    SystemExceptionEDEADLK(std::string d) : MsgException(d){};
-    const char* what() const throw();
+    SystemExceptionEDEADLK(std::string d);
+    // const char* what() const throw();
 };
 
 /* Cannot allocate memory */
-class SystemExceptionENOMEM : public MsgException {
+class SystemExceptionENOMEM : public SystemException {
    public:
-    SystemExceptionENOMEM(std::string d) : MsgException(d){};
-    const char* what() const throw();
+    SystemExceptionENOMEM(std::string d);
+    // const char* what() const throw();
 };
 
 /* Permission denied */
-class SystemExceptionEACCES : public MsgException {
+class SystemExceptionEACCES : public SystemException {
    public:
-    SystemExceptionEACCES(std::string d) : MsgException(d){};
-    const char* what() const throw();
+    SystemExceptionEACCES(std::string d);
+    // const char* what() const throw();
 };
 
 /* Bad address */
-class SystemExceptionEFAULT : public MsgException {
+class SystemExceptionEFAULT : public SystemException {
    public:
-    SystemExceptionEFAULT(std::string d) : MsgException(d){};
-    const char* what() const throw();
+    SystemExceptionEFAULT(std::string d);
+    // const char* what() const throw();
 };
 
 /* Block device required */
-class SystemExceptionENOTBLK : public MsgException {
+class SystemExceptionENOTBLK : public SystemException {
    public:
-    SystemExceptionENOTBLK(std::string d) : MsgException(d){};
-    const char* what() const throw();
+    SystemExceptionENOTBLK(std::string d);
+    // const char* what() const throw();
 };
 
 /* Device / Resource busy */
-class SystemExceptionEBUSY : public MsgException {
+class SystemExceptionEBUSY : public SystemException {
    public:
-    SystemExceptionEBUSY(std::string d) : MsgException(d){};
-    const char* what() const throw();
+    SystemExceptionEBUSY(std::string d);
+    // const char* what() const throw();
 };
 
 /* File exists */
-class SystemExceptionEEXIST : public MsgException {
+class SystemExceptionEEXIST : public SystemException {
    public:
-    SystemExceptionEEXIST(std::string d) : MsgException(d){};
-    const char* what() const throw();
+    SystemExceptionEEXIST(std::string d);
+    // const char* what() const throw();
 };
 
 /* Cross-device link */
-class SystemExceptionEXDEV : public MsgException {
+class SystemExceptionEXDEV : public SystemException {
    public:
-    SystemExceptionEXDEV(std::string d) : MsgException(d){};
-    const char* what() const throw();
+    SystemExceptionEXDEV(std::string d);
+    // const char* what() const throw();
 };
 
 /* Operation not supported by device */
-class SystemExceptionENODEV : public MsgException {
+class SystemExceptionENODEV : public SystemException {
    public:
-    SystemExceptionENODEV(std::string d) : MsgException(d){};
-    const char* what() const throw();
+    SystemExceptionENODEV(std::string d);
+    // const char* what() const throw();
 };
 
 /* Not a directory */
-class SystemExceptionENOTDIR : public MsgException {
+class SystemExceptionENOTDIR : public SystemException {
    public:
-    SystemExceptionENOTDIR(std::string d) : MsgException(d){};
-    const char* what() const throw();
+    SystemExceptionENOTDIR(std::string d);
+    // const char* what() const throw();
 };
 
 /* Is a directory */
-class SystemExceptionEISDIR : public MsgException {
+class SystemExceptionEISDIR : public SystemException {
    public:
-    SystemExceptionEISDIR(std::string d) : MsgException(d){};
-    const char* what() const throw();
+    SystemExceptionEISDIR(std::string d);
+    // const char* what() const throw();
 };
 
 /* Invalid argument */
-class SystemExceptionEINVAL : public MsgException {
+class SystemExceptionEINVAL : public SystemException {
    public:
-    SystemExceptionEINVAL(std::string d) : MsgException(d){};
-    const char* what() const throw();
+    SystemExceptionEINVAL(std::string d);
+    // const char* what() const throw();
 };
 
 /* Too many open files in system */
-class SystemExceptionENFILE : public MsgException {
+class SystemExceptionENFILE : public SystemException {
    public:
-    SystemExceptionENFILE(std::string d) : MsgException(d){};
-    const char* what() const throw();
+    SystemExceptionENFILE(std::string d);
+    // const char* what() const throw();
 };
 
 /* Too many open files */
-class SystemExceptionEMFILE : public MsgException {
+class SystemExceptionEMFILE : public SystemException {
    public:
-    SystemExceptionEMFILE(std::string d) : MsgException(d){};
-    const char* what() const throw();
+    SystemExceptionEMFILE(std::string d);
+    // const char* what() const throw();
 };
 
 /* Inappropriate ioctl for device */
-class SystemExceptionENOTTY : public MsgException {
+class SystemExceptionENOTTY : public SystemException {
    public:
-    SystemExceptionENOTTY(std::string d) : MsgException(d){};
-    const char* what() const throw();
+    SystemExceptionENOTTY(std::string d);
+    // const char* what() const throw();
 };
 
 /* Text file busy */
-class SystemExceptionETXTBSY : public MsgException {
+class SystemExceptionETXTBSY : public SystemException {
    public:
-    SystemExceptionETXTBSY(std::string d) : MsgException(d){};
-    const char* what() const throw();
+    SystemExceptionETXTBSY(std::string d);
+    // const char* what() const throw();
 };
 
 /* File too large */
-class SystemExceptionEFBIG : public MsgException {
+class SystemExceptionEFBIG : public SystemException {
    public:
-    SystemExceptionEFBIG(std::string d) : MsgException(d){};
-    const char* what() const throw();
+    SystemExceptionEFBIG(std::string d);
+    // const char* what() const throw();
 };
 
 /* No space left on device */
-class SystemExceptionENOSPC : public MsgException {
+class SystemExceptionENOSPC : public SystemException {
    public:
-    SystemExceptionENOSPC(std::string d) : MsgException(d){};
-    const char* what() const throw();
+    SystemExceptionENOSPC(std::string d);
+    // const char* what() const throw();
 };
 
 /* Illegal seek */
-class SystemExceptionESPIPE : public MsgException {
+class SystemExceptionESPIPE : public SystemException {
    public:
-    SystemExceptionESPIPE(std::string d) : MsgException(d){};
-    const char* what() const throw();
+    SystemExceptionESPIPE(std::string d);
+    // const char* what() const throw();
 };
 
 /* Read-only file system */
-class SystemExceptionEROFS : public MsgException {
+class SystemExceptionEROFS : public SystemException {
    public:
-    SystemExceptionEROFS(std::string d) : MsgException(d){};
-    const char* what() const throw();
+    SystemExceptionEROFS(std::string d);
+    // const char* what() const throw();
 };
 
 /* Too many links */
-class SystemExceptionEMLINK : public MsgException {
+class SystemExceptionEMLINK : public SystemException {
    public:
-    SystemExceptionEMLINK(std::string d) : MsgException(d){};
-    const char* what() const throw();
+    SystemExceptionEMLINK(std::string d);
+    // const char* what() const throw();
 };
 
 /* Broken pipe */
-class SystemExceptionEPIPE : public MsgException {
+class SystemExceptionEPIPE : public SystemException {
    public:
-    SystemExceptionEPIPE(std::string d) : MsgException(d){};
-    const char* what() const throw();
+    SystemExceptionEPIPE(std::string d);
+    // const char* what() const throw();
 };
 
 /* Numerical argument out of domain */
-class SystemExceptionEDOM : public MsgException {
+class SystemExceptionEDOM : public SystemException {
    public:
-    SystemExceptionEDOM(std::string d) : MsgException(d){};
-    const char* what() const throw();
+    SystemExceptionEDOM(std::string d);
+    // const char* what() const throw();
 };
 
 /* Result too large */
-class SystemExceptionERANGE : public MsgException {
+class SystemExceptionERANGE : public SystemException {
    public:
-    SystemExceptionERANGE(std::string d) : MsgException(d){};
-    const char* what() const throw();
+    SystemExceptionERANGE(std::string d);
+    // const char* what() const throw();
 };
 
 /* Resource temporarily unavailable */
-class SystemExceptionEAGAIN : public MsgException {
+class SystemExceptionEAGAIN : public SystemException {
    public:
-    SystemExceptionEAGAIN(std::string d) : MsgException(d){};
-    const char* what() const throw();
+    SystemExceptionEAGAIN(std::string d);
+    // const char* what() const throw();
 };
 
 /* Operation would block */
-class SystemExceptionEWOULDBLOCK : public MsgException {
+class SystemExceptionEWOULDBLOCK : public SystemException {
    public:
-    SystemExceptionEWOULDBLOCK(std::string d) : MsgException(d){};
-    const char* what() const throw();
+    SystemExceptionEWOULDBLOCK(std::string d);
+    // const char* what() const throw();
 };
 
 /* Operation now in progress */
-class SystemExceptionEINPROGRESS : public MsgException {
+class SystemExceptionEINPROGRESS : public SystemException {
    public:
-    SystemExceptionEINPROGRESS(std::string d) : MsgException(d){};
-    const char* what() const throw();
+    SystemExceptionEINPROGRESS(std::string d);
+    // const char* what() const throw();
 };
 
 /* Operation already in progress */
-class SystemExceptionEALREADY : public MsgException {
+class SystemExceptionEALREADY : public SystemException {
    public:
-    SystemExceptionEALREADY(std::string d) : MsgException(d){};
-    const char* what() const throw();
+    SystemExceptionEALREADY(std::string d);
+    // const char* what() const throw();
 };
 
 /* Socket operation on non-socket */
-class SystemExceptionENOTSOCK : public MsgException {
+class SystemExceptionENOTSOCK : public SystemException {
    public:
-    SystemExceptionENOTSOCK(std::string d) : MsgException(d){};
-    const char* what() const throw();
+    SystemExceptionENOTSOCK(std::string d);
+    // const char* what() const throw();
 };
 
 /* Destination address required */
-class SystemExceptionEDESTADDRREQ : public MsgException {
+class SystemExceptionEDESTADDRREQ : public SystemException {
    public:
-    SystemExceptionEDESTADDRREQ(std::string d) : MsgException(d){};
-    const char* what() const throw();
+    SystemExceptionEDESTADDRREQ(std::string d);
+    // const char* what() const throw();
 };
 
 /* Message too long */
-class SystemExceptionEMSGSIZE : public MsgException {
+class SystemExceptionEMSGSIZE : public SystemException {
    public:
-    SystemExceptionEMSGSIZE(std::string d) : MsgException(d){};
-    const char* what() const throw();
+    SystemExceptionEMSGSIZE(std::string d);
+    // const char* what() const throw();
 };
 
 /* Protocol wrong type for socket */
-class SystemExceptionEPROTOTYPE : public MsgException {
+class SystemExceptionEPROTOTYPE : public SystemException {
    public:
-    SystemExceptionEPROTOTYPE(std::string d) : MsgException(d){};
-    const char* what() const throw();
+    SystemExceptionEPROTOTYPE(std::string d);
+    // const char* what() const throw();
 };
 
 /* Protocol not available */
-class SystemExceptionENOPROTOOPT : public MsgException {
+class SystemExceptionENOPROTOOPT : public SystemException {
    public:
-    SystemExceptionENOPROTOOPT(std::string d) : MsgException(d){};
-    const char* what() const throw();
+    SystemExceptionENOPROTOOPT(std::string d);
+    // const char* what() const throw();
 };
 
 /* Protocol not supported */
-class SystemExceptionEPROTONOSUPPORT : public MsgException {
+class SystemExceptionEPROTONOSUPPORT : public SystemException {
    public:
-    SystemExceptionEPROTONOSUPPORT(std::string d) : MsgException(d){};
-    const char* what() const throw();
+    SystemExceptionEPROTONOSUPPORT(std::string d);
+    // const char* what() const throw();
 };
 
 /* Socket type not supported */
-class SystemExceptionESOCKTNOSUPPORT : public MsgException {
+class SystemExceptionESOCKTNOSUPPORT : public SystemException {
    public:
-    SystemExceptionESOCKTNOSUPPORT(std::string d) : MsgException(d){};
-    const char* what() const throw();
+    SystemExceptionESOCKTNOSUPPORT(std::string d);
+    // const char* what() const throw();
 };
 
 /* Operation not supported */
-class SystemExceptionENOTSUP : public MsgException {
+class SystemExceptionENOTSUP : public SystemException {
    public:
-    SystemExceptionENOTSUP(std::string d) : MsgException(d){};
-    const char* what() const throw();
+    SystemExceptionENOTSUP(std::string d);
+    // const char* what() const throw();
 };
 
 /* Protocol family not supported */
-class SystemExceptionEPFNOSUPPORT : public MsgException {
+class SystemExceptionEPFNOSUPPORT : public SystemException {
    public:
-    SystemExceptionEPFNOSUPPORT(std::string d) : MsgException(d){};
-    const char* what() const throw();
+    SystemExceptionEPFNOSUPPORT(std::string d);
+    // const char* what() const throw();
 };
 
 /* Address family not supported by protocol family */
-class SystemExceptionEAFNOSUPPORT : public MsgException {
+class SystemExceptionEAFNOSUPPORT : public SystemException {
    public:
-    SystemExceptionEAFNOSUPPORT(std::string d) : MsgException(d){};
-    const char* what() const throw();
+    SystemExceptionEAFNOSUPPORT(std::string d);
+    // const char* what() const throw();
 };
 
 /* Address already in use */
-class SystemExceptionEADDRINUSE : public MsgException {
+class SystemExceptionEADDRINUSE : public SystemException {
    public:
-    SystemExceptionEADDRINUSE(std::string d) : MsgException(d){};
-    const char* what() const throw();
+    SystemExceptionEADDRINUSE(std::string d);
+    // const char* what() const throw();
 };
 
 /* Can't assign requested address */
-class SystemExceptionEADDRNOTAVAIL : public MsgException {
+class SystemExceptionEADDRNOTAVAIL : public SystemException {
    public:
-    SystemExceptionEADDRNOTAVAIL(std::string d) : MsgException(d){};
-    const char* what() const throw();
+    SystemExceptionEADDRNOTAVAIL(std::string d);
+    // const char* what() const throw();
 };
 
 /* Network is down */
-class SystemExceptionENETDOWN : public MsgException {
+class SystemExceptionENETDOWN : public SystemException {
    public:
-    SystemExceptionENETDOWN(std::string d) : MsgException(d){};
-    const char* what() const throw();
+    SystemExceptionENETDOWN(std::string d);
+    // const char* what() const throw();
 };
 
 /* Network is unreachable */
-class SystemExceptionENETUNREACH : public MsgException {
+class SystemExceptionENETUNREACH : public SystemException {
    public:
-    SystemExceptionENETUNREACH(std::string d) : MsgException(d){};
-    const char* what() const throw();
+    SystemExceptionENETUNREACH(std::string d);
+    // const char* what() const throw();
 };
 
 /* Network dropped connection on reset */
-class SystemExceptionENETRESET : public MsgException {
+class SystemExceptionENETRESET : public SystemException {
    public:
-    SystemExceptionENETRESET(std::string d) : MsgException(d){};
-    const char* what() const throw();
+    SystemExceptionENETRESET(std::string d);
+    // const char* what() const throw();
 };
 
 /* Software caused connection abort */
-class SystemExceptionECONNABORTED : public MsgException {
+class SystemExceptionECONNABORTED : public SystemException {
    public:
-    SystemExceptionECONNABORTED(std::string d) : MsgException(d){};
-    const char* what() const throw();
+    SystemExceptionECONNABORTED(std::string d);
+    // const char* what() const throw();
 };
 
 /* Connection reset by peer */
-class SystemExceptionECONNRESET : public MsgException {
+class SystemExceptionECONNRESET : public SystemException {
    public:
-    SystemExceptionECONNRESET(std::string d) : MsgException(d){};
-    const char* what() const throw();
+    SystemExceptionECONNRESET(std::string d);
+    // const char* what() const throw();
 };
 
 /* No buffer space available */
-class SystemExceptionENOBUFS : public MsgException {
+class SystemExceptionENOBUFS : public SystemException {
    public:
-    SystemExceptionENOBUFS(std::string d) : MsgException(d){};
-    const char* what() const throw();
+    SystemExceptionENOBUFS(std::string d);
+    // const char* what() const throw();
 };
 
 /* Socket is already connected */
-class SystemExceptionEISCONN : public MsgException {
+class SystemExceptionEISCONN : public SystemException {
    public:
-    SystemExceptionEISCONN(std::string d) : MsgException(d){};
-    const char* what() const throw();
+    SystemExceptionEISCONN(std::string d);
+    // const char* what() const throw();
 };
 
 /* Socket is not connected */
-class SystemExceptionENOTCONN : public MsgException {
+class SystemExceptionENOTCONN : public SystemException {
    public:
-    SystemExceptionENOTCONN(std::string d) : MsgException(d){};
-    const char* what() const throw();
+    SystemExceptionENOTCONN(std::string d);
+    // const char* what() const throw();
 };
 
 /* Can't send after socket shutdown */
-class SystemExceptionESHUTDOWN : public MsgException {
+class SystemExceptionESHUTDOWN : public SystemException {
    public:
-    SystemExceptionESHUTDOWN(std::string d) : MsgException(d){};
-    const char* what() const throw();
+    SystemExceptionESHUTDOWN(std::string d);
+    // const char* what() const throw();
 };
 
 /* Too many references: can't splice */
-class SystemExceptionETOOMANYREFS : public MsgException {
+class SystemExceptionETOOMANYREFS : public SystemException {
    public:
-    SystemExceptionETOOMANYREFS(std::string d) : MsgException(d){};
-    const char* what() const throw();
+    SystemExceptionETOOMANYREFS(std::string d);
+    // const char* what() const throw();
 };
 
 /* Operation timed out */
-class SystemExceptionETIMEDOUT : public MsgException {
+class SystemExceptionETIMEDOUT : public SystemException {
    public:
-    SystemExceptionETIMEDOUT(std::string d) : MsgException(d){};
-    const char* what() const throw();
+    SystemExceptionETIMEDOUT(std::string d);
+    // const char* what() const throw();
 };
 
 /* Connection refused */
-class SystemExceptionECONNREFUSED : public MsgException {
+class SystemExceptionECONNREFUSED : public SystemException {
    public:
-    SystemExceptionECONNREFUSED(std::string d) : MsgException(d){};
-    const char* what() const throw();
+    SystemExceptionECONNREFUSED(std::string d);
+    // const char* what() const throw();
 };
 
 /* Too many levels of symbolic links */
-class SystemExceptionELOOP : public MsgException {
+class SystemExceptionELOOP : public SystemException {
    public:
-    SystemExceptionELOOP(std::string d) : MsgException(d){};
-    const char* what() const throw();
+    SystemExceptionELOOP(std::string d);
+    // const char* what() const throw();
 };
 
 /* File name too long */
-class SystemExceptionENAMETOOLONG : public MsgException {
+class SystemExceptionENAMETOOLONG : public SystemException {
    public:
-    SystemExceptionENAMETOOLONG(std::string d) : MsgException(d){};
-    const char* what() const throw();
+    SystemExceptionENAMETOOLONG(std::string d);
+    // const char* what() const throw();
 };
 
 /* Host is down */
-class SystemExceptionEHOSTDOWN : public MsgException {
+class SystemExceptionEHOSTDOWN : public SystemException {
    public:
-    SystemExceptionEHOSTDOWN(std::string d) : MsgException(d){};
-    const char* what() const throw();
+    SystemExceptionEHOSTDOWN(std::string d);
+    // const char* what() const throw();
 };
 
 /* No route to host */
-class SystemExceptionEHOSTUNREACH : public MsgException {
+class SystemExceptionEHOSTUNREACH : public SystemException {
    public:
-    SystemExceptionEHOSTUNREACH(std::string d) : MsgException(d){};
-    const char* what() const throw();
+    SystemExceptionEHOSTUNREACH(std::string d);
+    // const char* what() const throw();
 };
 
 /* Directory not empty */
-class SystemExceptionENOTEMPTY : public MsgException {
+class SystemExceptionENOTEMPTY : public SystemException {
    public:
-    SystemExceptionENOTEMPTY(std::string d) : MsgException(d){};
-    const char* what() const throw();
+    SystemExceptionENOTEMPTY(std::string d);
+    // const char* what() const throw();
 };
 
 /* Too many processes */
-class SystemExceptionEPROCLIM : public MsgException {
+class SystemExceptionEPROCLIM : public SystemException {
    public:
-    SystemExceptionEPROCLIM(std::string d) : MsgException(d){};
-    const char* what() const throw();
+    SystemExceptionEPROCLIM(std::string d);
+    // const char* what() const throw();
 };
 
 /* Too many users */
-class SystemExceptionEUSERS : public MsgException {
+class SystemExceptionEUSERS : public SystemException {
    public:
-    SystemExceptionEUSERS(std::string d) : MsgException(d){};
-    const char* what() const throw();
+    SystemExceptionEUSERS(std::string d);
+    // const char* what() const throw();
 };
 
 /* Disc quota exceeded */
-class SystemExceptionEDQUOT : public MsgException {
+class SystemExceptionEDQUOT : public SystemException {
    public:
-    SystemExceptionEDQUOT(std::string d) : MsgException(d){};
-    const char* what() const throw();
+    SystemExceptionEDQUOT(std::string d);
+    // const char* what() const throw();
 };
 
 /* Stale NFS file handle */
-class SystemExceptionESTALE : public MsgException {
+class SystemExceptionESTALE : public SystemException {
    public:
-    SystemExceptionESTALE(std::string d) : MsgException(d){};
-    const char* what() const throw();
+    SystemExceptionESTALE(std::string d);
+    // const char* what() const throw();
 };
 
 /* Too many levels of remote in path */
-class SystemExceptionEREMOTE : public MsgException {
+class SystemExceptionEREMOTE : public SystemException {
    public:
-    SystemExceptionEREMOTE(std::string d) : MsgException(d){};
-    const char* what() const throw();
+    SystemExceptionEREMOTE(std::string d);
+    // const char* what() const throw();
 };
 
 /* RPC struct is bad */
-class SystemExceptionEBADRPC : public MsgException {
+class SystemExceptionEBADRPC : public SystemException {
    public:
-    SystemExceptionEBADRPC(std::string d) : MsgException(d){};
-    const char* what() const throw();
+    SystemExceptionEBADRPC(std::string d);
+    // const char* what() const throw();
 };
 
 /* RPC version wrong */
-class SystemExceptionERPCMISMATCH : public MsgException {
+class SystemExceptionERPCMISMATCH : public SystemException {
    public:
-    SystemExceptionERPCMISMATCH(std::string d) : MsgException(d){};
-    const char* what() const throw();
+    SystemExceptionERPCMISMATCH(std::string d);
+    // const char* what() const throw();
 };
 
 /* RPC prog. not avail */
-class SystemExceptionEPROGUNAVAIL : public MsgException {
+class SystemExceptionEPROGUNAVAIL : public SystemException {
    public:
-    SystemExceptionEPROGUNAVAIL(std::string d) : MsgException(d){};
-    const char* what() const throw();
+    SystemExceptionEPROGUNAVAIL(std::string d);
+    // const char* what() const throw();
 };
 
 /* Program version wrong */
-class SystemExceptionEPROGMISMATCH : public MsgException {
+class SystemExceptionEPROGMISMATCH : public SystemException {
    public:
-    SystemExceptionEPROGMISMATCH(std::string d) : MsgException(d){};
-    const char* what() const throw();
+    SystemExceptionEPROGMISMATCH(std::string d);
+    // const char* what() const throw();
 };
 
 /* Bad procedure for program */
-class SystemExceptionEPROCUNAVAIL : public MsgException {
+class SystemExceptionEPROCUNAVAIL : public SystemException {
    public:
-    SystemExceptionEPROCUNAVAIL(std::string d) : MsgException(d){};
-    const char* what() const throw();
+    SystemExceptionEPROCUNAVAIL(std::string d);
+    // const char* what() const throw();
 };
 
 /* No locks available */
-class SystemExceptionENOLCK : public MsgException {
+class SystemExceptionENOLCK : public SystemException {
    public:
-    SystemExceptionENOLCK(std::string d) : MsgException(d){};
-    const char* what() const throw();
+    SystemExceptionENOLCK(std::string d);
+    // const char* what() const throw();
 };
 
 /* Function not implemented */
-class SystemExceptionENOSYS : public MsgException {
+class SystemExceptionENOSYS : public SystemException {
    public:
-    SystemExceptionENOSYS(std::string d) : MsgException(d){};
-    const char* what() const throw();
+    SystemExceptionENOSYS(std::string d);
+    // const char* what() const throw();
 };
 
 /* Inappropriate file type or format */
-class SystemExceptionEFTYPE : public MsgException {
+class SystemExceptionEFTYPE : public SystemException {
    public:
-    SystemExceptionEFTYPE(std::string d) : MsgException(d){};
-    const char* what() const throw();
+    SystemExceptionEFTYPE(std::string d);
+    // const char* what() const throw();
 };
 
 /* Authentication error */
-class SystemExceptionEAUTH : public MsgException {
+class SystemExceptionEAUTH : public SystemException {
    public:
-    SystemExceptionEAUTH(std::string d) : MsgException(d){};
-    const char* what() const throw();
+    SystemExceptionEAUTH(std::string d);
+    // const char* what() const throw();
 };
 
 /* Need authenticator */
-class SystemExceptionENEEDAUTH : public MsgException {
+class SystemExceptionENEEDAUTH : public SystemException {
    public:
-    SystemExceptionENEEDAUTH(std::string d) : MsgException(d){};
-    const char* what() const throw();
+    SystemExceptionENEEDAUTH(std::string d);
+    // const char* what() const throw();
 };
 
 /* Device power is off */
-class SystemExceptionEPWROFF : public MsgException {
+class SystemExceptionEPWROFF : public SystemException {
    public:
-    SystemExceptionEPWROFF(std::string d) : MsgException(d){};
-    const char* what() const throw();
+    SystemExceptionEPWROFF(std::string d);
+    // const char* what() const throw();
 };
 
 /* Device error, e.g. paper out */
-class SystemExceptionEDEVERR : public MsgException {
+class SystemExceptionEDEVERR : public SystemException {
    public:
-    SystemExceptionEDEVERR(std::string d) : MsgException(d){};
-    const char* what() const throw();
+    SystemExceptionEDEVERR(std::string d);
+    // const char* what() const throw();
 };
 
 /* Value too large to be stored in data type */
-class SystemExceptionEOVERFLOW : public MsgException {
+class SystemExceptionEOVERFLOW : public SystemException {
    public:
-    SystemExceptionEOVERFLOW(std::string d) : MsgException(d){};
-    const char* what() const throw();
+    SystemExceptionEOVERFLOW(std::string d);
+    // const char* what() const throw();
 };
 
 /* Bad executable */
-class SystemExceptionEBADEXEC : public MsgException {
+class SystemExceptionEBADEXEC : public SystemException {
    public:
-    SystemExceptionEBADEXEC(std::string d) : MsgException(d){};
-    const char* what() const throw();
+    SystemExceptionEBADEXEC(std::string d);
+    // const char* what() const throw();
 };
 
 /* Bad CPU type in executable */
-class SystemExceptionEBADARCH : public MsgException {
+class SystemExceptionEBADARCH : public SystemException {
    public:
-    SystemExceptionEBADARCH(std::string d) : MsgException(d){};
-    const char* what() const throw();
+    SystemExceptionEBADARCH(std::string d);
+    // const char* what() const throw();
 };
 
 /* Shared library version mismatch */
-class SystemExceptionESHLIBVERS : public MsgException {
+class SystemExceptionESHLIBVERS : public SystemException {
    public:
-    SystemExceptionESHLIBVERS(std::string d) : MsgException(d){};
-    const char* what() const throw();
+    SystemExceptionESHLIBVERS(std::string d);
+    // const char* what() const throw();
 };
 
 /* Malformed Macho file */
-class SystemExceptionEBADMACHO : public MsgException {
+class SystemExceptionEBADMACHO : public SystemException {
    public:
-    SystemExceptionEBADMACHO(std::string d) : MsgException(d){};
-    const char* what() const throw();
+    SystemExceptionEBADMACHO(std::string d);
+    // const char* what() const throw();
 };
 
 /* Operation canceled */
-class SystemExceptionECANCELED : public MsgException {
+class SystemExceptionECANCELED : public SystemException {
    public:
-    SystemExceptionECANCELED(std::string d) : MsgException(d){};
-    const char* what() const throw();
+    SystemExceptionECANCELED(std::string d);
+    // const char* what() const throw();
 };
 
 /* Identifier removed */
-class SystemExceptionEIDRM : public MsgException {
+class SystemExceptionEIDRM : public SystemException {
    public:
-    SystemExceptionEIDRM(std::string d) : MsgException(d){};
-    const char* what() const throw();
+    SystemExceptionEIDRM(std::string d);
+    // const char* what() const throw();
 };
 
 /* No message of desired type */
-class SystemExceptionENOMSG : public MsgException {
+class SystemExceptionENOMSG : public SystemException {
    public:
-    SystemExceptionENOMSG(std::string d) : MsgException(d){};
-    const char* what() const throw();
+    SystemExceptionENOMSG(std::string d);
+    // const char* what() const throw();
 };
 
 /* Illegal byte sequence */
-class SystemExceptionEILSEQ : public MsgException {
+class SystemExceptionEILSEQ : public SystemException {
    public:
-    SystemExceptionEILSEQ(std::string d) : MsgException(d){};
-    const char* what() const throw();
+    SystemExceptionEILSEQ(std::string d);
+    // const char* what() const throw();
 };
 
 /* Attribute not found */
-class SystemExceptionENOATTR : public MsgException {
+class SystemExceptionENOATTR : public SystemException {
    public:
-    SystemExceptionENOATTR(std::string d) : MsgException(d){};
-    const char* what() const throw();
+    SystemExceptionENOATTR(std::string d);
+    // const char* what() const throw();
 };
 
 /* Bad message */
-class SystemExceptionEBADMSG : public MsgException {
+class SystemExceptionEBADMSG : public SystemException {
    public:
-    SystemExceptionEBADMSG(std::string d) : MsgException(d){};
-    const char* what() const throw();
+    SystemExceptionEBADMSG(std::string d);
+    // const char* what() const throw();
 };
 
 /* Reserved */
-class SystemExceptionEMULTIHOP : public MsgException {
+class SystemExceptionEMULTIHOP : public SystemException {
    public:
-    SystemExceptionEMULTIHOP(std::string d) : MsgException(d){};
-    const char* what() const throw();
+    SystemExceptionEMULTIHOP(std::string d);
+    // const char* what() const throw();
 };
 
 /* No message available on STREAM */
-class SystemExceptionENODATA : public MsgException {
+class SystemExceptionENODATA : public SystemException {
    public:
-    SystemExceptionENODATA(std::string d) : MsgException(d){};
-    const char* what() const throw();
+    SystemExceptionENODATA(std::string d);
+    // const char* what() const throw();
 };
 
 /* Reserved */
-class SystemExceptionENOLINK : public MsgException {
+class SystemExceptionENOLINK : public SystemException {
    public:
-    SystemExceptionENOLINK(std::string d) : MsgException(d){};
-    const char* what() const throw();
+    SystemExceptionENOLINK(std::string d);
+    // const char* what() const throw();
 };
 
 /* No STREAM resources */
-class SystemExceptionENOSR : public MsgException {
+class SystemExceptionENOSR : public SystemException {
    public:
-    SystemExceptionENOSR(std::string d) : MsgException(d){};
-    const char* what() const throw();
+    SystemExceptionENOSR(std::string d);
+    // const char* what() const throw();
 };
 
 /* Not a STREAM */
-class SystemExceptionENOSTR : public MsgException {
+class SystemExceptionENOSTR : public SystemException {
    public:
-    SystemExceptionENOSTR(std::string d) : MsgException(d){};
-    const char* what() const throw();
+    SystemExceptionENOSTR(std::string d);
+    // const char* what() const throw();
 };
 
 /* Protocol error */
-class SystemExceptionEPROTO : public MsgException {
+class SystemExceptionEPROTO : public SystemException {
    public:
-    SystemExceptionEPROTO(std::string d) : MsgException(d){};
-    const char* what() const throw();
+    SystemExceptionEPROTO(std::string d);
+    // const char* what() const throw();
 };
 
 /* STREAM ioctl timeout */
-class SystemExceptionETIME : public MsgException {
+class SystemExceptionETIME : public SystemException {
    public:
-    SystemExceptionETIME(std::string d) : MsgException(d){};
-    const char* what() const throw();
+    SystemExceptionETIME(std::string d);
+    // const char* what() const throw();
 };
 
 /* Operation not supported on socket */
-class SystemExceptionEOPNOTSUPP : public MsgException {
+class SystemExceptionEOPNOTSUPP : public SystemException {
    public:
-    SystemExceptionEOPNOTSUPP(std::string d) : MsgException(d){};
-    const char* what() const throw();
+    SystemExceptionEOPNOTSUPP(std::string d);
+    // const char* what() const throw();
 };
 
 /* No such policy registered */
-class SystemExceptionENOPOLICY : public MsgException {
+class SystemExceptionENOPOLICY : public SystemException {
    public:
-    SystemExceptionENOPOLICY(std::string d) : MsgException(d){};
-    const char* what() const throw();
+    SystemExceptionENOPOLICY(std::string d);
+    // const char* what() const throw();
 };
 
 /* State not recoverable */
-class SystemExceptionENOTRECOVERABLE : public MsgException {
+class SystemExceptionENOTRECOVERABLE : public SystemException {
    public:
-    SystemExceptionENOTRECOVERABLE(std::string d) : MsgException(d){};
-    const char* what() const throw();
+    SystemExceptionENOTRECOVERABLE(std::string d);
+    // const char* what() const throw();
 };
 
 /* Previous owner died */
-class SystemExceptionEOWNERDEAD : public MsgException {
+class SystemExceptionEOWNERDEAD : public SystemException {
    public:
-    SystemExceptionEOWNERDEAD(std::string d) : MsgException(d){};
-    const char* what() const throw();
+    SystemExceptionEOWNERDEAD(std::string d);
+    // const char* what() const throw();
 };
 
 /* Interface output queue is full */
-class SystemExceptionEQFULL : public MsgException {
+class SystemExceptionEQFULL : public SystemException {
    public:
-    SystemExceptionEQFULL(std::string d) : MsgException(d){};
-    const char* what() const throw();
+    SystemExceptionEQFULL(std::string d);
+    // const char* what() const throw();
 };
 
 /* Must be equal largest errno */
-class SystemExceptionELAST : public MsgException {
+class SystemExceptionELAST : public SystemException {
    public:
-    SystemExceptionELAST(std::string d) : MsgException(d){};
-    const char* what() const throw();
+    SystemExceptionELAST(std::string d);
+    // const char* what() const throw();
 };
 }
 }

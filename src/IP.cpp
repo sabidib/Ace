@@ -24,6 +24,8 @@ namespace Communication {
 
 IP::IP() { m_ipAddress = DEFAULT_IP_ADDRESS; }
 
+IP::IP(UINT ipAddress) { this->m_ipAddress = htonl(ipAddress); }
+
 IP::IP(std::string ipAddress) { setIPS(ipAddress); }
 
 bool IP::setIPH(UINT hostOrderIP) {
@@ -78,14 +80,14 @@ bool IP::setIPS(std::string stringIP) {
 }
 
 std::string IP::getIPS() const {
-    UINT ip = m_ipAddress;
+    UINT ip = getIPH();
     unsigned char bytes[4];
     bytes[0] = ip & 0xFF;
     bytes[1] = (ip >> 8) & 0xFF;
     bytes[2] = (ip >> 16) & 0xFF;
     bytes[3] = (ip >> 24) & 0xFF;
     char buff[100];
-    snprintf(buff, sizeof(buff), "%d.%d.%d.%d\n", bytes[3], bytes[2], bytes[1],
+    snprintf(buff, sizeof(buff), "%d.%d.%d.%d", bytes[3], bytes[2], bytes[1],
              bytes[0]);
     std::string buffAsStdStr = buff;
     return buffAsStdStr;

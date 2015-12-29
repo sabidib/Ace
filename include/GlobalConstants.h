@@ -1,4 +1,4 @@
-/* * Ace - A c++ networking library
+ /* * Ace - A c++ networking library
  * Copyright (C) 2012, 2016 Samy Abidib
  *
  * This file is part of Ace.
@@ -32,7 +32,8 @@ INT const DEFAULT_CLIENTFAMILY = AF_INET;
 std::string const LOCALHOST_STRING = "127.0.0.1";
 UINT const LOCALHOST_HOST = 16820416;  /// 127.0.0.1
 INT const MAX_TO_SEND = 65536;
-INT const SERVER_PORT_STRING = "12030" INT const MAX_BACKLOG = 20;
+std::string const SERVER_PORT_STRING = "12030";
+INT const MAX_BACKLOG = 20;
 
 enum STATUS {
     CONNECTED = 2,

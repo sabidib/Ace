@@ -20,7 +20,8 @@
 #ifndef H_FUNCTIONHEADERS_H
 #define H_FUNCTIONHEADERS_H
 
-#include "GenHeader.h"
+namespace Communication{
+
 
 #ifdef _WIN32
 
@@ -42,5 +43,7 @@ inline const char* inet_ntop(int af, const void* src, char* dst, int cnt) {
 }
 
 #endif
+
+}
 
 #endif

@@ -112,6 +112,17 @@ class SocketStructure {
     std::string getIPS() const;
 
     /**
+     * @brief      Gets the string representation of the Port in the
+     * structure.
+     *
+     * @return   returns the string of the Port
+     * 
+     * @throws   MsgException throws an exception if the Port of the
+     * string is invalid.
+     */
+    std::string getPortS() const;
+
+    /**
      * @brief      Returns the Port stored in the structure.
      *
      * @return     A Port object.
@@ -179,7 +190,16 @@ class SocketStructure {
      */
     const sockaddr_in* getInternalStructure() const;
 
+    /**
+     * @brief      Sets the internal structure as well as the IP, Port,
+     * and family.
+     *
+     * @param      addr  a valid sockaddr pointer
+     */
+    void setInternalInternetSocketAddressStructure(sockaddr_in* addr);
+
    private:
+
     /**
      * @brief      updates the internal sock_add_in structure.
      */

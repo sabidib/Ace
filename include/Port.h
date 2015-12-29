@@ -26,14 +26,11 @@ namespace Communication {
 
 USHORT const DEFAULT_PORT_NUMBER = 0;
 
-
-
 /**
  * @brief      Represents a port number.
  */
 class Port {
    public:
-        
     /**
      * @brief      Initializes the port to the default port number( 0 ) .
      */
@@ -45,6 +42,17 @@ class Port {
      */
     Port(USHORT port);
 
+    /**
+     * @brief      Initializes the port number using an std::string
+     * representing a host order integer.
+     *
+     * @param[in]  port  A string representing a hsot order integer.
+     *
+     * @throws   MsgException If the string cannot be converted, if it not
+     * within the interger size or if it in not a valid ushort string.
+     *
+     */
+    Port(std::string port);
 
     /**
      * @brief      Sets the port number as a host order port number.
@@ -53,7 +61,6 @@ class Port {
      */
     void setPortH(USHORT HostOrderPort);
 
-
     /**
      * @brief      Sets the port number as a network order port number.
      *
@@ -61,13 +68,14 @@ class Port {
      */
     void setPortN(USHORT NetworkOrderPort);
 
-    
     /**
-     * @brief      Given a string for a host order port number, converts it 
+     * @brief      Given a string for a host order port number, converts it
      * to a host order USHORT and sets it as a port number.
-     * @throws   MsgException If the string cannot be converted, if it not 
+     *
+     * @param[in]  StringIP  a string representing a valid USHORT.
+     *
+     * @throws   MsgException If the string cannot be converted, if it not
      * within the interger size or if it in not a valid ushort string.
-     * @param[in]  StringIP  a string representing a valid USHORT. 
      */
     void setPortS(std::string StringIP);
 
@@ -86,13 +94,12 @@ class Port {
     USHORT getPortN() const;
 
     /**
-     * @brief      Returns representation of the host order port number in a 
+     * @brief      Returns representation of the host order port number in a
      * in a string.
      *
      * @return     an std::string representing the host order port number.
      */
     std::string getPortS() const;
-
 
     /**
      * @brief      Checks if the port number is valid.
@@ -105,7 +112,6 @@ class Port {
         return this->m_portNumberN == other.m_portNumberN;
     }
     bool operator!=(const Port& other) const { return !(*this == other); }
-
 
    private:
     /// The host set as a network order integer

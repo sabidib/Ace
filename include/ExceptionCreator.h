@@ -28,7 +28,7 @@ namespace Communication {
 
 class ExceptionCreator {
 public:
-    static MsgException getAnException(INT Error);
+    static void getAnException(INT Error);
 };
 }
 #endif

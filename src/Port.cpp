@@ -25,19 +25,19 @@ Port::Port() { this->m_portNumberN = DEFAULT_PORT_NUMBER; }
 
 Port::Port(USHORT port) { m_portNumberN = htons(port); }
 
-USHORT Port::getPortH() const{ return ntohs(m_portNumberN); }
+Port::Port(std::string port) { setPortS(port); }
 
-USHORT Port::getPortN() const{ return m_portNumberN; }
+USHORT Port::getPortH() const { return ntohs(m_portNumberN); }
+
+USHORT Port::getPortN() const { return m_portNumberN; }
 
 std::string Port::getPortS() const {
     std::stringstream k;
-    k << USHORT(getPortH());
+    k << getPortH();
     return k.str();
 }
 
-bool Port::isValid() const{
-    return (m_portNumberN != DEFAULT_PORT_NUMBER); 
-}
+bool Port::isValid() const { return (m_portNumberN != DEFAULT_PORT_NUMBER); }
 
 void Port::setPortH(USHORT HostOrderPort) {
     m_portNumberN = htons(HostOrderPort);

@@ -22,330 +22,660 @@
 
 namespace Communication {
 
-MsgException ExceptionCreator::getAnException(INT Error) {
+void ExceptionCreator::getAnException(INT Error) {
+
+    // if (Error == ENOENT) {
+    //     /* No such file or directory */
+    //     throw Exception::SystemExceptionE<ENOENT>("");
+    // } else if (Error == ESRCH) {
+    //     /* No such process */
+    //     throw Exception::SystemExceptionE<ESRCH>("");
+    // } else if (Error == EINTR) {
+    //     /* Interrupted system call */
+    //     throw Exception::SystemExceptionE<EINTR>("");
+    // } else if (Error == EIO) {
+    //     /* Input/output error */
+    //     throw Exception::SystemExceptionE<EIO>("");
+    // } else if (Error == ENXIO) {
+    //     /* Device not configured */
+    //     throw Exception::SystemExceptionE<ENXIO>("");
+    // } else if (Error == E2BIG) {
+    //     /* Argument list too long */
+    //     throw Exception::SystemExceptionE<E2BIG>("");
+    // } else if (Error == ENOEXEC) {
+    //     /* Exec format error */
+    //     throw Exception::SystemExceptionE<ENOEXEC>("");
+    // } else if (Error == EBADF) {
+    //     /* Bad file descriptor */
+    //     throw Exception::SystemExceptionE<EBADF>("");
+    // } else if (Error == ECHILD) {
+    //     /* No child processes */
+    //     throw Exception::SystemExceptionE<ECHILD>("");
+    // } else if (Error == EDEADLK) {
+    //     /* Resource deadlock avoided */
+    //     throw Exception::SystemExceptionE<EDEADLK>("");
+    // } else if (Error == ENOMEM) {
+    //     /* Cannot allocate memory */
+    //     throw Exception::SystemExceptionE<ENOMEM>("");
+    // } else if (Error == EACCES) {
+    //     /* Permission denied */
+    //     throw Exception::SystemExceptionE<EACCES>("");
+    // } else if (Error == EFAULT) {
+    //     /* Bad address */
+    //     throw Exception::SystemExceptionE<EFAULT>("");
+    // } else if (Error == ENOTBLK) {
+    //     /* Block device required */
+    //     throw Exception::SystemExceptionE<ENOTBLK>("");
+    // } else if (Error == EBUSY) {
+    //     /* Device / Resource busy */
+    //     throw Exception::SystemExceptionE<EBUSY>("");
+    // } else if (Error == EEXIST) {
+    //     /* File exists */
+    //     throw Exception::SystemExceptionE<EEXIST>("");
+    // } else if (Error == EXDEV) {
+    //     /* Cross-device link */
+    //     throw Exception::SystemExceptionE<EXDEV>("");
+    // } else if (Error == ENODEV) {
+    //     /* Operation not supported by device */
+    //     throw Exception::SystemExceptionE<ENODEV>("");
+    // } else if (Error == ENOTDIR) {
+    //     /* Not a directory */
+    //     throw Exception::SystemExceptionE<ENOTDIR>("");
+    // } else if (Error == EISDIR) {
+    //     /* Is a directory */
+    //     throw Exception::SystemExceptionE<EISDIR>("");
+    // } else if (Error == EINVAL) {
+    //     /* Invalid argument */
+    //     throw Exception::SystemExceptionE<EINVAL>("");
+    // } else if (Error == ENFILE) {
+    //     /* Too many open files in system */
+    //     throw Exception::SystemExceptionE<ENFILE>("");
+    // } else if (Error == EMFILE) {
+    //     /* Too many open files */
+    //     throw Exception::SystemExceptionE<EMFILE>("");
+    // } else if (Error == ENOTTY) {
+    //     /* Inappropriate ioctl for device */
+    //     throw Exception::SystemExceptionE<ENOTTY>("");
+    // } else if (Error == ETXTBSY) {
+    //     /* Text file busy */
+    //     throw Exception::SystemExceptionE<ETXTBSY>("");
+    // } else if (Error == EFBIG) {
+    //     /* File too large */
+    //     throw Exception::SystemExceptionE<EFBIG>("");
+    // } else if (Error == ENOSPC) {
+    //     /* No space left on device */
+    //     throw Exception::SystemExceptionE<ENOSPC>("");
+    // } else if (Error == ESPIPE) {
+    //     /* Illegal seek */
+    //     throw Exception::SystemExceptionE<ESPIPE>("");
+    // } else if (Error == EROFS) {
+    //     /* Read-only file system */
+    //     throw Exception::SystemExceptionE<EROFS>("");
+    // } else if (Error == EMLINK) {
+    //     /* Too many links */
+    //     throw Exception::SystemExceptionE<EMLINK>("");
+    // } else if (Error == EPIPE) {
+    //     /* Broken pipe */
+    //     throw Exception::SystemExceptionE<EPIPE>("");
+    // } else if (Error == EDOM) {
+    //     /* Numerical argument out of domain */
+    //     throw Exception::SystemExceptionE<EDOM>("");
+    // } else if (Error == ERANGE) {
+    //     /* Result too large */
+    //     throw Exception::SystemExceptionE<ERANGE>("");
+    // } else if (Error == EAGAIN) {
+    //     /* Resource temporarily unavailable */
+    //     throw Exception::SystemExceptionE<EAGAIN>("");
+    // } else if (Error == EWOULDBLOCK) {
+    //     /* Operation would block */
+    //     throw Exception::SystemExceptionE<EWOULDBLOCK>("");
+    // } else if (Error == EINPROGRESS) {
+    //     /* Operation now in progress */
+    //     throw Exception::SystemExceptionE<EINPROGRESS>("");
+    // } else if (Error == EALREADY) {
+    //     /* Operation already in progress */
+    //     throw Exception::SystemExceptionE<EALREADY>("");
+    // } else if (Error == ENOTSOCK) {
+    //     /* Socket operation on non-socket */
+    //     throw Exception::SystemExceptionE<ENOTSOCK>("");
+    // } else if (Error == EDESTADDRREQ) {
+    //     /* Destination address required */
+    //     throw Exception::SystemExceptionE<EDESTADDRREQ>("");
+    // } else if (Error == EMSGSIZE) {
+    //     /* Message too long */
+    //     throw Exception::SystemExceptionE<EMSGSIZE>("");
+    // } else if (Error == EPROTOTYPE) {
+    //     /* Protocol wrong type for socket */
+    //     throw Exception::SystemExceptionE<EPROTOTYPE>("");
+    // } else if (Error == ENOPROTOOPT) {
+    //     /* Protocol not available */
+    //     throw Exception::SystemExceptionE<ENOPROTOOPT>("");
+    // } else if (Error == EPROTONOSUPPORT) {
+    //     /* Protocol not supported */
+    //     throw Exception::SystemExceptionE<EPROTONOSUPPORT>("");
+    // } else if (Error == ESOCKTNOSUPPORT) {
+    //     /* Socket type not supported */
+    //     throw Exception::SystemExceptionE<ESOCKTNOSUPPORT>("");
+    // } else if (Error == ENOTSUP) {
+    //     /* Operation not supported */
+    //     throw Exception::SystemExceptionE<ENOTSUP>("");
+    // } else if (Error == EPFNOSUPPORT) {
+    //     /* Protocol family not supported */
+    //     throw Exception::SystemExceptionE<EPFNOSUPPORT>("");
+    // } else if (Error == EAFNOSUPPORT) {
+    //     /* Address family not supported by protocol family */
+    //     throw Exception::SystemExceptionE<EAFNOSUPPORT>("");
+    // } else if (Error == EADDRINUSE) {
+    //     /* Address already in use */
+    //     throw Exception::SystemExceptionE<EADDRINUSE>("");
+    // } else if (Error == EADDRNOTAVAIL) {
+    //     /* Can't assign requested address */
+    //     throw Exception::SystemExceptionE<EADDRNOTAVAIL>("");
+    // } else if (Error == ENETDOWN) {
+    //     /* Network is down */
+    //     throw Exception::SystemExceptionE<ENETDOWN>("");
+    // } else if (Error == ENETUNREACH) {
+    //     /* Network is unreachable */
+    //     throw Exception::SystemExceptionE<ENETUNREACH>("");
+    // } else if (Error == ENETRESET) {
+    //     /* Network dropped connection on reset */
+    //     throw Exception::SystemExceptionE<ENETRESET>("");
+    // } else if (Error == ECONNABORTED) {
+    //     /* Software caused connection abort */
+    //     throw Exception::SystemExceptionE<ECONNABORTED>("");
+    // } else if (Error == ECONNRESET) {
+    //     /* Connection reset by peer */
+    //     throw Exception::SystemExceptionE<ECONNRESET>("");
+    // } else if (Error == ENOBUFS) {
+    //     /* No buffer space available */
+    //     throw Exception::SystemExceptionE<ENOBUFS>("");
+    // } else if (Error == EISCONN) {
+    //     /* Socket is already connected */
+    //     throw Exception::SystemExceptionE<EISCONN>("");
+    // } else if (Error == ENOTCONN) {
+    //     /* Socket is not connected */
+    //     throw Exception::SystemExceptionE<ENOTCONN>("");
+    // } else if (Error == ESHUTDOWN) {
+    //     /* Can't send after socket shutdown */
+    //     throw Exception::SystemExceptionE<ESHUTDOWN>("");
+    // } else if (Error == ETOOMANYREFS) {
+    //     /* Too many references: can't splice */
+    //     throw Exception::SystemExceptionE<ETOOMANYREFS>("");
+    // } else if (Error == ETIMEDOUT) {
+    //     /* Operation timed out */
+    //     throw Exception::SystemExceptionE<ETIMEDOUT>("");
+    // } else if (Error == ECONNREFUSED) {
+    //     /* Connection refused */
+    //     throw Exception::SystemExceptionE<ECONNREFUSED>("");
+    // } else if (Error == ELOOP) {
+    //     /* Too many levels of symbolic links */
+    //     throw Exception::SystemExceptionE<ELOOP>("");
+    // } else if (Error == ENAMETOOLONG) {
+    //     /* File name too long */
+    //     throw Exception::SystemExceptionE<ENAMETOOLONG>("");
+    // } else if (Error == EHOSTDOWN) {
+    //     /* Host is down */
+    //     throw Exception::SystemExceptionE<EHOSTDOWN>("");
+    // } else if (Error == EHOSTUNREACH) {
+    //     /* No route to host */
+    //     throw Exception::SystemExceptionE<EHOSTUNREACH>("");
+    // } else if (Error == ENOTEMPTY) {
+    //     /* Directory not empty */
+    //     throw Exception::SystemExceptionE<ENOTEMPTY>("");
+    // } else if (Error == EPROCLIM) {
+    //     /* Too many processes */
+    //     throw Exception::SystemExceptionE<EPROCLIM>("");
+    // } else if (Error == EUSERS) {
+    //     /* Too many users */
+    //     throw Exception::SystemExceptionE<EUSERS>("");
+    // } else if (Error == EDQUOT) {
+    //     /* Disc quota exceeded */
+    //     throw Exception::SystemExceptionE<EDQUOT>("");
+    // } else if (Error == ESTALE) {
+    //     /* Stale NFS file handle */
+    //     throw Exception::SystemExceptionE<ESTALE>("");
+    // } else if (Error == EREMOTE) {
+    //     /* Too many levels of remote in path */
+    //     throw Exception::SystemExceptionE<EREMOTE>("");
+    // } else if (Error == EBADRPC) {
+    //     /* RPC struct is bad */
+    //     throw Exception::SystemExceptionE<EBADRPC>("");
+    // } else if (Error == ERPCMISMATCH) {
+    //     /* RPC version wrong */
+    //     throw Exception::SystemExceptionE<ERPCMISMATCH>("");
+    // } else if (Error == EPROGUNAVAIL) {
+    //     /* RPC prog. not avail */
+    //     throw Exception::SystemExceptionE<EPROGUNAVAIL>("");
+    // } else if (Error == EPROGMISMATCH) {
+    //     /* Program version wrong */
+    //     throw Exception::SystemExceptionE<EPROGMISMATCH>("");
+    // } else if (Error == EPROCUNAVAIL) {
+    //     /* Bad procedure for program */
+    //     throw Exception::SystemExceptionE<EPROCUNAVAIL>("");
+    // } else if (Error == ENOLCK) {
+    //     /* No locks available */
+    //     throw Exception::SystemExceptionE<ENOLCK>("");
+    // } else if (Error == ENOSYS) {
+    //     /* Function not implemented */
+    //     throw Exception::SystemExceptionE<ENOSYS>("");
+    // } else if (Error == EFTYPE) {
+    //     /* Inappropriate file type or format */
+    //     throw Exception::SystemExceptionE<EFTYPE>("");
+    // } else if (Error == EAUTH) {
+    //     /* Authentication error */
+    //     throw Exception::SystemExceptionE<EAUTH>("");
+    // } else if (Error == ENEEDAUTH) {
+    //     /* Need authenticator */
+    //     throw Exception::SystemExceptionE<ENEEDAUTH>("");
+    // } else if (Error == EPWROFF) {
+    //     /* Device power is off */
+    //     throw Exception::SystemExceptionE<EPWROFF>("");
+    // } else if (Error == EDEVERR) {
+    //     /* Device error, e.g. paper out */
+    //     throw Exception::SystemExceptionE<EDEVERR>("");
+    // } else if (Error == EOVERFLOW) {
+    //     /* Value too large to be stored in data type */
+    //     throw Exception::SystemExceptionE<EOVERFLOW>("");
+    // } else if (Error == EBADEXEC) {
+    //     /* Bad executable */
+    //     throw Exception::SystemExceptionE<EBADEXEC>("");
+    // } else if (Error == EBADARCH) {
+    //     /* Bad CPU type in executable */
+    //     throw Exception::SystemExceptionE<EBADARCH>("");
+    // } else if (Error == ESHLIBVERS) {
+    //     /* Shared library version mismatch */
+    //     throw Exception::SystemExceptionE<ESHLIBVERS>("");
+    // } else if (Error == EBADMACHO) {
+    //     /* Malformed Macho file */
+    //     throw Exception::SystemExceptionE<EBADMACHO>("");
+    // } else if (Error == ECANCELED) {
+    //     /* Operation canceled */
+    //     throw Exception::SystemExceptionE<ECANCELED>("");
+    // } else if (Error == EIDRM) {
+    //     /* Identifier removed */
+    //     throw Exception::SystemExceptionE<EIDRM>("");
+    // } else if (Error == ENOMSG) {
+    //     /* No message of desired type */
+    //     throw Exception::SystemExceptionE<ENOMSG>("");
+    // } else if (Error == EILSEQ) {
+    //     /* Illegal byte sequence */
+    //     throw Exception::SystemExceptionE<EILSEQ>("");
+    // } else if (Error == ENOATTR) {
+    //     /* Attribute not found */
+    //     throw Exception::SystemExceptionE<ENOATTR>("");
+    // } else if (Error == EBADMSG) {
+    //     /* Bad message */
+    //     throw Exception::SystemExceptionE<EBADMSG>("");
+    // } else if (Error == EMULTIHOP) {
+    //     /* Reserved */
+    //     throw Exception::SystemExceptionE<EMULTIHOP>("");
+    // } else if (Error == ENODATA) {
+    //     /* No message available on STREAM */
+    //     throw Exception::SystemExceptionE<ENODATA>("");
+    // } else if (Error == ENOLINK) {
+    //     /* Reserved */
+    //     throw Exception::SystemExceptionE<ENOLINK>("");
+    // } else if (Error == ENOSR) {
+    //     /* No STREAM resources */
+    //     throw Exception::SystemExceptionE<ENOSR>("");
+    // } else if (Error == ENOSTR) {
+    //     /* Not a STREAM */
+    //     throw Exception::SystemExceptionE<ENOSTR>("");
+    // } else if (Error == EPROTO) {
+    //     /* Protocol error */
+    //     throw Exception::SystemExceptionE<EPROTO>("");
+    // } else if (Error == ETIME) {
+    //     /* STREAM ioctl timeout */
+    //     throw Exception::SystemExceptionE<ETIME>("");
+    // } else if (Error == EOPNOTSUPP) {
+    //     /* Operation not supported on socket */
+    //     throw Exception::SystemExceptionE<EOPNOTSUPP>("");
+    // } else if (Error == ENOPOLICY) {
+    //     /* No such policy registered */
+    //     throw Exception::SystemExceptionE<ENOPOLICY>("");
+    // } else if (Error == ENOTRECOVERABLE) {
+    //     /* State not recoverable */
+    //     throw Exception::SystemExceptionE<ENOTRECOVERABLE>("");
+    // } else if (Error == EOWNERDEAD) {
+    //     /* Previous owner died */
+    //     throw Exception::SystemExceptionE<EOWNERDEAD>("");
+    // } else if (Error == EQFULL) {
+    //     /* Interface output queue is full */
+    //     throw Exception::SystemExceptionE<EQFULL>("");
+    // } else if (Error == ELAST) {
+    //     /* Must be equal largest errno */
+    //     throw Exception::SystemExceptionE<ELAST>("");
+    // } else {
+    //     std::stringstream ss;
+    //     ss << "Unspecfied error with errno"  << Error;
+    //     throw Exception::SystemExceptionE<0>(ss.str());
+    // }
+
     if (Error == ENOENT) {
         /* No such file or directory */
-        return Exception::SystemExceptionENOENT("");
+        throw Exception::SystemExceptionENOENT("");
     } else if (Error == ESRCH) {
         /* No such process */
-        return Exception::SystemExceptionESRCH("");
+        throw Exception::SystemExceptionESRCH("");
     } else if (Error == EINTR) {
         /* Interrupted system call */
-        return Exception::SystemExceptionEINTR("");
+        throw Exception::SystemExceptionEINTR("");
     } else if (Error == EIO) {
         /* Input/output error */
-        return Exception::SystemExceptionEIO("");
+        throw Exception::SystemExceptionEIO("");
     } else if (Error == ENXIO) {
         /* Device not configured */
-        return Exception::SystemExceptionENXIO("");
+        throw Exception::SystemExceptionENXIO("");
     } else if (Error == E2BIG) {
         /* Argument list too long */
-        return Exception::SystemExceptionE2BIG("");
+        throw Exception::SystemExceptionE2BIG("");
     } else if (Error == ENOEXEC) {
         /* Exec format error */
-        return Exception::SystemExceptionENOEXEC("");
+        throw Exception::SystemExceptionENOEXEC("");
     } else if (Error == EBADF) {
         /* Bad file descriptor */
-        return Exception::SystemExceptionEBADF("");
+        throw Exception::SystemExceptionEBADF("");
     } else if (Error == ECHILD) {
         /* No child processes */
-        return Exception::SystemExceptionECHILD("");
+        throw Exception::SystemExceptionECHILD("");
     } else if (Error == EDEADLK) {
         /* Resource deadlock avoided */
-        return Exception::SystemExceptionEDEADLK("");
+        throw Exception::SystemExceptionEDEADLK("");
     } else if (Error == ENOMEM) {
         /* Cannot allocate memory */
-        return Exception::SystemExceptionENOMEM("");
+        throw Exception::SystemExceptionENOMEM("");
     } else if (Error == EACCES) {
         /* Permission denied */
-        return Exception::SystemExceptionEACCES("");
+        throw Exception::SystemExceptionEACCES("");
     } else if (Error == EFAULT) {
         /* Bad address */
-        return Exception::SystemExceptionEFAULT("");
+        throw Exception::SystemExceptionEFAULT("");
     } else if (Error == ENOTBLK) {
         /* Block device required */
-        return Exception::SystemExceptionENOTBLK("");
+        throw Exception::SystemExceptionENOTBLK("");
     } else if (Error == EBUSY) {
         /* Device / Resource busy */
-        return Exception::SystemExceptionEBUSY("");
+        throw Exception::SystemExceptionEBUSY("");
     } else if (Error == EEXIST) {
         /* File exists */
-        return Exception::SystemExceptionEEXIST("");
+        throw Exception::SystemExceptionEEXIST("");
     } else if (Error == EXDEV) {
         /* Cross-device link */
-        return Exception::SystemExceptionEXDEV("");
+        throw Exception::SystemExceptionEXDEV("");
     } else if (Error == ENODEV) {
         /* Operation not supported by device */
-        return Exception::SystemExceptionENODEV("");
+        throw Exception::SystemExceptionENODEV("");
     } else if (Error == ENOTDIR) {
         /* Not a directory */
-        return Exception::SystemExceptionENOTDIR("");
+        throw Exception::SystemExceptionENOTDIR("");
     } else if (Error == EISDIR) {
         /* Is a directory */
-        return Exception::SystemExceptionEISDIR("");
+        throw Exception::SystemExceptionEISDIR("");
     } else if (Error == EINVAL) {
         /* Invalid argument */
-        return Exception::SystemExceptionEINVAL("");
+        throw Exception::SystemExceptionEINVAL("");
     } else if (Error == ENFILE) {
         /* Too many open files in system */
-        return Exception::SystemExceptionENFILE("");
+        throw Exception::SystemExceptionENFILE("");
     } else if (Error == EMFILE) {
         /* Too many open files */
-        return Exception::SystemExceptionEMFILE("");
+        throw Exception::SystemExceptionEMFILE("");
     } else if (Error == ENOTTY) {
         /* Inappropriate ioctl for device */
-        return Exception::SystemExceptionENOTTY("");
+        throw Exception::SystemExceptionENOTTY("");
     } else if (Error == ETXTBSY) {
         /* Text file busy */
-        return Exception::SystemExceptionETXTBSY("");
+        throw Exception::SystemExceptionETXTBSY("");
     } else if (Error == EFBIG) {
         /* File too large */
-        return Exception::SystemExceptionEFBIG("");
+        throw Exception::SystemExceptionEFBIG("");
     } else if (Error == ENOSPC) {
         /* No space left on device */
-        return Exception::SystemExceptionENOSPC("");
+        throw Exception::SystemExceptionENOSPC("");
     } else if (Error == ESPIPE) {
         /* Illegal seek */
-        return Exception::SystemExceptionESPIPE("");
+        throw Exception::SystemExceptionESPIPE("");
     } else if (Error == EROFS) {
         /* Read-only file system */
-        return Exception::SystemExceptionEROFS("");
+        throw Exception::SystemExceptionEROFS("");
     } else if (Error == EMLINK) {
         /* Too many links */
-        return Exception::SystemExceptionEMLINK("");
+        throw Exception::SystemExceptionEMLINK("");
     } else if (Error == EPIPE) {
         /* Broken pipe */
-        return Exception::SystemExceptionEPIPE("");
+        throw Exception::SystemExceptionEPIPE("");
     } else if (Error == EDOM) {
         /* Numerical argument out of domain */
-        return Exception::SystemExceptionEDOM("");
+        throw Exception::SystemExceptionEDOM("");
     } else if (Error == ERANGE) {
         /* Result too large */
-        return Exception::SystemExceptionERANGE("");
+        throw Exception::SystemExceptionERANGE("");
     } else if (Error == EAGAIN) {
         /* Resource temporarily unavailable */
-        return Exception::SystemExceptionEAGAIN("");
+        throw Exception::SystemExceptionEAGAIN("");
     } else if (Error == EWOULDBLOCK) {
         /* Operation would block */
-        return Exception::SystemExceptionEWOULDBLOCK("");
+        throw Exception::SystemExceptionEWOULDBLOCK("");
     } else if (Error == EINPROGRESS) {
         /* Operation now in progress */
-        return Exception::SystemExceptionEINPROGRESS("");
+        throw Exception::SystemExceptionEINPROGRESS("");
     } else if (Error == EALREADY) {
         /* Operation already in progress */
-        return Exception::SystemExceptionEALREADY("");
+        throw Exception::SystemExceptionEALREADY("");
     } else if (Error == ENOTSOCK) {
         /* Socket operation on non-socket */
-        return Exception::SystemExceptionENOTSOCK("");
+        throw Exception::SystemExceptionENOTSOCK("");
     } else if (Error == EDESTADDRREQ) {
         /* Destination address required */
-        return Exception::SystemExceptionEDESTADDRREQ("");
+        throw Exception::SystemExceptionEDESTADDRREQ("");
     } else if (Error == EMSGSIZE) {
         /* Message too long */
-        return Exception::SystemExceptionEMSGSIZE("");
+        throw Exception::SystemExceptionEMSGSIZE("");
     } else if (Error == EPROTOTYPE) {
         /* Protocol wrong type for socket */
-        return Exception::SystemExceptionEPROTOTYPE("");
+        throw Exception::SystemExceptionEPROTOTYPE("");
     } else if (Error == ENOPROTOOPT) {
         /* Protocol not available */
-        return Exception::SystemExceptionENOPROTOOPT("");
+        throw Exception::SystemExceptionENOPROTOOPT("");
     } else if (Error == EPROTONOSUPPORT) {
         /* Protocol not supported */
-        return Exception::SystemExceptionEPROTONOSUPPORT("");
+        throw Exception::SystemExceptionEPROTONOSUPPORT("");
     } else if (Error == ESOCKTNOSUPPORT) {
         /* Socket type not supported */
-        return Exception::SystemExceptionESOCKTNOSUPPORT("");
+        throw Exception::SystemExceptionESOCKTNOSUPPORT("");
     } else if (Error == ENOTSUP) {
         /* Operation not supported */
-        return Exception::SystemExceptionENOTSUP("");
+        throw Exception::SystemExceptionENOTSUP("");
     } else if (Error == EPFNOSUPPORT) {
         /* Protocol family not supported */
-        return Exception::SystemExceptionEPFNOSUPPORT("");
+        throw Exception::SystemExceptionEPFNOSUPPORT("");
     } else if (Error == EAFNOSUPPORT) {
         /* Address family not supported by protocol family */
-        return Exception::SystemExceptionEAFNOSUPPORT("");
+        throw Exception::SystemExceptionEAFNOSUPPORT("");
     } else if (Error == EADDRINUSE) {
         /* Address already in use */
-        return Exception::SystemExceptionEADDRINUSE("");
+        throw Exception::SystemExceptionEADDRINUSE("");
     } else if (Error == EADDRNOTAVAIL) {
         /* Can't assign requested address */
-        return Exception::SystemExceptionEADDRNOTAVAIL("");
+        throw Exception::SystemExceptionEADDRNOTAVAIL("");
     } else if (Error == ENETDOWN) {
         /* Network is down */
-        return Exception::SystemExceptionENETDOWN("");
+        throw Exception::SystemExceptionENETDOWN("");
     } else if (Error == ENETUNREACH) {
         /* Network is unreachable */
-        return Exception::SystemExceptionENETUNREACH("");
+        throw Exception::SystemExceptionENETUNREACH("");
     } else if (Error == ENETRESET) {
         /* Network dropped connection on reset */
-        return Exception::SystemExceptionENETRESET("");
+        throw Exception::SystemExceptionENETRESET("");
     } else if (Error == ECONNABORTED) {
         /* Software caused connection abort */
-        return Exception::SystemExceptionECONNABORTED("");
+        throw Exception::SystemExceptionECONNABORTED("");
     } else if (Error == ECONNRESET) {
         /* Connection reset by peer */
-        return Exception::SystemExceptionECONNRESET("");
+        throw Exception::SystemExceptionECONNRESET("");
     } else if (Error == ENOBUFS) {
         /* No buffer space available */
-        return Exception::SystemExceptionENOBUFS("");
+        throw Exception::SystemExceptionENOBUFS("");
     } else if (Error == EISCONN) {
         /* Socket is already connected */
-        return Exception::SystemExceptionEISCONN("");
+        throw Exception::SystemExceptionEISCONN("");
     } else if (Error == ENOTCONN) {
         /* Socket is not connected */
-        return Exception::SystemExceptionENOTCONN("");
+        throw Exception::SystemExceptionENOTCONN("");
     } else if (Error == ESHUTDOWN) {
         /* Can't send after socket shutdown */
-        return Exception::SystemExceptionESHUTDOWN("");
+        throw Exception::SystemExceptionESHUTDOWN("");
     } else if (Error == ETOOMANYREFS) {
         /* Too many references: can't splice */
-        return Exception::SystemExceptionETOOMANYREFS("");
+        throw Exception::SystemExceptionETOOMANYREFS("");
     } else if (Error == ETIMEDOUT) {
         /* Operation timed out */
-        return Exception::SystemExceptionETIMEDOUT("");
+        throw Exception::SystemExceptionETIMEDOUT("");
     } else if (Error == ECONNREFUSED) {
         /* Connection refused */
-        return Exception::SystemExceptionECONNREFUSED("");
+        throw Exception::SystemExceptionECONNREFUSED("");
     } else if (Error == ELOOP) {
         /* Too many levels of symbolic links */
-        return Exception::SystemExceptionELOOP("");
+        throw Exception::SystemExceptionELOOP("");
     } else if (Error == ENAMETOOLONG) {
         /* File name too long */
-        return Exception::SystemExceptionENAMETOOLONG("");
+        throw Exception::SystemExceptionENAMETOOLONG("");
     } else if (Error == EHOSTDOWN) {
         /* Host is down */
-        return Exception::SystemExceptionEHOSTDOWN("");
+        throw Exception::SystemExceptionEHOSTDOWN("");
     } else if (Error == EHOSTUNREACH) {
         /* No route to host */
-        return Exception::SystemExceptionEHOSTUNREACH("");
+        throw Exception::SystemExceptionEHOSTUNREACH("");
     } else if (Error == ENOTEMPTY) {
         /* Directory not empty */
-        return Exception::SystemExceptionENOTEMPTY("");
+        throw Exception::SystemExceptionENOTEMPTY("");
     } else if (Error == EPROCLIM) {
         /* Too many processes */
-        return Exception::SystemExceptionEPROCLIM("");
+        throw Exception::SystemExceptionEPROCLIM("");
     } else if (Error == EUSERS) {
         /* Too many users */
-        return Exception::SystemExceptionEUSERS("");
+        throw Exception::SystemExceptionEUSERS("");
     } else if (Error == EDQUOT) {
         /* Disc quota exceeded */
-        return Exception::SystemExceptionEDQUOT("");
+        throw Exception::SystemExceptionEDQUOT("");
     } else if (Error == ESTALE) {
         /* Stale NFS file handle */
-        return Exception::SystemExceptionESTALE("");
+        throw Exception::SystemExceptionESTALE("");
     } else if (Error == EREMOTE) {
         /* Too many levels of remote in path */
-        return Exception::SystemExceptionEREMOTE("");
+        throw Exception::SystemExceptionEREMOTE("");
     } else if (Error == EBADRPC) {
         /* RPC struct is bad */
-        return Exception::SystemExceptionEBADRPC("");
+        throw Exception::SystemExceptionEBADRPC("");
     } else if (Error == ERPCMISMATCH) {
         /* RPC version wrong */
-        return Exception::SystemExceptionERPCMISMATCH("");
+        throw Exception::SystemExceptionERPCMISMATCH("");
     } else if (Error == EPROGUNAVAIL) {
         /* RPC prog. not avail */
-        return Exception::SystemExceptionEPROGUNAVAIL("");
+        throw Exception::SystemExceptionEPROGUNAVAIL("");
     } else if (Error == EPROGMISMATCH) {
         /* Program version wrong */
-        return Exception::SystemExceptionEPROGMISMATCH("");
+        throw Exception::SystemExceptionEPROGMISMATCH("");
     } else if (Error == EPROCUNAVAIL) {
         /* Bad procedure for program */
-        return Exception::SystemExceptionEPROCUNAVAIL("");
+        throw Exception::SystemExceptionEPROCUNAVAIL("");
     } else if (Error == ENOLCK) {
         /* No locks available */
-        return Exception::SystemExceptionENOLCK("");
+        throw Exception::SystemExceptionENOLCK("");
     } else if (Error == ENOSYS) {
         /* Function not implemented */
-        return Exception::SystemExceptionENOSYS("");
+        throw Exception::SystemExceptionENOSYS("");
     } else if (Error == EFTYPE) {
         /* Inappropriate file type or format */
-        return Exception::SystemExceptionEFTYPE("");
+        throw Exception::SystemExceptionEFTYPE("");
     } else if (Error == EAUTH) {
         /* Authentication error */
-        return Exception::SystemExceptionEAUTH("");
+        throw Exception::SystemExceptionEAUTH("");
     } else if (Error == ENEEDAUTH) {
         /* Need authenticator */
-        return Exception::SystemExceptionENEEDAUTH("");
+        throw Exception::SystemExceptionENEEDAUTH("");
     } else if (Error == EPWROFF) {
         /* Device power is off */
-        return Exception::SystemExceptionEPWROFF("");
+        throw Exception::SystemExceptionEPWROFF("");
     } else if (Error == EDEVERR) {
         /* Device error, e.g. paper out */
-        return Exception::SystemExceptionEDEVERR("");
+        throw Exception::SystemExceptionEDEVERR("");
     } else if (Error == EOVERFLOW) {
         /* Value too large to be stored in data type */
-        return Exception::SystemExceptionEOVERFLOW("");
+        throw Exception::SystemExceptionEOVERFLOW("");
     } else if (Error == EBADEXEC) {
         /* Bad executable */
-        return Exception::SystemExceptionEBADEXEC("");
+        throw Exception::SystemExceptionEBADEXEC("");
     } else if (Error == EBADARCH) {
         /* Bad CPU type in executable */
-        return Exception::SystemExceptionEBADARCH("");
+        throw Exception::SystemExceptionEBADARCH("");
     } else if (Error == ESHLIBVERS) {
         /* Shared library version mismatch */
-        return Exception::SystemExceptionESHLIBVERS("");
+        throw Exception::SystemExceptionESHLIBVERS("");
     } else if (Error == EBADMACHO) {
         /* Malformed Macho file */
-        return Exception::SystemExceptionEBADMACHO("");
+        throw Exception::SystemExceptionEBADMACHO("");
     } else if (Error == ECANCELED) {
         /* Operation canceled */
-        return Exception::SystemExceptionECANCELED("");
+        throw Exception::SystemExceptionECANCELED("");
     } else if (Error == EIDRM) {
         /* Identifier removed */
-        return Exception::SystemExceptionEIDRM("");
+        throw Exception::SystemExceptionEIDRM("");
     } else if (Error == ENOMSG) {
         /* No message of desired type */
-        return Exception::SystemExceptionENOMSG("");
+        throw Exception::SystemExceptionENOMSG("");
     } else if (Error == EILSEQ) {
         /* Illegal byte sequence */
-        return Exception::SystemExceptionEILSEQ("");
+        throw Exception::SystemExceptionEILSEQ("");
     } else if (Error == ENOATTR) {
         /* Attribute not found */
-        return Exception::SystemExceptionENOATTR("");
+        throw Exception::SystemExceptionENOATTR("");
     } else if (Error == EBADMSG) {
         /* Bad message */
-        return Exception::SystemExceptionEBADMSG("");
+        throw Exception::SystemExceptionEBADMSG("");
     } else if (Error == EMULTIHOP) {
         /* Reserved */
-        return Exception::SystemExceptionEMULTIHOP("");
+        throw Exception::SystemExceptionEMULTIHOP("");
     } else if (Error == ENODATA) {
         /* No message available on STREAM */
-        return Exception::SystemExceptionENODATA("");
+        throw Exception::SystemExceptionENODATA("");
     } else if (Error == ENOLINK) {
         /* Reserved */
-        return Exception::SystemExceptionENOLINK("");
+        throw Exception::SystemExceptionENOLINK("");
     } else if (Error == ENOSR) {
         /* No STREAM resources */
-        return Exception::SystemExceptionENOSR("");
+        throw Exception::SystemExceptionENOSR("");
     } else if (Error == ENOSTR) {
         /* Not a STREAM */
-        return Exception::SystemExceptionENOSTR("");
+        throw Exception::SystemExceptionENOSTR("");
     } else if (Error == EPROTO) {
         /* Protocol error */
-        return Exception::SystemExceptionEPROTO("");
+        throw Exception::SystemExceptionEPROTO("");
     } else if (Error == ETIME) {
         /* STREAM ioctl timeout */
-        return Exception::SystemExceptionETIME("");
+        throw Exception::SystemExceptionETIME("");
     } else if (Error == EOPNOTSUPP) {
         /* Operation not supported on socket */
-        return Exception::SystemExceptionEOPNOTSUPP("");
+        throw Exception::SystemExceptionEOPNOTSUPP("");
     } else if (Error == ENOPOLICY) {
         /* No such policy registered */
-        return Exception::SystemExceptionENOPOLICY("");
+        throw Exception::SystemExceptionENOPOLICY("");
     } else if (Error == ENOTRECOVERABLE) {
         /* State not recoverable */
-        return Exception::SystemExceptionENOTRECOVERABLE("");
+        throw Exception::SystemExceptionENOTRECOVERABLE("");
     } else if (Error == EOWNERDEAD) {
         /* Previous owner died */
-        return Exception::SystemExceptionEOWNERDEAD("");
+        throw Exception::SystemExceptionEOWNERDEAD("");
     } else if (Error == EQFULL) {
         /* Interface output queue is full */
-        return Exception::SystemExceptionEQFULL("");
+        throw Exception::SystemExceptionEQFULL("");
     } else if (Error == ELAST) {
         /* Must be equal largest errno */
-        return Exception::SystemExceptionELAST("");
+        throw Exception::SystemExceptionELAST("");
     } else {
-        return MsgException("Unspecfied error");
+        std::stringstream ss;
+        ss << "Unspecfied error with errno"  << Error;
+        throw Exception::SystemException(ss.str());
     }
 }
 }
