@@ -39,7 +39,7 @@ class SocketFileDescriptor {
     /**
      * @brief      Sets the files descriptor for the object
      *
-     * @param[in]  set   a UINT representing the socket
+     * @param  set   a UINT representing the socket
      *
      * @return     return true if the socket is sucessfully set
      */

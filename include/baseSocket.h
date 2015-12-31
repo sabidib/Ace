@@ -39,10 +39,10 @@ class baseSocket {
     /**
      * @brief      Initializes a socket according to the given parameters
      *
-     * @param[in]  IPAddress  The ip address of the socket
-     * @param[in]  port       The port address of the socket
-     * @param[in]  type       The type of socket as defined in "sys/socket.h"
-     * @param[in]  family     The family of socket as defined in "sys/socket.h"
+     * @param  IPAddress  The ip address of the socket
+     * @param  port       The port address of the socket
+     * @param  type       The type of socket as defined in "sys/socket.h"
+     * @param  family     The family of socket as defined in "sys/socket.h"
      * @throws   MsgException Throws an exception if any of the parameters are
      * invalid.
      */
@@ -51,7 +51,7 @@ class baseSocket {
     /**
      * @brief      Initializes a socket according to a SocketStructure object.
      *
-     * @param[in]  serverInfo  a valid SocketStructure object.
+     * @param  serverInfo  a valid SocketStructure object.
      */
     baseSocket(SocketStructure serverInfo);
 
@@ -108,14 +108,14 @@ class baseSocket {
     /**
      * @brief      Sets the file descriptor for the socket
      *
-     * @param[in]  socketFileDescriptor  a valid socket file descriptor.
+     * @param  socketFileDescriptor  a valid socket file descriptor.
      */
     void setSocketDescriptor(SocketFileDescriptor socketFileDescriptor);
 
     /**
      * @brief      Sets the socket structure for this socket.
      *
-     * @param[in]  socketInfo  a valid SocketStructure object.
+     * @param  socketInfo  a valid SocketStructure object.
      */
     void setSocketStructure(SocketStructure socketInfo);
 

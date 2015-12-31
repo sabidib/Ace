@@ -43,9 +43,9 @@ class baseDataBuffer {
      * set to true, then the object will delete the data on destruction of
      * of the object. If it is set to false, then it is the responsibility
      * of the caller to delete the object.
-     * @param[in]  datas        A pointer to the data.
-     * @param[in]  len          The length of the data in bytes.
-     * @param[in]  doesOwnData  Whether the object owns the data or not.
+     * @param  datas        A pointer to the data.
+     * @param  len          The length of the data in bytes.
+     * @param  doesOwnData  Whether the object owns the data or not.
      */
     baseDataBuffer(char* datas, UINT len, bool doesOwnData = false);
     /**
@@ -53,7 +53,7 @@ class baseDataBuffer {
      * in the datas std::string. This implicitly assigns ownership of
      * the copied string to the object.
      *
-     * @param[in]  datas  A string of the data to store.
+     * @param  datas  A string of the data to store.
      */
     baseDataBuffer(std::string datas);
 
@@ -82,9 +82,9 @@ class baseDataBuffer {
      * destruction of the object. If it is set to false, then it is the
      * responsibility of the caller to delete the object.
      *
-     * @param[in]  DataArray  A pointer to the data.
-     * @param[in]  len        The length of the data in bytes.
-     * @param[in]  doesOwnData  Whether the object owns the data or not.
+     * @param  DataArray  A pointer to the data.
+     * @param  len        The length of the data in bytes.
+     * @param  doesOwnData  Whether the object owns the data or not.
      *
      * @return     returns the size of the buffer.
      */
@@ -95,7 +95,7 @@ class baseDataBuffer {
      * in the data std::string. This implicitly assigned ownership of
      * the copied string to the object.
      *
-     * @param[in]  data  the std::string containing the data.
+     * @param  data  the std::string containing the data.
      *
      * @return     returns the size of the buffer
      */

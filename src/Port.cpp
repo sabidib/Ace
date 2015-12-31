@@ -58,4 +58,16 @@ void Port::setPortS(std::string stringPort) {
     }
     m_portNumberN = res;
 }
+
+
+    bool Port::operator==(const Port& other) const {
+        return this->m_portNumberN == other.m_portNumberN;
+    }
+
+
+
+    bool Port::operator!=(const Port& other) const { return !(*this == other); }
+
+
+
 }

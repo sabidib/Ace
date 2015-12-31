@@ -69,12 +69,12 @@ TEST(testCreateSocket)
 
 
 
-testSocketInfo->SetInfo(IP6,Port1,Family1, Type1);
-testSocket->SetSocketInfo(*testSocketInfo);
-INT result1 = test->CreateSocket(*testSocket);
-CHECK_EQUAL(true, result1);
-CHECK( testSocket->GetSocket() != DEFAULT_SOCKET);
-CHECK( testSocket->GetSocket() > -1);
+    testSocketInfo->SetInfo(IP6,Port1,Family1, Type1);
+    testSocket->SetSocketInfo(*testSocketInfo);
+    INT result1 = test->CreateSocket(*testSocket);
+    CHECK_EQUAL(true, result1);
+    CHECK( testSocket->GetSocket() != DEFAULT_SOCKET);
+    CHECK( testSocket->GetSocket() > -1);
 
 
 

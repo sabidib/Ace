@@ -78,9 +78,9 @@ class Client : baseGateway {
      * baseGateway::receiveData().
      *
      *
-     * @param[in]  lenToAccept  The length in bytes of data to accept if not set
+     * @param  lenToAccept  The length in bytes of data to accept if not set
      * lentToAccept = 256
-     * @param[in]  flags        Any flags to be used.  if not set flags = 0
+     * @param  flags        Any flags to be used.  if not set flags = 0
      *
      * @return     A pointer to a baseDataBuffer containing the received data.
      *
@@ -98,8 +98,8 @@ class Client : baseGateway {
      * may block if the send buffer is full. This function makes use of
      * baseGateway::sendData().
      *
-     * @param[in]  data   The data to send.
-     * @param[in]  flags  Any flags to set, if not set flags = 0
+     * @param  data   The data to send.
+     * @param  flags  Any flags to set, if not set flags = 0
      *
      * @return     returns the number of bytes sent by the socket.
      *
@@ -115,8 +115,8 @@ class Client : baseGateway {
      * This call may block if the send buffer is full. This function makes
      * use of baseGateway::sendData().
      *
-     * @param[in]  data   The data buffer to send.
-     * @param[in]  flags  Any flags to set, if not set flags = 0
+     * @param  data   The data buffer to send.
+     * @param  flags  Any flags to set, if not set flags = 0
      *
      * @return     returns the number of bytes sent by the socket.
      *
@@ -145,7 +145,7 @@ class Client : baseGateway {
      *  data in the baseDataBuffer. This functions calls Client::send() and then
      *  baseGateway::closeSocket()
      *
-     * @param[in] DataToSend The baseDataBuffer to send to the socket.
+     * @param DataToSend The baseDataBuffer to send to the socket.
      *
      * @return   return true if the socket was successfully disconnected.
      *
@@ -160,7 +160,7 @@ class Client : baseGateway {
      *  data in the DataToSend string. This functions calls Client::send() and
      *  then baseGateway::closeSocket()
      *
-     * @param[in] DataToSend The std::string to send to the socket.
+     * @param DataToSend The std::string to send to the socket.
      *
      * @return   return true if the socket was successfully disconnected.
      *

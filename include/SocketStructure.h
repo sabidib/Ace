@@ -44,10 +44,10 @@ class SocketStructure {
     /**
      * @brief      Initializes the structure with the given parameters.
      *
-     * @param[in]  IPAddress  The ip address of the socket
-     * @param[in]  port       The port address of the socket
-     * @param[in]  type       The type of socket as defined in "sys/socket.h"
-     * @param[in]  family     The family of socket as defined in "sys/socket.h"
+     * @param  IPAddress  The ip address of the socket
+     * @param  port       The port address of the socket
+     * @param  type       The type of socket as defined in "sys/socket.h"
+     * @param  family     The family of socket as defined in "sys/socket.h"
      * @throws   MsgException Throws an exception if any of the parameters are
      * invalid.
      */
@@ -56,10 +56,10 @@ class SocketStructure {
     /**
      * @brief      Sets the structure of the socket to the given parameters
      *
-     * @param[in]  IPAddress  The ip address of the socket
-     * @param[in]  port       The port address of the socket
-     * @param[in]  type       The type of socket as defined in "sys/socket.h"
-     * @param[in]  family     The family of socket as defined in "sys/socket.h"
+     * @param  IPAddress  The ip address of the socket
+     * @param  port       The port address of the socket
+     * @param  type       The type of socket as defined in "sys/socket.h"
+     * @param  family     The family of socket as defined in "sys/socket.h"
      *
      * @throws   MsgException Throws an exception if any of the parameters are
      * invalid.
@@ -75,7 +75,7 @@ class SocketStructure {
     /**
      * @brief      Sets the port number of the structure
      *
-     * @param[in]  set   The port number to set.
+     * @param  set   The port number to set.
      * @throws   MsgException Throws an exception if the port number is invalid
      */
     void setPort(Port set);
@@ -83,7 +83,7 @@ class SocketStructure {
     /**
      * @brief      Sets the IP address of the structure
      *
-     * @param[in]  set   The IP address to set.
+     * @param  set   The IP address to set.
      * @throws   MsgExceptions Throws an exception if the IP address is invalid.
      */
     void setIP(IP set);
@@ -91,13 +91,13 @@ class SocketStructure {
     /**
      * @brief      Sets the family of the structure
      *
-     * @param[in]  set   The family to set.
+     * @param  set   The family to set.
      */
     void setFamily(UINT set);
     /**
      * @brief      Sets the type of the structure
      *
-     * @param[in]  set   The type to set.
+     * @param  set   The type to set.
      */
     void setType(UINT set);
 

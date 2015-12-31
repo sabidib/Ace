@@ -41,7 +41,7 @@ class baseGateway {
      * reconnected. This functions makes use of OS::_socket().
      *
      * @param      SocketToCreate  The reference to a valid socket to create.
-     * @param[in]  flags           any flags to use in connecting. If no flag is
+     * @param  flags           any flags to use in connecting. If no flag is
      * set then flags=0
      *
      * @return     returns true on successful creation.
@@ -128,7 +128,7 @@ class baseGateway {
      *
      * @param      SocketToSend  A reference valid socket to send data on.
      * @param      Data          A reference to a valid baseDataBuffer object.
-     * @param[in]  FLAGS         Any flags to set. If no flags are set then
+     * @param  FLAGS         Any flags to set. If no flags are set then
      * FLAGS=0
      *
      * @return     returns the number of bytes of data sent through the socket.
@@ -150,9 +150,9 @@ class baseGateway {
      *
      * @param      SocketToReceive  A reference to a valid socket to receive
      * data on
-     * @param[in]  lenToAccept      The amount of data to receive. If not set
+     * @param  lenToAccept      The amount of data to receive. If not set
      * then lenToAccept=0.
-     * @param[in]  flags            Any flags to set. IF not set then flags=0.
+     * @param  flags            Any flags to set. IF not set then flags=0.
      *
      * @return     return a baseDataBuffer object containing the received data.
      * It may also return nullptr if there is an error.
@@ -175,7 +175,7 @@ class baseGateway {
      * destroy the socket file descriptor.
      *
      * @param      SocketToClose  A reference to a valid socket.
-     * @param[in]  FLAGS          A flags to set for shutdown.
+     * @param  FLAGS          A flags to set for shutdown.
      *
      * @return     return true if the socket is successfully destroyed
      *

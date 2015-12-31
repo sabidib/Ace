@@ -36,7 +36,7 @@ class IP {
     /**
      * @brief      Constructor
      *
-     * @param[in]  ipAddress  A host order UINT representing the IP address.
+     * @param  ipAddress  A host order UINT representing the IP address.
      */
     IP(UINT ipAddress);
     IP(std::string ipAddress);
@@ -44,7 +44,7 @@ class IP {
     /**
      * @brief      Sets the IP as host order UINT.
      *
-     * @param[in]  hostOrderIP  host order uINT to set
+     * @param  hostOrderIP  host order uINT to set
      *
      * @return     returns true if a valid host number has been provided
      * false otherwise.
@@ -54,7 +54,7 @@ class IP {
     /**
      * @brief      Sets the IP as network order UINT
      *
-     * @param[in]  networkOrderIP  The network order UINT to set.
+     * @param  networkOrderIP  The network order UINT to set.
      *
      * @return   return true if a valid network order host is set
      */
@@ -63,7 +63,7 @@ class IP {
     /**
      * @brief      Sets the IP from the std::string
      *
-     * @param[in]  stringIP  a string representing a valid IP address
+     * @param  stringIP  a string representing a valid IP address
      * this can be in the octet format.
      * @throws     MsgException Throws an exception if the string is invalid.
      * @return     return true if the string was successfully parsed
@@ -75,8 +75,8 @@ class IP {
      * @brief      Sets the IP from a domain name, this performs a
      * domain name lookup to get the IP address.
      *
-     * @param[in]  domainName  The domain name to get the IP for.
-     * @param[in]  service     The service to check IP for.
+     * @param  domainName  The domain name to get the IP for.
+     * @param  service     The service to check IP for.
      * @throws     MsgException Throws an exception if the domain is invalid.
      * @return     Return true if the domain name was resolved.
      */

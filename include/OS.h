@@ -161,10 +161,10 @@ class OS {
      * @brief      Sets the socket options for a valid baseSocket.
      *
      * @param      Socket       a refernece to a valid  baseSocket
-     * @param[in]  optionLevel  The options level.
-     * @param[in]  optionName   The options name.
+     * @param  optionLevel  The options level.
+     * @param  optionName   The options name.
      * @param      setting      The a pointer to the options new value.
-     * @param[in]  length       The length of the options value.
+     * @param  length       The length of the options value.
      *
      * @return     returns true if the socket option is succesfully set.
      * @throws   MsgException   Throws an exception if the operating system call
@@ -177,8 +177,8 @@ class OS {
      * @brief      Returns the socket options for a valid baseSocket.
      *
      * @param      Socket       a refernece to a valid  baseSocket
-     * @param[in]  optionLevel  The options level.
-     * @param[in]  optionName   The options name.
+     * @param  optionLevel  The options level.
+     * @param  optionName   The options name.
      * @param[out] setting      An output pointer with the value of the option.
      * @param[out]  length       The length of the output value.
      *

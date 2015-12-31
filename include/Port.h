@@ -38,7 +38,7 @@ class Port {
     /**
      * @brief      Initializes the port number as a host order port.
      *
-     * @param[in]  port  a USHORT Host order port number.
+     * @param  port  a USHORT Host order port number.
      */
     Port(USHORT port);
 
@@ -46,7 +46,7 @@ class Port {
      * @brief      Initializes the port number using an std::string
      * representing a host order integer.
      *
-     * @param[in]  port  A string representing a hsot order integer.
+     * @param  port  A string representing a hsot order integer.
      *
      * @throws   MsgException If the string cannot be converted, if it not
      * within the interger size or if it in not a valid ushort string.
@@ -57,14 +57,14 @@ class Port {
     /**
      * @brief      Sets the port number as a host order port number.
      *
-     * @param[in]  HostOrderPort  The USHORT host order port number.
+     * @param  HostOrderPort  The USHORT host order port number.
      */
     void setPortH(USHORT HostOrderPort);
 
     /**
      * @brief      Sets the port number as a network order port number.
      *
-     * @param[in]  NetworkOrderPort  The network order USHORT port number.
+     * @param  NetworkOrderPort  The network order USHORT port number.
      */
     void setPortN(USHORT NetworkOrderPort);
 
@@ -72,7 +72,7 @@ class Port {
      * @brief      Given a string for a host order port number, converts it
      * to a host order USHORT and sets it as a port number.
      *
-     * @param[in]  StringIP  a string representing a valid USHORT.
+     * @param  StringIP  a string representing a valid USHORT.
      *
      * @throws   MsgException If the string cannot be converted, if it not
      * within the interger size or if it in not a valid ushort string.
@@ -108,11 +108,14 @@ class Port {
      */
     bool isValid() const;
 
-    bool operator==(const Port& other) const {
-        return this->m_portNumberN == other.m_portNumberN;
-    }
-    bool operator!=(const Port& other) const { return !(*this == other); }
 
+    bool operator==(const Port& other) const;
+    bool operator!=(const Port& other) const;
+
+
+
+
+    
    private:
     /// The host set as a network order integer
     USHORT m_portNumberN;

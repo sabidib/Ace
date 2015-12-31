@@ -116,96 +116,91 @@ TEST(testGetIPS)
 }
 
 
-// TEST(testisIPValid)
-// {
-//     baseSocket* test = new baseSocket();
+TEST(testisIPValid)
+{
+    baseSocket* test = new baseSocket();
+    bool PASS = true;
+    SocketStructure* sockStructure = new SocketStructure();
 
-//     baseSocketInfo* sockStructure = new baseSocketInfo();
-
-//     UINT IP1 = 1694542016;
-//     UINT IP2 = 59595954;
-//     UINT IP3 = 2130706433;
-//     INT IP4 = 959595959595;
-//     INT IP5 = 9595639963;
-
-
-//     short Port1 = 5584;
-//     short Port2 = 48;
-//     short Port3 = 0;
-//     short Port4 = -123;
-//     short Port5 = 239;
-//     short Port6 = -1;
-
-//     INT Family1 = AF_INET;
-//     INT Family2 = AF_INET;
-//     INT Family3 = AF_UNSPEC;
-//     INT Family4 = AF_APPLETALK;
-//     INT Family5 = -1;
-//     INT Family6 = 0;
+    UINT IP1 = 1694542016;
+    UINT IP2 = 59595954;
+    UINT IP3 = 2130706433;
+    UINT IP4 = 959595955;
+    UINT IP5 = 95956363;
 
 
-//     INT Type1 = SOCK_STREAM;
-//     INT Type2 = SOCK_DGRAM;
-//     INT Type3 = SOCK_RAW;
-//     INT Type4 = SOCK_SEQPACKET;
-//     INT Type5 = -1;
+    USHORT Port1 = 5584; std::string Port1S = "5584";
+    USHORT Port2 = 48; std::string Port2S = "48";
+    USHORT Port3 = 0; std::string Port3S = "0";
+    USHORT Port4 = -123; std::string Port4S = "-123";
+    USHORT Port5 = 239; std::string Port5S = "239";
+    USHORT Port6 = -1; std::string Port6S = "-1";
+
+    UINT Family1 = AF_INET;
+    UINT Family2 = AF_INET;
+    UINT Family3 = AF_UNSPEC;
+    UINT Family4 = AF_APPLETALK;
+    UINT Family5 = -1;
+    UINT Family6 = 0;
 
 
-//     sockStructure->resetStructure();
-//     INT result1 =  sockStructure->setStructure(IP1,Port1,Family1,Type1);
-//     CHECK_EQUAL(PASS,result1);
-
-//     CHECK_EQUAL(sockStructure->GetIPAddressN(), IP1);
-//     CHECK_EQUAL(sockStructure->getPort()->getPortN(), Port1);
-//     CHECK_EQUAL(sockStructure->getFamily() , Family1);
-//     CHECK_EQUAL(sockStructure->getType(), Type1);
-
-//     test->SetSocketInfo(*sockStructure);
-
-//     CHECK_EQUAL(true, test->isIPValid());
-
-//     sockStructure->resetStructure();
-
-//     INT result2 = sockStructure->setStructure(IP2,Port1,Family1,Type1);
-//     CHECK_EQUAL(PASS,result2);
-
-//     CHECK_EQUAL(sockStructure->GetIPAddressN(),IP2);
-//     CHECK_EQUAL(sockStructure->getPort()->getPortN(), Port1);
-//     CHECK_EQUAL(sockStructure->getFamily() ,Family1);
-//     CHECK_EQUAL(sockStructure->getType(), Type1);
+    UINT Type1 = SOCK_STREAM;
+    UINT Type2 = SOCK_DGRAM;
+    UINT Type3 = SOCK_RAW;
+    UINT Type4 = SOCK_SEQPACKET;
+    UINT Type5 = -1;
 
 
-//     test->SetSocketInfo(*sockStructure);
+    sockStructure->resetStructure();
 
-//     CHECK_EQUAL(true, test->isIPValid());
+    sockStructure->setStructure(IP1,Port1,Type1,Family1);
+    
+    CHECK_EQUAL(sockStructure->getIP().getIPH(), IP1);
+    CHECK_EQUAL(sockStructure->getPort().getPortH(), Port1);
+    CHECK_EQUAL(sockStructure->getFamily() , Family1);
+    CHECK_EQUAL(sockStructure->getType(), Type1);
 
-//     sockStructure->resetStructure();
-//     INT result3 = sockStructure->setStructure(IP3,Port1,Family1,Type1);
-//     CHECK_EQUAL(PASS,result3);
+    test->setSocketStructure(*sockStructure);
 
-//     CHECK_EQUAL(sockStructure->GetIPAddressN(), IP3);
-//     CHECK_EQUAL(sockStructure->getPort()->getPortN(), Port1);
-//     CHECK_EQUAL(sockStructure->getFamily() , Family1);
-//     CHECK_EQUAL(sockStructure->getType(), Type1);
+    CHECK_EQUAL(true, test->isIPValid());
 
+    sockStructure->resetStructure();
+    sockStructure->setStructure(IP2,Port1,Type1,Family1);
 
-//     test->SetSocketInfo(*sockStructure);
-//     CHECK_EQUAL(test->isIPValid(), true);
-
-
-//     sockStructure->resetStructure();
-
-//     INT result4 = sockStructure->SetIP(IP4);
-//     CHECK_EQUAL(PASS,result4);
-
-//     CHECK_EQUAL(sockStructure->GetIPAddressN(), IP4);
+    CHECK_EQUAL(sockStructure->getIP().getIPH(),IP2);
+    CHECK_EQUAL(sockStructure->getPort().getPortH(), Port1);
+    CHECK_EQUAL(sockStructure->getFamily() ,Family1);
+    CHECK_EQUAL(sockStructure->getType(), Type1);
 
 
-//     test->SetSocketInfo(*sockStructure);
+    test->setSocketStructure(*sockStructure);
 
-//     CHECK_EQUAL(test->isIPValid(), true);
+    CHECK_EQUAL(true, test->isIPValid());
 
-// }
+    sockStructure->resetStructure();
+    sockStructure->setStructure(IP3,Port1,Type1,Family1);
+
+    CHECK_EQUAL(sockStructure->getIP().getIPH(), IP3);
+    CHECK_EQUAL(sockStructure->getPort().getPortH(), Port1);
+    CHECK_EQUAL(sockStructure->getFamily() , Family1);
+    CHECK_EQUAL(sockStructure->getType(), Type1);
+
+
+    test->setSocketStructure(*sockStructure);
+    CHECK_EQUAL(test->isIPValid(), true);
+
+
+    sockStructure->resetStructure();
+
+    sockStructure->setIP(IP4);
+    CHECK_EQUAL(sockStructure->getIP().getIPH(), IP4);
+
+
+    test->setSocketStructure(*sockStructure);
+
+    CHECK_EQUAL(test->isIPValid(), true);
+
+}
 
 
 
