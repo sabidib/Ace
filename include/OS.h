@@ -22,8 +22,8 @@
 
 #include "GenHeader.h"
 #include "baseSocket.h"
-#include "socketStructure.h"
-#include "socketFileDescriptor.h"
+#include "SocketStructure.h"
+#include "SocketFileDescriptor.h"
 
 #include "ExceptionCreator.h"
 
