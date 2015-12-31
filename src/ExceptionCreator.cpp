@@ -549,9 +549,11 @@ void ExceptionCreator::getAnException(INT Error) {
     } else if (Error == ENOTEMPTY) {
         /* Directory not empty */
         throw Exception::SystemExceptionENOTEMPTY("");
+#ifndef __linux__ 
     } else if (Error == EPROCLIM) {
         /* Too many processes */
         throw Exception::SystemExceptionEPROCLIM("");
+#endif
     } else if (Error == EUSERS) {
         /* Too many users */
         throw Exception::SystemExceptionEUSERS("");
@@ -564,6 +566,7 @@ void ExceptionCreator::getAnException(INT Error) {
     } else if (Error == EREMOTE) {
         /* Too many levels of remote in path */
         throw Exception::SystemExceptionEREMOTE("");
+#ifndef __linux__ 
     } else if (Error == EBADRPC) {
         /* RPC struct is bad */
         throw Exception::SystemExceptionEBADRPC("");
@@ -579,12 +582,14 @@ void ExceptionCreator::getAnException(INT Error) {
     } else if (Error == EPROCUNAVAIL) {
         /* Bad procedure for program */
         throw Exception::SystemExceptionEPROCUNAVAIL("");
+#endif
     } else if (Error == ENOLCK) {
         /* No locks available */
         throw Exception::SystemExceptionENOLCK("");
     } else if (Error == ENOSYS) {
         /* Function not implemented */
         throw Exception::SystemExceptionENOSYS("");
+#ifndef __linux__ 
     } else if (Error == EFTYPE) {
         /* Inappropriate file type or format */
         throw Exception::SystemExceptionEFTYPE("");
@@ -600,9 +605,11 @@ void ExceptionCreator::getAnException(INT Error) {
     } else if (Error == EDEVERR) {
         /* Device error, e.g. paper out */
         throw Exception::SystemExceptionEDEVERR("");
+#endif
     } else if (Error == EOVERFLOW) {
         /* Value too large to be stored in data type */
         throw Exception::SystemExceptionEOVERFLOW("");
+#ifndef __linux__         
     } else if (Error == EBADEXEC) {
         /* Bad executable */
         throw Exception::SystemExceptionEBADEXEC("");
@@ -615,6 +622,7 @@ void ExceptionCreator::getAnException(INT Error) {
     } else if (Error == EBADMACHO) {
         /* Malformed Macho file */
         throw Exception::SystemExceptionEBADMACHO("");
+#endif
     } else if (Error == ECANCELED) {
         /* Operation canceled */
         throw Exception::SystemExceptionECANCELED("");
@@ -627,9 +635,11 @@ void ExceptionCreator::getAnException(INT Error) {
     } else if (Error == EILSEQ) {
         /* Illegal byte sequence */
         throw Exception::SystemExceptionEILSEQ("");
+#ifndef __linux__
     } else if (Error == ENOATTR) {
         /* Attribute not found */
         throw Exception::SystemExceptionENOATTR("");
+#endif
     } else if (Error == EBADMSG) {
         /* Bad message */
         throw Exception::SystemExceptionEBADMSG("");
@@ -657,21 +667,25 @@ void ExceptionCreator::getAnException(INT Error) {
     } else if (Error == EOPNOTSUPP) {
         /* Operation not supported on socket */
         throw Exception::SystemExceptionEOPNOTSUPP("");
+#ifndef __linux__
     } else if (Error == ENOPOLICY) {
         /* No such policy registered */
         throw Exception::SystemExceptionENOPOLICY("");
+#endif
     } else if (Error == ENOTRECOVERABLE) {
         /* State not recoverable */
         throw Exception::SystemExceptionENOTRECOVERABLE("");
     } else if (Error == EOWNERDEAD) {
         /* Previous owner died */
         throw Exception::SystemExceptionEOWNERDEAD("");
+ #ifndef __linux__
     } else if (Error == EQFULL) {
         /* Interface output queue is full */
         throw Exception::SystemExceptionEQFULL("");
     } else if (Error == ELAST) {
         /* Must be equal largest errno */
         throw Exception::SystemExceptionELAST("");
+#endif
     } else {
         std::stringstream ss;
         ss << "Unspecfied error with errno"  << Error;

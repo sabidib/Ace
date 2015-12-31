@@ -43,30 +43,30 @@ bool ConnectionStatus::isConnected() const { return m_isConnected; }
 
 bool ConnectionStatus::isAssigned() const { return m_isAssigned; }
 
-void ConnectionStatus::setIsSendingData(bool isSendingData) {
+void ConnectionStatus::setIsSendingData(bool in_isSendingData) {
     m_status = STATUS::SENDING;
-    m_isSendingData = isSendingData;
+    m_isSendingData = in_isSendingData;
 }
 
-void ConnectionStatus::setIsReceivingData(bool isReceivingData) {
+void ConnectionStatus::setIsReceivingData(bool in_isReceivingData) {
     m_status = STATUS::RECEIVING;
-    m_isReceivingData = isReceivingData;
+    m_isReceivingData = in_isReceivingData;
 }
 
-void ConnectionStatus::setIsListening(bool isListening) {
+void ConnectionStatus::setIsListening(bool in_isListening) {
     m_status = STATUS::LISTENING;
-    m_isListening = isListening;
+    m_isListening = in_isListening;
 }
 
-void ConnectionStatus::setIsBound(bool isBound) { m_isBound = isBound; }
+void ConnectionStatus::setIsBound(bool in_isBound) { m_isBound = in_isBound; }
 
-void ConnectionStatus::setIsConnected(bool isConnected) {
+void ConnectionStatus::setIsConnected(bool in_isConnected) {
     m_status = STATUS::CONNECTED;
-    m_isConnected = isConnected;
+    m_isConnected = in_isConnected;
 }
 
-void ConnectionStatus::setIsAssigned(bool isAssignedSocket) {
-    m_isAssigned = isAssignedSocket;
+void ConnectionStatus::setIsAssigned(bool in_isAssignedSocket) {
+    m_isAssigned = in_isAssignedSocket;
 }
 
 STATUS ConnectionStatus::getStatus() const { return m_status; }

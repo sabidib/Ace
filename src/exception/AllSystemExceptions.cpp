@@ -489,13 +489,14 @@ SystemExceptionENOTEMPTY::SystemExceptionENOTEMPTY(std::string d)
 // return (s + std::string("  ") + std::string(strerror(ENOTEMPTY))).c_str();
 // };
 
+#ifndef __linux__ 
 SystemExceptionEPROCLIM::SystemExceptionEPROCLIM(std::string d)
     : SystemException(d + std::string("  SystemExceptionEPROCLIM:") +
                       std::string(strerror(EPROCLIM))) {}
 // const char* SystemExceptionEPROCLIM::what() const throw() {
 // return (s + std::string("  ") + std::string(strerror(EPROCLIM))).c_str();
 // };
-
+#endif
 SystemExceptionEUSERS::SystemExceptionEUSERS(std::string d)
     : SystemException(d + std::string("  SystemExceptionEUSERS:") +
                       std::string(strerror(EUSERS))) {}
@@ -524,6 +525,7 @@ SystemExceptionEREMOTE::SystemExceptionEREMOTE(std::string d)
 // return (s + std::string("  ") + std::string(strerror(EREMOTE))).c_str();
 // }
 
+#ifndef __linux__ 
 SystemExceptionEBADRPC::SystemExceptionEBADRPC(std::string d)
     : SystemException(d + std::string("  SystemExceptionEBADRPC:") +
                       std::string(strerror(EBADRPC))) {}
@@ -559,7 +561,7 @@ SystemExceptionEPROCUNAVAIL::SystemExceptionEPROCUNAVAIL(std::string d)
 // const char* SystemExceptionEPROCUNAVAIL::what() const throw() {
 // return (s + std::string("  ") + std::string(strerror(EPROCUNAVAIL))).c_str();
 // };
-
+#endif
 SystemExceptionENOLCK::SystemExceptionENOLCK(std::string d)
     : SystemException(d + std::string("  SystemExceptionENOLCK:") +
                       std::string(strerror(ENOLCK))) {}
@@ -574,6 +576,7 @@ SystemExceptionENOSYS::SystemExceptionENOSYS(std::string d)
 // return (s + std::string("  ") + std::string(strerror(ENOSYS))).c_str();
 // }
 
+#ifndef __linux__ 
 SystemExceptionEFTYPE::SystemExceptionEFTYPE(std::string d)
     : SystemException(d + std::string("  SystemExceptionEFTYPE:") +
                       std::string(strerror(EFTYPE))) {}
@@ -609,6 +612,8 @@ SystemExceptionEDEVERR::SystemExceptionEDEVERR(std::string d)
 // return (s + std::string("  ") + std::string(strerror(EDEVERR))).c_str();
 // }
 
+#endif
+
 SystemExceptionEOVERFLOW::SystemExceptionEOVERFLOW(std::string d)
     : SystemException(d + std::string("  SystemExceptionEOVERFLOW:") +
                       std::string(strerror(EOVERFLOW))) {}
@@ -616,6 +621,7 @@ SystemExceptionEOVERFLOW::SystemExceptionEOVERFLOW(std::string d)
 // return (s + std::string("  ") + std::string(strerror(EOVERFLOW))).c_str();
 // };
 
+#ifndef __linux__ 
 SystemExceptionEBADEXEC::SystemExceptionEBADEXEC(std::string d)
     : SystemException(d + std::string("  SystemExceptionEBADEXEC:") +
                       std::string(strerror(EBADEXEC))) {}
@@ -643,7 +649,7 @@ SystemExceptionEBADMACHO::SystemExceptionEBADMACHO(std::string d)
 // const char* SystemExceptionEBADMACHO::what() const throw() {
 // return (s + std::string("  ") + std::string(strerror(EBADMACHO))).c_str();
 // };
-
+#endif
 SystemExceptionECANCELED::SystemExceptionECANCELED(std::string d)
     : SystemException(d + std::string("  SystemExceptionECANCELED:") +
                       std::string(strerror(ECANCELED))) {}
@@ -672,13 +678,14 @@ SystemExceptionEILSEQ::SystemExceptionEILSEQ(std::string d)
 // return (s + std::string("  ") + std::string(strerror(EILSEQ))).c_str();
 // }
 
+#ifndef __linux__ 
 SystemExceptionENOATTR::SystemExceptionENOATTR(std::string d)
     : SystemException(d + std::string("  SystemExceptionENOATTR:") +
                       std::string(strerror(ENOATTR))) {}
 // const char* SystemExceptionENOATTR::what() const throw() {
 // return (s + std::string("  ") + std::string(strerror(ENOATTR))).c_str();
 // }
-
+#endif
 SystemExceptionEBADMSG::SystemExceptionEBADMSG(std::string d)
     : SystemException(d + std::string("  SystemExceptionEBADMSG:") +
                       std::string(strerror(EBADMSG))) {}
@@ -742,13 +749,14 @@ SystemExceptionEOPNOTSUPP::SystemExceptionEOPNOTSUPP(std::string d)
 // return (s + std::string("  ") + std::string(strerror(EOPNOTSUPP))).c_str();
 // };
 
+#ifndef __linux__ 
 SystemExceptionENOPOLICY::SystemExceptionENOPOLICY(std::string d)
     : SystemException(d + std::string("  SystemExceptionENOPOLICY:") +
                       std::string(strerror(ENOPOLICY))) {}
 // const char* SystemExceptionENOPOLICY::what() const throw() {
 // return (s + std::string("  ") + std::string(strerror(ENOPOLICY))).c_str();
 // };
-
+#endif
 SystemExceptionENOTRECOVERABLE::SystemExceptionENOTRECOVERABLE(std::string d)
     : SystemException(d + std::string("  SystemExceptionENOTRECOVERABLE:") +
                       std::string(strerror(ENOTRECOVERABLE))) {}
@@ -764,6 +772,7 @@ SystemExceptionEOWNERDEAD::SystemExceptionEOWNERDEAD(std::string d)
 // return (s + std::string("  ") + std::string(strerror(EOWNERDEAD))).c_str();
 // };
 
+#ifndef __linux__ 
 SystemExceptionEQFULL::SystemExceptionEQFULL(std::string d)
     : SystemException(d + std::string("  SystemExceptionEQFULL:") +
                       std::string(strerror(EQFULL))) {}
@@ -777,5 +786,6 @@ SystemExceptionELAST::SystemExceptionELAST(std::string d)
 // const char* SystemExceptionELAST::what() const throw() {
 // return (s + std::string("  ") + std::string(strerror(ELAST))).c_str();
 // }
+#endif
 }
 }

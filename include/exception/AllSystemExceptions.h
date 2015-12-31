@@ -489,13 +489,14 @@ class SystemExceptionENOTEMPTY : public SystemException {
     // const char* what() const throw();
 };
 
+#ifndef __linux__ 
 /* Too many processes */
 class SystemExceptionEPROCLIM : public SystemException {
    public:
     SystemExceptionEPROCLIM(std::string d);
     // const char* what() const throw();
 };
-
+#endif
 /* Too many users */
 class SystemExceptionEUSERS : public SystemException {
    public:
@@ -524,6 +525,7 @@ class SystemExceptionEREMOTE : public SystemException {
     // const char* what() const throw();
 };
 
+#ifndef __linux__ 
 /* RPC struct is bad */
 class SystemExceptionEBADRPC : public SystemException {
    public:
@@ -558,7 +560,7 @@ class SystemExceptionEPROCUNAVAIL : public SystemException {
     SystemExceptionEPROCUNAVAIL(std::string d);
     // const char* what() const throw();
 };
-
+#endif
 /* No locks available */
 class SystemExceptionENOLCK : public SystemException {
    public:
@@ -573,6 +575,7 @@ class SystemExceptionENOSYS : public SystemException {
     // const char* what() const throw();
 };
 
+#ifndef __linux__ 
 /* Inappropriate file type or format */
 class SystemExceptionEFTYPE : public SystemException {
    public:
@@ -607,7 +610,7 @@ class SystemExceptionEDEVERR : public SystemException {
     SystemExceptionEDEVERR(std::string d);
     // const char* what() const throw();
 };
-
+#endif
 /* Value too large to be stored in data type */
 class SystemExceptionEOVERFLOW : public SystemException {
    public:
@@ -615,6 +618,7 @@ class SystemExceptionEOVERFLOW : public SystemException {
     // const char* what() const throw();
 };
 
+#ifndef __linux__ 
 /* Bad executable */
 class SystemExceptionEBADEXEC : public SystemException {
    public:
@@ -642,7 +646,7 @@ class SystemExceptionEBADMACHO : public SystemException {
     SystemExceptionEBADMACHO(std::string d);
     // const char* what() const throw();
 };
-
+#endif
 /* Operation canceled */
 class SystemExceptionECANCELED : public SystemException {
    public:
@@ -671,13 +675,14 @@ class SystemExceptionEILSEQ : public SystemException {
     // const char* what() const throw();
 };
 
+#ifndef __linux__ 
 /* Attribute not found */
 class SystemExceptionENOATTR : public SystemException {
    public:
     SystemExceptionENOATTR(std::string d);
     // const char* what() const throw();
 };
-
+#endif
 /* Bad message */
 class SystemExceptionEBADMSG : public SystemException {
    public:
@@ -741,13 +746,14 @@ class SystemExceptionEOPNOTSUPP : public SystemException {
     // const char* what() const throw();
 };
 
+#ifndef __linux__ 
 /* No such policy registered */
 class SystemExceptionENOPOLICY : public SystemException {
    public:
     SystemExceptionENOPOLICY(std::string d);
     // const char* what() const throw();
 };
-
+#endif
 /* State not recoverable */
 class SystemExceptionENOTRECOVERABLE : public SystemException {
    public:
@@ -762,6 +768,7 @@ class SystemExceptionEOWNERDEAD : public SystemException {
     // const char* what() const throw();
 };
 
+#ifndef __linux__ 
 /* Interface output queue is full */
 class SystemExceptionEQFULL : public SystemException {
    public:
@@ -775,6 +782,7 @@ class SystemExceptionELAST : public SystemException {
     SystemExceptionELAST(std::string d);
     // const char* what() const throw();
 };
+#endif
 }
 }
 

@@ -1,3 +1,6 @@
 #!/usr/bin/env bash
-mkdir build;
-cmake --build build/ --clean-first
+mkdir -p build;
+cd build;
+cmake ..;
+make;
+cd ..;

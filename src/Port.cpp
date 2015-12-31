@@ -56,11 +56,6 @@ void Port::setPortS(std::string stringPort) {
     } catch (const std::out_of_range& err) {
         throw MsgException("String is not within interger size.");
     }
-
-    if (res >= 0 && res <= std::numeric_limits<USHORT>::max()) {
-        m_portNumberN = res;
-    } else {
-        throw MsgException("String is not a USHORT.");
-    }
+    m_portNumberN = res;
 }
 }
