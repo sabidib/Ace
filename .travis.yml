@@ -6,5 +6,15 @@ compiler:
   -clang
   -gcc
 script:
-  - buildSource.sh
-  - buildTest.sh
+  - ./buildSource.sh;
+  - ./buildTest.sh;
+  # - mkdir -p build; 
+  # - cd build;
+  # - cmake ..;
+  # - make;
+  # - cd ../tests;
+  # - mkdir -p build;
+  # - cd build;
+  # - cmake ..;
+  # - make;
+  # - cd ../..;
