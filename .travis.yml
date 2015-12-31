@@ -3,5 +3,5 @@ compiler:
   -clang
   -gcc
 script:
-  - ./buildTest.sh
-  - ./buildSource.sh
+  - mkdir build
+  - cmake --build build/ --clean-first
