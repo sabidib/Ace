@@ -3,5 +3,6 @@ compiler:
   -clang
   -gcc
 script:
-  - mkdir build
-  - cmake --build build/ --clean-first
+  - mkdir build; cd build;
+  - cmake .. --clean-first
+  - make
