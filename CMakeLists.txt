@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 2.8.9)
+cmake_minimum_required(VERSION 2.8.7)
 project (acecom)
 include_directories(include)
 file(GLOB SOURCES "src/*.cpp" "src/exception/*.cpp")
