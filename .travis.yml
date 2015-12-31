@@ -6,5 +6,5 @@ compiler:
   -clang
   -gcc
 script:
-  -./buildSource.sh
-  -./buildTest.sh
+  - buildSource.sh
+  - buildTest.sh
