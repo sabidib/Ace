@@ -7,7 +7,6 @@ compiler:
   -gcc
 script:
   - ./buildSource.sh;
-  - ./buildTest.sh;
   # - mkdir -p build; 
   # - cd build;
   # - cmake ..;
