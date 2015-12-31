@@ -4,5 +4,5 @@ compiler:
   -gcc
 script:
   - mkdir build; cd build;
-  - cmake .. --clean-first
+  - cmake ..
   - make
