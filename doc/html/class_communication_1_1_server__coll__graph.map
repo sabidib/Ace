@@ -1,0 +1,9 @@
+<map id="Communication::Server" name="Communication::Server">
+<area shape="rect" id="node2" href="$class_communication_1_1base_gateway.html" title="Defines the a base class for any kind of socket management gateway. This wraps the functions in the O..." alt="" coords="725,29,947,57"/>
+<area shape="rect" id="node3" href="$class_communication_1_1base_socket.html" title="Represents a basic socket. This class combines the SocketStructure and SocketFileDescriptors together..." alt="" coords="731,81,941,109"/>
+<area shape="rect" id="node4" href="$class_communication_1_1_connection_status.html" title="A class that represents a connections status. This class is used in the base socket class to describe..." alt="" coords="319,5,526,49"/>
+<area shape="rect" id="node5" href="$class_communication_1_1_socket_file_descriptor.html" title="Represents a Socket&#39;s file descriptor. " alt="" coords="323,73,523,117"/>
+<area shape="rect" id="node6" href="$class_communication_1_1_socket_structure.html" title="Represents the basic information required to create a socket this includes the IP, the port number, the type of socket and the family of the socket. " alt="" coords="305,141,541,169"/>
+<area shape="rect" id="node7" href="$class_communication_1_1_i_p.html" title="Represents an IP address. The value can be set as a string, a network, or host integer. " alt="" coords="13,114,158,142"/>
+<area shape="rect" id="node8" href="$class_communication_1_1_port.html" title="Represents a port number. " alt="" coords="6,166,165,194"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="Communication::baseGateway" name="Communication::baseGateway">
+<area shape="rect" id="node2" href="$class_communication_1_1_client.html" title="Represents an Internet client. The class is initialized with a destination which can be then be conne..." alt="" coords="5,83,173,111"/>
+<area shape="rect" id="node3" href="$class_communication_1_1_server.html" title="Represents the implementation of an internet server. This will bind the given socket to the local mac..." alt="" coords="198,83,372,111"/>
+</map>

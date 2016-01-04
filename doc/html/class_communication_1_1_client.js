@@ -1,0 +1,25 @@
+var class_communication_1_1_client =
+[
+    [ "Client", "class_communication_1_1_client.html#aea201d12c91899407f6b1a8f996d548d", null ],
+    [ "Client", "class_communication_1_1_client.html#ac607567232a2f4f2f0e2c6f643259d95", null ],
+    [ "Client", "class_communication_1_1_client.html#ae2cfc25664ab90a303a9e687a47c15f5", null ],
+    [ "~Client", "class_communication_1_1_client.html#a77c290beabfe76ea97a9027d66a04f7c", null ],
+    [ "connect", "class_communication_1_1_client.html#a0fa54f72440e34d7659d6289ce4219d5", null ],
+    [ "disconnect", "class_communication_1_1_client.html#ab9a6013d31a6fd6a2365270bbe8ac207", null ],
+    [ "disconnect", "class_communication_1_1_client.html#ae1b174c8884fca6e4104e672ec4127c9", null ],
+    [ "disconnect", "class_communication_1_1_client.html#aee5d02aa859d813a72a14ab2d39ea23d", null ],
+    [ "doesOwnSocket", "class_communication_1_1_client.html#a7a6d48c9528ed8c4d4175dfcdd4ddf87", null ],
+    [ "getSocket", "class_communication_1_1_client.html#a87a0efa909c795c7680512bd0c35c883", null ],
+    [ "receive", "class_communication_1_1_client.html#aa28b2b8434ac7d76b9aaa6c4b951d3be", null ],
+    [ "receive", "class_communication_1_1_client.html#a2e3aedb9540e48b89ad34d9831e5868e", null ],
+    [ "receive", "class_communication_1_1_client.html#a333fae358f61a607582a3dc1e849ccd4", null ],
+    [ "relinquishOwnership", "class_communication_1_1_client.html#a5ac457cde6469d51fc9a9424bf673206", null ],
+    [ "send", "class_communication_1_1_client.html#a9f646713fab7ee53a86cc4391c65ba96", null ],
+    [ "send", "class_communication_1_1_client.html#a38725c4bb7fcb0275d7782b1c5a9d44f", null ],
+    [ "send", "class_communication_1_1_client.html#a3be85163c108c2f8297680689905006c", null ],
+    [ "send", "class_communication_1_1_client.html#a90215215336f21e97829c17e76104ac6", null ],
+    [ "setSocket", "class_communication_1_1_client.html#ac97183c35c7227c71dc43ed713efb8cb", null ],
+    [ "transferOwnership", "class_communication_1_1_client.html#a6c33c673b779dc2443f66ed453178f43", null ],
+    [ "m_currentSocket", "class_communication_1_1_client.html#a2795556f3ffbb25b8c3f242b4d643c25", null ],
+    [ "m_doesOwnSocket", "class_communication_1_1_client.html#afe0f1b2c58ad4ec8a0b2fb74e3a59b08", null ]
+];

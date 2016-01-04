@@ -1,0 +1,4 @@
+var class_communication_1_1_exception_1_1_system_exception_e_n_o_t_r_e_c_o_v_e_r_a_b_l_e =
+[
+    [ "SystemExceptionENOTRECOVERABLE", "class_communication_1_1_exception_1_1_system_exception_e_n_o_t_r_e_c_o_v_e_r_a_b_l_e.html#aaf0a0742233948d4471dff5dd533cdc8", null ]
+];

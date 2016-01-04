@@ -1,0 +1,20 @@
+<map id="/Users/samy/Programming/Ace/include/baseGateway.h" name="/Users/samy/Programming/Ace/include/baseGateway.h">
+<area shape="rect" id="node2" href="$_gen_header_8h.html" title="GenHeader.h" alt="" coords="496,409,606,437"/>
+<area shape="rect" id="node28" href="$base_socket_8h.html" title="baseSocket.h" alt="" coords="603,177,713,205"/>
+<area shape="rect" id="node34" href="$base_data_buffer_8h.html" title="baseDataBuffer.h" alt="" coords="757,177,893,205"/>
+<area shape="rect" id="node35" href="$_o_s_8h.html" title="OS.h" alt="" coords="477,99,533,127"/>
+<area shape="rect" id="node3" href="$msg_exception_8h.html" title="exception/msgException.h" alt="" coords="44,486,237,514"/>
+<area shape="rect" id="node6" href="$_s_t_l_header_8h.html" title="STLHeader.h" alt="" coords="990,486,1100,514"/>
+<area shape="rect" id="node24" href="$typedefs_8h.html" title="typedefs.h" alt="" coords="1124,486,1213,514"/>
+<area shape="rect" id="node25" href="$_global_constants_8h.html" title="GlobalConstants.h" alt="" coords="314,486,456,514"/>
+<area shape="rect" id="node26" href="$_platform_header_8h.html" title="PlatformHeader.h" alt="" coords="200,563,337,591"/>
+<area shape="rect" id="node27" href="$_function_headers_8h.html" title="FunctionHeaders.h" alt="" coords="480,486,625,514"/>
+<area shape="rect" id="node29" href="$_socket_structure_8h.html" title="SocketStructure.h" alt="" coords="405,254,544,282"/>
+<area shape="rect" id="node32" href="$_socket_file_descriptor_8h.html" title="SocketFileDescriptor.h" alt="" coords="568,254,737,282"/>
+<area shape="rect" id="node33" href="$_connection_status_8h.html" title="ConnectionStatus.h" alt="" coords="651,331,801,359"/>
+<area shape="rect" id="node30" href="$_i_p_8h.html" title="IP.h" alt="" coords="528,331,576,359"/>
+<area shape="rect" id="node31" href="$_port_8h.html" title="Port.h" alt="" coords="392,331,453,359"/>
+<area shape="rect" id="node36" href="$_exception_creator_8h.html" title="ExceptionCreator.h" alt="" coords="120,254,268,282"/>
+<area shape="rect" id="node37" href="$_all_system_exceptions_8h.html" title="exception/AllSystemExceptions.h" alt="" coords="27,331,265,359"/>
+<area shape="rect" id="node38" href="$_system_exception_8h.html" title="exception/SystemException.h" alt="" coords="36,409,250,437"/>
+</map>

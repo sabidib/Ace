@@ -1,0 +1,25 @@
+var class_communication_1_1_server =
+[
+    [ "Server", "class_communication_1_1_server.html#a1b8f8c80fa15d3e171ad5807d6c4da42", null ],
+    [ "Server", "class_communication_1_1_server.html#ae0edf16a55b4271c76180deae2137b0a", null ],
+    [ "Server", "class_communication_1_1_server.html#a6cde5340b15595739ffb72ab2f600928", null ],
+    [ "~Server", "class_communication_1_1_server.html#aef74c77dc02436ee1dc6d16310837b12", null ],
+    [ "doesOwnSocket", "class_communication_1_1_server.html#aeb511c766005b9b22208778adb80f66f", null ],
+    [ "getClientList", "class_communication_1_1_server.html#afb6658eb5983662bfc36f13f562f3acf", null ],
+    [ "getSocket", "class_communication_1_1_server.html#a0a8014847e1d2e241ee30d48e0b307d7", null ],
+    [ "isAccepting", "class_communication_1_1_server.html#a0f85511b0e8445f57f9226b4b1d2579b", null ],
+    [ "isRunning", "class_communication_1_1_server.html#ad9e57ab4ca738330f8052978034eea3b", null ],
+    [ "relinquishOwnership", "class_communication_1_1_server.html#a3f5fc277d677db87a1b3ec8a064cfe7c", null ],
+    [ "setSocket", "class_communication_1_1_server.html#a875eb11ac955e00739cd4596aa670e4a", null ],
+    [ "setSocket", "class_communication_1_1_server.html#a30bee0cf7df458c9b0c512bd48129e88", null ],
+    [ "setSocket", "class_communication_1_1_server.html#aea8579d23e3b7d0090acebec5dffaca9", null ],
+    [ "shutdownServer", "class_communication_1_1_server.html#a9d80054a0eb0a8f4935a766344f9e076", null ],
+    [ "startAccepting", "class_communication_1_1_server.html#aa005d6dfbb2f3d09bb6f5c31c7f61563", null ],
+    [ "startServer", "class_communication_1_1_server.html#a30f8961c165145504a3c29410c0b643c", null ],
+    [ "transferOwnership", "class_communication_1_1_server.html#aa2e19a107eeaa9e4409654c99972b702", null ],
+    [ "m_connectedClients", "class_communication_1_1_server.html#ac26c1d233eb7a8bef029230bd6b8e18b", null ],
+    [ "m_doesOwnBoundSocket", "class_communication_1_1_server.html#afc99b5efd81c3d7cba80127a1972eec7", null ],
+    [ "m_isAccepting", "class_communication_1_1_server.html#a9ab2cea7ed0c61b2c4b2833e35a76f75", null ],
+    [ "m_isServerUp", "class_communication_1_1_server.html#a5b9dd26ba6c527a5d9547eeedc1b152b", null ],
+    [ "m_toBind", "class_communication_1_1_server.html#a9e61ac5bb8ac2471084a4f2ea90347d8", null ]
+];

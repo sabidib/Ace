@@ -1,0 +1,18 @@
+<map id="/Users/samy/Programming/Ace/include/OS.h" name="/Users/samy/Programming/Ace/include/OS.h">
+<area shape="rect" id="node2" href="$_gen_header_8h.html" title="GenHeader.h" alt="" coords="1497,331,1607,359"/>
+<area shape="rect" id="node28" href="$base_socket_8h.html" title="baseSocket.h" alt="" coords="1426,99,1536,127"/>
+<area shape="rect" id="node29" href="$_socket_structure_8h.html" title="SocketStructure.h" alt="" coords="1255,177,1393,205"/>
+<area shape="rect" id="node32" href="$_socket_file_descriptor_8h.html" title="SocketFileDescriptor.h" alt="" coords="1519,177,1688,205"/>
+<area shape="rect" id="node34" href="$_exception_creator_8h.html" title="ExceptionCreator.h" alt="" coords="1813,177,1960,205"/>
+<area shape="rect" id="node3" href="$msg_exception_8h.html" title="exception/msgException.h" alt="" coords="1855,409,2048,437"/>
+<area shape="rect" id="node6" href="$_s_t_l_header_8h.html" title="STLHeader.h" alt="" coords="745,409,855,437"/>
+<area shape="rect" id="node24" href="$typedefs_8h.html" title="typedefs.h" alt="" coords="1354,409,1443,437"/>
+<area shape="rect" id="node25" href="$_global_constants_8h.html" title="GlobalConstants.h" alt="" coords="1467,409,1609,437"/>
+<area shape="rect" id="node26" href="$_platform_header_8h.html" title="PlatformHeader.h" alt="" coords="1579,486,1716,514"/>
+<area shape="rect" id="node27" href="$_function_headers_8h.html" title="FunctionHeaders.h" alt="" coords="1686,409,1831,437"/>
+<area shape="rect" id="node33" href="$_connection_status_8h.html" title="ConnectionStatus.h" alt="" coords="1363,254,1513,282"/>
+<area shape="rect" id="node30" href="$_i_p_8h.html" title="IP.h" alt="" coords="1155,254,1203,282"/>
+<area shape="rect" id="node31" href="$_port_8h.html" title="Port.h" alt="" coords="1227,254,1288,282"/>
+<area shape="rect" id="node35" href="$_all_system_exceptions_8h.html" title="exception/AllSystemExceptions.h" alt="" coords="1791,254,2029,282"/>
+<area shape="rect" id="node36" href="$_system_exception_8h.html" title="exception/SystemException.h" alt="" coords="1809,331,2023,359"/>
+</map>

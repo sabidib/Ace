@@ -1,0 +1,25 @@
+var searchData=
+[
+  ['getanexception',['getAnException',['../class_communication_1_1_exception_creator.html#a70dfc4fed060dc7b4dd9838f8467d6f2',1,'Communication::ExceptionCreator']]],
+  ['getbuffer',['getBuffer',['../class_communication_1_1base_data_buffer.html#a6c5969f0136efb534ec125ebf1a916f7',1,'Communication::baseDataBuffer']]],
+  ['getclientlist',['getClientList',['../class_communication_1_1_server.html#afb6658eb5983662bfc36f13f562f3acf',1,'Communication::Server']]],
+  ['getconnectionstatus',['getConnectionStatus',['../class_communication_1_1base_socket.html#aab7f6e7eb9eed4e7b6e2ac39db1e777e',1,'Communication::baseSocket']]],
+  ['getfamily',['getFamily',['../class_communication_1_1base_socket.html#ae59deca1baed0874631e5c3483eb9034',1,'Communication::baseSocket::getFamily()'],['../class_communication_1_1_socket_structure.html#a2175ee4dfb07e2f410348937f801a668',1,'Communication::SocketStructure::getFamily()']]],
+  ['getinternalstructure',['getInternalStructure',['../class_communication_1_1_socket_structure.html#a976af3d3e1ea120ba80b4e808a9600b9',1,'Communication::SocketStructure']]],
+  ['getip',['getIP',['../class_communication_1_1base_socket.html#ab2744d91831fa4cc36b065829b34a558',1,'Communication::baseSocket::getIP()'],['../class_communication_1_1_socket_structure.html#a67ef573033634fd974c791861dff84cc',1,'Communication::SocketStructure::getIP()']]],
+  ['getiph',['getIPH',['../class_communication_1_1_i_p.html#a4d27a1a6564af4cfe32efad64bff1782',1,'Communication::IP']]],
+  ['getipn',['getIPN',['../class_communication_1_1_i_p.html#acc518ec890e42d67fe93840c31ed0b27',1,'Communication::IP']]],
+  ['getips',['getIPS',['../class_communication_1_1base_socket.html#afc772059faa2fc0776aa3fc5bb846c0b',1,'Communication::baseSocket::getIPS()'],['../class_communication_1_1_i_p.html#a0cfc93cc3418241b854ee38b7db70782',1,'Communication::IP::getIPS()'],['../class_communication_1_1_socket_structure.html#a00d0d9e10ff5d75c6717310adcca594b',1,'Communication::SocketStructure::getIPS()']]],
+  ['getport',['getPort',['../class_communication_1_1base_socket.html#a26cb031a880597f5323d720f4a295971',1,'Communication::baseSocket::getPort()'],['../class_communication_1_1_socket_structure.html#a7be506680c04918818545f05f84680cb',1,'Communication::SocketStructure::getPort()']]],
+  ['getporth',['getPortH',['../class_communication_1_1_port.html#aced2e6a97ef18d79cb86d81fdd8d71e9',1,'Communication::Port']]],
+  ['getportn',['getPortN',['../class_communication_1_1_port.html#adf58b6023f5878d4ac5c3a49431e26de',1,'Communication::Port']]],
+  ['getports',['getPortS',['../class_communication_1_1_port.html#a00ca90bb3c6e6827ee95a2fb3a77a995',1,'Communication::Port::getPortS()'],['../class_communication_1_1_socket_structure.html#a01cdf61533d33bd9c0c58fcbd4431e79',1,'Communication::SocketStructure::getPortS()']]],
+  ['getsize',['getSize',['../class_communication_1_1_socket_structure.html#a3d80b5598e8fbc5ada0838a4c8d622fc',1,'Communication::SocketStructure']]],
+  ['getsizeofdata',['getSizeOfData',['../class_communication_1_1base_data_buffer.html#adc057b73886aa1b1a40a586e01f1f396',1,'Communication::baseDataBuffer']]],
+  ['getsocket',['getSocket',['../class_communication_1_1_client.html#a87a0efa909c795c7680512bd0c35c883',1,'Communication::Client::getSocket()'],['../class_communication_1_1_server.html#a0a8014847e1d2e241ee30d48e0b307d7',1,'Communication::Server::getSocket()']]],
+  ['getsocketfiledescriptor',['getSocketFileDescriptor',['../class_communication_1_1base_socket.html#a1d73b54fa8ac561a2e302440726e58d6',1,'Communication::baseSocket']]],
+  ['getsocketid',['getSocketID',['../class_communication_1_1_socket_file_descriptor.html#a9f7c9de3b232bf172a4db62a3d4c6cac',1,'Communication::SocketFileDescriptor']]],
+  ['getsocketstructure',['getSocketStructure',['../class_communication_1_1base_socket.html#acccdca4e8634c4bd82153904ad3d1a54',1,'Communication::baseSocket']]],
+  ['getstatus',['getStatus',['../class_communication_1_1base_socket.html#a87c909591d9b6c3259e478845d8a0b82',1,'Communication::baseSocket::getStatus()'],['../class_communication_1_1_connection_status.html#acfdcf1ed0579d0e561c27b89b776a5ec',1,'Communication::ConnectionStatus::getStatus()']]],
+  ['gettype',['getType',['../class_communication_1_1base_socket.html#acda374c9e43cdc66573be7bb3b16db53',1,'Communication::baseSocket::getType()'],['../class_communication_1_1_socket_structure.html#accda20274761bc71c0bc142875aa676e',1,'Communication::SocketStructure::getType()']]]
+];

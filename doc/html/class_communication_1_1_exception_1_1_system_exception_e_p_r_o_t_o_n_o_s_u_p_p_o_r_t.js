@@ -1,0 +1,4 @@
+var class_communication_1_1_exception_1_1_system_exception_e_p_r_o_t_o_n_o_s_u_p_p_o_r_t =
+[
+    [ "SystemExceptionEPROTONOSUPPORT", "class_communication_1_1_exception_1_1_system_exception_e_p_r_o_t_o_n_o_s_u_p_p_o_r_t.html#aef294ed036c4e59ae051eade20fc11f6", null ]
+];

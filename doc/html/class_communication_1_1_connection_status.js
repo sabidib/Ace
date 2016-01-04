@@ -1,0 +1,26 @@
+var class_communication_1_1_connection_status =
+[
+    [ "ConnectionStatus", "class_communication_1_1_connection_status.html#a2fd4bbdadb8a1564a06e0192020ae6a1", null ],
+    [ "getStatus", "class_communication_1_1_connection_status.html#acfdcf1ed0579d0e561c27b89b776a5ec", null ],
+    [ "isAssigned", "class_communication_1_1_connection_status.html#afe3618523181a963fc2d72128b42aa79", null ],
+    [ "isBound", "class_communication_1_1_connection_status.html#a1091dfab9b442a559344c2fe83d450c3", null ],
+    [ "isConnected", "class_communication_1_1_connection_status.html#ae2c68bf6faea24f7e8d0e1e06662d1a5", null ],
+    [ "isListening", "class_communication_1_1_connection_status.html#a101f64e8a51669c752cf3de4b0317812", null ],
+    [ "isReceivingData", "class_communication_1_1_connection_status.html#a148fb3bd4a95a92efb0bb78051124ef6", null ],
+    [ "isSendingData", "class_communication_1_1_connection_status.html#aa4f4bdf5d044a9905fe6d711e2755b33", null ],
+    [ "setIsAssigned", "class_communication_1_1_connection_status.html#a8c6dccdc9a3377865f90d8d06f83be7f", null ],
+    [ "setIsBound", "class_communication_1_1_connection_status.html#aeb16dc0c60073513cb23175705369f9b", null ],
+    [ "setIsConnected", "class_communication_1_1_connection_status.html#a671519288f76df11cc6bd38dcf41af13", null ],
+    [ "setIsListening", "class_communication_1_1_connection_status.html#a11dd03b3ea4848d9188029d868227e24", null ],
+    [ "setIsReceivingData", "class_communication_1_1_connection_status.html#a24078a06f4bf3205efb80d27e23688c3", null ],
+    [ "setIsSendingData", "class_communication_1_1_connection_status.html#a122001e6c991b2b5006c6e2c414d3000", null ],
+    [ "baseGateway", "class_communication_1_1_connection_status.html#a25af926aab0a15eb87a3149f43072f29", null ],
+    [ "m_isAssigned", "class_communication_1_1_connection_status.html#af8eda66a74967c2e5226203d09d0b1cb", null ],
+    [ "m_isBound", "class_communication_1_1_connection_status.html#ae89ece76fe699c7d1f943ec4bf5abfd9", null ],
+    [ "m_isConnected", "class_communication_1_1_connection_status.html#a3dd4daaa2236535df54db8d755e2e6dc", null ],
+    [ "m_isConnectedToDestinationSocket", "class_communication_1_1_connection_status.html#a75682bfd7179c2de4e54b15f3080cc73", null ],
+    [ "m_isListening", "class_communication_1_1_connection_status.html#af805eedc14d916294b7ef4ec70e8b24b", null ],
+    [ "m_isReceivingData", "class_communication_1_1_connection_status.html#a4c8edb70feb123e6a5e6cd75ddcdd468", null ],
+    [ "m_isSendingData", "class_communication_1_1_connection_status.html#aeb89ad295c5f513ee4388a6e8fe8b997", null ],
+    [ "m_status", "class_communication_1_1_connection_status.html#a91fdffcdf89271aec6f7943e44776cc9", null ]
+];

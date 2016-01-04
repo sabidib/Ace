@@ -1,0 +1,4 @@
+var class_communication_1_1_exception_1_1_system_exception_e_s_o_c_k_t_n_o_s_u_p_p_o_r_t =
+[
+    [ "SystemExceptionESOCKTNOSUPPORT", "class_communication_1_1_exception_1_1_system_exception_e_s_o_c_k_t_n_o_s_u_p_p_o_r_t.html#a342a1b1ba9ea176c6d89575de9fce53c", null ]
+];

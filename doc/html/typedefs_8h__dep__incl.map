@@ -1,0 +1,17 @@
+<map id="/Users/samy/Programming/Ace/include/typedefs.h" name="/Users/samy/Programming/Ace/include/typedefs.h">
+<area shape="rect" id="node2" href="$_gen_header_8h.html" title="/Users/samy/Programming\l/Ace/include/GenHeader.h" alt="" coords="753,99,949,143"/>
+<area shape="rect" id="node3" href="$base_data_buffer_8h.html" title="/Users/samy/Programming\l/Ace/include/baseDataBuffer.h" alt="" coords="1325,395,1545,439"/>
+<area shape="rect" id="node4" href="$base_gateway_8h.html" title="/Users/samy/Programming\l/Ace/include/baseGateway.h" alt="" coords="817,582,1025,626"/>
+<area shape="rect" id="node5" href="$_client_8h.html" title="/Users/samy/Programming\l/Ace/include/Client.h" alt="" coords="631,675,826,719"/>
+<area shape="rect" id="node6" href="$_server_8h.html" title="/Users/samy/Programming\l/Ace/include/Server.h" alt="" coords="964,675,1159,719"/>
+<area shape="rect" id="node7" href="$base_socket_8h.html" title="/Users/samy/Programming\l/Ace/include/baseSocket.h" alt="" coords="767,395,962,439"/>
+<area shape="rect" id="node8" href="$_o_s_8h.html" title="/Users/samy/Programming\l/Ace/include/OS.h" alt="" coords="495,489,690,533"/>
+<area shape="rect" id="node9" href="$_internet_socket_8h.html" title="/Users/samy/Programming\l/Ace/include/InternetSocket.h" alt="" coords="945,489,1158,533"/>
+<area shape="rect" id="node10" href="$_socket_structure_8h.html" title="/Users/samy/Programming\l/Ace/include/SocketStructure.h" alt="" coords="339,302,561,346"/>
+<area shape="rect" id="node11" href="$_i_p_8h.html" title="/Users/samy/Programming\l/Ace/include/IP.h" alt="" coords="592,201,787,245"/>
+<area shape="rect" id="node12" href="$_port_8h.html" title="/Users/samy/Programming\l/Ace/include/Port.h" alt="" coords="320,201,515,245"/>
+<area shape="rect" id="node13" href="$_socket_file_descriptor_8h.html" title="/Users/samy/Programming\l/Ace/include/SocketFileDescriptor.h" alt="" coords="637,302,890,346"/>
+<area shape="rect" id="node14" href="$_connection_status_8h.html" title="/Users/samy/Programming\l/Ace/include/ConnectionStatus.h" alt="" coords="965,302,1198,346"/>
+<area shape="rect" id="node15" href="$_exception_creator_8h.html" title="/Users/samy/Programming\l/Ace/include/ExceptionCreator.h" alt="" coords="82,302,314,346"/>
+<area shape="rect" id="node16" href="$_all_system_exceptions_8h.html" title="/Users/samy/Programming\l/Ace/include/exception\l/AllSystemExceptions.h" alt="" coords="48,193,243,253"/>
+</map>
