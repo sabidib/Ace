@@ -136,12 +136,13 @@ baseSocket* Server::startAccepting() {
 }
 
 bool Server::shutdownServer() {
-    // std::cout << m_connectedClients[0] << std::endl;
     for (baseSocket* i : m_connectedClients) {
-        // std::cout << "Attempting to close" << std::endl;
-        // std::cout << m_connectedClients.size() << std::endl;
-
-        closeSocket(*i);
+        try{
+            closeSocket(*i);    
+        } catch (MsgException& err){
+            std::cout << err.what() << " ignoring error when trying to close server sockets" << std::endl;
+            continue;
+        }        
     }
         
     m_connectedClients = std::vector<baseSocket*>();
