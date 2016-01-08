@@ -1,4 +1,4 @@
-![Building](https://travis-ci.com/sabidib/Ace.svg?token=cjyDygCQAkVjSCxqEHxj)
+![Building](https://travis-ci.org/sabidib/Ace.svg)
 # Ace
 Ace is lightweight c++11 networking library. 
 
