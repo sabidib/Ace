@@ -1,0 +1,230 @@
+\hypertarget{class_communication_1_1_connection_status}{}\section{Communication\+:\+:Connection\+Status Class Reference}
+\label{class_communication_1_1_connection_status}\index{Communication\+::\+Connection\+Status@{Communication\+::\+Connection\+Status}}
+
+
+A class that represents a connections status. This class is used in the base socket class to describe the current state of the socket.  
+
+
+
+
+{\ttfamily \#include $<$Connection\+Status.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_communication_1_1_connection_status_a2fd4bbdadb8a1564a06e0192020ae6a1}{Connection\+Status} ()
+\item 
+bool \hyperlink{class_communication_1_1_connection_status_aa4f4bdf5d044a9905fe6d711e2755b33}{is\+Sending\+Data} () const 
+\item 
+bool \hyperlink{class_communication_1_1_connection_status_a148fb3bd4a95a92efb0bb78051124ef6}{is\+Receiving\+Data} () const 
+\item 
+bool \hyperlink{class_communication_1_1_connection_status_a101f64e8a51669c752cf3de4b0317812}{is\+Listening} () const 
+\item 
+bool \hyperlink{class_communication_1_1_connection_status_a1091dfab9b442a559344c2fe83d450c3}{is\+Bound} () const 
+\item 
+bool \hyperlink{class_communication_1_1_connection_status_ae2c68bf6faea24f7e8d0e1e06662d1a5}{is\+Connected} () const 
+\item 
+bool \hyperlink{class_communication_1_1_connection_status_afe3618523181a963fc2d72128b42aa79}{is\+Assigned} () const 
+\item 
+\hyperlink{namespace_communication_a8dc059cf785da5e0d245141c4f8a6a9c}{S\+T\+A\+T\+U\+S} \hyperlink{class_communication_1_1_connection_status_acfdcf1ed0579d0e561c27b89b776a5ec}{get\+Status} () const 
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_communication_1_1_connection_status_a122001e6c991b2b5006c6e2c414d3000}{set\+Is\+Sending\+Data} (bool \hyperlink{class_communication_1_1_connection_status_aa4f4bdf5d044a9905fe6d711e2755b33}{is\+Sending\+Data})
+\item 
+void \hyperlink{class_communication_1_1_connection_status_a24078a06f4bf3205efb80d27e23688c3}{set\+Is\+Receiving\+Data} (bool \hyperlink{class_communication_1_1_connection_status_a148fb3bd4a95a92efb0bb78051124ef6}{is\+Receiving\+Data})
+\item 
+void \hyperlink{class_communication_1_1_connection_status_a11dd03b3ea4848d9188029d868227e24}{set\+Is\+Listening} (bool \hyperlink{class_communication_1_1_connection_status_a101f64e8a51669c752cf3de4b0317812}{is\+Listening})
+\item 
+void \hyperlink{class_communication_1_1_connection_status_aeb16dc0c60073513cb23175705369f9b}{set\+Is\+Bound} (bool \hyperlink{class_communication_1_1_connection_status_a1091dfab9b442a559344c2fe83d450c3}{is\+Bound})
+\item 
+void \hyperlink{class_communication_1_1_connection_status_a671519288f76df11cc6bd38dcf41af13}{set\+Is\+Connected} (bool \hyperlink{class_communication_1_1_connection_status_ae2c68bf6faea24f7e8d0e1e06662d1a5}{is\+Connected})
+\item 
+void \hyperlink{class_communication_1_1_connection_status_a8c6dccdc9a3377865f90d8d06f83be7f}{set\+Is\+Assigned} (bool \hyperlink{class_communication_1_1_connection_status_afe3618523181a963fc2d72128b42aa79}{is\+Assigned})
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{class_communication_1_1_connection_status_aeb89ad295c5f513ee4388a6e8fe8b997}{m\+\_\+is\+Sending\+Data}
+\begin{DoxyCompactList}\small\item\em A state bool representing if the object is sending data. \end{DoxyCompactList}\item 
+bool \hyperlink{class_communication_1_1_connection_status_a4c8edb70feb123e6a5e6cd75ddcdd468}{m\+\_\+is\+Receiving\+Data}
+\begin{DoxyCompactList}\small\item\em A state bool representing if the object is receiving data. \end{DoxyCompactList}\item 
+bool \hyperlink{class_communication_1_1_connection_status_af805eedc14d916294b7ef4ec70e8b24b}{m\+\_\+is\+Listening}
+\begin{DoxyCompactList}\small\item\em A state bool representing if the object is currently listening. \end{DoxyCompactList}\item 
+bool \hyperlink{class_communication_1_1_connection_status_ae89ece76fe699c7d1f943ec4bf5abfd9}{m\+\_\+is\+Bound}
+\item 
+bool \hyperlink{class_communication_1_1_connection_status_a75682bfd7179c2de4e54b15f3080cc73}{m\+\_\+is\+Connected\+To\+Destination\+Socket}
+\item 
+bool \hyperlink{class_communication_1_1_connection_status_a3dd4daaa2236535df54db8d755e2e6dc}{m\+\_\+is\+Connected}
+\item 
+bool \hyperlink{class_communication_1_1_connection_status_af8eda66a74967c2e5226203d09d0b1cb}{m\+\_\+is\+Assigned}
+\item 
+\hyperlink{namespace_communication_a8dc059cf785da5e0d245141c4f8a6a9c}{S\+T\+A\+T\+U\+S} \hyperlink{class_communication_1_1_connection_status_a91fdffcdf89271aec6f7943e44776cc9}{m\+\_\+status}
+\begin{DoxyCompactList}\small\item\em A detailed state on m\+\_\+\+Connected\+Socket. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_communication_1_1_connection_status_a25af926aab0a15eb87a3149f43072f29}{base\+Gateway}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A class that represents a connections status. This class is used in the base socket class to describe the current state of the socket. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_communication_1_1_connection_status_a2fd4bbdadb8a1564a06e0192020ae6a1}{}\index{Communication\+::\+Connection\+Status@{Communication\+::\+Connection\+Status}!Connection\+Status@{Connection\+Status}}
+\index{Connection\+Status@{Connection\+Status}!Communication\+::\+Connection\+Status@{Communication\+::\+Connection\+Status}}
+\subsubsection[{Connection\+Status()}]{\setlength{\rightskip}{0pt plus 5cm}Communication\+::\+Connection\+Status\+::\+Connection\+Status (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_communication_1_1_connection_status_a2fd4bbdadb8a1564a06e0192020ae6a1}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_communication_1_1_connection_status_acfdcf1ed0579d0e561c27b89b776a5ec}{}\index{Communication\+::\+Connection\+Status@{Communication\+::\+Connection\+Status}!get\+Status@{get\+Status}}
+\index{get\+Status@{get\+Status}!Communication\+::\+Connection\+Status@{Communication\+::\+Connection\+Status}}
+\subsubsection[{get\+Status() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+U\+S} Communication\+::\+Connection\+Status\+::get\+Status (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_communication_1_1_connection_status_acfdcf1ed0579d0e561c27b89b776a5ec}
+\hypertarget{class_communication_1_1_connection_status_afe3618523181a963fc2d72128b42aa79}{}\index{Communication\+::\+Connection\+Status@{Communication\+::\+Connection\+Status}!is\+Assigned@{is\+Assigned}}
+\index{is\+Assigned@{is\+Assigned}!Communication\+::\+Connection\+Status@{Communication\+::\+Connection\+Status}}
+\subsubsection[{is\+Assigned() const }]{\setlength{\rightskip}{0pt plus 5cm}bool Communication\+::\+Connection\+Status\+::is\+Assigned (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_communication_1_1_connection_status_afe3618523181a963fc2d72128b42aa79}
+\hypertarget{class_communication_1_1_connection_status_a1091dfab9b442a559344c2fe83d450c3}{}\index{Communication\+::\+Connection\+Status@{Communication\+::\+Connection\+Status}!is\+Bound@{is\+Bound}}
+\index{is\+Bound@{is\+Bound}!Communication\+::\+Connection\+Status@{Communication\+::\+Connection\+Status}}
+\subsubsection[{is\+Bound() const }]{\setlength{\rightskip}{0pt plus 5cm}bool Communication\+::\+Connection\+Status\+::is\+Bound (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_communication_1_1_connection_status_a1091dfab9b442a559344c2fe83d450c3}
+\hypertarget{class_communication_1_1_connection_status_ae2c68bf6faea24f7e8d0e1e06662d1a5}{}\index{Communication\+::\+Connection\+Status@{Communication\+::\+Connection\+Status}!is\+Connected@{is\+Connected}}
+\index{is\+Connected@{is\+Connected}!Communication\+::\+Connection\+Status@{Communication\+::\+Connection\+Status}}
+\subsubsection[{is\+Connected() const }]{\setlength{\rightskip}{0pt plus 5cm}bool Communication\+::\+Connection\+Status\+::is\+Connected (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_communication_1_1_connection_status_ae2c68bf6faea24f7e8d0e1e06662d1a5}
+\hypertarget{class_communication_1_1_connection_status_a101f64e8a51669c752cf3de4b0317812}{}\index{Communication\+::\+Connection\+Status@{Communication\+::\+Connection\+Status}!is\+Listening@{is\+Listening}}
+\index{is\+Listening@{is\+Listening}!Communication\+::\+Connection\+Status@{Communication\+::\+Connection\+Status}}
+\subsubsection[{is\+Listening() const }]{\setlength{\rightskip}{0pt plus 5cm}bool Communication\+::\+Connection\+Status\+::is\+Listening (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_communication_1_1_connection_status_a101f64e8a51669c752cf3de4b0317812}
+\hypertarget{class_communication_1_1_connection_status_a148fb3bd4a95a92efb0bb78051124ef6}{}\index{Communication\+::\+Connection\+Status@{Communication\+::\+Connection\+Status}!is\+Receiving\+Data@{is\+Receiving\+Data}}
+\index{is\+Receiving\+Data@{is\+Receiving\+Data}!Communication\+::\+Connection\+Status@{Communication\+::\+Connection\+Status}}
+\subsubsection[{is\+Receiving\+Data() const }]{\setlength{\rightskip}{0pt plus 5cm}bool Communication\+::\+Connection\+Status\+::is\+Receiving\+Data (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_communication_1_1_connection_status_a148fb3bd4a95a92efb0bb78051124ef6}
+\hypertarget{class_communication_1_1_connection_status_aa4f4bdf5d044a9905fe6d711e2755b33}{}\index{Communication\+::\+Connection\+Status@{Communication\+::\+Connection\+Status}!is\+Sending\+Data@{is\+Sending\+Data}}
+\index{is\+Sending\+Data@{is\+Sending\+Data}!Communication\+::\+Connection\+Status@{Communication\+::\+Connection\+Status}}
+\subsubsection[{is\+Sending\+Data() const }]{\setlength{\rightskip}{0pt plus 5cm}bool Communication\+::\+Connection\+Status\+::is\+Sending\+Data (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_communication_1_1_connection_status_aa4f4bdf5d044a9905fe6d711e2755b33}
+\hypertarget{class_communication_1_1_connection_status_a8c6dccdc9a3377865f90d8d06f83be7f}{}\index{Communication\+::\+Connection\+Status@{Communication\+::\+Connection\+Status}!set\+Is\+Assigned@{set\+Is\+Assigned}}
+\index{set\+Is\+Assigned@{set\+Is\+Assigned}!Communication\+::\+Connection\+Status@{Communication\+::\+Connection\+Status}}
+\subsubsection[{set\+Is\+Assigned(bool is\+Assigned)}]{\setlength{\rightskip}{0pt plus 5cm}void Communication\+::\+Connection\+Status\+::set\+Is\+Assigned (
+\begin{DoxyParamCaption}
+\item[{bool}]{is\+Assigned}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_communication_1_1_connection_status_a8c6dccdc9a3377865f90d8d06f83be7f}
+\hypertarget{class_communication_1_1_connection_status_aeb16dc0c60073513cb23175705369f9b}{}\index{Communication\+::\+Connection\+Status@{Communication\+::\+Connection\+Status}!set\+Is\+Bound@{set\+Is\+Bound}}
+\index{set\+Is\+Bound@{set\+Is\+Bound}!Communication\+::\+Connection\+Status@{Communication\+::\+Connection\+Status}}
+\subsubsection[{set\+Is\+Bound(bool is\+Bound)}]{\setlength{\rightskip}{0pt plus 5cm}void Communication\+::\+Connection\+Status\+::set\+Is\+Bound (
+\begin{DoxyParamCaption}
+\item[{bool}]{is\+Bound}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_communication_1_1_connection_status_aeb16dc0c60073513cb23175705369f9b}
+\hypertarget{class_communication_1_1_connection_status_a671519288f76df11cc6bd38dcf41af13}{}\index{Communication\+::\+Connection\+Status@{Communication\+::\+Connection\+Status}!set\+Is\+Connected@{set\+Is\+Connected}}
+\index{set\+Is\+Connected@{set\+Is\+Connected}!Communication\+::\+Connection\+Status@{Communication\+::\+Connection\+Status}}
+\subsubsection[{set\+Is\+Connected(bool is\+Connected)}]{\setlength{\rightskip}{0pt plus 5cm}void Communication\+::\+Connection\+Status\+::set\+Is\+Connected (
+\begin{DoxyParamCaption}
+\item[{bool}]{is\+Connected}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_communication_1_1_connection_status_a671519288f76df11cc6bd38dcf41af13}
+\hypertarget{class_communication_1_1_connection_status_a11dd03b3ea4848d9188029d868227e24}{}\index{Communication\+::\+Connection\+Status@{Communication\+::\+Connection\+Status}!set\+Is\+Listening@{set\+Is\+Listening}}
+\index{set\+Is\+Listening@{set\+Is\+Listening}!Communication\+::\+Connection\+Status@{Communication\+::\+Connection\+Status}}
+\subsubsection[{set\+Is\+Listening(bool is\+Listening)}]{\setlength{\rightskip}{0pt plus 5cm}void Communication\+::\+Connection\+Status\+::set\+Is\+Listening (
+\begin{DoxyParamCaption}
+\item[{bool}]{is\+Listening}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_communication_1_1_connection_status_a11dd03b3ea4848d9188029d868227e24}
+\hypertarget{class_communication_1_1_connection_status_a24078a06f4bf3205efb80d27e23688c3}{}\index{Communication\+::\+Connection\+Status@{Communication\+::\+Connection\+Status}!set\+Is\+Receiving\+Data@{set\+Is\+Receiving\+Data}}
+\index{set\+Is\+Receiving\+Data@{set\+Is\+Receiving\+Data}!Communication\+::\+Connection\+Status@{Communication\+::\+Connection\+Status}}
+\subsubsection[{set\+Is\+Receiving\+Data(bool is\+Receiving\+Data)}]{\setlength{\rightskip}{0pt plus 5cm}void Communication\+::\+Connection\+Status\+::set\+Is\+Receiving\+Data (
+\begin{DoxyParamCaption}
+\item[{bool}]{is\+Receiving\+Data}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_communication_1_1_connection_status_a24078a06f4bf3205efb80d27e23688c3}
+\hypertarget{class_communication_1_1_connection_status_a122001e6c991b2b5006c6e2c414d3000}{}\index{Communication\+::\+Connection\+Status@{Communication\+::\+Connection\+Status}!set\+Is\+Sending\+Data@{set\+Is\+Sending\+Data}}
+\index{set\+Is\+Sending\+Data@{set\+Is\+Sending\+Data}!Communication\+::\+Connection\+Status@{Communication\+::\+Connection\+Status}}
+\subsubsection[{set\+Is\+Sending\+Data(bool is\+Sending\+Data)}]{\setlength{\rightskip}{0pt plus 5cm}void Communication\+::\+Connection\+Status\+::set\+Is\+Sending\+Data (
+\begin{DoxyParamCaption}
+\item[{bool}]{is\+Sending\+Data}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_communication_1_1_connection_status_a122001e6c991b2b5006c6e2c414d3000}
+
+
+\subsection{Friends And Related Function Documentation}
+\hypertarget{class_communication_1_1_connection_status_a25af926aab0a15eb87a3149f43072f29}{}\index{Communication\+::\+Connection\+Status@{Communication\+::\+Connection\+Status}!base\+Gateway@{base\+Gateway}}
+\index{base\+Gateway@{base\+Gateway}!Communication\+::\+Connection\+Status@{Communication\+::\+Connection\+Status}}
+\subsubsection[{base\+Gateway}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf base\+Gateway}\hspace{0.3cm}{\ttfamily [friend]}}\label{class_communication_1_1_connection_status_a25af926aab0a15eb87a3149f43072f29}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_communication_1_1_connection_status_af8eda66a74967c2e5226203d09d0b1cb}{}\index{Communication\+::\+Connection\+Status@{Communication\+::\+Connection\+Status}!m\+\_\+is\+Assigned@{m\+\_\+is\+Assigned}}
+\index{m\+\_\+is\+Assigned@{m\+\_\+is\+Assigned}!Communication\+::\+Connection\+Status@{Communication\+::\+Connection\+Status}}
+\subsubsection[{m\+\_\+is\+Assigned}]{\setlength{\rightskip}{0pt plus 5cm}bool Communication\+::\+Connection\+Status\+::m\+\_\+is\+Assigned\hspace{0.3cm}{\ttfamily [private]}}\label{class_communication_1_1_connection_status_af8eda66a74967c2e5226203d09d0b1cb}
+A state bool represent if the object has a socket\+I\+D currently assigned to it \hypertarget{class_communication_1_1_connection_status_ae89ece76fe699c7d1f943ec4bf5abfd9}{}\index{Communication\+::\+Connection\+Status@{Communication\+::\+Connection\+Status}!m\+\_\+is\+Bound@{m\+\_\+is\+Bound}}
+\index{m\+\_\+is\+Bound@{m\+\_\+is\+Bound}!Communication\+::\+Connection\+Status@{Communication\+::\+Connection\+Status}}
+\subsubsection[{m\+\_\+is\+Bound}]{\setlength{\rightskip}{0pt plus 5cm}bool Communication\+::\+Connection\+Status\+::m\+\_\+is\+Bound\hspace{0.3cm}{\ttfamily [private]}}\label{class_communication_1_1_connection_status_ae89ece76fe699c7d1f943ec4bf5abfd9}
+A state bool representing if the object is currently bound the socket defined in m\+\_\+\+Destination\+Socket. \hypertarget{class_communication_1_1_connection_status_a3dd4daaa2236535df54db8d755e2e6dc}{}\index{Communication\+::\+Connection\+Status@{Communication\+::\+Connection\+Status}!m\+\_\+is\+Connected@{m\+\_\+is\+Connected}}
+\index{m\+\_\+is\+Connected@{m\+\_\+is\+Connected}!Communication\+::\+Connection\+Status@{Communication\+::\+Connection\+Status}}
+\subsubsection[{m\+\_\+is\+Connected}]{\setlength{\rightskip}{0pt plus 5cm}bool Communication\+::\+Connection\+Status\+::m\+\_\+is\+Connected\hspace{0.3cm}{\ttfamily [private]}}\label{class_communication_1_1_connection_status_a3dd4daaa2236535df54db8d755e2e6dc}
+A state bool representing if the object is currently connected to the socket defined in m\+\_\+\+Conneted\+Socket. \hypertarget{class_communication_1_1_connection_status_a75682bfd7179c2de4e54b15f3080cc73}{}\index{Communication\+::\+Connection\+Status@{Communication\+::\+Connection\+Status}!m\+\_\+is\+Connected\+To\+Destination\+Socket@{m\+\_\+is\+Connected\+To\+Destination\+Socket}}
+\index{m\+\_\+is\+Connected\+To\+Destination\+Socket@{m\+\_\+is\+Connected\+To\+Destination\+Socket}!Communication\+::\+Connection\+Status@{Communication\+::\+Connection\+Status}}
+\subsubsection[{m\+\_\+is\+Connected\+To\+Destination\+Socket}]{\setlength{\rightskip}{0pt plus 5cm}bool Communication\+::\+Connection\+Status\+::m\+\_\+is\+Connected\+To\+Destination\+Socket\hspace{0.3cm}{\ttfamily [private]}}\label{class_communication_1_1_connection_status_a75682bfd7179c2de4e54b15f3080cc73}
+A state bool representing if the object is currently connected to the socket defined in m\+\_\+\+Destination\+Socket. \hypertarget{class_communication_1_1_connection_status_af805eedc14d916294b7ef4ec70e8b24b}{}\index{Communication\+::\+Connection\+Status@{Communication\+::\+Connection\+Status}!m\+\_\+is\+Listening@{m\+\_\+is\+Listening}}
+\index{m\+\_\+is\+Listening@{m\+\_\+is\+Listening}!Communication\+::\+Connection\+Status@{Communication\+::\+Connection\+Status}}
+\subsubsection[{m\+\_\+is\+Listening}]{\setlength{\rightskip}{0pt plus 5cm}bool Communication\+::\+Connection\+Status\+::m\+\_\+is\+Listening\hspace{0.3cm}{\ttfamily [private]}}\label{class_communication_1_1_connection_status_af805eedc14d916294b7ef4ec70e8b24b}
+
+
+A state bool representing if the object is currently listening. 
+
+\hypertarget{class_communication_1_1_connection_status_a4c8edb70feb123e6a5e6cd75ddcdd468}{}\index{Communication\+::\+Connection\+Status@{Communication\+::\+Connection\+Status}!m\+\_\+is\+Receiving\+Data@{m\+\_\+is\+Receiving\+Data}}
+\index{m\+\_\+is\+Receiving\+Data@{m\+\_\+is\+Receiving\+Data}!Communication\+::\+Connection\+Status@{Communication\+::\+Connection\+Status}}
+\subsubsection[{m\+\_\+is\+Receiving\+Data}]{\setlength{\rightskip}{0pt plus 5cm}bool Communication\+::\+Connection\+Status\+::m\+\_\+is\+Receiving\+Data\hspace{0.3cm}{\ttfamily [private]}}\label{class_communication_1_1_connection_status_a4c8edb70feb123e6a5e6cd75ddcdd468}
+
+
+A state bool representing if the object is receiving data. 
+
+\hypertarget{class_communication_1_1_connection_status_aeb89ad295c5f513ee4388a6e8fe8b997}{}\index{Communication\+::\+Connection\+Status@{Communication\+::\+Connection\+Status}!m\+\_\+is\+Sending\+Data@{m\+\_\+is\+Sending\+Data}}
+\index{m\+\_\+is\+Sending\+Data@{m\+\_\+is\+Sending\+Data}!Communication\+::\+Connection\+Status@{Communication\+::\+Connection\+Status}}
+\subsubsection[{m\+\_\+is\+Sending\+Data}]{\setlength{\rightskip}{0pt plus 5cm}bool Communication\+::\+Connection\+Status\+::m\+\_\+is\+Sending\+Data\hspace{0.3cm}{\ttfamily [private]}}\label{class_communication_1_1_connection_status_aeb89ad295c5f513ee4388a6e8fe8b997}
+
+
+A state bool representing if the object is sending data. 
+
+\hypertarget{class_communication_1_1_connection_status_a91fdffcdf89271aec6f7943e44776cc9}{}\index{Communication\+::\+Connection\+Status@{Communication\+::\+Connection\+Status}!m\+\_\+status@{m\+\_\+status}}
+\index{m\+\_\+status@{m\+\_\+status}!Communication\+::\+Connection\+Status@{Communication\+::\+Connection\+Status}}
+\subsubsection[{m\+\_\+status}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+U\+S} Communication\+::\+Connection\+Status\+::m\+\_\+status\hspace{0.3cm}{\ttfamily [private]}}\label{class_communication_1_1_connection_status_a91fdffcdf89271aec6f7943e44776cc9}
+
+
+A detailed state on m\+\_\+\+Connected\+Socket. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/samy/\+Programming/\+Ace/include/\hyperlink{_connection_status_8h}{Connection\+Status.\+h}\end{DoxyCompactItemize}

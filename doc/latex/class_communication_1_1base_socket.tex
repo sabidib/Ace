@@ -1,0 +1,489 @@
+\hypertarget{class_communication_1_1base_socket}{}\section{Communication\+:\+:base\+Socket Class Reference}
+\label{class_communication_1_1base_socket}\index{Communication\+::base\+Socket@{Communication\+::base\+Socket}}
+
+
+Represents a basic socket. This class combines the \hyperlink{class_communication_1_1_socket_structure}{Socket\+Structure} and Socket\+File\+Descriptors together and is the basic unit of cppcom.  
+
+
+
+
+{\ttfamily \#include $<$base\+Socket.\+h$>$}
+
+
+
+Inheritance diagram for Communication\+:\+:base\+Socket\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=250pt]{class_communication_1_1base_socket__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Communication\+:\+:base\+Socket\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_communication_1_1base_socket__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_communication_1_1base_socket_ae213be9a97f353585668e1115fc5273a}{base\+Socket} ()
+\item 
+\hyperlink{class_communication_1_1base_socket_ac2d2df47f79b5a60b6ca2dd8af31d40b}{base\+Socket} (\hyperlink{class_communication_1_1_i_p}{I\+P} ip, \hyperlink{class_communication_1_1_port}{Port} port\+No, \hyperlink{typedefs_8h_a2e2c38961834f28c06e17e074eb00bc7}{U\+I\+N\+T} socket\+Type, \hyperlink{typedefs_8h_a2e2c38961834f28c06e17e074eb00bc7}{U\+I\+N\+T} family\+Type)
+\begin{DoxyCompactList}\small\item\em Initializes a socket according to the given parameters. \end{DoxyCompactList}\item 
+\hyperlink{class_communication_1_1base_socket_a18e4ac664428ff983a3e89c32ecee806}{base\+Socket} (\hyperlink{class_communication_1_1_socket_structure}{Socket\+Structure} server\+Info)
+\begin{DoxyCompactList}\small\item\em Initializes a socket according to a \hyperlink{class_communication_1_1_socket_structure}{Socket\+Structure} object. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{class_communication_1_1base_socket_afc772059faa2fc0776aa3fc5bb846c0b}{get\+I\+P\+S} () const 
+\begin{DoxyCompactList}\small\item\em Gets the string representation of the \hyperlink{class_communication_1_1_i_p}{I\+P} address in the socket. \end{DoxyCompactList}\item 
+\hyperlink{class_communication_1_1_port}{Port} \hyperlink{class_communication_1_1base_socket_a26cb031a880597f5323d720f4a295971}{get\+Port} () const 
+\begin{DoxyCompactList}\small\item\em Returns the \hyperlink{class_communication_1_1_port}{Port} stored in the socket. \end{DoxyCompactList}\item 
+\hyperlink{class_communication_1_1_i_p}{I\+P} \hyperlink{class_communication_1_1base_socket_ab2744d91831fa4cc36b065829b34a558}{get\+I\+P} () const 
+\begin{DoxyCompactList}\small\item\em Returns the \hyperlink{class_communication_1_1_i_p}{I\+P} address of the socket. \end{DoxyCompactList}\item 
+\hyperlink{typedefs_8h_a2e2c38961834f28c06e17e074eb00bc7}{U\+I\+N\+T} \hyperlink{class_communication_1_1base_socket_acda374c9e43cdc66573be7bb3b16db53}{get\+Type} () const 
+\begin{DoxyCompactList}\small\item\em Returns the type of the socket as defined in \char`\"{}sys/socket.\+h\char`\"{}. \end{DoxyCompactList}\item 
+\hyperlink{typedefs_8h_a2e2c38961834f28c06e17e074eb00bc7}{U\+I\+N\+T} \hyperlink{class_communication_1_1base_socket_ae59deca1baed0874631e5c3483eb9034}{get\+Family} () const 
+\begin{DoxyCompactList}\small\item\em Returns the family of the socket as defined in \char`\"{}sys/socket.\+h\char`\"{}. \end{DoxyCompactList}\item 
+\hyperlink{class_communication_1_1_socket_structure}{Socket\+Structure} $\ast$ \hyperlink{class_communication_1_1base_socket_acccdca4e8634c4bd82153904ad3d1a54}{get\+Socket\+Structure} ()
+\begin{DoxyCompactList}\small\item\em Returns a reference to the \hyperlink{class_communication_1_1_socket_structure}{Socket\+Structure}. \end{DoxyCompactList}\item 
+\hyperlink{class_communication_1_1_socket_file_descriptor}{Socket\+File\+Descriptor} $\ast$ \hyperlink{class_communication_1_1base_socket_a1d73b54fa8ac561a2e302440726e58d6}{get\+Socket\+File\+Descriptor} ()
+\begin{DoxyCompactList}\small\item\em Returns pointer to the file descriptor. \end{DoxyCompactList}\item 
+void \hyperlink{class_communication_1_1base_socket_afc8dd197527d82d6707bbfe593e62b5a}{set\+Socket\+Descriptor} (\hyperlink{class_communication_1_1_socket_file_descriptor}{Socket\+File\+Descriptor} socket\+File\+Descriptor)
+\begin{DoxyCompactList}\small\item\em Sets the file descriptor for the socket. \end{DoxyCompactList}\item 
+void \hyperlink{class_communication_1_1base_socket_a8bbe17d829e80da212b15ec271a6c7b0}{set\+Socket\+Structure} (\hyperlink{class_communication_1_1_socket_structure}{Socket\+Structure} socket\+Info)
+\begin{DoxyCompactList}\small\item\em Sets the socket structure for this socket. \end{DoxyCompactList}\item 
+bool \hyperlink{class_communication_1_1base_socket_a4c6da12f4f5202671c02dc83f22831a7}{is\+I\+P\+Valid} () const 
+\begin{DoxyCompactList}\small\item\em Checks if the sockets \hyperlink{class_communication_1_1_i_p}{I\+P} is valid. \end{DoxyCompactList}\item 
+bool \hyperlink{class_communication_1_1base_socket_a70e5ae4df0f7736b9e528ad8ff22bb7a}{is\+Port\+Valid} () const 
+\begin{DoxyCompactList}\small\item\em checks if the sockets \hyperlink{class_communication_1_1_port}{Port} is valid. \end{DoxyCompactList}\item 
+bool \hyperlink{class_communication_1_1base_socket_ae17db190efde85e725b68e17053a7b2e}{is\+Valid} () const 
+\begin{DoxyCompactList}\small\item\em Checks if the \hyperlink{class_communication_1_1_i_p}{I\+P} and port are valid. If the socket file descriptor has been set, then it also checks if the socket file descriptor is valid. \end{DoxyCompactList}\item 
+bool \hyperlink{class_communication_1_1base_socket_ab1a93d814a26672e39b333aaf5d41051}{is\+Assigned} () const 
+\begin{DoxyCompactList}\small\item\em Checks if the socket has been assigned to a file descriptor. \end{DoxyCompactList}\item 
+bool \hyperlink{class_communication_1_1base_socket_aaa5cf7099830637f0029fcac12e35d8d}{is\+Listening} () const 
+\begin{DoxyCompactList}\small\item\em Checks if the socket has been set to listen. \end{DoxyCompactList}\item 
+bool \hyperlink{class_communication_1_1base_socket_a376b19659ad45dd34109dc81d4ddb840}{is\+Bound} () const 
+\begin{DoxyCompactList}\small\item\em Checks if the socket has been bound. \end{DoxyCompactList}\item 
+bool \hyperlink{class_communication_1_1base_socket_a64d75f4245795544666610e6b67ecb12}{is\+Connected} () const 
+\begin{DoxyCompactList}\small\item\em Check if the socket has been connected. \end{DoxyCompactList}\item 
+bool \hyperlink{class_communication_1_1base_socket_a636198498cbb8773cc9461a5ee33089b}{is\+Sending\+Data} () const 
+\begin{DoxyCompactList}\small\item\em Checks if the socket is currently sending data. \end{DoxyCompactList}\item 
+bool \hyperlink{class_communication_1_1base_socket_aa9b1a3ba74c7754dec0ae45767798f95}{is\+Receiving\+Data} () const 
+\begin{DoxyCompactList}\small\item\em Checks if the socket is currently receiving data. \end{DoxyCompactList}\item 
+\hyperlink{namespace_communication_a8dc059cf785da5e0d245141c4f8a6a9c}{S\+T\+A\+T\+U\+S} \hyperlink{class_communication_1_1base_socket_a87c909591d9b6c3259e478845d8a0b82}{get\+Status} () const 
+\begin{DoxyCompactList}\small\item\em Gets the complete status of the socket. \end{DoxyCompactList}\item 
+\hyperlink{class_communication_1_1_connection_status}{Connection\+Status} $\ast$ \hyperlink{class_communication_1_1base_socket_aab7f6e7eb9eed4e7b6e2ac39db1e777e}{get\+Connection\+Status} ()
+\begin{DoxyCompactList}\small\item\em Gets the complete connection status object. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{class_communication_1_1base_socket_ad20fc9f3e205dbbcb4936e2a2ab351cb}{to\+String} () const 
+\begin{DoxyCompactList}\small\item\em Creates a string representation of the socket. \end{DoxyCompactList}\item 
+void \hyperlink{class_communication_1_1base_socket_aaee790fa1e870f007839f2310152f4f7}{\+\_\+reset\+Socket} ()
+\begin{DoxyCompactList}\small\item\em Resets the socket. Sets the socket descriptor to a default object and sets the status to a new status, however it does not reset the \hyperlink{class_communication_1_1_socket_structure}{Socket\+Structure} object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_communication_1_1_socket_structure}{Socket\+Structure} \hyperlink{class_communication_1_1base_socket_a61e4cefccf27fbc3365af9ab2a4b1228}{m\+\_\+socket\+Structure}
+\item 
+\hyperlink{class_communication_1_1_connection_status}{Connection\+Status} \hyperlink{class_communication_1_1base_socket_a4102d51354af1c2f5a34a3bdc21be0bb}{m\+\_\+socket\+Status}
+\item 
+\hyperlink{class_communication_1_1_socket_file_descriptor}{Socket\+File\+Descriptor} \hyperlink{class_communication_1_1base_socket_a2e5ec64337ee29b17f45853efde00a43}{m\+\_\+socket\+Descriptor}
+\item 
+bool \hyperlink{class_communication_1_1base_socket_ab4ef6d96459a000539623e28c7d926ce}{m\+\_\+socket\+Descriptor\+Was\+Set}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Represents a basic socket. This class combines the \hyperlink{class_communication_1_1_socket_structure}{Socket\+Structure} and Socket\+File\+Descriptors together and is the basic unit of cppcom. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_communication_1_1base_socket_ae213be9a97f353585668e1115fc5273a}{}\index{Communication\+::base\+Socket@{Communication\+::base\+Socket}!base\+Socket@{base\+Socket}}
+\index{base\+Socket@{base\+Socket}!Communication\+::base\+Socket@{Communication\+::base\+Socket}}
+\subsubsection[{base\+Socket()}]{\setlength{\rightskip}{0pt plus 5cm}Communication\+::base\+Socket\+::base\+Socket (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_communication_1_1base_socket_ae213be9a97f353585668e1115fc5273a}
+\hypertarget{class_communication_1_1base_socket_ac2d2df47f79b5a60b6ca2dd8af31d40b}{}\index{Communication\+::base\+Socket@{Communication\+::base\+Socket}!base\+Socket@{base\+Socket}}
+\index{base\+Socket@{base\+Socket}!Communication\+::base\+Socket@{Communication\+::base\+Socket}}
+\subsubsection[{base\+Socket(\+I\+P ip, Port port\+No, U\+I\+N\+T socket\+Type, U\+I\+N\+T family\+Type)}]{\setlength{\rightskip}{0pt plus 5cm}Communication\+::base\+Socket\+::base\+Socket (
+\begin{DoxyParamCaption}
+\item[{{\bf I\+P}}]{ip, }
+\item[{{\bf Port}}]{port\+No, }
+\item[{{\bf U\+I\+N\+T}}]{socket\+Type, }
+\item[{{\bf U\+I\+N\+T}}]{family\+Type}
+\end{DoxyParamCaption}
+)}\label{class_communication_1_1base_socket_ac2d2df47f79b5a60b6ca2dd8af31d40b}
+
+
+Initializes a socket according to the given parameters. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em I\+P\+Address} & The ip address of the socket \\
+\hline
+\mbox{\tt in}  & {\em port} & The port address of the socket \\
+\hline
+\mbox{\tt in}  & {\em type} & The type of socket as defined in \char`\"{}sys/socket.\+h\char`\"{} \\
+\hline
+\mbox{\tt in}  & {\em family} & The family of socket as defined in \char`\"{}sys/socket.\+h\char`\"{} \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{class_communication_1_1_msg_exception}{Msg\+Exception}} & Throws an exception if any of the parameters are invalid. \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{class_communication_1_1base_socket_a18e4ac664428ff983a3e89c32ecee806}{}\index{Communication\+::base\+Socket@{Communication\+::base\+Socket}!base\+Socket@{base\+Socket}}
+\index{base\+Socket@{base\+Socket}!Communication\+::base\+Socket@{Communication\+::base\+Socket}}
+\subsubsection[{base\+Socket(\+Socket\+Structure server\+Info)}]{\setlength{\rightskip}{0pt plus 5cm}Communication\+::base\+Socket\+::base\+Socket (
+\begin{DoxyParamCaption}
+\item[{{\bf Socket\+Structure}}]{server\+Info}
+\end{DoxyParamCaption}
+)}\label{class_communication_1_1base_socket_a18e4ac664428ff983a3e89c32ecee806}
+
+
+Initializes a socket according to a \hyperlink{class_communication_1_1_socket_structure}{Socket\+Structure} object. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em server\+Info} & a valid \hyperlink{class_communication_1_1_socket_structure}{Socket\+Structure} object. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_communication_1_1base_socket_aaee790fa1e870f007839f2310152f4f7}{}\index{Communication\+::base\+Socket@{Communication\+::base\+Socket}!\+\_\+reset\+Socket@{\+\_\+reset\+Socket}}
+\index{\+\_\+reset\+Socket@{\+\_\+reset\+Socket}!Communication\+::base\+Socket@{Communication\+::base\+Socket}}
+\subsubsection[{\+\_\+reset\+Socket()}]{\setlength{\rightskip}{0pt plus 5cm}void Communication\+::base\+Socket\+::\+\_\+reset\+Socket (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_communication_1_1base_socket_aaee790fa1e870f007839f2310152f4f7}
+
+
+Resets the socket. Sets the socket descriptor to a default object and sets the status to a new status, however it does not reset the \hyperlink{class_communication_1_1_socket_structure}{Socket\+Structure} object. 
+
+\hypertarget{class_communication_1_1base_socket_aab7f6e7eb9eed4e7b6e2ac39db1e777e}{}\index{Communication\+::base\+Socket@{Communication\+::base\+Socket}!get\+Connection\+Status@{get\+Connection\+Status}}
+\index{get\+Connection\+Status@{get\+Connection\+Status}!Communication\+::base\+Socket@{Communication\+::base\+Socket}}
+\subsubsection[{get\+Connection\+Status()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Connection\+Status}$\ast$ Communication\+::base\+Socket\+::get\+Connection\+Status (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_communication_1_1base_socket_aab7f6e7eb9eed4e7b6e2ac39db1e777e}
+
+
+Gets the complete connection status object. 
+
+\begin{DoxyReturn}{Returns}
+Returns a connection status object that represents the complete state of the socket. 
+\end{DoxyReturn}
+\hypertarget{class_communication_1_1base_socket_ae59deca1baed0874631e5c3483eb9034}{}\index{Communication\+::base\+Socket@{Communication\+::base\+Socket}!get\+Family@{get\+Family}}
+\index{get\+Family@{get\+Family}!Communication\+::base\+Socket@{Communication\+::base\+Socket}}
+\subsubsection[{get\+Family() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf U\+I\+N\+T} Communication\+::base\+Socket\+::get\+Family (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_communication_1_1base_socket_ae59deca1baed0874631e5c3483eb9034}
+
+
+Returns the family of the socket as defined in \char`\"{}sys/socket.\+h\char`\"{}. 
+
+\begin{DoxyReturn}{Returns}
+return a U\+I\+N\+T representing the socket family 
+\end{DoxyReturn}
+\hypertarget{class_communication_1_1base_socket_ab2744d91831fa4cc36b065829b34a558}{}\index{Communication\+::base\+Socket@{Communication\+::base\+Socket}!get\+I\+P@{get\+I\+P}}
+\index{get\+I\+P@{get\+I\+P}!Communication\+::base\+Socket@{Communication\+::base\+Socket}}
+\subsubsection[{get\+I\+P() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+P} Communication\+::base\+Socket\+::get\+I\+P (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_communication_1_1base_socket_ab2744d91831fa4cc36b065829b34a558}
+
+
+Returns the \hyperlink{class_communication_1_1_i_p}{I\+P} address of the socket. 
+
+\begin{DoxyReturn}{Returns}
+an \hyperlink{class_communication_1_1_i_p}{I\+P} address object. 
+\end{DoxyReturn}
+\hypertarget{class_communication_1_1base_socket_afc772059faa2fc0776aa3fc5bb846c0b}{}\index{Communication\+::base\+Socket@{Communication\+::base\+Socket}!get\+I\+P\+S@{get\+I\+P\+S}}
+\index{get\+I\+P\+S@{get\+I\+P\+S}!Communication\+::base\+Socket@{Communication\+::base\+Socket}}
+\subsubsection[{get\+I\+P\+S() const }]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Communication\+::base\+Socket\+::get\+I\+P\+S (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_communication_1_1base_socket_afc772059faa2fc0776aa3fc5bb846c0b}
+
+
+Gets the string representation of the \hyperlink{class_communication_1_1_i_p}{I\+P} address in the socket. 
+
+\begin{DoxyReturn}{Returns}
+returns the string of the \hyperlink{class_communication_1_1_i_p}{I\+P} address 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{class_communication_1_1_msg_exception}{Msg\+Exception}} & throws an exception if the \hyperlink{class_communication_1_1_i_p}{I\+P} address of the string is invalid. \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{class_communication_1_1base_socket_a26cb031a880597f5323d720f4a295971}{}\index{Communication\+::base\+Socket@{Communication\+::base\+Socket}!get\+Port@{get\+Port}}
+\index{get\+Port@{get\+Port}!Communication\+::base\+Socket@{Communication\+::base\+Socket}}
+\subsubsection[{get\+Port() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Port} Communication\+::base\+Socket\+::get\+Port (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_communication_1_1base_socket_a26cb031a880597f5323d720f4a295971}
+
+
+Returns the \hyperlink{class_communication_1_1_port}{Port} stored in the socket. 
+
+\begin{DoxyReturn}{Returns}
+A \hyperlink{class_communication_1_1_port}{Port} object. 
+\end{DoxyReturn}
+\hypertarget{class_communication_1_1base_socket_a1d73b54fa8ac561a2e302440726e58d6}{}\index{Communication\+::base\+Socket@{Communication\+::base\+Socket}!get\+Socket\+File\+Descriptor@{get\+Socket\+File\+Descriptor}}
+\index{get\+Socket\+File\+Descriptor@{get\+Socket\+File\+Descriptor}!Communication\+::base\+Socket@{Communication\+::base\+Socket}}
+\subsubsection[{get\+Socket\+File\+Descriptor()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Socket\+File\+Descriptor}$\ast$ Communication\+::base\+Socket\+::get\+Socket\+File\+Descriptor (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_communication_1_1base_socket_a1d73b54fa8ac561a2e302440726e58d6}
+
+
+Returns pointer to the file descriptor. 
+
+\begin{DoxyReturn}{Returns}
+returns a \hyperlink{class_communication_1_1_socket_file_descriptor}{Socket\+File\+Descriptor} 
+\end{DoxyReturn}
+\hypertarget{class_communication_1_1base_socket_acccdca4e8634c4bd82153904ad3d1a54}{}\index{Communication\+::base\+Socket@{Communication\+::base\+Socket}!get\+Socket\+Structure@{get\+Socket\+Structure}}
+\index{get\+Socket\+Structure@{get\+Socket\+Structure}!Communication\+::base\+Socket@{Communication\+::base\+Socket}}
+\subsubsection[{get\+Socket\+Structure()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Socket\+Structure}$\ast$ Communication\+::base\+Socket\+::get\+Socket\+Structure (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_communication_1_1base_socket_acccdca4e8634c4bd82153904ad3d1a54}
+
+
+Returns a reference to the \hyperlink{class_communication_1_1_socket_structure}{Socket\+Structure}. 
+
+\begin{DoxyReturn}{Returns}
+a \hyperlink{class_communication_1_1_socket_structure}{Socket\+Structure} reference 
+\end{DoxyReturn}
+\hypertarget{class_communication_1_1base_socket_a87c909591d9b6c3259e478845d8a0b82}{}\index{Communication\+::base\+Socket@{Communication\+::base\+Socket}!get\+Status@{get\+Status}}
+\index{get\+Status@{get\+Status}!Communication\+::base\+Socket@{Communication\+::base\+Socket}}
+\subsubsection[{get\+Status() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+T\+A\+T\+U\+S} Communication\+::base\+Socket\+::get\+Status (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_communication_1_1base_socket_a87c909591d9b6c3259e478845d8a0b82}
+
+
+Gets the complete status of the socket. 
+
+\begin{DoxyReturn}{Returns}
+returns a S\+T\+A\+T\+U\+S enum representing the state of the socket. 
+\end{DoxyReturn}
+\hypertarget{class_communication_1_1base_socket_acda374c9e43cdc66573be7bb3b16db53}{}\index{Communication\+::base\+Socket@{Communication\+::base\+Socket}!get\+Type@{get\+Type}}
+\index{get\+Type@{get\+Type}!Communication\+::base\+Socket@{Communication\+::base\+Socket}}
+\subsubsection[{get\+Type() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf U\+I\+N\+T} Communication\+::base\+Socket\+::get\+Type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_communication_1_1base_socket_acda374c9e43cdc66573be7bb3b16db53}
+
+
+Returns the type of the socket as defined in \char`\"{}sys/socket.\+h\char`\"{}. 
+
+\begin{DoxyReturn}{Returns}
+return a U\+I\+N\+T representing the socket type 
+\end{DoxyReturn}
+\hypertarget{class_communication_1_1base_socket_ab1a93d814a26672e39b333aaf5d41051}{}\index{Communication\+::base\+Socket@{Communication\+::base\+Socket}!is\+Assigned@{is\+Assigned}}
+\index{is\+Assigned@{is\+Assigned}!Communication\+::base\+Socket@{Communication\+::base\+Socket}}
+\subsubsection[{is\+Assigned() const }]{\setlength{\rightskip}{0pt plus 5cm}bool Communication\+::base\+Socket\+::is\+Assigned (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_communication_1_1base_socket_ab1a93d814a26672e39b333aaf5d41051}
+
+
+Checks if the socket has been assigned to a file descriptor. 
+
+\begin{DoxyReturn}{Returns}
+returns true if it has been assigned, false otherwise. 
+\end{DoxyReturn}
+\hypertarget{class_communication_1_1base_socket_a376b19659ad45dd34109dc81d4ddb840}{}\index{Communication\+::base\+Socket@{Communication\+::base\+Socket}!is\+Bound@{is\+Bound}}
+\index{is\+Bound@{is\+Bound}!Communication\+::base\+Socket@{Communication\+::base\+Socket}}
+\subsubsection[{is\+Bound() const }]{\setlength{\rightskip}{0pt plus 5cm}bool Communication\+::base\+Socket\+::is\+Bound (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_communication_1_1base_socket_a376b19659ad45dd34109dc81d4ddb840}
+
+
+Checks if the socket has been bound. 
+
+\begin{DoxyReturn}{Returns}
+returns true if it is bound, false otherwise. 
+\end{DoxyReturn}
+\hypertarget{class_communication_1_1base_socket_a64d75f4245795544666610e6b67ecb12}{}\index{Communication\+::base\+Socket@{Communication\+::base\+Socket}!is\+Connected@{is\+Connected}}
+\index{is\+Connected@{is\+Connected}!Communication\+::base\+Socket@{Communication\+::base\+Socket}}
+\subsubsection[{is\+Connected() const }]{\setlength{\rightskip}{0pt plus 5cm}bool Communication\+::base\+Socket\+::is\+Connected (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_communication_1_1base_socket_a64d75f4245795544666610e6b67ecb12}
+
+
+Check if the socket has been connected. 
+
+\begin{DoxyReturn}{Returns}
+returns true if it has been connected, false otherwise. 
+\end{DoxyReturn}
+\hypertarget{class_communication_1_1base_socket_a4c6da12f4f5202671c02dc83f22831a7}{}\index{Communication\+::base\+Socket@{Communication\+::base\+Socket}!is\+I\+P\+Valid@{is\+I\+P\+Valid}}
+\index{is\+I\+P\+Valid@{is\+I\+P\+Valid}!Communication\+::base\+Socket@{Communication\+::base\+Socket}}
+\subsubsection[{is\+I\+P\+Valid() const }]{\setlength{\rightskip}{0pt plus 5cm}bool Communication\+::base\+Socket\+::is\+I\+P\+Valid (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_communication_1_1base_socket_a4c6da12f4f5202671c02dc83f22831a7}
+
+
+Checks if the sockets \hyperlink{class_communication_1_1_i_p}{I\+P} is valid. 
+
+\begin{DoxyReturn}{Returns}
+return true if the ip is valid false otherwise 
+\end{DoxyReturn}
+\hypertarget{class_communication_1_1base_socket_aaa5cf7099830637f0029fcac12e35d8d}{}\index{Communication\+::base\+Socket@{Communication\+::base\+Socket}!is\+Listening@{is\+Listening}}
+\index{is\+Listening@{is\+Listening}!Communication\+::base\+Socket@{Communication\+::base\+Socket}}
+\subsubsection[{is\+Listening() const }]{\setlength{\rightskip}{0pt plus 5cm}bool Communication\+::base\+Socket\+::is\+Listening (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_communication_1_1base_socket_aaa5cf7099830637f0029fcac12e35d8d}
+
+
+Checks if the socket has been set to listen. 
+
+\begin{DoxyReturn}{Returns}
+returns true if it is listening, false otherwise 
+\end{DoxyReturn}
+\hypertarget{class_communication_1_1base_socket_a70e5ae4df0f7736b9e528ad8ff22bb7a}{}\index{Communication\+::base\+Socket@{Communication\+::base\+Socket}!is\+Port\+Valid@{is\+Port\+Valid}}
+\index{is\+Port\+Valid@{is\+Port\+Valid}!Communication\+::base\+Socket@{Communication\+::base\+Socket}}
+\subsubsection[{is\+Port\+Valid() const }]{\setlength{\rightskip}{0pt plus 5cm}bool Communication\+::base\+Socket\+::is\+Port\+Valid (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_communication_1_1base_socket_a70e5ae4df0f7736b9e528ad8ff22bb7a}
+
+
+checks if the sockets \hyperlink{class_communication_1_1_port}{Port} is valid. 
+
+\begin{DoxyReturn}{Returns}
+return true if the port is valid, false otherwise. 
+\end{DoxyReturn}
+\hypertarget{class_communication_1_1base_socket_aa9b1a3ba74c7754dec0ae45767798f95}{}\index{Communication\+::base\+Socket@{Communication\+::base\+Socket}!is\+Receiving\+Data@{is\+Receiving\+Data}}
+\index{is\+Receiving\+Data@{is\+Receiving\+Data}!Communication\+::base\+Socket@{Communication\+::base\+Socket}}
+\subsubsection[{is\+Receiving\+Data() const }]{\setlength{\rightskip}{0pt plus 5cm}bool Communication\+::base\+Socket\+::is\+Receiving\+Data (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_communication_1_1base_socket_aa9b1a3ba74c7754dec0ae45767798f95}
+
+
+Checks if the socket is currently receiving data. 
+
+\begin{DoxyReturn}{Returns}
+returns true if the socket is sending data, false otherwise. 
+\end{DoxyReturn}
+\hypertarget{class_communication_1_1base_socket_a636198498cbb8773cc9461a5ee33089b}{}\index{Communication\+::base\+Socket@{Communication\+::base\+Socket}!is\+Sending\+Data@{is\+Sending\+Data}}
+\index{is\+Sending\+Data@{is\+Sending\+Data}!Communication\+::base\+Socket@{Communication\+::base\+Socket}}
+\subsubsection[{is\+Sending\+Data() const }]{\setlength{\rightskip}{0pt plus 5cm}bool Communication\+::base\+Socket\+::is\+Sending\+Data (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_communication_1_1base_socket_a636198498cbb8773cc9461a5ee33089b}
+
+
+Checks if the socket is currently sending data. 
+
+\begin{DoxyReturn}{Returns}
+returns true if the socket is sending data, false otherwise 
+\end{DoxyReturn}
+\hypertarget{class_communication_1_1base_socket_ae17db190efde85e725b68e17053a7b2e}{}\index{Communication\+::base\+Socket@{Communication\+::base\+Socket}!is\+Valid@{is\+Valid}}
+\index{is\+Valid@{is\+Valid}!Communication\+::base\+Socket@{Communication\+::base\+Socket}}
+\subsubsection[{is\+Valid() const }]{\setlength{\rightskip}{0pt plus 5cm}bool Communication\+::base\+Socket\+::is\+Valid (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_communication_1_1base_socket_ae17db190efde85e725b68e17053a7b2e}
+
+
+Checks if the \hyperlink{class_communication_1_1_i_p}{I\+P} and port are valid. If the socket file descriptor has been set, then it also checks if the socket file descriptor is valid. 
+
+\begin{DoxyReturn}{Returns}
+returns true all \hyperlink{class_communication_1_1_i_p}{I\+P} and port and (in the case it is set) the file descriptor as well. 
+\end{DoxyReturn}
+\hypertarget{class_communication_1_1base_socket_afc8dd197527d82d6707bbfe593e62b5a}{}\index{Communication\+::base\+Socket@{Communication\+::base\+Socket}!set\+Socket\+Descriptor@{set\+Socket\+Descriptor}}
+\index{set\+Socket\+Descriptor@{set\+Socket\+Descriptor}!Communication\+::base\+Socket@{Communication\+::base\+Socket}}
+\subsubsection[{set\+Socket\+Descriptor(\+Socket\+File\+Descriptor socket\+File\+Descriptor)}]{\setlength{\rightskip}{0pt plus 5cm}void Communication\+::base\+Socket\+::set\+Socket\+Descriptor (
+\begin{DoxyParamCaption}
+\item[{{\bf Socket\+File\+Descriptor}}]{socket\+File\+Descriptor}
+\end{DoxyParamCaption}
+)}\label{class_communication_1_1base_socket_afc8dd197527d82d6707bbfe593e62b5a}
+
+
+Sets the file descriptor for the socket. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em socket\+File\+Descriptor} & a valid socket file descriptor. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_communication_1_1base_socket_a8bbe17d829e80da212b15ec271a6c7b0}{}\index{Communication\+::base\+Socket@{Communication\+::base\+Socket}!set\+Socket\+Structure@{set\+Socket\+Structure}}
+\index{set\+Socket\+Structure@{set\+Socket\+Structure}!Communication\+::base\+Socket@{Communication\+::base\+Socket}}
+\subsubsection[{set\+Socket\+Structure(\+Socket\+Structure socket\+Info)}]{\setlength{\rightskip}{0pt plus 5cm}void Communication\+::base\+Socket\+::set\+Socket\+Structure (
+\begin{DoxyParamCaption}
+\item[{{\bf Socket\+Structure}}]{socket\+Info}
+\end{DoxyParamCaption}
+)}\label{class_communication_1_1base_socket_a8bbe17d829e80da212b15ec271a6c7b0}
+
+
+Sets the socket structure for this socket. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em socket\+Info} & a valid \hyperlink{class_communication_1_1_socket_structure}{Socket\+Structure} object. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_communication_1_1base_socket_ad20fc9f3e205dbbcb4936e2a2ab351cb}{}\index{Communication\+::base\+Socket@{Communication\+::base\+Socket}!to\+String@{to\+String}}
+\index{to\+String@{to\+String}!Communication\+::base\+Socket@{Communication\+::base\+Socket}}
+\subsubsection[{to\+String() const }]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Communication\+::base\+Socket\+::to\+String (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_communication_1_1base_socket_ad20fc9f3e205dbbcb4936e2a2ab351cb}
+
+
+Creates a string representation of the socket. 
+
+\begin{DoxyReturn}{Returns}
+Return a string representation of the socket. 
+\end{DoxyReturn}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_communication_1_1base_socket_a2e5ec64337ee29b17f45853efde00a43}{}\index{Communication\+::base\+Socket@{Communication\+::base\+Socket}!m\+\_\+socket\+Descriptor@{m\+\_\+socket\+Descriptor}}
+\index{m\+\_\+socket\+Descriptor@{m\+\_\+socket\+Descriptor}!Communication\+::base\+Socket@{Communication\+::base\+Socket}}
+\subsubsection[{m\+\_\+socket\+Descriptor}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Socket\+File\+Descriptor} Communication\+::base\+Socket\+::m\+\_\+socket\+Descriptor\hspace{0.3cm}{\ttfamily [private]}}\label{class_communication_1_1base_socket_a2e5ec64337ee29b17f45853efde00a43}
+\hypertarget{class_communication_1_1base_socket_ab4ef6d96459a000539623e28c7d926ce}{}\index{Communication\+::base\+Socket@{Communication\+::base\+Socket}!m\+\_\+socket\+Descriptor\+Was\+Set@{m\+\_\+socket\+Descriptor\+Was\+Set}}
+\index{m\+\_\+socket\+Descriptor\+Was\+Set@{m\+\_\+socket\+Descriptor\+Was\+Set}!Communication\+::base\+Socket@{Communication\+::base\+Socket}}
+\subsubsection[{m\+\_\+socket\+Descriptor\+Was\+Set}]{\setlength{\rightskip}{0pt plus 5cm}bool Communication\+::base\+Socket\+::m\+\_\+socket\+Descriptor\+Was\+Set\hspace{0.3cm}{\ttfamily [private]}}\label{class_communication_1_1base_socket_ab4ef6d96459a000539623e28c7d926ce}
+\hypertarget{class_communication_1_1base_socket_a4102d51354af1c2f5a34a3bdc21be0bb}{}\index{Communication\+::base\+Socket@{Communication\+::base\+Socket}!m\+\_\+socket\+Status@{m\+\_\+socket\+Status}}
+\index{m\+\_\+socket\+Status@{m\+\_\+socket\+Status}!Communication\+::base\+Socket@{Communication\+::base\+Socket}}
+\subsubsection[{m\+\_\+socket\+Status}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Connection\+Status} Communication\+::base\+Socket\+::m\+\_\+socket\+Status\hspace{0.3cm}{\ttfamily [private]}}\label{class_communication_1_1base_socket_a4102d51354af1c2f5a34a3bdc21be0bb}
+\hypertarget{class_communication_1_1base_socket_a61e4cefccf27fbc3365af9ab2a4b1228}{}\index{Communication\+::base\+Socket@{Communication\+::base\+Socket}!m\+\_\+socket\+Structure@{m\+\_\+socket\+Structure}}
+\index{m\+\_\+socket\+Structure@{m\+\_\+socket\+Structure}!Communication\+::base\+Socket@{Communication\+::base\+Socket}}
+\subsubsection[{m\+\_\+socket\+Structure}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Socket\+Structure} Communication\+::base\+Socket\+::m\+\_\+socket\+Structure\hspace{0.3cm}{\ttfamily [private]}}\label{class_communication_1_1base_socket_a61e4cefccf27fbc3365af9ab2a4b1228}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/samy/\+Programming/\+Ace/include/\hyperlink{base_socket_8h}{base\+Socket.\+h}\end{DoxyCompactItemize}

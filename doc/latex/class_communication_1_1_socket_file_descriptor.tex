@@ -1,0 +1,117 @@
+\hypertarget{class_communication_1_1_socket_file_descriptor}{}\section{Communication\+:\+:Socket\+File\+Descriptor Class Reference}
+\label{class_communication_1_1_socket_file_descriptor}\index{Communication\+::\+Socket\+File\+Descriptor@{Communication\+::\+Socket\+File\+Descriptor}}
+
+
+Represents a Socket\textquotesingle{}s file descriptor.  
+
+
+
+
+{\ttfamily \#include $<$Socket\+File\+Descriptor.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_communication_1_1_socket_file_descriptor_a770c8b6c9a3a47120f66ccb175afc4f3}{Socket\+File\+Descriptor} ()
+\begin{DoxyCompactList}\small\item\em Initializes an empty socket file descriptor with an invalid files descriptor. \end{DoxyCompactList}\item 
+bool \hyperlink{class_communication_1_1_socket_file_descriptor_ad107f96b082afa6d917acd54220f81db}{set\+Socket\+I\+D} (\hyperlink{typedefs_8h_a2e2c38961834f28c06e17e074eb00bc7}{U\+I\+N\+T} set)
+\begin{DoxyCompactList}\small\item\em Sets the files descriptor for the object. \end{DoxyCompactList}\item 
+\hyperlink{typedefs_8h_a2e2c38961834f28c06e17e074eb00bc7}{U\+I\+N\+T} \hyperlink{class_communication_1_1_socket_file_descriptor_a9f7c9de3b232bf172a4db62a3d4c6cac}{get\+Socket\+I\+D} () const 
+\begin{DoxyCompactList}\small\item\em Returns the U\+I\+N\+T representing the socket file descriptor. \end{DoxyCompactList}\item 
+bool \hyperlink{class_communication_1_1_socket_file_descriptor_acd3712f2ad189c2bc96d516b6a329e1d}{is\+Valid} () const 
+\begin{DoxyCompactList}\small\item\em Checks if the sock is valid ( \hyperlink{class_communication_1_1_socket_file_descriptor_a9f7c9de3b232bf172a4db62a3d4c6cac}{get\+Socket\+I\+D()} $>$ 0) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{class_communication_1_1_socket_file_descriptor_a0022ac1ef0e5923217abb07fc61beb53}{socketis\+Valid} (\hyperlink{typedefs_8h_a2e2c38961834f28c06e17e074eb00bc7}{U\+I\+N\+T} Sock) const 
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{typedefs_8h_a2e2c38961834f28c06e17e074eb00bc7}{U\+I\+N\+T} \hyperlink{class_communication_1_1_socket_file_descriptor_acea16d16c15f77de622888f8e45ff87b}{m\+\_\+socket\+File\+Id}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Represents a Socket\textquotesingle{}s file descriptor. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_communication_1_1_socket_file_descriptor_a770c8b6c9a3a47120f66ccb175afc4f3}{}\index{Communication\+::\+Socket\+File\+Descriptor@{Communication\+::\+Socket\+File\+Descriptor}!Socket\+File\+Descriptor@{Socket\+File\+Descriptor}}
+\index{Socket\+File\+Descriptor@{Socket\+File\+Descriptor}!Communication\+::\+Socket\+File\+Descriptor@{Communication\+::\+Socket\+File\+Descriptor}}
+\subsubsection[{Socket\+File\+Descriptor()}]{\setlength{\rightskip}{0pt plus 5cm}Communication\+::\+Socket\+File\+Descriptor\+::\+Socket\+File\+Descriptor (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_communication_1_1_socket_file_descriptor_a770c8b6c9a3a47120f66ccb175afc4f3}
+
+
+Initializes an empty socket file descriptor with an invalid files descriptor. 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_communication_1_1_socket_file_descriptor_a9f7c9de3b232bf172a4db62a3d4c6cac}{}\index{Communication\+::\+Socket\+File\+Descriptor@{Communication\+::\+Socket\+File\+Descriptor}!get\+Socket\+I\+D@{get\+Socket\+I\+D}}
+\index{get\+Socket\+I\+D@{get\+Socket\+I\+D}!Communication\+::\+Socket\+File\+Descriptor@{Communication\+::\+Socket\+File\+Descriptor}}
+\subsubsection[{get\+Socket\+I\+D() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf U\+I\+N\+T} Communication\+::\+Socket\+File\+Descriptor\+::get\+Socket\+I\+D (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_communication_1_1_socket_file_descriptor_a9f7c9de3b232bf172a4db62a3d4c6cac}
+
+
+Returns the U\+I\+N\+T representing the socket file descriptor. 
+
+\begin{DoxyReturn}{Returns}
+A U\+I\+N\+T socket file descriptor 
+\end{DoxyReturn}
+\hypertarget{class_communication_1_1_socket_file_descriptor_acd3712f2ad189c2bc96d516b6a329e1d}{}\index{Communication\+::\+Socket\+File\+Descriptor@{Communication\+::\+Socket\+File\+Descriptor}!is\+Valid@{is\+Valid}}
+\index{is\+Valid@{is\+Valid}!Communication\+::\+Socket\+File\+Descriptor@{Communication\+::\+Socket\+File\+Descriptor}}
+\subsubsection[{is\+Valid() const }]{\setlength{\rightskip}{0pt plus 5cm}bool Communication\+::\+Socket\+File\+Descriptor\+::is\+Valid (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_communication_1_1_socket_file_descriptor_acd3712f2ad189c2bc96d516b6a329e1d}
+
+
+Checks if the sock is valid ( \hyperlink{class_communication_1_1_socket_file_descriptor_a9f7c9de3b232bf172a4db62a3d4c6cac}{get\+Socket\+I\+D()} $>$ 0) 
+
+\begin{DoxyReturn}{Returns}
+returns true if the socket file descriptor is valid. 
+\end{DoxyReturn}
+\hypertarget{class_communication_1_1_socket_file_descriptor_ad107f96b082afa6d917acd54220f81db}{}\index{Communication\+::\+Socket\+File\+Descriptor@{Communication\+::\+Socket\+File\+Descriptor}!set\+Socket\+I\+D@{set\+Socket\+I\+D}}
+\index{set\+Socket\+I\+D@{set\+Socket\+I\+D}!Communication\+::\+Socket\+File\+Descriptor@{Communication\+::\+Socket\+File\+Descriptor}}
+\subsubsection[{set\+Socket\+I\+D(\+U\+I\+N\+T set)}]{\setlength{\rightskip}{0pt plus 5cm}bool Communication\+::\+Socket\+File\+Descriptor\+::set\+Socket\+I\+D (
+\begin{DoxyParamCaption}
+\item[{{\bf U\+I\+N\+T}}]{set}
+\end{DoxyParamCaption}
+)}\label{class_communication_1_1_socket_file_descriptor_ad107f96b082afa6d917acd54220f81db}
+
+
+Sets the files descriptor for the object. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em set} & a U\+I\+N\+T representing the socket\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+return true if the socket is sucessfully set 
+\end{DoxyReturn}
+\hypertarget{class_communication_1_1_socket_file_descriptor_a0022ac1ef0e5923217abb07fc61beb53}{}\index{Communication\+::\+Socket\+File\+Descriptor@{Communication\+::\+Socket\+File\+Descriptor}!socketis\+Valid@{socketis\+Valid}}
+\index{socketis\+Valid@{socketis\+Valid}!Communication\+::\+Socket\+File\+Descriptor@{Communication\+::\+Socket\+File\+Descriptor}}
+\subsubsection[{socketis\+Valid(\+U\+I\+N\+T Sock) const }]{\setlength{\rightskip}{0pt plus 5cm}bool Communication\+::\+Socket\+File\+Descriptor\+::socketis\+Valid (
+\begin{DoxyParamCaption}
+\item[{{\bf U\+I\+N\+T}}]{Sock}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [private]}}\label{class_communication_1_1_socket_file_descriptor_a0022ac1ef0e5923217abb07fc61beb53}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_communication_1_1_socket_file_descriptor_acea16d16c15f77de622888f8e45ff87b}{}\index{Communication\+::\+Socket\+File\+Descriptor@{Communication\+::\+Socket\+File\+Descriptor}!m\+\_\+socket\+File\+Id@{m\+\_\+socket\+File\+Id}}
+\index{m\+\_\+socket\+File\+Id@{m\+\_\+socket\+File\+Id}!Communication\+::\+Socket\+File\+Descriptor@{Communication\+::\+Socket\+File\+Descriptor}}
+\subsubsection[{m\+\_\+socket\+File\+Id}]{\setlength{\rightskip}{0pt plus 5cm}{\bf U\+I\+N\+T} Communication\+::\+Socket\+File\+Descriptor\+::m\+\_\+socket\+File\+Id\hspace{0.3cm}{\ttfamily [private]}}\label{class_communication_1_1_socket_file_descriptor_acea16d16c15f77de622888f8e45ff87b}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/samy/\+Programming/\+Ace/include/\hyperlink{_socket_file_descriptor_8h}{Socket\+File\+Descriptor.\+h}\end{DoxyCompactItemize}

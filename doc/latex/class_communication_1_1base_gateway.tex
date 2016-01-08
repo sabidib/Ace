@@ -1,0 +1,298 @@
+\hypertarget{class_communication_1_1base_gateway}{}\section{Communication\+:\+:base\+Gateway Class Reference}
+\label{class_communication_1_1base_gateway}\index{Communication\+::base\+Gateway@{Communication\+::base\+Gateway}}
+
+
+Defines the a base class for any kind of socket management gateway. This wraps the functions in the \hyperlink{class_communication_1_1_o_s}{O\+S} class to make them available for such management gateways.  
+
+
+
+
+{\ttfamily \#include $<$base\+Gateway.\+h$>$}
+
+
+
+Inheritance diagram for Communication\+:\+:base\+Gateway\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_communication_1_1base_gateway__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{class_communication_1_1base_gateway_a47e8f182fca56a7658f94e8b173d63f2}{create\+Socket} (\hyperlink{class_communication_1_1base_socket}{base\+Socket} \&Socket\+To\+Create, \hyperlink{typedefs_8h_a0240b856f74f8905ed334a5a0ca624e5}{I\+N\+T} flags)
+\begin{DoxyCompactList}\small\item\em Registers the socket with the operating system. The socket must be valid, unbound , not listening, and not sending or receiving data. If it is connected, then it will be closed and reconnected. This functions makes use of \hyperlink{class_communication_1_1_o_s_ab3ce5ee10f85abdf1c3d258132d12b78}{O\+S\+::\+\_\+socket()}. \end{DoxyCompactList}\item 
+bool \hyperlink{class_communication_1_1base_gateway_a650a204d981cd4a89cf2115ca195d844}{create\+Socket} (\hyperlink{class_communication_1_1base_socket}{base\+Socket} \&Socket\+To\+Create)
+\item 
+bool \hyperlink{class_communication_1_1base_gateway_adf19a1e4e5cf90f3e4e97edb9a791e0b}{bind\+Socket} (\hyperlink{class_communication_1_1base_socket}{base\+Socket} \&Socket\+To\+Bind)
+\begin{DoxyCompactList}\small\item\em Binds a registered socket to the location outlined in the \hyperlink{class_communication_1_1base_socket}{base\+Socket} object. The socket must be valid, assigned, unbound, not listening, not connected, nor should it be sending or receiving data. This function makes use of \hyperlink{class_communication_1_1_o_s_a7815dee0292a83340b8b4a4a16906aad}{O\+S\+::\+\_\+bind()}. \end{DoxyCompactList}\item 
+bool \hyperlink{class_communication_1_1base_gateway_a3118d268cf632aefe2ce05daa71bcc86}{connect\+Socket} (\hyperlink{class_communication_1_1base_socket}{base\+Socket} \&Socket\+To\+Connect)
+\begin{DoxyCompactList}\small\item\em Connects a socket to the destination stored in the \hyperlink{class_communication_1_1base_socket}{base\+Socket} object. The socket must be valid, unbound, not listening, not yet connected, nor should it be sending or receiving any data. This function uses \hyperlink{class_communication_1_1_o_s_a927b094016b9c8b5dec6756ab958bea0}{O\+S\+::\+\_\+connect()}. \end{DoxyCompactList}\item 
+bool \hyperlink{class_communication_1_1base_gateway_a1afc237866f0ecb37bff899567e684df}{listen\+For\+Connections} (\hyperlink{class_communication_1_1base_socket}{base\+Socket} \&Socket\+To\+Start\+Listening)
+\begin{DoxyCompactList}\small\item\em Sets the socket to listen mode. The socket must be valid, bound, not already listening , not connected nor should it be sending or receiving data already. This function makes use of \hyperlink{class_communication_1_1_o_s_add79085b739cd0b0f7300f10eee920c5}{O\+S\+::\+\_\+listen()}. \end{DoxyCompactList}\item 
+\hyperlink{class_communication_1_1base_socket}{base\+Socket} $\ast$ \hyperlink{class_communication_1_1base_gateway_ae4fc465b7b804c358590019440048c01}{accept\+Connection} (\hyperlink{class_communication_1_1base_socket}{base\+Socket} \&Socket\+To\+Accept\+Connection)
+\begin{DoxyCompactList}\small\item\em Accepts a connection on a socket and returns the new connection. This function may block if the socket is set as a blocking socket. The \hyperlink{class_communication_1_1base_socket}{base\+Socket} object must be a valid, bound, listening, unconnected socket that is not sending or receiving data. This function makes use of \hyperlink{class_communication_1_1_o_s_a449cc9a8cd90440f7ca83315bceabebf}{O\+S\+::\+\_\+accept()} and \hyperlink{class_communication_1_1_o_s_a346bdb63997895b796df07e0484cc466}{O\+S\+::\+\_\+setsockopt()}. \end{DoxyCompactList}\item 
+\hyperlink{typedefs_8h_a2e2c38961834f28c06e17e074eb00bc7}{U\+I\+N\+T} \hyperlink{class_communication_1_1base_gateway_a7f5d58eaadea6e124f065f263f2b8029}{send\+Data} (\hyperlink{class_communication_1_1base_socket}{base\+Socket} \&Socket\+To\+Send, \hyperlink{class_communication_1_1base_data_buffer}{base\+Data\+Buffer} \&Data, \hyperlink{typedefs_8h_a0240b856f74f8905ed334a5a0ca624e5}{I\+N\+T} F\+L\+A\+G\+S)
+\begin{DoxyCompactList}\small\item\em Sends the data found in the \hyperlink{class_communication_1_1base_data_buffer}{base\+Data\+Buffer} to the destination outlined by the \hyperlink{class_communication_1_1base_socket}{base\+Socket} object. The socket must be valid, unbound, not listening and not already sending or receiving data. It must be connected. This call may block if the buffer is full. The size of the data in the buffer must be less than M\+A\+X\+\_\+\+T\+O\+\_\+\+S\+E\+N\+D value. This function makes use of \hyperlink{class_communication_1_1_o_s_af6ca3ef21b995019d6d8bbf86204ba80}{O\+S\+::\+\_\+send()}. \end{DoxyCompactList}\item 
+\hyperlink{typedefs_8h_a2e2c38961834f28c06e17e074eb00bc7}{U\+I\+N\+T} \hyperlink{class_communication_1_1base_gateway_a03d1953b62ffee1f5dfa0ad3f579c2e5}{send\+Data} (\hyperlink{class_communication_1_1base_socket}{base\+Socket} \&Socket\+To\+Send, \hyperlink{class_communication_1_1base_data_buffer}{base\+Data\+Buffer} \&Data)
+\item 
+\hyperlink{class_communication_1_1base_data_buffer}{base\+Data\+Buffer} $\ast$ \hyperlink{class_communication_1_1base_gateway_adcdbbefcddb590bf3d2d7b616a915d24}{receive\+Data} (\hyperlink{class_communication_1_1base_socket}{base\+Socket} \&Socket\+To\+Receive, \hyperlink{typedefs_8h_a2e2c38961834f28c06e17e074eb00bc7}{U\+I\+N\+T} len\+To\+Accept, \hyperlink{typedefs_8h_a0240b856f74f8905ed334a5a0ca624e5}{I\+N\+T} flags)
+\begin{DoxyCompactList}\small\item\em Receives a \hyperlink{class_communication_1_1base_data_buffer}{base\+Data\+Buffer} of length len\+To\+Accept on the socket specified. The socket must be valid, unbound, not listening, and should not be receiving or sending any data. It must be connected. This call may block if there no data in the socket buffer. len\+To\+Accept must be less than the maximum buffer length. This functions makes use of \hyperlink{class_communication_1_1_o_s_a1eaa3e210f77c5b06bc818723595a0e4}{O\+S\+::\+\_\+recv()} \end{DoxyCompactList}\item 
+\hyperlink{class_communication_1_1base_data_buffer}{base\+Data\+Buffer} $\ast$ \hyperlink{class_communication_1_1base_gateway_ac6d9f425318417faf8da620184f413b7}{receive\+Data} (\hyperlink{class_communication_1_1base_socket}{base\+Socket} \&Socket\+To\+Receive, \hyperlink{typedefs_8h_a2e2c38961834f28c06e17e074eb00bc7}{U\+I\+N\+T} len\+To\+Accept)
+\item 
+\hyperlink{class_communication_1_1base_data_buffer}{base\+Data\+Buffer} $\ast$ \hyperlink{class_communication_1_1base_gateway_aa15590c94dccb975fc2f5394b4a0ac5f}{receive\+Data} (\hyperlink{class_communication_1_1base_socket}{base\+Socket} \&Socket\+To\+Receive)
+\item 
+bool \hyperlink{class_communication_1_1base_gateway_a6d0f24de107a1e43bd2a41fe2ba421ba}{close\+Socket} (\hyperlink{class_communication_1_1base_socket}{base\+Socket} \&Socket\+To\+Close, \hyperlink{typedefs_8h_a0240b856f74f8905ed334a5a0ca624e5}{I\+N\+T} F\+L\+A\+G\+S=S\+H\+U\+T\+\_\+\+R\+D\+W\+R)
+\begin{DoxyCompactList}\small\item\em Closes the socket by shutting it down then closing. The socket must be an valid and assigned socket. This call may block if there is still data in the socket buffer. This functions calls both \hyperlink{class_communication_1_1_o_s_a48497a56e399c71521402474881c1a91}{O\+S\+::\+\_\+shutdown()} for the flags and makes use of \hyperlink{class_communication_1_1_o_s_a61e6b800ca7347f20a8326e7d7666b46}{O\+S\+::\+\_\+close} to destroy the socket file descriptor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Defines the a base class for any kind of socket management gateway. This wraps the functions in the \hyperlink{class_communication_1_1_o_s}{O\+S} class to make them available for such management gateways. 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_communication_1_1base_gateway_ae4fc465b7b804c358590019440048c01}{}\index{Communication\+::base\+Gateway@{Communication\+::base\+Gateway}!accept\+Connection@{accept\+Connection}}
+\index{accept\+Connection@{accept\+Connection}!Communication\+::base\+Gateway@{Communication\+::base\+Gateway}}
+\subsubsection[{accept\+Connection(base\+Socket \&\+Socket\+To\+Accept\+Connection)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf base\+Socket}$\ast$ Communication\+::base\+Gateway\+::accept\+Connection (
+\begin{DoxyParamCaption}
+\item[{{\bf base\+Socket} \&}]{Socket\+To\+Accept\+Connection}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_communication_1_1base_gateway_ae4fc465b7b804c358590019440048c01}
+
+
+Accepts a connection on a socket and returns the new connection. This function may block if the socket is set as a blocking socket. The \hyperlink{class_communication_1_1base_socket}{base\+Socket} object must be a valid, bound, listening, unconnected socket that is not sending or receiving data. This function makes use of \hyperlink{class_communication_1_1_o_s_a449cc9a8cd90440f7ca83315bceabebf}{O\+S\+::\+\_\+accept()} and \hyperlink{class_communication_1_1_o_s_a346bdb63997895b796df07e0484cc466}{O\+S\+::\+\_\+setsockopt()}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Socket\+To\+Accept\+Connection} & A valid reference to a \hyperlink{class_communication_1_1base_socket}{base\+Socket}.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+return a pointer to the new \hyperlink{class_communication_1_1base_socket}{base\+Socket} connected, or a nullptr if the socket returned was considered invalid.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{class_communication_1_1_msg_exception}{Msg\+Exception}} & An exception is thrown if any of the requirements for the \hyperlink{class_communication_1_1base_socket}{base\+Socket} object are not met, or if the operating system call fails. \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{class_communication_1_1base_gateway_adf19a1e4e5cf90f3e4e97edb9a791e0b}{}\index{Communication\+::base\+Gateway@{Communication\+::base\+Gateway}!bind\+Socket@{bind\+Socket}}
+\index{bind\+Socket@{bind\+Socket}!Communication\+::base\+Gateway@{Communication\+::base\+Gateway}}
+\subsubsection[{bind\+Socket(base\+Socket \&\+Socket\+To\+Bind)}]{\setlength{\rightskip}{0pt plus 5cm}bool Communication\+::base\+Gateway\+::bind\+Socket (
+\begin{DoxyParamCaption}
+\item[{{\bf base\+Socket} \&}]{Socket\+To\+Bind}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_communication_1_1base_gateway_adf19a1e4e5cf90f3e4e97edb9a791e0b}
+
+
+Binds a registered socket to the location outlined in the \hyperlink{class_communication_1_1base_socket}{base\+Socket} object. The socket must be valid, assigned, unbound, not listening, not connected, nor should it be sending or receiving data. This function makes use of \hyperlink{class_communication_1_1_o_s_a7815dee0292a83340b8b4a4a16906aad}{O\+S\+::\+\_\+bind()}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Socket\+To\+Bind} & A reference to a valid socket to bind.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+return true on successful binding.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{class_communication_1_1_msg_exception}{Msg\+Exception}} & An exception is thrown if any of the requirements for the \hyperlink{class_communication_1_1base_socket}{base\+Socket} object are not met, or if the operating system call fails. \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{class_communication_1_1base_gateway_a6d0f24de107a1e43bd2a41fe2ba421ba}{}\index{Communication\+::base\+Gateway@{Communication\+::base\+Gateway}!close\+Socket@{close\+Socket}}
+\index{close\+Socket@{close\+Socket}!Communication\+::base\+Gateway@{Communication\+::base\+Gateway}}
+\subsubsection[{close\+Socket(base\+Socket \&\+Socket\+To\+Close, I\+N\+T F\+L\+A\+G\+S=\+S\+H\+U\+T\+\_\+\+R\+D\+W\+R)}]{\setlength{\rightskip}{0pt plus 5cm}bool Communication\+::base\+Gateway\+::close\+Socket (
+\begin{DoxyParamCaption}
+\item[{{\bf base\+Socket} \&}]{Socket\+To\+Close, }
+\item[{{\bf I\+N\+T}}]{F\+L\+A\+G\+S = {\ttfamily SHUT\+\_\+RDWR}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_communication_1_1base_gateway_a6d0f24de107a1e43bd2a41fe2ba421ba}
+
+
+Closes the socket by shutting it down then closing. The socket must be an valid and assigned socket. This call may block if there is still data in the socket buffer. This functions calls both \hyperlink{class_communication_1_1_o_s_a48497a56e399c71521402474881c1a91}{O\+S\+::\+\_\+shutdown()} for the flags and makes use of \hyperlink{class_communication_1_1_o_s_a61e6b800ca7347f20a8326e7d7666b46}{O\+S\+::\+\_\+close} to destroy the socket file descriptor. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em Socket\+To\+Close} & A reference to a valid socket. \\
+\hline
+\mbox{\tt in}  & {\em F\+L\+A\+G\+S} & A flags to set for shutdown.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+return true if the socket is successfully destroyed
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{class_communication_1_1_msg_exception}{Msg\+Exception}} & An exception is thrown if any of the requirements for the \hyperlink{class_communication_1_1base_socket}{base\+Socket} object are not met, or if the operating system call fails. \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{class_communication_1_1base_gateway_a3118d268cf632aefe2ce05daa71bcc86}{}\index{Communication\+::base\+Gateway@{Communication\+::base\+Gateway}!connect\+Socket@{connect\+Socket}}
+\index{connect\+Socket@{connect\+Socket}!Communication\+::base\+Gateway@{Communication\+::base\+Gateway}}
+\subsubsection[{connect\+Socket(base\+Socket \&\+Socket\+To\+Connect)}]{\setlength{\rightskip}{0pt plus 5cm}bool Communication\+::base\+Gateway\+::connect\+Socket (
+\begin{DoxyParamCaption}
+\item[{{\bf base\+Socket} \&}]{Socket\+To\+Connect}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_communication_1_1base_gateway_a3118d268cf632aefe2ce05daa71bcc86}
+
+
+Connects a socket to the destination stored in the \hyperlink{class_communication_1_1base_socket}{base\+Socket} object. The socket must be valid, unbound, not listening, not yet connected, nor should it be sending or receiving any data. This function uses \hyperlink{class_communication_1_1_o_s_a927b094016b9c8b5dec6756ab958bea0}{O\+S\+::\+\_\+connect()}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Socket\+To\+Connect} & A reference to a valid socket.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+return true if the socket successfully connects.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{class_communication_1_1_msg_exception}{Msg\+Exception}} & An exception is thrown if any of the requirements for the \hyperlink{class_communication_1_1base_socket}{base\+Socket} object are not met, or if the operating system call fails. \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{class_communication_1_1base_gateway_a47e8f182fca56a7658f94e8b173d63f2}{}\index{Communication\+::base\+Gateway@{Communication\+::base\+Gateway}!create\+Socket@{create\+Socket}}
+\index{create\+Socket@{create\+Socket}!Communication\+::base\+Gateway@{Communication\+::base\+Gateway}}
+\subsubsection[{create\+Socket(base\+Socket \&\+Socket\+To\+Create, I\+N\+T flags)}]{\setlength{\rightskip}{0pt plus 5cm}bool Communication\+::base\+Gateway\+::create\+Socket (
+\begin{DoxyParamCaption}
+\item[{{\bf base\+Socket} \&}]{Socket\+To\+Create, }
+\item[{{\bf I\+N\+T}}]{flags}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_communication_1_1base_gateway_a47e8f182fca56a7658f94e8b173d63f2}
+
+
+Registers the socket with the operating system. The socket must be valid, unbound , not listening, and not sending or receiving data. If it is connected, then it will be closed and reconnected. This functions makes use of \hyperlink{class_communication_1_1_o_s_ab3ce5ee10f85abdf1c3d258132d12b78}{O\+S\+::\+\_\+socket()}. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em Socket\+To\+Create} & The reference to a valid socket to create. \\
+\hline
+\mbox{\tt in}  & {\em flags} & any flags to use in connecting. If no flag is set then flags=0\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+returns true on successful creation. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{class_communication_1_1_msg_exception}{Msg\+Exception}} & An exception is thrown if any of the requirements for the \hyperlink{class_communication_1_1base_socket}{base\+Socket} object are not met, or if the operating system call fails. \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{class_communication_1_1base_gateway_a650a204d981cd4a89cf2115ca195d844}{}\index{Communication\+::base\+Gateway@{Communication\+::base\+Gateway}!create\+Socket@{create\+Socket}}
+\index{create\+Socket@{create\+Socket}!Communication\+::base\+Gateway@{Communication\+::base\+Gateway}}
+\subsubsection[{create\+Socket(base\+Socket \&\+Socket\+To\+Create)}]{\setlength{\rightskip}{0pt plus 5cm}bool Communication\+::base\+Gateway\+::create\+Socket (
+\begin{DoxyParamCaption}
+\item[{{\bf base\+Socket} \&}]{Socket\+To\+Create}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_communication_1_1base_gateway_a650a204d981cd4a89cf2115ca195d844}
+\hypertarget{class_communication_1_1base_gateway_a1afc237866f0ecb37bff899567e684df}{}\index{Communication\+::base\+Gateway@{Communication\+::base\+Gateway}!listen\+For\+Connections@{listen\+For\+Connections}}
+\index{listen\+For\+Connections@{listen\+For\+Connections}!Communication\+::base\+Gateway@{Communication\+::base\+Gateway}}
+\subsubsection[{listen\+For\+Connections(base\+Socket \&\+Socket\+To\+Start\+Listening)}]{\setlength{\rightskip}{0pt plus 5cm}bool Communication\+::base\+Gateway\+::listen\+For\+Connections (
+\begin{DoxyParamCaption}
+\item[{{\bf base\+Socket} \&}]{Socket\+To\+Start\+Listening}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_communication_1_1base_gateway_a1afc237866f0ecb37bff899567e684df}
+
+
+Sets the socket to listen mode. The socket must be valid, bound, not already listening , not connected nor should it be sending or receiving data already. This function makes use of \hyperlink{class_communication_1_1_o_s_add79085b739cd0b0f7300f10eee920c5}{O\+S\+::\+\_\+listen()}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Socket\+To\+Start\+Listening} & A reference to a valid socket.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+returns true if the socket is set to listening mode.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{class_communication_1_1_msg_exception}{Msg\+Exception}} & An exception is thrown if any of the requirements for the \hyperlink{class_communication_1_1base_socket}{base\+Socket} object are not met, or if the operating system call fails. \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{class_communication_1_1base_gateway_adcdbbefcddb590bf3d2d7b616a915d24}{}\index{Communication\+::base\+Gateway@{Communication\+::base\+Gateway}!receive\+Data@{receive\+Data}}
+\index{receive\+Data@{receive\+Data}!Communication\+::base\+Gateway@{Communication\+::base\+Gateway}}
+\subsubsection[{receive\+Data(base\+Socket \&\+Socket\+To\+Receive, U\+I\+N\+T len\+To\+Accept, I\+N\+T flags)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf base\+Data\+Buffer}$\ast$ Communication\+::base\+Gateway\+::receive\+Data (
+\begin{DoxyParamCaption}
+\item[{{\bf base\+Socket} \&}]{Socket\+To\+Receive, }
+\item[{{\bf U\+I\+N\+T}}]{len\+To\+Accept, }
+\item[{{\bf I\+N\+T}}]{flags}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_communication_1_1base_gateway_adcdbbefcddb590bf3d2d7b616a915d24}
+
+
+Receives a \hyperlink{class_communication_1_1base_data_buffer}{base\+Data\+Buffer} of length len\+To\+Accept on the socket specified. The socket must be valid, unbound, not listening, and should not be receiving or sending any data. It must be connected. This call may block if there no data in the socket buffer. len\+To\+Accept must be less than the maximum buffer length. This functions makes use of \hyperlink{class_communication_1_1_o_s_a1eaa3e210f77c5b06bc818723595a0e4}{O\+S\+::\+\_\+recv()} 
+
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em Socket\+To\+Receive} & A reference to a valid socket to receive data on \\
+\hline
+\mbox{\tt in}  & {\em len\+To\+Accept} & The amount of data to receive. If not set then len\+To\+Accept=0. \\
+\hline
+\mbox{\tt in}  & {\em flags} & Any flags to set. I\+F not set then flags=0.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+return a \hyperlink{class_communication_1_1base_data_buffer}{base\+Data\+Buffer} object containing the received data. It may also return nullptr if there is an error.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{class_communication_1_1_msg_exception}{Msg\+Exception}} & An exception is thrown if any of the requirements for the \hyperlink{class_communication_1_1base_socket}{base\+Socket} object are not met, or if the operating system call fails. \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{class_communication_1_1base_gateway_ac6d9f425318417faf8da620184f413b7}{}\index{Communication\+::base\+Gateway@{Communication\+::base\+Gateway}!receive\+Data@{receive\+Data}}
+\index{receive\+Data@{receive\+Data}!Communication\+::base\+Gateway@{Communication\+::base\+Gateway}}
+\subsubsection[{receive\+Data(base\+Socket \&\+Socket\+To\+Receive, U\+I\+N\+T len\+To\+Accept)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf base\+Data\+Buffer}$\ast$ Communication\+::base\+Gateway\+::receive\+Data (
+\begin{DoxyParamCaption}
+\item[{{\bf base\+Socket} \&}]{Socket\+To\+Receive, }
+\item[{{\bf U\+I\+N\+T}}]{len\+To\+Accept}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_communication_1_1base_gateway_ac6d9f425318417faf8da620184f413b7}
+\hypertarget{class_communication_1_1base_gateway_aa15590c94dccb975fc2f5394b4a0ac5f}{}\index{Communication\+::base\+Gateway@{Communication\+::base\+Gateway}!receive\+Data@{receive\+Data}}
+\index{receive\+Data@{receive\+Data}!Communication\+::base\+Gateway@{Communication\+::base\+Gateway}}
+\subsubsection[{receive\+Data(base\+Socket \&\+Socket\+To\+Receive)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf base\+Data\+Buffer}$\ast$ Communication\+::base\+Gateway\+::receive\+Data (
+\begin{DoxyParamCaption}
+\item[{{\bf base\+Socket} \&}]{Socket\+To\+Receive}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_communication_1_1base_gateway_aa15590c94dccb975fc2f5394b4a0ac5f}
+\hypertarget{class_communication_1_1base_gateway_a7f5d58eaadea6e124f065f263f2b8029}{}\index{Communication\+::base\+Gateway@{Communication\+::base\+Gateway}!send\+Data@{send\+Data}}
+\index{send\+Data@{send\+Data}!Communication\+::base\+Gateway@{Communication\+::base\+Gateway}}
+\subsubsection[{send\+Data(base\+Socket \&\+Socket\+To\+Send, base\+Data\+Buffer \&\+Data, I\+N\+T F\+L\+A\+G\+S)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf U\+I\+N\+T} Communication\+::base\+Gateway\+::send\+Data (
+\begin{DoxyParamCaption}
+\item[{{\bf base\+Socket} \&}]{Socket\+To\+Send, }
+\item[{{\bf base\+Data\+Buffer} \&}]{Data, }
+\item[{{\bf I\+N\+T}}]{F\+L\+A\+G\+S}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_communication_1_1base_gateway_a7f5d58eaadea6e124f065f263f2b8029}
+
+
+Sends the data found in the \hyperlink{class_communication_1_1base_data_buffer}{base\+Data\+Buffer} to the destination outlined by the \hyperlink{class_communication_1_1base_socket}{base\+Socket} object. The socket must be valid, unbound, not listening and not already sending or receiving data. It must be connected. This call may block if the buffer is full. The size of the data in the buffer must be less than M\+A\+X\+\_\+\+T\+O\+\_\+\+S\+E\+N\+D value. This function makes use of \hyperlink{class_communication_1_1_o_s_af6ca3ef21b995019d6d8bbf86204ba80}{O\+S\+::\+\_\+send()}. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em Socket\+To\+Send} & A reference valid socket to send data on. \\
+\hline
+ & {\em Data} & A reference to a valid \hyperlink{class_communication_1_1base_data_buffer}{base\+Data\+Buffer} object. \\
+\hline
+\mbox{\tt in}  & {\em F\+L\+A\+G\+S} & Any flags to set. If no flags are set then F\+L\+A\+G\+S=0\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+returns the number of bytes of data sent through the socket.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{class_communication_1_1_msg_exception}{Msg\+Exception}} & An exception is thrown if any of the requirements for the \hyperlink{class_communication_1_1base_socket}{base\+Socket} object are not met, or if the operating system call fails. \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{class_communication_1_1base_gateway_a03d1953b62ffee1f5dfa0ad3f579c2e5}{}\index{Communication\+::base\+Gateway@{Communication\+::base\+Gateway}!send\+Data@{send\+Data}}
+\index{send\+Data@{send\+Data}!Communication\+::base\+Gateway@{Communication\+::base\+Gateway}}
+\subsubsection[{send\+Data(base\+Socket \&\+Socket\+To\+Send, base\+Data\+Buffer \&\+Data)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf U\+I\+N\+T} Communication\+::base\+Gateway\+::send\+Data (
+\begin{DoxyParamCaption}
+\item[{{\bf base\+Socket} \&}]{Socket\+To\+Send, }
+\item[{{\bf base\+Data\+Buffer} \&}]{Data}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_communication_1_1base_gateway_a03d1953b62ffee1f5dfa0ad3f579c2e5}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/samy/\+Programming/\+Ace/include/\hyperlink{base_gateway_8h}{base\+Gateway.\+h}\end{DoxyCompactItemize}

@@ -1,0 +1,390 @@
+\hypertarget{class_communication_1_1_o_s}{}\section{Communication\+:\+:O\+S Class Reference}
+\label{class_communication_1_1_o_s}\index{Communication\+::\+O\+S@{Communication\+::\+O\+S}}
+
+
+A simple wrapper class around the \hyperlink{class_communication_1_1_o_s}{O\+S} socket functions. This implementation defines the unix \hyperlink{class_communication_1_1_o_s}{O\+S} functions. Detailed documentation on these functions can be found for the standard unix socket functions.  
+
+
+
+
+{\ttfamily \#include $<$O\+S.\+h$>$}
+
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static bool \hyperlink{class_communication_1_1_o_s_ab3ce5ee10f85abdf1c3d258132d12b78}{\+\_\+socket} (\hyperlink{class_communication_1_1base_socket}{base\+Socket} \&socket\+To\+Create\+\_\+\+I\+N, \hyperlink{typedefs_8h_a0240b856f74f8905ed334a5a0ca624e5}{I\+N\+T} flags\+\_\+\+I\+N=0)
+\begin{DoxyCompactList}\small\item\em Registers the socket with the file system. \end{DoxyCompactList}\item 
+static \hyperlink{class_communication_1_1base_socket}{base\+Socket} $\ast$ \hyperlink{class_communication_1_1_o_s_a449cc9a8cd90440f7ca83315bceabebf}{\+\_\+accept} (\hyperlink{class_communication_1_1base_socket}{base\+Socket} \&socket\+To\+Acccept\+On\+\_\+\+I\+N)
+\begin{DoxyCompactList}\small\item\em Accepts a new connection on a given \hyperlink{class_communication_1_1base_socket}{base\+Socket} object. This calls will block unless setsockopt is set otherwise. \end{DoxyCompactList}\item 
+static bool \hyperlink{class_communication_1_1_o_s_a927b094016b9c8b5dec6756ab958bea0}{\+\_\+connect} (\hyperlink{class_communication_1_1base_socket}{base\+Socket} \&Socket\+To\+Connect\+\_\+\+I\+N)
+\begin{DoxyCompactList}\small\item\em Connects the socket to the destination described in the \hyperlink{class_communication_1_1base_socket}{base\+Socket} object. \end{DoxyCompactList}\item 
+static bool \hyperlink{class_communication_1_1_o_s_a7815dee0292a83340b8b4a4a16906aad}{\+\_\+bind} (\hyperlink{class_communication_1_1base_socket}{base\+Socket} \&Socket\+To\+Bind\+\_\+\+I\+N)
+\begin{DoxyCompactList}\small\item\em Binds the socket to the given location on the local machine. \end{DoxyCompactList}\item 
+static \hyperlink{typedefs_8h_a2e2c38961834f28c06e17e074eb00bc7}{U\+I\+N\+T} \hyperlink{class_communication_1_1_o_s_af6ca3ef21b995019d6d8bbf86204ba80}{\+\_\+send} (\hyperlink{class_communication_1_1base_socket}{base\+Socket} \&Socket\+To\+Send, char $\ast$array, \hyperlink{typedefs_8h_a2e2c38961834f28c06e17e074eb00bc7}{U\+I\+N\+T} len, \hyperlink{typedefs_8h_a0240b856f74f8905ed334a5a0ca624e5}{I\+N\+T} flags)
+\begin{DoxyCompactList}\small\item\em Sends data to a socket. This will block if the socket buffer is full. \end{DoxyCompactList}\item 
+static \hyperlink{typedefs_8h_a2e2c38961834f28c06e17e074eb00bc7}{U\+I\+N\+T} \hyperlink{class_communication_1_1_o_s_a1eaa3e210f77c5b06bc818723595a0e4}{\+\_\+recv} (\hyperlink{class_communication_1_1base_socket}{base\+Socket} \&Socket\+To\+Recv, char $\ast$tmp, \hyperlink{typedefs_8h_a2e2c38961834f28c06e17e074eb00bc7}{U\+I\+N\+T} len, \hyperlink{typedefs_8h_a0240b856f74f8905ed334a5a0ca624e5}{I\+N\+T} flags)
+\begin{DoxyCompactList}\small\item\em Receives data on a socket. This operation will block if there is nothing to read. Unless the socket is set otherwise. \end{DoxyCompactList}\item 
+static bool \hyperlink{class_communication_1_1_o_s_a48497a56e399c71521402474881c1a91}{\+\_\+shutdown} (\hyperlink{class_communication_1_1base_socket}{base\+Socket} \&Socket\+To\+Shutdown, \hyperlink{typedefs_8h_a0240b856f74f8905ed334a5a0ca624e5}{I\+N\+T} flags)
+\begin{DoxyCompactList}\small\item\em Shutdown the current socket in a manner specified by the flags options. \end{DoxyCompactList}\item 
+static bool \hyperlink{class_communication_1_1_o_s_add79085b739cd0b0f7300f10eee920c5}{\+\_\+listen} (\hyperlink{class_communication_1_1base_socket}{base\+Socket} \&Socket\+To\+Listen\+On, \hyperlink{typedefs_8h_a0240b856f74f8905ed334a5a0ca624e5}{I\+N\+T} backlog)
+\begin{DoxyCompactList}\small\item\em Sets the socket to listen mode so that it can accept new connections. \end{DoxyCompactList}\item 
+static bool \hyperlink{class_communication_1_1_o_s_a346bdb63997895b796df07e0484cc466}{\+\_\+setsockopt} (\hyperlink{class_communication_1_1base_socket}{base\+Socket} \&Socket, \hyperlink{typedefs_8h_a0240b856f74f8905ed334a5a0ca624e5}{I\+N\+T} option\+Level, \hyperlink{typedefs_8h_a0240b856f74f8905ed334a5a0ca624e5}{I\+N\+T} option\+Name, void $\ast$setting, \hyperlink{typedefs_8h_a2e2c38961834f28c06e17e074eb00bc7}{U\+I\+N\+T} length)
+\begin{DoxyCompactList}\small\item\em Sets the socket options for a valid \hyperlink{class_communication_1_1base_socket}{base\+Socket}. \end{DoxyCompactList}\item 
+static bool \hyperlink{class_communication_1_1_o_s_a7cc538effe2bc9098f69ab8ba994bd3b}{\+\_\+getsockopt} (\hyperlink{class_communication_1_1base_socket}{base\+Socket} \&Socket, \hyperlink{typedefs_8h_a0240b856f74f8905ed334a5a0ca624e5}{I\+N\+T} option\+Level, \hyperlink{typedefs_8h_a0240b856f74f8905ed334a5a0ca624e5}{I\+N\+T} option\+Name, void $\ast$setting, \hyperlink{typedefs_8h_a2e2c38961834f28c06e17e074eb00bc7}{U\+I\+N\+T} $\ast$length)
+\begin{DoxyCompactList}\small\item\em Returns the socket options for a valid \hyperlink{class_communication_1_1base_socket}{base\+Socket}. \end{DoxyCompactList}\item 
+static bool \hyperlink{class_communication_1_1_o_s_a61e6b800ca7347f20a8326e7d7666b46}{\+\_\+close} (\hyperlink{class_communication_1_1base_socket}{base\+Socket} \&Socket\+To\+Close)
+\begin{DoxyCompactList}\small\item\em Closes the socket defined by \hyperlink{class_communication_1_1base_socket}{base\+Socket}. This may block if the socket still have remaining data to send. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static bool \hyperlink{class_communication_1_1_o_s_a2d41fbe0a2a5fb63ba2ab1e92ab8b5cc}{\+\_\+setsockopt} (\hyperlink{typedefs_8h_a0240b856f74f8905ed334a5a0ca624e5}{I\+N\+T} fd, \hyperlink{typedefs_8h_a0240b856f74f8905ed334a5a0ca624e5}{I\+N\+T} option\+Level, \hyperlink{typedefs_8h_a0240b856f74f8905ed334a5a0ca624e5}{I\+N\+T} option\+Name, void $\ast$setting, \hyperlink{typedefs_8h_a2e2c38961834f28c06e17e074eb00bc7}{U\+I\+N\+T} length)
+\item 
+static bool \hyperlink{class_communication_1_1_o_s_af6efca24886339b80a5db677bc30ef59}{\+\_\+getsockopt} (\hyperlink{typedefs_8h_a0240b856f74f8905ed334a5a0ca624e5}{I\+N\+T} fd, \hyperlink{typedefs_8h_a0240b856f74f8905ed334a5a0ca624e5}{I\+N\+T} option\+Level, \hyperlink{typedefs_8h_a0240b856f74f8905ed334a5a0ca624e5}{I\+N\+T} option\+Name, void $\ast$setting, \hyperlink{typedefs_8h_a2e2c38961834f28c06e17e074eb00bc7}{U\+I\+N\+T} $\ast$length)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A simple wrapper class around the \hyperlink{class_communication_1_1_o_s}{O\+S} socket functions. This implementation defines the unix \hyperlink{class_communication_1_1_o_s}{O\+S} functions. Detailed documentation on these functions can be found for the standard unix socket functions. 
+
+This means that the \+\_\+socket(...) defined in this class is the same as the unix socket(...) call. 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_communication_1_1_o_s_a449cc9a8cd90440f7ca83315bceabebf}{}\index{Communication\+::\+O\+S@{Communication\+::\+O\+S}!\+\_\+accept@{\+\_\+accept}}
+\index{\+\_\+accept@{\+\_\+accept}!Communication\+::\+O\+S@{Communication\+::\+O\+S}}
+\subsubsection[{\+\_\+accept(base\+Socket \&socket\+To\+Acccept\+On\+\_\+\+I\+N)}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf base\+Socket}$\ast$ Communication\+::\+O\+S\+::\+\_\+accept (
+\begin{DoxyParamCaption}
+\item[{{\bf base\+Socket} \&}]{socket\+To\+Acccept\+On\+\_\+\+I\+N}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_communication_1_1_o_s_a449cc9a8cd90440f7ca83315bceabebf}
+
+
+Accepts a new connection on a given \hyperlink{class_communication_1_1base_socket}{base\+Socket} object. This calls will block unless setsockopt is set otherwise. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em socket\+To\+Acccept\+On\+\_\+\+I\+N} & A valid, bound and listening \hyperlink{class_communication_1_1base_socket}{base\+Socket}.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns a pointer to the \hyperlink{class_communication_1_1base_socket}{base\+Socket} accepted on the listening socket.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{class_communication_1_1_msg_exception}{Msg\+Exception}} & Throws an exception if the operating system call fails \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{class_communication_1_1_o_s_a7815dee0292a83340b8b4a4a16906aad}{}\index{Communication\+::\+O\+S@{Communication\+::\+O\+S}!\+\_\+bind@{\+\_\+bind}}
+\index{\+\_\+bind@{\+\_\+bind}!Communication\+::\+O\+S@{Communication\+::\+O\+S}}
+\subsubsection[{\+\_\+bind(base\+Socket \&\+Socket\+To\+Bind\+\_\+\+I\+N)}]{\setlength{\rightskip}{0pt plus 5cm}static bool Communication\+::\+O\+S\+::\+\_\+bind (
+\begin{DoxyParamCaption}
+\item[{{\bf base\+Socket} \&}]{Socket\+To\+Bind\+\_\+\+I\+N}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_communication_1_1_o_s_a7815dee0292a83340b8b4a4a16906aad}
+
+
+Binds the socket to the given location on the local machine. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Socket\+To\+Bind\+\_\+\+I\+N} & A valid, unbound and unconnected \hyperlink{class_communication_1_1base_socket}{base\+Socket}.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+returns true if the socket was sucessfully bound. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{class_communication_1_1_msg_exception}{Msg\+Exception}} & Throws an exception if the operating system call fails. \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{class_communication_1_1_o_s_a61e6b800ca7347f20a8326e7d7666b46}{}\index{Communication\+::\+O\+S@{Communication\+::\+O\+S}!\+\_\+close@{\+\_\+close}}
+\index{\+\_\+close@{\+\_\+close}!Communication\+::\+O\+S@{Communication\+::\+O\+S}}
+\subsubsection[{\+\_\+close(base\+Socket \&\+Socket\+To\+Close)}]{\setlength{\rightskip}{0pt plus 5cm}static bool Communication\+::\+O\+S\+::\+\_\+close (
+\begin{DoxyParamCaption}
+\item[{{\bf base\+Socket} \&}]{Socket\+To\+Close}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_communication_1_1_o_s_a61e6b800ca7347f20a8326e7d7666b46}
+
+
+Closes the socket defined by \hyperlink{class_communication_1_1base_socket}{base\+Socket}. This may block if the socket still have remaining data to send. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Socket\+To\+Close} & A reference to a valid \hyperlink{class_communication_1_1base_socket}{base\+Socket} object. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+returns true if the socket is successfully close. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{class_communication_1_1_msg_exception}{Msg\+Exception}} & Throws an exception if the operating system call fails. \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{class_communication_1_1_o_s_a927b094016b9c8b5dec6756ab958bea0}{}\index{Communication\+::\+O\+S@{Communication\+::\+O\+S}!\+\_\+connect@{\+\_\+connect}}
+\index{\+\_\+connect@{\+\_\+connect}!Communication\+::\+O\+S@{Communication\+::\+O\+S}}
+\subsubsection[{\+\_\+connect(base\+Socket \&\+Socket\+To\+Connect\+\_\+\+I\+N)}]{\setlength{\rightskip}{0pt plus 5cm}static bool Communication\+::\+O\+S\+::\+\_\+connect (
+\begin{DoxyParamCaption}
+\item[{{\bf base\+Socket} \&}]{Socket\+To\+Connect\+\_\+\+I\+N}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_communication_1_1_o_s_a927b094016b9c8b5dec6756ab958bea0}
+
+
+Connects the socket to the destination described in the \hyperlink{class_communication_1_1base_socket}{base\+Socket} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Socket\+To\+Connect\+\_\+\+I\+N} & A valid, unconnected, and unbound \hyperlink{class_communication_1_1base_socket}{base\+Socket}.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+return true if the socket is sucessfully connected, false otherwise.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{class_communication_1_1_msg_exception}{Msg\+Exception}} & Throws an exception if the operating system call fails. \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{class_communication_1_1_o_s_a7cc538effe2bc9098f69ab8ba994bd3b}{}\index{Communication\+::\+O\+S@{Communication\+::\+O\+S}!\+\_\+getsockopt@{\+\_\+getsockopt}}
+\index{\+\_\+getsockopt@{\+\_\+getsockopt}!Communication\+::\+O\+S@{Communication\+::\+O\+S}}
+\subsubsection[{\+\_\+getsockopt(base\+Socket \&\+Socket, I\+N\+T option\+Level, I\+N\+T option\+Name, void $\ast$setting, U\+I\+N\+T $\ast$length)}]{\setlength{\rightskip}{0pt plus 5cm}static bool Communication\+::\+O\+S\+::\+\_\+getsockopt (
+\begin{DoxyParamCaption}
+\item[{{\bf base\+Socket} \&}]{Socket, }
+\item[{{\bf I\+N\+T}}]{option\+Level, }
+\item[{{\bf I\+N\+T}}]{option\+Name, }
+\item[{void $\ast$}]{setting, }
+\item[{{\bf U\+I\+N\+T} $\ast$}]{length}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_communication_1_1_o_s_a7cc538effe2bc9098f69ab8ba994bd3b}
+
+
+Returns the socket options for a valid \hyperlink{class_communication_1_1base_socket}{base\+Socket}. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em Socket} & a refernece to a valid \hyperlink{class_communication_1_1base_socket}{base\+Socket} \\
+\hline
+\mbox{\tt in}  & {\em option\+Level} & The options level. \\
+\hline
+\mbox{\tt in}  & {\em option\+Name} & The options name. \\
+\hline
+\mbox{\tt out}  & {\em setting} & An output pointer with the value of the option. \\
+\hline
+\mbox{\tt out}  & {\em length} & The length of the output value.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+returns true if the socket option is succesfully set. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{class_communication_1_1_msg_exception}{Msg\+Exception}} & Throws an exception if the operating system call fails. \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{class_communication_1_1_o_s_af6efca24886339b80a5db677bc30ef59}{}\index{Communication\+::\+O\+S@{Communication\+::\+O\+S}!\+\_\+getsockopt@{\+\_\+getsockopt}}
+\index{\+\_\+getsockopt@{\+\_\+getsockopt}!Communication\+::\+O\+S@{Communication\+::\+O\+S}}
+\subsubsection[{\+\_\+getsockopt(\+I\+N\+T fd, I\+N\+T option\+Level, I\+N\+T option\+Name, void $\ast$setting, U\+I\+N\+T $\ast$length)}]{\setlength{\rightskip}{0pt plus 5cm}static bool Communication\+::\+O\+S\+::\+\_\+getsockopt (
+\begin{DoxyParamCaption}
+\item[{{\bf I\+N\+T}}]{fd, }
+\item[{{\bf I\+N\+T}}]{option\+Level, }
+\item[{{\bf I\+N\+T}}]{option\+Name, }
+\item[{void $\ast$}]{setting, }
+\item[{{\bf U\+I\+N\+T} $\ast$}]{length}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}\label{class_communication_1_1_o_s_af6efca24886339b80a5db677bc30ef59}
+\hypertarget{class_communication_1_1_o_s_add79085b739cd0b0f7300f10eee920c5}{}\index{Communication\+::\+O\+S@{Communication\+::\+O\+S}!\+\_\+listen@{\+\_\+listen}}
+\index{\+\_\+listen@{\+\_\+listen}!Communication\+::\+O\+S@{Communication\+::\+O\+S}}
+\subsubsection[{\+\_\+listen(base\+Socket \&\+Socket\+To\+Listen\+On, I\+N\+T backlog)}]{\setlength{\rightskip}{0pt plus 5cm}static bool Communication\+::\+O\+S\+::\+\_\+listen (
+\begin{DoxyParamCaption}
+\item[{{\bf base\+Socket} \&}]{Socket\+To\+Listen\+On, }
+\item[{{\bf I\+N\+T}}]{backlog}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_communication_1_1_o_s_add79085b739cd0b0f7300f10eee920c5}
+
+
+Sets the socket to listen mode so that it can accept new connections. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Socket\+To\+Listen\+On} & A reference to a valid and bound \hyperlink{class_communication_1_1base_socket}{base\+Socket}. \\
+\hline
+{\em backlog} & the size of the connection backlog.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+return true if the socket was sucesfully placed in listen mode.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{class_communication_1_1_msg_exception}{Msg\+Exception}} & Throws an exception if the operating system call fails. \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{class_communication_1_1_o_s_a1eaa3e210f77c5b06bc818723595a0e4}{}\index{Communication\+::\+O\+S@{Communication\+::\+O\+S}!\+\_\+recv@{\+\_\+recv}}
+\index{\+\_\+recv@{\+\_\+recv}!Communication\+::\+O\+S@{Communication\+::\+O\+S}}
+\subsubsection[{\+\_\+recv(base\+Socket \&\+Socket\+To\+Recv, char $\ast$tmp, U\+I\+N\+T len, I\+N\+T flags)}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf U\+I\+N\+T} Communication\+::\+O\+S\+::\+\_\+recv (
+\begin{DoxyParamCaption}
+\item[{{\bf base\+Socket} \&}]{Socket\+To\+Recv, }
+\item[{char $\ast$}]{tmp, }
+\item[{{\bf U\+I\+N\+T}}]{len, }
+\item[{{\bf I\+N\+T}}]{flags}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_communication_1_1_o_s_a1eaa3e210f77c5b06bc818723595a0e4}
+
+
+Receives data on a socket. This operation will block if there is nothing to read. Unless the socket is set otherwise. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Socket\+To\+Recv} & A reference to a bound or connected \hyperlink{class_communication_1_1base_socket}{base\+Socket}. \\
+\hline
+{\em tmp} & A pointer to a buffer to store the data \\
+\hline
+{\em len} & The length of data to accept \\
+\hline
+{\em flags} & Any flags to set.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+returns the number of bytes placed in the tmp buffer. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{class_communication_1_1_msg_exception}{Msg\+Exception}} & Throws an exception if the operating system call fails. \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{class_communication_1_1_o_s_af6ca3ef21b995019d6d8bbf86204ba80}{}\index{Communication\+::\+O\+S@{Communication\+::\+O\+S}!\+\_\+send@{\+\_\+send}}
+\index{\+\_\+send@{\+\_\+send}!Communication\+::\+O\+S@{Communication\+::\+O\+S}}
+\subsubsection[{\+\_\+send(base\+Socket \&\+Socket\+To\+Send, char $\ast$array, U\+I\+N\+T len, I\+N\+T flags)}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf U\+I\+N\+T} Communication\+::\+O\+S\+::\+\_\+send (
+\begin{DoxyParamCaption}
+\item[{{\bf base\+Socket} \&}]{Socket\+To\+Send, }
+\item[{char $\ast$}]{array, }
+\item[{{\bf U\+I\+N\+T}}]{len, }
+\item[{{\bf I\+N\+T}}]{flags}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_communication_1_1_o_s_af6ca3ef21b995019d6d8bbf86204ba80}
+
+
+Sends data to a socket. This will block if the socket buffer is full. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Socket\+To\+Send} & A reference to a connected or bound socket. \\
+\hline
+{\em array} & A pointer to the data \\
+\hline
+{\em len} & The length of the data to send in bytes \\
+\hline
+{\em flags} & Any flags to set.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+returns the number of bytes placed in the socket buffer. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{class_communication_1_1_msg_exception}{Msg\+Exception}} & Throws an exception if the operating system call fails. \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{class_communication_1_1_o_s_a346bdb63997895b796df07e0484cc466}{}\index{Communication\+::\+O\+S@{Communication\+::\+O\+S}!\+\_\+setsockopt@{\+\_\+setsockopt}}
+\index{\+\_\+setsockopt@{\+\_\+setsockopt}!Communication\+::\+O\+S@{Communication\+::\+O\+S}}
+\subsubsection[{\+\_\+setsockopt(base\+Socket \&\+Socket, I\+N\+T option\+Level, I\+N\+T option\+Name, void $\ast$setting, U\+I\+N\+T length)}]{\setlength{\rightskip}{0pt plus 5cm}static bool Communication\+::\+O\+S\+::\+\_\+setsockopt (
+\begin{DoxyParamCaption}
+\item[{{\bf base\+Socket} \&}]{Socket, }
+\item[{{\bf I\+N\+T}}]{option\+Level, }
+\item[{{\bf I\+N\+T}}]{option\+Name, }
+\item[{void $\ast$}]{setting, }
+\item[{{\bf U\+I\+N\+T}}]{length}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_communication_1_1_o_s_a346bdb63997895b796df07e0484cc466}
+
+
+Sets the socket options for a valid \hyperlink{class_communication_1_1base_socket}{base\+Socket}. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em Socket} & a refernece to a valid \hyperlink{class_communication_1_1base_socket}{base\+Socket} \\
+\hline
+\mbox{\tt in}  & {\em option\+Level} & The options level. \\
+\hline
+\mbox{\tt in}  & {\em option\+Name} & The options name. \\
+\hline
+ & {\em setting} & The a pointer to the options new value. \\
+\hline
+\mbox{\tt in}  & {\em length} & The length of the options value.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+returns true if the socket option is succesfully set. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{class_communication_1_1_msg_exception}{Msg\+Exception}} & Throws an exception if the operating system call fails. \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{class_communication_1_1_o_s_a2d41fbe0a2a5fb63ba2ab1e92ab8b5cc}{}\index{Communication\+::\+O\+S@{Communication\+::\+O\+S}!\+\_\+setsockopt@{\+\_\+setsockopt}}
+\index{\+\_\+setsockopt@{\+\_\+setsockopt}!Communication\+::\+O\+S@{Communication\+::\+O\+S}}
+\subsubsection[{\+\_\+setsockopt(\+I\+N\+T fd, I\+N\+T option\+Level, I\+N\+T option\+Name, void $\ast$setting, U\+I\+N\+T length)}]{\setlength{\rightskip}{0pt plus 5cm}static bool Communication\+::\+O\+S\+::\+\_\+setsockopt (
+\begin{DoxyParamCaption}
+\item[{{\bf I\+N\+T}}]{fd, }
+\item[{{\bf I\+N\+T}}]{option\+Level, }
+\item[{{\bf I\+N\+T}}]{option\+Name, }
+\item[{void $\ast$}]{setting, }
+\item[{{\bf U\+I\+N\+T}}]{length}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}\label{class_communication_1_1_o_s_a2d41fbe0a2a5fb63ba2ab1e92ab8b5cc}
+\hypertarget{class_communication_1_1_o_s_a48497a56e399c71521402474881c1a91}{}\index{Communication\+::\+O\+S@{Communication\+::\+O\+S}!\+\_\+shutdown@{\+\_\+shutdown}}
+\index{\+\_\+shutdown@{\+\_\+shutdown}!Communication\+::\+O\+S@{Communication\+::\+O\+S}}
+\subsubsection[{\+\_\+shutdown(base\+Socket \&\+Socket\+To\+Shutdown, I\+N\+T flags)}]{\setlength{\rightskip}{0pt plus 5cm}static bool Communication\+::\+O\+S\+::\+\_\+shutdown (
+\begin{DoxyParamCaption}
+\item[{{\bf base\+Socket} \&}]{Socket\+To\+Shutdown, }
+\item[{{\bf I\+N\+T}}]{flags}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_communication_1_1_o_s_a48497a56e399c71521402474881c1a91}
+
+
+Shutdown the current socket in a manner specified by the flags options. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Socket\+To\+Shutdown} & A reference to any valid assigned socket. \\
+\hline
+{\em flags} & Flags to set.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+return true on succesful shutdown of socket. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{class_communication_1_1_msg_exception}{Msg\+Exception}} & Throws an exception if the operating system call fails. \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{class_communication_1_1_o_s_ab3ce5ee10f85abdf1c3d258132d12b78}{}\index{Communication\+::\+O\+S@{Communication\+::\+O\+S}!\+\_\+socket@{\+\_\+socket}}
+\index{\+\_\+socket@{\+\_\+socket}!Communication\+::\+O\+S@{Communication\+::\+O\+S}}
+\subsubsection[{\+\_\+socket(base\+Socket \&socket\+To\+Create\+\_\+\+I\+N, I\+N\+T flags\+\_\+\+I\+N=0)}]{\setlength{\rightskip}{0pt plus 5cm}static bool Communication\+::\+O\+S\+::\+\_\+socket (
+\begin{DoxyParamCaption}
+\item[{{\bf base\+Socket} \&}]{socket\+To\+Create\+\_\+\+I\+N, }
+\item[{{\bf I\+N\+T}}]{flags\+\_\+\+I\+N = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_communication_1_1_o_s_ab3ce5ee10f85abdf1c3d258132d12b78}
+
+
+Registers the socket with the file system. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em socket\+To\+Create\+\_\+\+I\+N} & A valid reference to a \hyperlink{class_communication_1_1base_socket}{base\+Socket} object. \\
+\hline
+{\em flags\+\_\+\+I\+N} & Any flags that could be passed to the Operating\+System call.\\
+\hline
+\end{DoxyParams}
+return returns true if the socket is sucessfully registered 
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{class_communication_1_1_msg_exception}{Msg\+Exception}} & Throws an exception if the operating system call fails. \\
+\hline
+\end{DoxyExceptions}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/samy/\+Programming/\+Ace/include/\hyperlink{_o_s_8h}{O\+S.\+h}\end{DoxyCompactItemize}

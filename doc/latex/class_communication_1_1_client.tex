@@ -1,0 +1,406 @@
+\hypertarget{class_communication_1_1_client}{}\section{Communication\+:\+:Client Class Reference}
+\label{class_communication_1_1_client}\index{Communication\+::\+Client@{Communication\+::\+Client}}
+
+
+Represents an Internet client. The class is initialized with a destination which can be then be connected to with \hyperlink{class_communication_1_1_client_a0fa54f72440e34d7659d6289ce4219d5}{Client\+::connect()}.  
+
+
+
+
+{\ttfamily \#include $<$Client.\+h$>$}
+
+
+
+Inheritance diagram for Communication\+:\+:Client\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=246pt]{class_communication_1_1_client__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Communication\+:\+:Client\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_communication_1_1_client__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_communication_1_1_client_aea201d12c91899407f6b1a8f996d548d}{Client} (\hyperlink{class_communication_1_1_i_p}{I\+P} ip, \hyperlink{class_communication_1_1_port}{Port} port\+No, \hyperlink{typedefs_8h_a2e2c38961834f28c06e17e074eb00bc7}{U\+I\+N\+T} socket\+Type=S\+O\+C\+K\+\_\+\+S\+T\+R\+E\+A\+M, \hyperlink{typedefs_8h_a2e2c38961834f28c06e17e074eb00bc7}{U\+I\+N\+T} family\+Type=A\+F\+\_\+\+I\+N\+E\+T)
+\item 
+\hyperlink{class_communication_1_1_client_ac607567232a2f4f2f0e2c6f643259d95}{Client} (\hyperlink{class_communication_1_1_socket_structure}{Socket\+Structure} $\ast$connection\+Destination)
+\item 
+\hyperlink{class_communication_1_1_client_ae2cfc25664ab90a303a9e687a47c15f5}{Client} (\hyperlink{class_communication_1_1base_socket}{base\+Socket} $\ast$connection\+Destination)
+\item 
+\hyperlink{class_communication_1_1_client_a77c290beabfe76ea97a9027d66a04f7c}{$\sim$\+Client} ()
+\begin{DoxyCompactList}\small\item\em Destroys the object and if m\+\_\+does\+Own\+Socket is true, then it will also delete the current socket. \end{DoxyCompactList}\item 
+bool \hyperlink{class_communication_1_1_client_a0fa54f72440e34d7659d6289ce4219d5}{connect} ()
+\begin{DoxyCompactList}\small\item\em Connects to socket stored in the object by calling the base function \hyperlink{class_communication_1_1base_gateway_a47e8f182fca56a7658f94e8b173d63f2}{base\+Gateway\+::create\+Socket} and then connecting the socket with \hyperlink{class_communication_1_1base_gateway_a3118d268cf632aefe2ce05daa71bcc86}{base\+Gateway\+::connect\+Socket()}. \end{DoxyCompactList}\item 
+\hyperlink{class_communication_1_1base_data_buffer}{base\+Data\+Buffer} $\ast$ \hyperlink{class_communication_1_1_client_aa28b2b8434ac7d76b9aaa6c4b951d3be}{receive} (\hyperlink{typedefs_8h_a2e2c38961834f28c06e17e074eb00bc7}{U\+I\+N\+T} len\+To\+Accept, \hyperlink{typedefs_8h_a0240b856f74f8905ed334a5a0ca624e5}{I\+N\+T} flags)
+\begin{DoxyCompactList}\small\item\em Receives data from the connected socket. This call may block if there is no data to receive. This function makes use of \hyperlink{class_communication_1_1base_gateway_adcdbbefcddb590bf3d2d7b616a915d24}{base\+Gateway\+::receive\+Data()}. \end{DoxyCompactList}\item 
+\hyperlink{class_communication_1_1base_data_buffer}{base\+Data\+Buffer} $\ast$ \hyperlink{class_communication_1_1_client_a2e3aedb9540e48b89ad34d9831e5868e}{receive} (\hyperlink{typedefs_8h_a2e2c38961834f28c06e17e074eb00bc7}{U\+I\+N\+T} len\+To\+Accept)
+\item 
+\hyperlink{class_communication_1_1base_data_buffer}{base\+Data\+Buffer} $\ast$ \hyperlink{class_communication_1_1_client_a333fae358f61a607582a3dc1e849ccd4}{receive} ()
+\item 
+\hyperlink{typedefs_8h_a2e2c38961834f28c06e17e074eb00bc7}{U\+I\+N\+T} \hyperlink{class_communication_1_1_client_a9f646713fab7ee53a86cc4391c65ba96}{send} (std\+::string data)
+\begin{DoxyCompactList}\small\item\em Sends data in the string to the connected socket. This call may block if the send buffer is full. This function makes use of \hyperlink{class_communication_1_1base_gateway_a7f5d58eaadea6e124f065f263f2b8029}{base\+Gateway\+::send\+Data()}. \end{DoxyCompactList}\item 
+\hyperlink{typedefs_8h_a2e2c38961834f28c06e17e074eb00bc7}{U\+I\+N\+T} \hyperlink{class_communication_1_1_client_a38725c4bb7fcb0275d7782b1c5a9d44f}{send} (std\+::string data, \hyperlink{typedefs_8h_a0240b856f74f8905ed334a5a0ca624e5}{I\+N\+T} flags)
+\item 
+\hyperlink{typedefs_8h_a2e2c38961834f28c06e17e074eb00bc7}{U\+I\+N\+T} \hyperlink{class_communication_1_1_client_a3be85163c108c2f8297680689905006c}{send} (\hyperlink{class_communication_1_1base_data_buffer}{base\+Data\+Buffer} \&data, \hyperlink{typedefs_8h_a0240b856f74f8905ed334a5a0ca624e5}{I\+N\+T} flags)
+\begin{DoxyCompactList}\small\item\em Sends the data in \hyperlink{class_communication_1_1base_data_buffer}{base\+Data\+Buffer} to the connected socket. This call may block if the send buffer is full. This function makes use of \hyperlink{class_communication_1_1base_gateway_a7f5d58eaadea6e124f065f263f2b8029}{base\+Gateway\+::send\+Data()}. \end{DoxyCompactList}\item 
+\hyperlink{typedefs_8h_a2e2c38961834f28c06e17e074eb00bc7}{U\+I\+N\+T} \hyperlink{class_communication_1_1_client_a90215215336f21e97829c17e76104ac6}{send} (\hyperlink{class_communication_1_1base_data_buffer}{base\+Data\+Buffer} \&data)
+\item 
+bool \hyperlink{class_communication_1_1_client_ab9a6013d31a6fd6a2365270bbe8ac207}{disconnect} ()
+\begin{DoxyCompactList}\small\item\em Disconnects the socket completely. This function can block if there is still data in the socket buffer. This functions calls \hyperlink{class_communication_1_1base_gateway_a6d0f24de107a1e43bd2a41fe2ba421ba}{base\+Gateway\+::close\+Socket()} \end{DoxyCompactList}\item 
+bool \hyperlink{class_communication_1_1_client_ae1b174c8884fca6e4104e672ec4127c9}{disconnect} (\hyperlink{class_communication_1_1base_data_buffer}{base\+Data\+Buffer} \&Data\+To\+Send)
+\begin{DoxyCompactList}\small\item\em Disconnects the socket completely but not before sending the data in the \hyperlink{class_communication_1_1base_data_buffer}{base\+Data\+Buffer}. This functions calls \hyperlink{class_communication_1_1_client_a9f646713fab7ee53a86cc4391c65ba96}{Client\+::send()} and then \hyperlink{class_communication_1_1base_gateway_a6d0f24de107a1e43bd2a41fe2ba421ba}{base\+Gateway\+::close\+Socket()} \end{DoxyCompactList}\item 
+bool \hyperlink{class_communication_1_1_client_aee5d02aa859d813a72a14ab2d39ea23d}{disconnect} (std\+::string Data\+To\+Send)
+\begin{DoxyCompactList}\small\item\em Disconnects the socket completely but not before sending the data in the Data\+To\+Send string. This functions calls \hyperlink{class_communication_1_1_client_a9f646713fab7ee53a86cc4391c65ba96}{Client\+::send()} and then \hyperlink{class_communication_1_1base_gateway_a6d0f24de107a1e43bd2a41fe2ba421ba}{base\+Gateway\+::close\+Socket()} \end{DoxyCompactList}\item 
+bool \hyperlink{class_communication_1_1_client_ac97183c35c7227c71dc43ed713efb8cb}{set\+Socket} (\hyperlink{class_communication_1_1base_socket}{base\+Socket} $\ast$destination\+Socket)
+\begin{DoxyCompactList}\small\item\em Sets the socket for the client to connect to. The socket being set must not be bound. The current socket is not destroyed or disconnected. \end{DoxyCompactList}\item 
+\hyperlink{class_communication_1_1base_socket}{base\+Socket} $\ast$ \hyperlink{class_communication_1_1_client_a87a0efa909c795c7680512bd0c35c883}{get\+Socket} ()
+\begin{DoxyCompactList}\small\item\em Returns a pointer to the current socket. \end{DoxyCompactList}\item 
+void \hyperlink{class_communication_1_1_client_a5ac457cde6469d51fc9a9424bf673206}{relinquish\+Ownership} ()
+\begin{DoxyCompactList}\small\item\em Relinquishes ownership of the socket by setting m\+\_\+does\+Own\+Socket to false. This stops the socket object from being deleted on object destructions. \end{DoxyCompactList}\item 
+void \hyperlink{class_communication_1_1_client_a6c33c673b779dc2443f66ed453178f43}{transfer\+Ownership} ()
+\begin{DoxyCompactList}\small\item\em Gives ownership of the socket to the client by setting m\+\_\+does\+Own\+Socket to true. This forces the \hyperlink{class_communication_1_1_client}{Client} destructor to destroy the object. \end{DoxyCompactList}\item 
+bool \hyperlink{class_communication_1_1_client_a7a6d48c9528ed8c4d4175dfcdd4ddf87}{does\+Own\+Socket} ()
+\begin{DoxyCompactList}\small\item\em Checks if the \hyperlink{class_communication_1_1_client}{Client} owns the socket. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_communication_1_1base_socket}{base\+Socket} $\ast$ \hyperlink{class_communication_1_1_client_a2795556f3ffbb25b8c3f242b4d643c25}{m\+\_\+current\+Socket}
+\item 
+bool \hyperlink{class_communication_1_1_client_afe0f1b2c58ad4ec8a0b2fb74e3a59b08}{m\+\_\+does\+Own\+Socket}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Represents an Internet client. The class is initialized with a destination which can be then be connected to with \hyperlink{class_communication_1_1_client_a0fa54f72440e34d7659d6289ce4219d5}{Client\+::connect()}. 
+
+Data can be sent with \hyperlink{class_communication_1_1_client_a9f646713fab7ee53a86cc4391c65ba96}{Client\+::send()} and received with \hyperlink{class_communication_1_1_client_a333fae358f61a607582a3dc1e849ccd4}{Client\+::receive()}. A new socket can be set without the old one being destroyed by using \hyperlink{class_communication_1_1_client_ac97183c35c7227c71dc43ed713efb8cb}{Client\+::set\+Socket()}. Finally you can destroy a \hyperlink{class_communication_1_1_client}{Client}\textquotesingle{}s socket by calling \hyperlink{class_communication_1_1_client_ab9a6013d31a6fd6a2365270bbe8ac207}{Client\+::disconnect()}.
+
+When the \hyperlink{class_communication_1_1_client}{Client} object is destroyed it will delete the current socket it is pointing to unless the socket has been explicitly set. Therefore one must be careful when using \hyperlink{class_communication_1_1_client_a87a0efa909c795c7680512bd0c35c883}{Client\+::get\+Socket()} as the socket may be delete once \hyperlink{class_communication_1_1_client}{Client} goes out of scope. Functions such as \hyperlink{class_communication_1_1_client_a5ac457cde6469d51fc9a9424bf673206}{Client\+::relinquish\+Ownership()} and \hyperlink{class_communication_1_1_client_a6c33c673b779dc2443f66ed453178f43}{Client\+::transfer\+Ownership()} are useful in coercing the \hyperlink{class_communication_1_1_client}{Client} to handle object destruction. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_communication_1_1_client_aea201d12c91899407f6b1a8f996d548d}{}\index{Communication\+::\+Client@{Communication\+::\+Client}!Client@{Client}}
+\index{Client@{Client}!Communication\+::\+Client@{Communication\+::\+Client}}
+\subsubsection[{Client(\+I\+P ip, Port port\+No, U\+I\+N\+T socket\+Type=\+S\+O\+C\+K\+\_\+\+S\+T\+R\+E\+A\+M, U\+I\+N\+T family\+Type=\+A\+F\+\_\+\+I\+N\+E\+T)}]{\setlength{\rightskip}{0pt plus 5cm}Communication\+::\+Client\+::\+Client (
+\begin{DoxyParamCaption}
+\item[{{\bf I\+P}}]{ip, }
+\item[{{\bf Port}}]{port\+No, }
+\item[{{\bf U\+I\+N\+T}}]{socket\+Type = {\ttfamily SOCK\+\_\+STREAM}, }
+\item[{{\bf U\+I\+N\+T}}]{family\+Type = {\ttfamily AF\+\_\+INET}}
+\end{DoxyParamCaption}
+)}\label{class_communication_1_1_client_aea201d12c91899407f6b1a8f996d548d}
+\hypertarget{class_communication_1_1_client_ac607567232a2f4f2f0e2c6f643259d95}{}\index{Communication\+::\+Client@{Communication\+::\+Client}!Client@{Client}}
+\index{Client@{Client}!Communication\+::\+Client@{Communication\+::\+Client}}
+\subsubsection[{Client(\+Socket\+Structure $\ast$connection\+Destination)}]{\setlength{\rightskip}{0pt plus 5cm}Communication\+::\+Client\+::\+Client (
+\begin{DoxyParamCaption}
+\item[{{\bf Socket\+Structure} $\ast$}]{connection\+Destination}
+\end{DoxyParamCaption}
+)}\label{class_communication_1_1_client_ac607567232a2f4f2f0e2c6f643259d95}
+\hypertarget{class_communication_1_1_client_ae2cfc25664ab90a303a9e687a47c15f5}{}\index{Communication\+::\+Client@{Communication\+::\+Client}!Client@{Client}}
+\index{Client@{Client}!Communication\+::\+Client@{Communication\+::\+Client}}
+\subsubsection[{Client(base\+Socket $\ast$connection\+Destination)}]{\setlength{\rightskip}{0pt plus 5cm}Communication\+::\+Client\+::\+Client (
+\begin{DoxyParamCaption}
+\item[{{\bf base\+Socket} $\ast$}]{connection\+Destination}
+\end{DoxyParamCaption}
+)}\label{class_communication_1_1_client_ae2cfc25664ab90a303a9e687a47c15f5}
+\hypertarget{class_communication_1_1_client_a77c290beabfe76ea97a9027d66a04f7c}{}\index{Communication\+::\+Client@{Communication\+::\+Client}!````~Client@{$\sim$\+Client}}
+\index{````~Client@{$\sim$\+Client}!Communication\+::\+Client@{Communication\+::\+Client}}
+\subsubsection[{$\sim$\+Client()}]{\setlength{\rightskip}{0pt plus 5cm}Communication\+::\+Client\+::$\sim$\+Client (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_communication_1_1_client_a77c290beabfe76ea97a9027d66a04f7c}
+
+
+Destroys the object and if m\+\_\+does\+Own\+Socket is true, then it will also delete the current socket. 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_communication_1_1_client_a0fa54f72440e34d7659d6289ce4219d5}{}\index{Communication\+::\+Client@{Communication\+::\+Client}!connect@{connect}}
+\index{connect@{connect}!Communication\+::\+Client@{Communication\+::\+Client}}
+\subsubsection[{connect()}]{\setlength{\rightskip}{0pt plus 5cm}bool Communication\+::\+Client\+::connect (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_communication_1_1_client_a0fa54f72440e34d7659d6289ce4219d5}
+
+
+Connects to socket stored in the object by calling the base function \hyperlink{class_communication_1_1base_gateway_a47e8f182fca56a7658f94e8b173d63f2}{base\+Gateway\+::create\+Socket} and then connecting the socket with \hyperlink{class_communication_1_1base_gateway_a3118d268cf632aefe2ce05daa71bcc86}{base\+Gateway\+::connect\+Socket()}. 
+
+\begin{DoxyReturn}{Returns}
+return true if sucesfully connected, false otherwise.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{class_communication_1_1_msg_exception}{Msg\+Exception}} & An exception is thrown if any of the requirements for the \hyperlink{class_communication_1_1base_socket}{base\+Socket} object are not met, or if the operating system call fails. \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{class_communication_1_1_client_ab9a6013d31a6fd6a2365270bbe8ac207}{}\index{Communication\+::\+Client@{Communication\+::\+Client}!disconnect@{disconnect}}
+\index{disconnect@{disconnect}!Communication\+::\+Client@{Communication\+::\+Client}}
+\subsubsection[{disconnect()}]{\setlength{\rightskip}{0pt plus 5cm}bool Communication\+::\+Client\+::disconnect (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_communication_1_1_client_ab9a6013d31a6fd6a2365270bbe8ac207}
+
+
+Disconnects the socket completely. This function can block if there is still data in the socket buffer. This functions calls \hyperlink{class_communication_1_1base_gateway_a6d0f24de107a1e43bd2a41fe2ba421ba}{base\+Gateway\+::close\+Socket()} 
+
+\begin{DoxyReturn}{Returns}
+return true if the socket was successfully disconnected.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{class_communication_1_1_msg_exception}{Msg\+Exception}} & An exception is thrown if any of the requirements for the \hyperlink{class_communication_1_1base_socket}{base\+Socket} object are not met, or if the operating system call fails. \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{class_communication_1_1_client_ae1b174c8884fca6e4104e672ec4127c9}{}\index{Communication\+::\+Client@{Communication\+::\+Client}!disconnect@{disconnect}}
+\index{disconnect@{disconnect}!Communication\+::\+Client@{Communication\+::\+Client}}
+\subsubsection[{disconnect(base\+Data\+Buffer \&\+Data\+To\+Send)}]{\setlength{\rightskip}{0pt plus 5cm}bool Communication\+::\+Client\+::disconnect (
+\begin{DoxyParamCaption}
+\item[{{\bf base\+Data\+Buffer} \&}]{Data\+To\+Send}
+\end{DoxyParamCaption}
+)}\label{class_communication_1_1_client_ae1b174c8884fca6e4104e672ec4127c9}
+
+
+Disconnects the socket completely but not before sending the data in the \hyperlink{class_communication_1_1base_data_buffer}{base\+Data\+Buffer}. This functions calls \hyperlink{class_communication_1_1_client_a9f646713fab7ee53a86cc4391c65ba96}{Client\+::send()} and then \hyperlink{class_communication_1_1base_gateway_a6d0f24de107a1e43bd2a41fe2ba421ba}{base\+Gateway\+::close\+Socket()} 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em Data\+To\+Send} & The \hyperlink{class_communication_1_1base_data_buffer}{base\+Data\+Buffer} to send to the socket.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+return true if the socket was successfully disconnected.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{class_communication_1_1_msg_exception}{Msg\+Exception}} & An exception is thrown if any of the requirements for the \hyperlink{class_communication_1_1base_socket}{base\+Socket} object are not met, or if the operating system call fails. \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{class_communication_1_1_client_aee5d02aa859d813a72a14ab2d39ea23d}{}\index{Communication\+::\+Client@{Communication\+::\+Client}!disconnect@{disconnect}}
+\index{disconnect@{disconnect}!Communication\+::\+Client@{Communication\+::\+Client}}
+\subsubsection[{disconnect(std\+::string Data\+To\+Send)}]{\setlength{\rightskip}{0pt plus 5cm}bool Communication\+::\+Client\+::disconnect (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{Data\+To\+Send}
+\end{DoxyParamCaption}
+)}\label{class_communication_1_1_client_aee5d02aa859d813a72a14ab2d39ea23d}
+
+
+Disconnects the socket completely but not before sending the data in the Data\+To\+Send string. This functions calls \hyperlink{class_communication_1_1_client_a9f646713fab7ee53a86cc4391c65ba96}{Client\+::send()} and then \hyperlink{class_communication_1_1base_gateway_a6d0f24de107a1e43bd2a41fe2ba421ba}{base\+Gateway\+::close\+Socket()} 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em Data\+To\+Send} & The std\+::string to send to the socket.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+return true if the socket was successfully disconnected.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{class_communication_1_1_msg_exception}{Msg\+Exception}} & An exception is thrown if any of the requirements for the \hyperlink{class_communication_1_1base_socket}{base\+Socket} object are not met, or if the operating system call fails. \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{class_communication_1_1_client_a7a6d48c9528ed8c4d4175dfcdd4ddf87}{}\index{Communication\+::\+Client@{Communication\+::\+Client}!does\+Own\+Socket@{does\+Own\+Socket}}
+\index{does\+Own\+Socket@{does\+Own\+Socket}!Communication\+::\+Client@{Communication\+::\+Client}}
+\subsubsection[{does\+Own\+Socket()}]{\setlength{\rightskip}{0pt plus 5cm}bool Communication\+::\+Client\+::does\+Own\+Socket (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_communication_1_1_client_a7a6d48c9528ed8c4d4175dfcdd4ddf87}
+
+
+Checks if the \hyperlink{class_communication_1_1_client}{Client} owns the socket. 
+
+\begin{DoxyReturn}{Returns}
+Returns true if the \hyperlink{class_communication_1_1_client}{Client} owns the socket, false otherwise. 
+\end{DoxyReturn}
+\hypertarget{class_communication_1_1_client_a87a0efa909c795c7680512bd0c35c883}{}\index{Communication\+::\+Client@{Communication\+::\+Client}!get\+Socket@{get\+Socket}}
+\index{get\+Socket@{get\+Socket}!Communication\+::\+Client@{Communication\+::\+Client}}
+\subsubsection[{get\+Socket()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf base\+Socket}$\ast$ Communication\+::\+Client\+::get\+Socket (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_communication_1_1_client_a87a0efa909c795c7680512bd0c35c883}
+
+
+Returns a pointer to the current socket. 
+
+\begin{DoxyReturn}{Returns}
+returns the current socket. 
+\end{DoxyReturn}
+\hypertarget{class_communication_1_1_client_aa28b2b8434ac7d76b9aaa6c4b951d3be}{}\index{Communication\+::\+Client@{Communication\+::\+Client}!receive@{receive}}
+\index{receive@{receive}!Communication\+::\+Client@{Communication\+::\+Client}}
+\subsubsection[{receive(\+U\+I\+N\+T len\+To\+Accept, I\+N\+T flags)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf base\+Data\+Buffer}$\ast$ Communication\+::\+Client\+::receive (
+\begin{DoxyParamCaption}
+\item[{{\bf U\+I\+N\+T}}]{len\+To\+Accept, }
+\item[{{\bf I\+N\+T}}]{flags}
+\end{DoxyParamCaption}
+)}\label{class_communication_1_1_client_aa28b2b8434ac7d76b9aaa6c4b951d3be}
+
+
+Receives data from the connected socket. This call may block if there is no data to receive. This function makes use of \hyperlink{class_communication_1_1base_gateway_adcdbbefcddb590bf3d2d7b616a915d24}{base\+Gateway\+::receive\+Data()}. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em len\+To\+Accept} & The length in bytes of data to accept if not set lent\+To\+Accept = 256 \\
+\hline
+\mbox{\tt in}  & {\em flags} & Any flags to be used. if not set flags = 0\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to a \hyperlink{class_communication_1_1base_data_buffer}{base\+Data\+Buffer} containing the received data.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{class_communication_1_1_msg_exception}{Msg\+Exception}} & An exception is thrown if any of the requirements for the \hyperlink{class_communication_1_1base_socket}{base\+Socket} object are not met, or if the operating system call fails. \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{class_communication_1_1_client_a2e3aedb9540e48b89ad34d9831e5868e}{}\index{Communication\+::\+Client@{Communication\+::\+Client}!receive@{receive}}
+\index{receive@{receive}!Communication\+::\+Client@{Communication\+::\+Client}}
+\subsubsection[{receive(\+U\+I\+N\+T len\+To\+Accept)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf base\+Data\+Buffer}$\ast$ Communication\+::\+Client\+::receive (
+\begin{DoxyParamCaption}
+\item[{{\bf U\+I\+N\+T}}]{len\+To\+Accept}
+\end{DoxyParamCaption}
+)}\label{class_communication_1_1_client_a2e3aedb9540e48b89ad34d9831e5868e}
+\hypertarget{class_communication_1_1_client_a333fae358f61a607582a3dc1e849ccd4}{}\index{Communication\+::\+Client@{Communication\+::\+Client}!receive@{receive}}
+\index{receive@{receive}!Communication\+::\+Client@{Communication\+::\+Client}}
+\subsubsection[{receive()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf base\+Data\+Buffer}$\ast$ Communication\+::\+Client\+::receive (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_communication_1_1_client_a333fae358f61a607582a3dc1e849ccd4}
+\hypertarget{class_communication_1_1_client_a5ac457cde6469d51fc9a9424bf673206}{}\index{Communication\+::\+Client@{Communication\+::\+Client}!relinquish\+Ownership@{relinquish\+Ownership}}
+\index{relinquish\+Ownership@{relinquish\+Ownership}!Communication\+::\+Client@{Communication\+::\+Client}}
+\subsubsection[{relinquish\+Ownership()}]{\setlength{\rightskip}{0pt plus 5cm}void Communication\+::\+Client\+::relinquish\+Ownership (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_communication_1_1_client_a5ac457cde6469d51fc9a9424bf673206}
+
+
+Relinquishes ownership of the socket by setting m\+\_\+does\+Own\+Socket to false. This stops the socket object from being deleted on object destructions. 
+
+\hypertarget{class_communication_1_1_client_a9f646713fab7ee53a86cc4391c65ba96}{}\index{Communication\+::\+Client@{Communication\+::\+Client}!send@{send}}
+\index{send@{send}!Communication\+::\+Client@{Communication\+::\+Client}}
+\subsubsection[{send(std\+::string data)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf U\+I\+N\+T} Communication\+::\+Client\+::send (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{data}
+\end{DoxyParamCaption}
+)}\label{class_communication_1_1_client_a9f646713fab7ee53a86cc4391c65ba96}
+
+
+Sends data in the string to the connected socket. This call may block if the send buffer is full. This function makes use of \hyperlink{class_communication_1_1base_gateway_a7f5d58eaadea6e124f065f263f2b8029}{base\+Gateway\+::send\+Data()}. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em data} & The data to send. \\
+\hline
+\mbox{\tt in}  & {\em flags} & Any flags to set, if not set flags = 0\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+returns the number of bytes sent by the socket.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{class_communication_1_1_msg_exception}{Msg\+Exception}} & An exception is thrown if any of the requirements for the \hyperlink{class_communication_1_1base_socket}{base\+Socket} object are not met, or if the operating system call fails. \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{class_communication_1_1_client_a38725c4bb7fcb0275d7782b1c5a9d44f}{}\index{Communication\+::\+Client@{Communication\+::\+Client}!send@{send}}
+\index{send@{send}!Communication\+::\+Client@{Communication\+::\+Client}}
+\subsubsection[{send(std\+::string data, I\+N\+T flags)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf U\+I\+N\+T} Communication\+::\+Client\+::send (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{data, }
+\item[{{\bf I\+N\+T}}]{flags}
+\end{DoxyParamCaption}
+)}\label{class_communication_1_1_client_a38725c4bb7fcb0275d7782b1c5a9d44f}
+\hypertarget{class_communication_1_1_client_a3be85163c108c2f8297680689905006c}{}\index{Communication\+::\+Client@{Communication\+::\+Client}!send@{send}}
+\index{send@{send}!Communication\+::\+Client@{Communication\+::\+Client}}
+\subsubsection[{send(base\+Data\+Buffer \&data, I\+N\+T flags)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf U\+I\+N\+T} Communication\+::\+Client\+::send (
+\begin{DoxyParamCaption}
+\item[{{\bf base\+Data\+Buffer} \&}]{data, }
+\item[{{\bf I\+N\+T}}]{flags}
+\end{DoxyParamCaption}
+)}\label{class_communication_1_1_client_a3be85163c108c2f8297680689905006c}
+
+
+Sends the data in \hyperlink{class_communication_1_1base_data_buffer}{base\+Data\+Buffer} to the connected socket. This call may block if the send buffer is full. This function makes use of \hyperlink{class_communication_1_1base_gateway_a7f5d58eaadea6e124f065f263f2b8029}{base\+Gateway\+::send\+Data()}. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em data} & The data buffer to send. \\
+\hline
+\mbox{\tt in}  & {\em flags} & Any flags to set, if not set flags = 0\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+returns the number of bytes sent by the socket.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{class_communication_1_1_msg_exception}{Msg\+Exception}} & An exception is thrown if any of the requirements for the \hyperlink{class_communication_1_1base_socket}{base\+Socket} object are not met, or if the operating system call fails. \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{class_communication_1_1_client_a90215215336f21e97829c17e76104ac6}{}\index{Communication\+::\+Client@{Communication\+::\+Client}!send@{send}}
+\index{send@{send}!Communication\+::\+Client@{Communication\+::\+Client}}
+\subsubsection[{send(base\+Data\+Buffer \&data)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf U\+I\+N\+T} Communication\+::\+Client\+::send (
+\begin{DoxyParamCaption}
+\item[{{\bf base\+Data\+Buffer} \&}]{data}
+\end{DoxyParamCaption}
+)}\label{class_communication_1_1_client_a90215215336f21e97829c17e76104ac6}
+\hypertarget{class_communication_1_1_client_ac97183c35c7227c71dc43ed713efb8cb}{}\index{Communication\+::\+Client@{Communication\+::\+Client}!set\+Socket@{set\+Socket}}
+\index{set\+Socket@{set\+Socket}!Communication\+::\+Client@{Communication\+::\+Client}}
+\subsubsection[{set\+Socket(base\+Socket $\ast$destination\+Socket)}]{\setlength{\rightskip}{0pt plus 5cm}bool Communication\+::\+Client\+::set\+Socket (
+\begin{DoxyParamCaption}
+\item[{{\bf base\+Socket} $\ast$}]{destination\+Socket}
+\end{DoxyParamCaption}
+)}\label{class_communication_1_1_client_ac97183c35c7227c71dc43ed713efb8cb}
+
+
+Sets the socket for the client to connect to. The socket being set must not be bound. The current socket is not destroyed or disconnected. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em destination\+Socket} & A reference to a valid socket.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+return true if the socket was successfully set. 
+\end{DoxyReturn}
+\hypertarget{class_communication_1_1_client_a6c33c673b779dc2443f66ed453178f43}{}\index{Communication\+::\+Client@{Communication\+::\+Client}!transfer\+Ownership@{transfer\+Ownership}}
+\index{transfer\+Ownership@{transfer\+Ownership}!Communication\+::\+Client@{Communication\+::\+Client}}
+\subsubsection[{transfer\+Ownership()}]{\setlength{\rightskip}{0pt plus 5cm}void Communication\+::\+Client\+::transfer\+Ownership (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_communication_1_1_client_a6c33c673b779dc2443f66ed453178f43}
+
+
+Gives ownership of the socket to the client by setting m\+\_\+does\+Own\+Socket to true. This forces the \hyperlink{class_communication_1_1_client}{Client} destructor to destroy the object. 
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_communication_1_1_client_a2795556f3ffbb25b8c3f242b4d643c25}{}\index{Communication\+::\+Client@{Communication\+::\+Client}!m\+\_\+current\+Socket@{m\+\_\+current\+Socket}}
+\index{m\+\_\+current\+Socket@{m\+\_\+current\+Socket}!Communication\+::\+Client@{Communication\+::\+Client}}
+\subsubsection[{m\+\_\+current\+Socket}]{\setlength{\rightskip}{0pt plus 5cm}{\bf base\+Socket}$\ast$ Communication\+::\+Client\+::m\+\_\+current\+Socket\hspace{0.3cm}{\ttfamily [private]}}\label{class_communication_1_1_client_a2795556f3ffbb25b8c3f242b4d643c25}
+\hypertarget{class_communication_1_1_client_afe0f1b2c58ad4ec8a0b2fb74e3a59b08}{}\index{Communication\+::\+Client@{Communication\+::\+Client}!m\+\_\+does\+Own\+Socket@{m\+\_\+does\+Own\+Socket}}
+\index{m\+\_\+does\+Own\+Socket@{m\+\_\+does\+Own\+Socket}!Communication\+::\+Client@{Communication\+::\+Client}}
+\subsubsection[{m\+\_\+does\+Own\+Socket}]{\setlength{\rightskip}{0pt plus 5cm}bool Communication\+::\+Client\+::m\+\_\+does\+Own\+Socket\hspace{0.3cm}{\ttfamily [private]}}\label{class_communication_1_1_client_afe0f1b2c58ad4ec8a0b2fb74e3a59b08}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/samy/\+Programming/\+Ace/include/\hyperlink{_client_8h}{Client.\+h}\end{DoxyCompactItemize}

@@ -1,0 +1,471 @@
+\hypertarget{class_communication_1_1_socket_structure}{}\section{Communication\+:\+:Socket\+Structure Class Reference}
+\label{class_communication_1_1_socket_structure}\index{Communication\+::\+Socket\+Structure@{Communication\+::\+Socket\+Structure}}
+
+
+Represents the basic information required to create a socket this includes the \hyperlink{class_communication_1_1_i_p}{I\+P}, the port number, the type of socket and the family of the socket.  
+
+
+
+
+{\ttfamily \#include $<$Socket\+Structure.\+h$>$}
+
+
+
+Collaboration diagram for Communication\+:\+:Socket\+Structure\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=325pt]{class_communication_1_1_socket_structure__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_communication_1_1_socket_structure_ab741b5359897e17320ae2d1f494f21f4}{Socket\+Structure} ()
+\begin{DoxyCompactList}\small\item\em Initializes the socket structure to an empty structure. \end{DoxyCompactList}\item 
+\hyperlink{class_communication_1_1_socket_structure_a96cc18c1a9f36523f0645ae2993f997e}{Socket\+Structure} (\hyperlink{class_communication_1_1_i_p}{I\+P} I\+P\+Address, \hyperlink{class_communication_1_1_port}{Port} port, \hyperlink{typedefs_8h_a2e2c38961834f28c06e17e074eb00bc7}{U\+I\+N\+T} type, \hyperlink{typedefs_8h_a2e2c38961834f28c06e17e074eb00bc7}{U\+I\+N\+T} family)
+\begin{DoxyCompactList}\small\item\em Initializes the structure with the given parameters. \end{DoxyCompactList}\item 
+void \hyperlink{class_communication_1_1_socket_structure_a991b1dea09771ac634f574b1b6dbefe5}{set\+Structure} (\hyperlink{class_communication_1_1_i_p}{I\+P} I\+P\+Address, \hyperlink{class_communication_1_1_port}{Port} port, \hyperlink{typedefs_8h_a2e2c38961834f28c06e17e074eb00bc7}{U\+I\+N\+T} type, \hyperlink{typedefs_8h_a2e2c38961834f28c06e17e074eb00bc7}{U\+I\+N\+T} family)
+\begin{DoxyCompactList}\small\item\em Sets the structure of the socket to the given parameters. \end{DoxyCompactList}\item 
+void \hyperlink{class_communication_1_1_socket_structure_a09357914ed2d0967ad2f3b5ed7afafeb}{reset\+Structure} ()
+\begin{DoxyCompactList}\small\item\em Resets the structure to default port number, default \hyperlink{class_communication_1_1_i_p}{I\+P}, family = -\/1 and type = -\/1.\+This will force the structure to fail is \hyperlink{class_communication_1_1_socket_structure_add4c226e6a517cd50505b9d80b74ab72}{is\+Valid()} is called. \end{DoxyCompactList}\item 
+void \hyperlink{class_communication_1_1_socket_structure_aab30d1c41344f14aab469241afbfd69c}{set\+Port} (\hyperlink{class_communication_1_1_port}{Port} set)
+\begin{DoxyCompactList}\small\item\em Sets the port number of the structure. \end{DoxyCompactList}\item 
+void \hyperlink{class_communication_1_1_socket_structure_acd8abd4bf53dc625807f3e487e20f69e}{set\+I\+P} (\hyperlink{class_communication_1_1_i_p}{I\+P} set)
+\begin{DoxyCompactList}\small\item\em Sets the \hyperlink{class_communication_1_1_i_p}{I\+P} address of the structure. \end{DoxyCompactList}\item 
+void \hyperlink{class_communication_1_1_socket_structure_aa8d9e7b4c27b016f1afe91cbc14292b1}{set\+Family} (\hyperlink{typedefs_8h_a2e2c38961834f28c06e17e074eb00bc7}{U\+I\+N\+T} set)
+\begin{DoxyCompactList}\small\item\em Sets the family of the structure. \end{DoxyCompactList}\item 
+void \hyperlink{class_communication_1_1_socket_structure_a3b0e5dca91bbf9758ce5736cce2fd8db}{set\+Type} (\hyperlink{typedefs_8h_a2e2c38961834f28c06e17e074eb00bc7}{U\+I\+N\+T} set)
+\begin{DoxyCompactList}\small\item\em Sets the type of the structure. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{class_communication_1_1_socket_structure_a00d0d9e10ff5d75c6717310adcca594b}{get\+I\+P\+S} () const 
+\begin{DoxyCompactList}\small\item\em Gets the string representation of the \hyperlink{class_communication_1_1_i_p}{I\+P} address in the structure. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{class_communication_1_1_socket_structure_a01cdf61533d33bd9c0c58fcbd4431e79}{get\+Port\+S} () const 
+\begin{DoxyCompactList}\small\item\em Gets the string representation of the \hyperlink{class_communication_1_1_port}{Port} in the structure. \end{DoxyCompactList}\item 
+\hyperlink{class_communication_1_1_port}{Port} \hyperlink{class_communication_1_1_socket_structure_a7be506680c04918818545f05f84680cb}{get\+Port} () const 
+\begin{DoxyCompactList}\small\item\em Returns the \hyperlink{class_communication_1_1_port}{Port} stored in the structure. \end{DoxyCompactList}\item 
+\hyperlink{class_communication_1_1_i_p}{I\+P} \hyperlink{class_communication_1_1_socket_structure_a67ef573033634fd974c791861dff84cc}{get\+I\+P} () const 
+\begin{DoxyCompactList}\small\item\em Returns the \hyperlink{class_communication_1_1_i_p}{I\+P} address of the structure. \end{DoxyCompactList}\item 
+\hyperlink{typedefs_8h_a2e2c38961834f28c06e17e074eb00bc7}{U\+I\+N\+T} \hyperlink{class_communication_1_1_socket_structure_accda20274761bc71c0bc142875aa676e}{get\+Type} () const 
+\begin{DoxyCompactList}\small\item\em Returns the type of the structure as defined in \char`\"{}sys/socket.\+h\char`\"{}. \end{DoxyCompactList}\item 
+\hyperlink{typedefs_8h_a2e2c38961834f28c06e17e074eb00bc7}{U\+I\+N\+T} \hyperlink{class_communication_1_1_socket_structure_a2175ee4dfb07e2f410348937f801a668}{get\+Family} () const 
+\begin{DoxyCompactList}\small\item\em Returns the family of the structure as defined in \char`\"{}sys/socket.\+h\char`\"{}. \end{DoxyCompactList}\item 
+bool \hyperlink{class_communication_1_1_socket_structure_aba551d9dec66414c7188eaf0a0e21940}{is\+Port\+Valid} () const 
+\begin{DoxyCompactList}\small\item\em Checks if the port is valid. \end{DoxyCompactList}\item 
+bool \hyperlink{class_communication_1_1_socket_structure_ab86892c3c0707022bc3012239e2928b8}{is\+I\+P\+Valid} () const 
+\begin{DoxyCompactList}\small\item\em Checks if the \hyperlink{class_communication_1_1_i_p}{I\+P} is valid. \end{DoxyCompactList}\item 
+bool \hyperlink{class_communication_1_1_socket_structure_add4c226e6a517cd50505b9d80b74ab72}{is\+Valid} () const 
+\begin{DoxyCompactList}\small\item\em Checks if the general structure is valid, this includes checking if the port and \hyperlink{class_communication_1_1_i_p}{I\+P} are valid. \end{DoxyCompactList}\item 
+\hyperlink{typedefs_8h_a2e2c38961834f28c06e17e074eb00bc7}{U\+I\+N\+T} \hyperlink{class_communication_1_1_socket_structure_a3d80b5598e8fbc5ada0838a4c8d622fc}{get\+Size} () const 
+\begin{DoxyCompactList}\small\item\em Returns the size in bytes of the sockaddr\+\_\+in structure stored in the \hyperlink{class_communication_1_1_socket_structure}{Socket\+Structure} object. \end{DoxyCompactList}\item 
+const sockaddr\+\_\+in $\ast$ \hyperlink{class_communication_1_1_socket_structure_a976af3d3e1ea120ba80b4e808a9600b9}{get\+Internal\+Structure} () const 
+\begin{DoxyCompactList}\small\item\em Returns a const pointer of to the sockaddr\+\_\+in structure. \end{DoxyCompactList}\item 
+void \hyperlink{class_communication_1_1_socket_structure_afb9a6f6cdae0ebba5aea50e2fe7ec1a5}{set\+Internal\+Internet\+Socket\+Address\+Structure} (sockaddr\+\_\+in $\ast$addr)
+\begin{DoxyCompactList}\small\item\em Sets the internal structure as well as the \hyperlink{class_communication_1_1_i_p}{I\+P}, \hyperlink{class_communication_1_1_port}{Port}, and family. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_communication_1_1_socket_structure_ae82ee7be05b9ee39e8c540d127389251}{update\+Struct} ()
+\begin{DoxyCompactList}\small\item\em updates the internal sock\+\_\+add\+\_\+in structure. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_communication_1_1_i_p}{I\+P} \hyperlink{class_communication_1_1_socket_structure_a25cbb53ed15f74e6bebb4e6dace2f731}{m\+\_\+ip\+Address}
+\item 
+\hyperlink{class_communication_1_1_port}{Port} \hyperlink{class_communication_1_1_socket_structure_a9c1d1e42bb9fb4aca9e77233bc872455}{m\+\_\+port}
+\item 
+\hyperlink{typedefs_8h_a2e2c38961834f28c06e17e074eb00bc7}{U\+I\+N\+T} \hyperlink{class_communication_1_1_socket_structure_a36dd474f4205869987fa88c2c1e6e08e}{m\+\_\+connection\+Type}
+\item 
+\hyperlink{typedefs_8h_a2e2c38961834f28c06e17e074eb00bc7}{U\+I\+N\+T} \hyperlink{class_communication_1_1_socket_structure_ac87c8414d43ba2b1a1ba0b30983aa1b4}{m\+\_\+family}
+\item 
+sockaddr\+\_\+in \hyperlink{class_communication_1_1_socket_structure_a34c100e39a27e68a5cc3235b0c552e27}{m\+\_\+structure}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_communication_1_1_socket_structure_a9564a1cc322bc3c0b2bf8625ea5dfeb2}{O\+S}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Represents the basic information required to create a socket this includes the \hyperlink{class_communication_1_1_i_p}{I\+P}, the port number, the type of socket and the family of the socket. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_communication_1_1_socket_structure_ab741b5359897e17320ae2d1f494f21f4}{}\index{Communication\+::\+Socket\+Structure@{Communication\+::\+Socket\+Structure}!Socket\+Structure@{Socket\+Structure}}
+\index{Socket\+Structure@{Socket\+Structure}!Communication\+::\+Socket\+Structure@{Communication\+::\+Socket\+Structure}}
+\subsubsection[{Socket\+Structure()}]{\setlength{\rightskip}{0pt plus 5cm}Communication\+::\+Socket\+Structure\+::\+Socket\+Structure (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_communication_1_1_socket_structure_ab741b5359897e17320ae2d1f494f21f4}
+
+
+Initializes the socket structure to an empty structure. 
+
+\hypertarget{class_communication_1_1_socket_structure_a96cc18c1a9f36523f0645ae2993f997e}{}\index{Communication\+::\+Socket\+Structure@{Communication\+::\+Socket\+Structure}!Socket\+Structure@{Socket\+Structure}}
+\index{Socket\+Structure@{Socket\+Structure}!Communication\+::\+Socket\+Structure@{Communication\+::\+Socket\+Structure}}
+\subsubsection[{Socket\+Structure(\+I\+P I\+P\+Address, Port port, U\+I\+N\+T type, U\+I\+N\+T family)}]{\setlength{\rightskip}{0pt plus 5cm}Communication\+::\+Socket\+Structure\+::\+Socket\+Structure (
+\begin{DoxyParamCaption}
+\item[{{\bf I\+P}}]{I\+P\+Address, }
+\item[{{\bf Port}}]{port, }
+\item[{{\bf U\+I\+N\+T}}]{type, }
+\item[{{\bf U\+I\+N\+T}}]{family}
+\end{DoxyParamCaption}
+)}\label{class_communication_1_1_socket_structure_a96cc18c1a9f36523f0645ae2993f997e}
+
+
+Initializes the structure with the given parameters. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em I\+P\+Address} & The ip address of the socket \\
+\hline
+\mbox{\tt in}  & {\em port} & The port address of the socket \\
+\hline
+\mbox{\tt in}  & {\em type} & The type of socket as defined in \char`\"{}sys/socket.\+h\char`\"{} \\
+\hline
+\mbox{\tt in}  & {\em family} & The family of socket as defined in \char`\"{}sys/socket.\+h\char`\"{} \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{class_communication_1_1_msg_exception}{Msg\+Exception}} & Throws an exception if any of the parameters are invalid. \\
+\hline
+\end{DoxyExceptions}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_communication_1_1_socket_structure_a2175ee4dfb07e2f410348937f801a668}{}\index{Communication\+::\+Socket\+Structure@{Communication\+::\+Socket\+Structure}!get\+Family@{get\+Family}}
+\index{get\+Family@{get\+Family}!Communication\+::\+Socket\+Structure@{Communication\+::\+Socket\+Structure}}
+\subsubsection[{get\+Family() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf U\+I\+N\+T} Communication\+::\+Socket\+Structure\+::get\+Family (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_communication_1_1_socket_structure_a2175ee4dfb07e2f410348937f801a668}
+
+
+Returns the family of the structure as defined in \char`\"{}sys/socket.\+h\char`\"{}. 
+
+\begin{DoxyReturn}{Returns}
+return a U\+I\+N\+T representing the socket family 
+\end{DoxyReturn}
+\hypertarget{class_communication_1_1_socket_structure_a976af3d3e1ea120ba80b4e808a9600b9}{}\index{Communication\+::\+Socket\+Structure@{Communication\+::\+Socket\+Structure}!get\+Internal\+Structure@{get\+Internal\+Structure}}
+\index{get\+Internal\+Structure@{get\+Internal\+Structure}!Communication\+::\+Socket\+Structure@{Communication\+::\+Socket\+Structure}}
+\subsubsection[{get\+Internal\+Structure() const }]{\setlength{\rightskip}{0pt plus 5cm}const sockaddr\+\_\+in$\ast$ Communication\+::\+Socket\+Structure\+::get\+Internal\+Structure (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_communication_1_1_socket_structure_a976af3d3e1ea120ba80b4e808a9600b9}
+
+
+Returns a const pointer of to the sockaddr\+\_\+in structure. 
+
+\begin{DoxyReturn}{Returns}
+a sockadd\+\_\+in structure. 
+\end{DoxyReturn}
+\hypertarget{class_communication_1_1_socket_structure_a67ef573033634fd974c791861dff84cc}{}\index{Communication\+::\+Socket\+Structure@{Communication\+::\+Socket\+Structure}!get\+I\+P@{get\+I\+P}}
+\index{get\+I\+P@{get\+I\+P}!Communication\+::\+Socket\+Structure@{Communication\+::\+Socket\+Structure}}
+\subsubsection[{get\+I\+P() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+P} Communication\+::\+Socket\+Structure\+::get\+I\+P (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_communication_1_1_socket_structure_a67ef573033634fd974c791861dff84cc}
+
+
+Returns the \hyperlink{class_communication_1_1_i_p}{I\+P} address of the structure. 
+
+\begin{DoxyReturn}{Returns}
+an \hyperlink{class_communication_1_1_i_p}{I\+P} address object. 
+\end{DoxyReturn}
+\hypertarget{class_communication_1_1_socket_structure_a00d0d9e10ff5d75c6717310adcca594b}{}\index{Communication\+::\+Socket\+Structure@{Communication\+::\+Socket\+Structure}!get\+I\+P\+S@{get\+I\+P\+S}}
+\index{get\+I\+P\+S@{get\+I\+P\+S}!Communication\+::\+Socket\+Structure@{Communication\+::\+Socket\+Structure}}
+\subsubsection[{get\+I\+P\+S() const }]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Communication\+::\+Socket\+Structure\+::get\+I\+P\+S (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_communication_1_1_socket_structure_a00d0d9e10ff5d75c6717310adcca594b}
+
+
+Gets the string representation of the \hyperlink{class_communication_1_1_i_p}{I\+P} address in the structure. 
+
+\begin{DoxyReturn}{Returns}
+returns the string of the \hyperlink{class_communication_1_1_i_p}{I\+P} address 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{class_communication_1_1_msg_exception}{Msg\+Exception}} & throws an exception if the \hyperlink{class_communication_1_1_i_p}{I\+P} address of the string is invalid. \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{class_communication_1_1_socket_structure_a7be506680c04918818545f05f84680cb}{}\index{Communication\+::\+Socket\+Structure@{Communication\+::\+Socket\+Structure}!get\+Port@{get\+Port}}
+\index{get\+Port@{get\+Port}!Communication\+::\+Socket\+Structure@{Communication\+::\+Socket\+Structure}}
+\subsubsection[{get\+Port() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Port} Communication\+::\+Socket\+Structure\+::get\+Port (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_communication_1_1_socket_structure_a7be506680c04918818545f05f84680cb}
+
+
+Returns the \hyperlink{class_communication_1_1_port}{Port} stored in the structure. 
+
+\begin{DoxyReturn}{Returns}
+A \hyperlink{class_communication_1_1_port}{Port} object. 
+\end{DoxyReturn}
+\hypertarget{class_communication_1_1_socket_structure_a01cdf61533d33bd9c0c58fcbd4431e79}{}\index{Communication\+::\+Socket\+Structure@{Communication\+::\+Socket\+Structure}!get\+Port\+S@{get\+Port\+S}}
+\index{get\+Port\+S@{get\+Port\+S}!Communication\+::\+Socket\+Structure@{Communication\+::\+Socket\+Structure}}
+\subsubsection[{get\+Port\+S() const }]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Communication\+::\+Socket\+Structure\+::get\+Port\+S (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_communication_1_1_socket_structure_a01cdf61533d33bd9c0c58fcbd4431e79}
+
+
+Gets the string representation of the \hyperlink{class_communication_1_1_port}{Port} in the structure. 
+
+\begin{DoxyReturn}{Returns}
+returns the string of the \hyperlink{class_communication_1_1_port}{Port}
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{class_communication_1_1_msg_exception}{Msg\+Exception}} & throws an exception if the \hyperlink{class_communication_1_1_port}{Port} of the string is invalid. \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{class_communication_1_1_socket_structure_a3d80b5598e8fbc5ada0838a4c8d622fc}{}\index{Communication\+::\+Socket\+Structure@{Communication\+::\+Socket\+Structure}!get\+Size@{get\+Size}}
+\index{get\+Size@{get\+Size}!Communication\+::\+Socket\+Structure@{Communication\+::\+Socket\+Structure}}
+\subsubsection[{get\+Size() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf U\+I\+N\+T} Communication\+::\+Socket\+Structure\+::get\+Size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_communication_1_1_socket_structure_a3d80b5598e8fbc5ada0838a4c8d622fc}
+
+
+Returns the size in bytes of the sockaddr\+\_\+in structure stored in the \hyperlink{class_communication_1_1_socket_structure}{Socket\+Structure} object. 
+
+\begin{DoxyReturn}{Returns}
+the size in bytes of the structure 
+\end{DoxyReturn}
+\hypertarget{class_communication_1_1_socket_structure_accda20274761bc71c0bc142875aa676e}{}\index{Communication\+::\+Socket\+Structure@{Communication\+::\+Socket\+Structure}!get\+Type@{get\+Type}}
+\index{get\+Type@{get\+Type}!Communication\+::\+Socket\+Structure@{Communication\+::\+Socket\+Structure}}
+\subsubsection[{get\+Type() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf U\+I\+N\+T} Communication\+::\+Socket\+Structure\+::get\+Type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_communication_1_1_socket_structure_accda20274761bc71c0bc142875aa676e}
+
+
+Returns the type of the structure as defined in \char`\"{}sys/socket.\+h\char`\"{}. 
+
+\begin{DoxyReturn}{Returns}
+return a U\+I\+N\+T representing the socket type 
+\end{DoxyReturn}
+\hypertarget{class_communication_1_1_socket_structure_ab86892c3c0707022bc3012239e2928b8}{}\index{Communication\+::\+Socket\+Structure@{Communication\+::\+Socket\+Structure}!is\+I\+P\+Valid@{is\+I\+P\+Valid}}
+\index{is\+I\+P\+Valid@{is\+I\+P\+Valid}!Communication\+::\+Socket\+Structure@{Communication\+::\+Socket\+Structure}}
+\subsubsection[{is\+I\+P\+Valid() const }]{\setlength{\rightskip}{0pt plus 5cm}bool Communication\+::\+Socket\+Structure\+::is\+I\+P\+Valid (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_communication_1_1_socket_structure_ab86892c3c0707022bc3012239e2928b8}
+
+
+Checks if the \hyperlink{class_communication_1_1_i_p}{I\+P} is valid. 
+
+\begin{DoxyReturn}{Returns}
+return true if \hyperlink{class_communication_1_1_i_p}{I\+P} is valid, false otherwise. 
+\end{DoxyReturn}
+\hypertarget{class_communication_1_1_socket_structure_aba551d9dec66414c7188eaf0a0e21940}{}\index{Communication\+::\+Socket\+Structure@{Communication\+::\+Socket\+Structure}!is\+Port\+Valid@{is\+Port\+Valid}}
+\index{is\+Port\+Valid@{is\+Port\+Valid}!Communication\+::\+Socket\+Structure@{Communication\+::\+Socket\+Structure}}
+\subsubsection[{is\+Port\+Valid() const }]{\setlength{\rightskip}{0pt plus 5cm}bool Communication\+::\+Socket\+Structure\+::is\+Port\+Valid (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_communication_1_1_socket_structure_aba551d9dec66414c7188eaf0a0e21940}
+
+
+Checks if the port is valid. 
+
+\begin{DoxyReturn}{Returns}
+return true if the port is valid, false otherwise. 
+\end{DoxyReturn}
+\hypertarget{class_communication_1_1_socket_structure_add4c226e6a517cd50505b9d80b74ab72}{}\index{Communication\+::\+Socket\+Structure@{Communication\+::\+Socket\+Structure}!is\+Valid@{is\+Valid}}
+\index{is\+Valid@{is\+Valid}!Communication\+::\+Socket\+Structure@{Communication\+::\+Socket\+Structure}}
+\subsubsection[{is\+Valid() const }]{\setlength{\rightskip}{0pt plus 5cm}bool Communication\+::\+Socket\+Structure\+::is\+Valid (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_communication_1_1_socket_structure_add4c226e6a517cd50505b9d80b74ab72}
+
+
+Checks if the general structure is valid, this includes checking if the port and \hyperlink{class_communication_1_1_i_p}{I\+P} are valid. 
+
+\begin{DoxyReturn}{Returns}
+true if the \hyperlink{class_communication_1_1_socket_structure}{Socket\+Structure} is valid, false otherwise. 
+\end{DoxyReturn}
+\hypertarget{class_communication_1_1_socket_structure_a09357914ed2d0967ad2f3b5ed7afafeb}{}\index{Communication\+::\+Socket\+Structure@{Communication\+::\+Socket\+Structure}!reset\+Structure@{reset\+Structure}}
+\index{reset\+Structure@{reset\+Structure}!Communication\+::\+Socket\+Structure@{Communication\+::\+Socket\+Structure}}
+\subsubsection[{reset\+Structure()}]{\setlength{\rightskip}{0pt plus 5cm}void Communication\+::\+Socket\+Structure\+::reset\+Structure (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_communication_1_1_socket_structure_a09357914ed2d0967ad2f3b5ed7afafeb}
+
+
+Resets the structure to default port number, default \hyperlink{class_communication_1_1_i_p}{I\+P}, family = -\/1 and type = -\/1.\+This will force the structure to fail is \hyperlink{class_communication_1_1_socket_structure_add4c226e6a517cd50505b9d80b74ab72}{is\+Valid()} is called. 
+
+\hypertarget{class_communication_1_1_socket_structure_aa8d9e7b4c27b016f1afe91cbc14292b1}{}\index{Communication\+::\+Socket\+Structure@{Communication\+::\+Socket\+Structure}!set\+Family@{set\+Family}}
+\index{set\+Family@{set\+Family}!Communication\+::\+Socket\+Structure@{Communication\+::\+Socket\+Structure}}
+\subsubsection[{set\+Family(\+U\+I\+N\+T set)}]{\setlength{\rightskip}{0pt plus 5cm}void Communication\+::\+Socket\+Structure\+::set\+Family (
+\begin{DoxyParamCaption}
+\item[{{\bf U\+I\+N\+T}}]{set}
+\end{DoxyParamCaption}
+)}\label{class_communication_1_1_socket_structure_aa8d9e7b4c27b016f1afe91cbc14292b1}
+
+
+Sets the family of the structure. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em set} & The family to set. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_communication_1_1_socket_structure_afb9a6f6cdae0ebba5aea50e2fe7ec1a5}{}\index{Communication\+::\+Socket\+Structure@{Communication\+::\+Socket\+Structure}!set\+Internal\+Internet\+Socket\+Address\+Structure@{set\+Internal\+Internet\+Socket\+Address\+Structure}}
+\index{set\+Internal\+Internet\+Socket\+Address\+Structure@{set\+Internal\+Internet\+Socket\+Address\+Structure}!Communication\+::\+Socket\+Structure@{Communication\+::\+Socket\+Structure}}
+\subsubsection[{set\+Internal\+Internet\+Socket\+Address\+Structure(sockaddr\+\_\+in $\ast$addr)}]{\setlength{\rightskip}{0pt plus 5cm}void Communication\+::\+Socket\+Structure\+::set\+Internal\+Internet\+Socket\+Address\+Structure (
+\begin{DoxyParamCaption}
+\item[{sockaddr\+\_\+in $\ast$}]{addr}
+\end{DoxyParamCaption}
+)}\label{class_communication_1_1_socket_structure_afb9a6f6cdae0ebba5aea50e2fe7ec1a5}
+
+
+Sets the internal structure as well as the \hyperlink{class_communication_1_1_i_p}{I\+P}, \hyperlink{class_communication_1_1_port}{Port}, and family. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em addr} & a valid sockaddr pointer \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_communication_1_1_socket_structure_acd8abd4bf53dc625807f3e487e20f69e}{}\index{Communication\+::\+Socket\+Structure@{Communication\+::\+Socket\+Structure}!set\+I\+P@{set\+I\+P}}
+\index{set\+I\+P@{set\+I\+P}!Communication\+::\+Socket\+Structure@{Communication\+::\+Socket\+Structure}}
+\subsubsection[{set\+I\+P(\+I\+P set)}]{\setlength{\rightskip}{0pt plus 5cm}void Communication\+::\+Socket\+Structure\+::set\+I\+P (
+\begin{DoxyParamCaption}
+\item[{{\bf I\+P}}]{set}
+\end{DoxyParamCaption}
+)}\label{class_communication_1_1_socket_structure_acd8abd4bf53dc625807f3e487e20f69e}
+
+
+Sets the \hyperlink{class_communication_1_1_i_p}{I\+P} address of the structure. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em set} & The \hyperlink{class_communication_1_1_i_p}{I\+P} address to set. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Msg\+Exceptions} & Throws an exception if the \hyperlink{class_communication_1_1_i_p}{I\+P} address is invalid. \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{class_communication_1_1_socket_structure_aab30d1c41344f14aab469241afbfd69c}{}\index{Communication\+::\+Socket\+Structure@{Communication\+::\+Socket\+Structure}!set\+Port@{set\+Port}}
+\index{set\+Port@{set\+Port}!Communication\+::\+Socket\+Structure@{Communication\+::\+Socket\+Structure}}
+\subsubsection[{set\+Port(\+Port set)}]{\setlength{\rightskip}{0pt plus 5cm}void Communication\+::\+Socket\+Structure\+::set\+Port (
+\begin{DoxyParamCaption}
+\item[{{\bf Port}}]{set}
+\end{DoxyParamCaption}
+)}\label{class_communication_1_1_socket_structure_aab30d1c41344f14aab469241afbfd69c}
+
+
+Sets the port number of the structure. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em set} & The port number to set. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{class_communication_1_1_msg_exception}{Msg\+Exception}} & Throws an exception if the port number is invalid \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{class_communication_1_1_socket_structure_a991b1dea09771ac634f574b1b6dbefe5}{}\index{Communication\+::\+Socket\+Structure@{Communication\+::\+Socket\+Structure}!set\+Structure@{set\+Structure}}
+\index{set\+Structure@{set\+Structure}!Communication\+::\+Socket\+Structure@{Communication\+::\+Socket\+Structure}}
+\subsubsection[{set\+Structure(\+I\+P I\+P\+Address, Port port, U\+I\+N\+T type, U\+I\+N\+T family)}]{\setlength{\rightskip}{0pt plus 5cm}void Communication\+::\+Socket\+Structure\+::set\+Structure (
+\begin{DoxyParamCaption}
+\item[{{\bf I\+P}}]{I\+P\+Address, }
+\item[{{\bf Port}}]{port, }
+\item[{{\bf U\+I\+N\+T}}]{type, }
+\item[{{\bf U\+I\+N\+T}}]{family}
+\end{DoxyParamCaption}
+)}\label{class_communication_1_1_socket_structure_a991b1dea09771ac634f574b1b6dbefe5}
+
+
+Sets the structure of the socket to the given parameters. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em I\+P\+Address} & The ip address of the socket \\
+\hline
+\mbox{\tt in}  & {\em port} & The port address of the socket \\
+\hline
+\mbox{\tt in}  & {\em type} & The type of socket as defined in \char`\"{}sys/socket.\+h\char`\"{} \\
+\hline
+\mbox{\tt in}  & {\em family} & The family of socket as defined in \char`\"{}sys/socket.\+h\char`\"{}\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{class_communication_1_1_msg_exception}{Msg\+Exception}} & Throws an exception if any of the parameters are invalid. \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{class_communication_1_1_socket_structure_a3b0e5dca91bbf9758ce5736cce2fd8db}{}\index{Communication\+::\+Socket\+Structure@{Communication\+::\+Socket\+Structure}!set\+Type@{set\+Type}}
+\index{set\+Type@{set\+Type}!Communication\+::\+Socket\+Structure@{Communication\+::\+Socket\+Structure}}
+\subsubsection[{set\+Type(\+U\+I\+N\+T set)}]{\setlength{\rightskip}{0pt plus 5cm}void Communication\+::\+Socket\+Structure\+::set\+Type (
+\begin{DoxyParamCaption}
+\item[{{\bf U\+I\+N\+T}}]{set}
+\end{DoxyParamCaption}
+)}\label{class_communication_1_1_socket_structure_a3b0e5dca91bbf9758ce5736cce2fd8db}
+
+
+Sets the type of the structure. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em set} & The type to set. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_communication_1_1_socket_structure_ae82ee7be05b9ee39e8c540d127389251}{}\index{Communication\+::\+Socket\+Structure@{Communication\+::\+Socket\+Structure}!update\+Struct@{update\+Struct}}
+\index{update\+Struct@{update\+Struct}!Communication\+::\+Socket\+Structure@{Communication\+::\+Socket\+Structure}}
+\subsubsection[{update\+Struct()}]{\setlength{\rightskip}{0pt plus 5cm}void Communication\+::\+Socket\+Structure\+::update\+Struct (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_communication_1_1_socket_structure_ae82ee7be05b9ee39e8c540d127389251}
+
+
+updates the internal sock\+\_\+add\+\_\+in structure. 
+
+
+
+\subsection{Friends And Related Function Documentation}
+\hypertarget{class_communication_1_1_socket_structure_a9564a1cc322bc3c0b2bf8625ea5dfeb2}{}\index{Communication\+::\+Socket\+Structure@{Communication\+::\+Socket\+Structure}!O\+S@{O\+S}}
+\index{O\+S@{O\+S}!Communication\+::\+Socket\+Structure@{Communication\+::\+Socket\+Structure}}
+\subsubsection[{O\+S}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf O\+S}\hspace{0.3cm}{\ttfamily [friend]}}\label{class_communication_1_1_socket_structure_a9564a1cc322bc3c0b2bf8625ea5dfeb2}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_communication_1_1_socket_structure_a36dd474f4205869987fa88c2c1e6e08e}{}\index{Communication\+::\+Socket\+Structure@{Communication\+::\+Socket\+Structure}!m\+\_\+connection\+Type@{m\+\_\+connection\+Type}}
+\index{m\+\_\+connection\+Type@{m\+\_\+connection\+Type}!Communication\+::\+Socket\+Structure@{Communication\+::\+Socket\+Structure}}
+\subsubsection[{m\+\_\+connection\+Type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf U\+I\+N\+T} Communication\+::\+Socket\+Structure\+::m\+\_\+connection\+Type\hspace{0.3cm}{\ttfamily [private]}}\label{class_communication_1_1_socket_structure_a36dd474f4205869987fa88c2c1e6e08e}
+\hypertarget{class_communication_1_1_socket_structure_ac87c8414d43ba2b1a1ba0b30983aa1b4}{}\index{Communication\+::\+Socket\+Structure@{Communication\+::\+Socket\+Structure}!m\+\_\+family@{m\+\_\+family}}
+\index{m\+\_\+family@{m\+\_\+family}!Communication\+::\+Socket\+Structure@{Communication\+::\+Socket\+Structure}}
+\subsubsection[{m\+\_\+family}]{\setlength{\rightskip}{0pt plus 5cm}{\bf U\+I\+N\+T} Communication\+::\+Socket\+Structure\+::m\+\_\+family\hspace{0.3cm}{\ttfamily [private]}}\label{class_communication_1_1_socket_structure_ac87c8414d43ba2b1a1ba0b30983aa1b4}
+\hypertarget{class_communication_1_1_socket_structure_a25cbb53ed15f74e6bebb4e6dace2f731}{}\index{Communication\+::\+Socket\+Structure@{Communication\+::\+Socket\+Structure}!m\+\_\+ip\+Address@{m\+\_\+ip\+Address}}
+\index{m\+\_\+ip\+Address@{m\+\_\+ip\+Address}!Communication\+::\+Socket\+Structure@{Communication\+::\+Socket\+Structure}}
+\subsubsection[{m\+\_\+ip\+Address}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+P} Communication\+::\+Socket\+Structure\+::m\+\_\+ip\+Address\hspace{0.3cm}{\ttfamily [private]}}\label{class_communication_1_1_socket_structure_a25cbb53ed15f74e6bebb4e6dace2f731}
+\hypertarget{class_communication_1_1_socket_structure_a9c1d1e42bb9fb4aca9e77233bc872455}{}\index{Communication\+::\+Socket\+Structure@{Communication\+::\+Socket\+Structure}!m\+\_\+port@{m\+\_\+port}}
+\index{m\+\_\+port@{m\+\_\+port}!Communication\+::\+Socket\+Structure@{Communication\+::\+Socket\+Structure}}
+\subsubsection[{m\+\_\+port}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Port} Communication\+::\+Socket\+Structure\+::m\+\_\+port\hspace{0.3cm}{\ttfamily [private]}}\label{class_communication_1_1_socket_structure_a9c1d1e42bb9fb4aca9e77233bc872455}
+\hypertarget{class_communication_1_1_socket_structure_a34c100e39a27e68a5cc3235b0c552e27}{}\index{Communication\+::\+Socket\+Structure@{Communication\+::\+Socket\+Structure}!m\+\_\+structure@{m\+\_\+structure}}
+\index{m\+\_\+structure@{m\+\_\+structure}!Communication\+::\+Socket\+Structure@{Communication\+::\+Socket\+Structure}}
+\subsubsection[{m\+\_\+structure}]{\setlength{\rightskip}{0pt plus 5cm}sockaddr\+\_\+in Communication\+::\+Socket\+Structure\+::m\+\_\+structure\hspace{0.3cm}{\ttfamily [private]}}\label{class_communication_1_1_socket_structure_a34c100e39a27e68a5cc3235b0c552e27}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/samy/\+Programming/\+Ace/include/\hyperlink{_socket_structure_8h}{Socket\+Structure.\+h}\end{DoxyCompactItemize}

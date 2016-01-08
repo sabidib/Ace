@@ -1,0 +1,258 @@
+\hypertarget{class_communication_1_1_i_p}{}\section{Communication\+:\+:I\+P Class Reference}
+\label{class_communication_1_1_i_p}\index{Communication\+::\+I\+P@{Communication\+::\+I\+P}}
+
+
+Represents an \hyperlink{class_communication_1_1_i_p}{I\+P} address. The value can be set as a string, a network, or host integer.  
+
+
+
+
+{\ttfamily \#include $<$I\+P.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_communication_1_1_i_p_a9ec6616d8a10948e659f0388d1e73b9f}{I\+P} ()
+\item 
+\hyperlink{class_communication_1_1_i_p_af9a5fd13eb3458d2aad5d3289fb8f4d0}{I\+P} (\hyperlink{typedefs_8h_a2e2c38961834f28c06e17e074eb00bc7}{U\+I\+N\+T} ip\+Address)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\hyperlink{class_communication_1_1_i_p_aa08bd46a0a2b58a18df716f0d8187a86}{I\+P} (std\+::string ip\+Address)
+\item 
+bool \hyperlink{class_communication_1_1_i_p_adf0d88bbd3308f87ac69bd3f9f41020f}{set\+I\+P\+H} (\hyperlink{typedefs_8h_a2e2c38961834f28c06e17e074eb00bc7}{U\+I\+N\+T} host\+Order\+I\+P)
+\begin{DoxyCompactList}\small\item\em Sets the \hyperlink{class_communication_1_1_i_p}{I\+P} as host order U\+I\+N\+T. \end{DoxyCompactList}\item 
+bool \hyperlink{class_communication_1_1_i_p_a77c4c1e10474800730e6f42773322f58}{set\+I\+P\+N} (\hyperlink{typedefs_8h_a2e2c38961834f28c06e17e074eb00bc7}{U\+I\+N\+T} network\+Order\+I\+P)
+\begin{DoxyCompactList}\small\item\em Sets the \hyperlink{class_communication_1_1_i_p}{I\+P} as network order U\+I\+N\+T. \end{DoxyCompactList}\item 
+bool \hyperlink{class_communication_1_1_i_p_a697d49b98bd030a9b62dd49e43bcbf95}{set\+I\+P\+S} (std\+::string string\+I\+P)
+\begin{DoxyCompactList}\small\item\em Sets the \hyperlink{class_communication_1_1_i_p}{I\+P} from the std\+::string. \end{DoxyCompactList}\item 
+bool \hyperlink{class_communication_1_1_i_p_a290d0d4102c11d863de21088b3c98ea6}{set\+I\+P\+Domain\+Name} (std\+::string domain\+Name, std\+::string service=\char`\"{}http\char`\"{})
+\begin{DoxyCompactList}\small\item\em Sets the \hyperlink{class_communication_1_1_i_p}{I\+P} from a domain name, this performs a domain name lookup to get the \hyperlink{class_communication_1_1_i_p}{I\+P} address. \end{DoxyCompactList}\item 
+\hyperlink{typedefs_8h_a2e2c38961834f28c06e17e074eb00bc7}{U\+I\+N\+T} \hyperlink{class_communication_1_1_i_p_a4d27a1a6564af4cfe32efad64bff1782}{get\+I\+P\+H} () const 
+\begin{DoxyCompactList}\small\item\em Returns the host order \hyperlink{class_communication_1_1_i_p}{I\+P} address as a U\+I\+N\+T. \end{DoxyCompactList}\item 
+\hyperlink{typedefs_8h_a2e2c38961834f28c06e17e074eb00bc7}{U\+I\+N\+T} \hyperlink{class_communication_1_1_i_p_acc518ec890e42d67fe93840c31ed0b27}{get\+I\+P\+N} () const 
+\begin{DoxyCompactList}\small\item\em Returns the network order \hyperlink{class_communication_1_1_i_p}{I\+P} address as a U\+I\+N\+T. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{class_communication_1_1_i_p_a0cfc93cc3418241b854ee38b7db70782}{get\+I\+P\+S} () const 
+\begin{DoxyCompactList}\small\item\em Returns the string representing the \hyperlink{class_communication_1_1_i_p}{I\+P} address. \end{DoxyCompactList}\item 
+bool \hyperlink{class_communication_1_1_i_p_a97cd2b1b9aa2d7694b1ed5009686db2b}{is\+Valid} () const 
+\begin{DoxyCompactList}\small\item\em Checks if the \hyperlink{class_communication_1_1_i_p}{I\+P} address is valid, this means checking if the \hyperlink{class_communication_1_1_i_p}{I\+P} address is set to D\+E\+F\+A\+U\+L\+T\+\_\+\+I\+P\+\_\+\+A\+D\+R\+E\+S\+S, 0 or -\/1. \end{DoxyCompactList}\item 
+bool \hyperlink{class_communication_1_1_i_p_a8977a1b0be96d90438675852f953092d}{operator==} (const \hyperlink{class_communication_1_1_i_p}{I\+P} \&other) const 
+\item 
+bool \hyperlink{class_communication_1_1_i_p_a3502e1435ed11a6e32b337f6b5bbce33}{operator!=} (const \hyperlink{class_communication_1_1_i_p}{I\+P} \&other) const 
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{typedefs_8h_a2e2c38961834f28c06e17e074eb00bc7}{U\+I\+N\+T} \hyperlink{class_communication_1_1_i_p_aeb8f550723eb60248dce5638e177d3da}{m\+\_\+ip\+Address}
+\begin{DoxyCompactList}\small\item\em The host set as a network order integer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Represents an \hyperlink{class_communication_1_1_i_p}{I\+P} address. The value can be set as a string, a network, or host integer. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_communication_1_1_i_p_a9ec6616d8a10948e659f0388d1e73b9f}{}\index{Communication\+::\+I\+P@{Communication\+::\+I\+P}!I\+P@{I\+P}}
+\index{I\+P@{I\+P}!Communication\+::\+I\+P@{Communication\+::\+I\+P}}
+\subsubsection[{I\+P()}]{\setlength{\rightskip}{0pt plus 5cm}Communication\+::\+I\+P\+::\+I\+P (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_communication_1_1_i_p_a9ec6616d8a10948e659f0388d1e73b9f}
+\hypertarget{class_communication_1_1_i_p_af9a5fd13eb3458d2aad5d3289fb8f4d0}{}\index{Communication\+::\+I\+P@{Communication\+::\+I\+P}!I\+P@{I\+P}}
+\index{I\+P@{I\+P}!Communication\+::\+I\+P@{Communication\+::\+I\+P}}
+\subsubsection[{I\+P(\+U\+I\+N\+T ip\+Address)}]{\setlength{\rightskip}{0pt plus 5cm}Communication\+::\+I\+P\+::\+I\+P (
+\begin{DoxyParamCaption}
+\item[{{\bf U\+I\+N\+T}}]{ip\+Address}
+\end{DoxyParamCaption}
+)}\label{class_communication_1_1_i_p_af9a5fd13eb3458d2aad5d3289fb8f4d0}
+
+
+Constructor. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em ip\+Address} & A host order U\+I\+N\+T representing the \hyperlink{class_communication_1_1_i_p}{I\+P} address. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_communication_1_1_i_p_aa08bd46a0a2b58a18df716f0d8187a86}{}\index{Communication\+::\+I\+P@{Communication\+::\+I\+P}!I\+P@{I\+P}}
+\index{I\+P@{I\+P}!Communication\+::\+I\+P@{Communication\+::\+I\+P}}
+\subsubsection[{I\+P(std\+::string ip\+Address)}]{\setlength{\rightskip}{0pt plus 5cm}Communication\+::\+I\+P\+::\+I\+P (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{ip\+Address}
+\end{DoxyParamCaption}
+)}\label{class_communication_1_1_i_p_aa08bd46a0a2b58a18df716f0d8187a86}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_communication_1_1_i_p_a4d27a1a6564af4cfe32efad64bff1782}{}\index{Communication\+::\+I\+P@{Communication\+::\+I\+P}!get\+I\+P\+H@{get\+I\+P\+H}}
+\index{get\+I\+P\+H@{get\+I\+P\+H}!Communication\+::\+I\+P@{Communication\+::\+I\+P}}
+\subsubsection[{get\+I\+P\+H() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf U\+I\+N\+T} Communication\+::\+I\+P\+::get\+I\+P\+H (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_communication_1_1_i_p_a4d27a1a6564af4cfe32efad64bff1782}
+
+
+Returns the host order \hyperlink{class_communication_1_1_i_p}{I\+P} address as a U\+I\+N\+T. 
+
+\begin{DoxyReturn}{Returns}
+Host order \hyperlink{class_communication_1_1_i_p}{I\+P} address. 
+\end{DoxyReturn}
+\hypertarget{class_communication_1_1_i_p_acc518ec890e42d67fe93840c31ed0b27}{}\index{Communication\+::\+I\+P@{Communication\+::\+I\+P}!get\+I\+P\+N@{get\+I\+P\+N}}
+\index{get\+I\+P\+N@{get\+I\+P\+N}!Communication\+::\+I\+P@{Communication\+::\+I\+P}}
+\subsubsection[{get\+I\+P\+N() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf U\+I\+N\+T} Communication\+::\+I\+P\+::get\+I\+P\+N (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_communication_1_1_i_p_acc518ec890e42d67fe93840c31ed0b27}
+
+
+Returns the network order \hyperlink{class_communication_1_1_i_p}{I\+P} address as a U\+I\+N\+T. 
+
+\begin{DoxyReturn}{Returns}
+Network order \hyperlink{class_communication_1_1_i_p}{I\+P} address. 
+\end{DoxyReturn}
+\hypertarget{class_communication_1_1_i_p_a0cfc93cc3418241b854ee38b7db70782}{}\index{Communication\+::\+I\+P@{Communication\+::\+I\+P}!get\+I\+P\+S@{get\+I\+P\+S}}
+\index{get\+I\+P\+S@{get\+I\+P\+S}!Communication\+::\+I\+P@{Communication\+::\+I\+P}}
+\subsubsection[{get\+I\+P\+S() const }]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Communication\+::\+I\+P\+::get\+I\+P\+S (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_communication_1_1_i_p_a0cfc93cc3418241b854ee38b7db70782}
+
+
+Returns the string representing the \hyperlink{class_communication_1_1_i_p}{I\+P} address. 
+
+\begin{DoxyReturn}{Returns}
+A std\+::string \hyperlink{class_communication_1_1_i_p}{I\+P} address. 
+\end{DoxyReturn}
+\hypertarget{class_communication_1_1_i_p_a97cd2b1b9aa2d7694b1ed5009686db2b}{}\index{Communication\+::\+I\+P@{Communication\+::\+I\+P}!is\+Valid@{is\+Valid}}
+\index{is\+Valid@{is\+Valid}!Communication\+::\+I\+P@{Communication\+::\+I\+P}}
+\subsubsection[{is\+Valid() const }]{\setlength{\rightskip}{0pt plus 5cm}bool Communication\+::\+I\+P\+::is\+Valid (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_communication_1_1_i_p_a97cd2b1b9aa2d7694b1ed5009686db2b}
+
+
+Checks if the \hyperlink{class_communication_1_1_i_p}{I\+P} address is valid, this means checking if the \hyperlink{class_communication_1_1_i_p}{I\+P} address is set to D\+E\+F\+A\+U\+L\+T\+\_\+\+I\+P\+\_\+\+A\+D\+R\+E\+S\+S, 0 or -\/1. 
+
+\begin{DoxyReturn}{Returns}
+return true if the \hyperlink{class_communication_1_1_i_p}{I\+P} is valid, false otherwise 
+\end{DoxyReturn}
+\hypertarget{class_communication_1_1_i_p_a3502e1435ed11a6e32b337f6b5bbce33}{}\index{Communication\+::\+I\+P@{Communication\+::\+I\+P}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!Communication\+::\+I\+P@{Communication\+::\+I\+P}}
+\subsubsection[{operator"!=(const I\+P \&other) const }]{\setlength{\rightskip}{0pt plus 5cm}bool Communication\+::\+I\+P\+::operator!= (
+\begin{DoxyParamCaption}
+\item[{const {\bf I\+P} \&}]{other}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_communication_1_1_i_p_a3502e1435ed11a6e32b337f6b5bbce33}
+\hypertarget{class_communication_1_1_i_p_a8977a1b0be96d90438675852f953092d}{}\index{Communication\+::\+I\+P@{Communication\+::\+I\+P}!operator==@{operator==}}
+\index{operator==@{operator==}!Communication\+::\+I\+P@{Communication\+::\+I\+P}}
+\subsubsection[{operator==(const I\+P \&other) const }]{\setlength{\rightskip}{0pt plus 5cm}bool Communication\+::\+I\+P\+::operator== (
+\begin{DoxyParamCaption}
+\item[{const {\bf I\+P} \&}]{other}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_communication_1_1_i_p_a8977a1b0be96d90438675852f953092d}
+\hypertarget{class_communication_1_1_i_p_a290d0d4102c11d863de21088b3c98ea6}{}\index{Communication\+::\+I\+P@{Communication\+::\+I\+P}!set\+I\+P\+Domain\+Name@{set\+I\+P\+Domain\+Name}}
+\index{set\+I\+P\+Domain\+Name@{set\+I\+P\+Domain\+Name}!Communication\+::\+I\+P@{Communication\+::\+I\+P}}
+\subsubsection[{set\+I\+P\+Domain\+Name(std\+::string domain\+Name, std\+::string service=""http"")}]{\setlength{\rightskip}{0pt plus 5cm}bool Communication\+::\+I\+P\+::set\+I\+P\+Domain\+Name (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{domain\+Name, }
+\item[{std\+::string}]{service = {\ttfamily \char`\"{}http\char`\"{}}}
+\end{DoxyParamCaption}
+)}\label{class_communication_1_1_i_p_a290d0d4102c11d863de21088b3c98ea6}
+
+
+Sets the \hyperlink{class_communication_1_1_i_p}{I\+P} from a domain name, this performs a domain name lookup to get the \hyperlink{class_communication_1_1_i_p}{I\+P} address. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em domain\+Name} & The domain name to get the \hyperlink{class_communication_1_1_i_p}{I\+P} for. \\
+\hline
+\mbox{\tt in}  & {\em service} & The service to check \hyperlink{class_communication_1_1_i_p}{I\+P} for. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{class_communication_1_1_msg_exception}{Msg\+Exception}} & Throws an exception if the domain is invalid. \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+Return true if the domain name was resolved. 
+\end{DoxyReturn}
+\hypertarget{class_communication_1_1_i_p_adf0d88bbd3308f87ac69bd3f9f41020f}{}\index{Communication\+::\+I\+P@{Communication\+::\+I\+P}!set\+I\+P\+H@{set\+I\+P\+H}}
+\index{set\+I\+P\+H@{set\+I\+P\+H}!Communication\+::\+I\+P@{Communication\+::\+I\+P}}
+\subsubsection[{set\+I\+P\+H(\+U\+I\+N\+T host\+Order\+I\+P)}]{\setlength{\rightskip}{0pt plus 5cm}bool Communication\+::\+I\+P\+::set\+I\+P\+H (
+\begin{DoxyParamCaption}
+\item[{{\bf U\+I\+N\+T}}]{host\+Order\+I\+P}
+\end{DoxyParamCaption}
+)}\label{class_communication_1_1_i_p_adf0d88bbd3308f87ac69bd3f9f41020f}
+
+
+Sets the \hyperlink{class_communication_1_1_i_p}{I\+P} as host order U\+I\+N\+T. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em host\+Order\+I\+P} & host order u\+I\+N\+T to set\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+returns true if a valid host number has been provided false otherwise. 
+\end{DoxyReturn}
+\hypertarget{class_communication_1_1_i_p_a77c4c1e10474800730e6f42773322f58}{}\index{Communication\+::\+I\+P@{Communication\+::\+I\+P}!set\+I\+P\+N@{set\+I\+P\+N}}
+\index{set\+I\+P\+N@{set\+I\+P\+N}!Communication\+::\+I\+P@{Communication\+::\+I\+P}}
+\subsubsection[{set\+I\+P\+N(\+U\+I\+N\+T network\+Order\+I\+P)}]{\setlength{\rightskip}{0pt plus 5cm}bool Communication\+::\+I\+P\+::set\+I\+P\+N (
+\begin{DoxyParamCaption}
+\item[{{\bf U\+I\+N\+T}}]{network\+Order\+I\+P}
+\end{DoxyParamCaption}
+)}\label{class_communication_1_1_i_p_a77c4c1e10474800730e6f42773322f58}
+
+
+Sets the \hyperlink{class_communication_1_1_i_p}{I\+P} as network order U\+I\+N\+T. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em network\+Order\+I\+P} & The network order U\+I\+N\+T to set.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+return true if a valid network order host is set 
+\end{DoxyReturn}
+\hypertarget{class_communication_1_1_i_p_a697d49b98bd030a9b62dd49e43bcbf95}{}\index{Communication\+::\+I\+P@{Communication\+::\+I\+P}!set\+I\+P\+S@{set\+I\+P\+S}}
+\index{set\+I\+P\+S@{set\+I\+P\+S}!Communication\+::\+I\+P@{Communication\+::\+I\+P}}
+\subsubsection[{set\+I\+P\+S(std\+::string string\+I\+P)}]{\setlength{\rightskip}{0pt plus 5cm}bool Communication\+::\+I\+P\+::set\+I\+P\+S (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{string\+I\+P}
+\end{DoxyParamCaption}
+)}\label{class_communication_1_1_i_p_a697d49b98bd030a9b62dd49e43bcbf95}
+
+
+Sets the \hyperlink{class_communication_1_1_i_p}{I\+P} from the std\+::string. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em string\+I\+P} & a string representing a valid \hyperlink{class_communication_1_1_i_p}{I\+P} address this can be in the octet format. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{class_communication_1_1_msg_exception}{Msg\+Exception}} & Throws an exception if the string is invalid. \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+return true if the string was successfully parsed and was a valid \hyperlink{class_communication_1_1_i_p}{I\+P} address otherwise, it return false. 
+\end{DoxyReturn}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_communication_1_1_i_p_aeb8f550723eb60248dce5638e177d3da}{}\index{Communication\+::\+I\+P@{Communication\+::\+I\+P}!m\+\_\+ip\+Address@{m\+\_\+ip\+Address}}
+\index{m\+\_\+ip\+Address@{m\+\_\+ip\+Address}!Communication\+::\+I\+P@{Communication\+::\+I\+P}}
+\subsubsection[{m\+\_\+ip\+Address}]{\setlength{\rightskip}{0pt plus 5cm}{\bf U\+I\+N\+T} Communication\+::\+I\+P\+::m\+\_\+ip\+Address\hspace{0.3cm}{\ttfamily [private]}}\label{class_communication_1_1_i_p_aeb8f550723eb60248dce5638e177d3da}
+
+
+The host set as a network order integer. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/samy/\+Programming/\+Ace/include/\hyperlink{_i_p_8h}{I\+P.\+h}\end{DoxyCompactItemize}

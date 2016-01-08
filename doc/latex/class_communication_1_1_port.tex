@@ -1,0 +1,238 @@
+\hypertarget{class_communication_1_1_port}{}\section{Communication\+:\+:Port Class Reference}
+\label{class_communication_1_1_port}\index{Communication\+::\+Port@{Communication\+::\+Port}}
+
+
+Represents a port number.  
+
+
+
+
+{\ttfamily \#include $<$Port.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_communication_1_1_port_a4663a9e8dcfa3d078930f83859c6eac8}{Port} ()
+\begin{DoxyCompactList}\small\item\em Initializes the port to the default port number( 0 ) . \end{DoxyCompactList}\item 
+\hyperlink{class_communication_1_1_port_a9f90d334dd5352c2df2b56d7e5b32017}{Port} (\hyperlink{typedefs_8h_a5b86282b5437f326bad1198f30248a54}{U\+S\+H\+O\+R\+T} port)
+\begin{DoxyCompactList}\small\item\em Initializes the port number as a host order port. \end{DoxyCompactList}\item 
+\hyperlink{class_communication_1_1_port_a8ed813f5c9fced98cde2f7a89fe10ffa}{Port} (std\+::string port)
+\begin{DoxyCompactList}\small\item\em Initializes the port number using an std\+::string representing a host order integer. \end{DoxyCompactList}\item 
+void \hyperlink{class_communication_1_1_port_afd0c88ba6c23c3a934ad019bb07dd465}{set\+Port\+H} (\hyperlink{typedefs_8h_a5b86282b5437f326bad1198f30248a54}{U\+S\+H\+O\+R\+T} Host\+Order\+Port)
+\begin{DoxyCompactList}\small\item\em Sets the port number as a host order port number. \end{DoxyCompactList}\item 
+void \hyperlink{class_communication_1_1_port_ab66ce0c328ca87872c8d2762a1445349}{set\+Port\+N} (\hyperlink{typedefs_8h_a5b86282b5437f326bad1198f30248a54}{U\+S\+H\+O\+R\+T} Network\+Order\+Port)
+\begin{DoxyCompactList}\small\item\em Sets the port number as a network order port number. \end{DoxyCompactList}\item 
+void \hyperlink{class_communication_1_1_port_adf4eb454c18e39aca860aa530fb02cb1}{set\+Port\+S} (std\+::string String\+I\+P)
+\begin{DoxyCompactList}\small\item\em Given a string for a host order port number, converts it to a host order U\+S\+H\+O\+R\+T and sets it as a port number. \end{DoxyCompactList}\item 
+\hyperlink{typedefs_8h_a5b86282b5437f326bad1198f30248a54}{U\+S\+H\+O\+R\+T} \hyperlink{class_communication_1_1_port_aced2e6a97ef18d79cb86d81fdd8d71e9}{get\+Port\+H} () const 
+\begin{DoxyCompactList}\small\item\em Returns the port number as host order U\+S\+H\+O\+R\+T. \end{DoxyCompactList}\item 
+\hyperlink{typedefs_8h_a5b86282b5437f326bad1198f30248a54}{U\+S\+H\+O\+R\+T} \hyperlink{class_communication_1_1_port_adf58b6023f5878d4ac5c3a49431e26de}{get\+Port\+N} () const 
+\begin{DoxyCompactList}\small\item\em Returns the port number as network order U\+S\+H\+O\+R\+T. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{class_communication_1_1_port_a00ca90bb3c6e6827ee95a2fb3a77a995}{get\+Port\+S} () const 
+\begin{DoxyCompactList}\small\item\em Returns representation of the host order port number in a in a string. \end{DoxyCompactList}\item 
+bool \hyperlink{class_communication_1_1_port_a8155e8e12d0f28d31c83ddc1f3eaeefc}{is\+Valid} () const 
+\begin{DoxyCompactList}\small\item\em Checks if the port number is valid. \end{DoxyCompactList}\item 
+bool \hyperlink{class_communication_1_1_port_a8d3329e119c8d26914f915904b6c6880}{operator==} (const \hyperlink{class_communication_1_1_port}{Port} \&other) const 
+\item 
+bool \hyperlink{class_communication_1_1_port_aeb3f1452a32089d1b6bdddaeeee61693}{operator!=} (const \hyperlink{class_communication_1_1_port}{Port} \&other) const 
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{typedefs_8h_a5b86282b5437f326bad1198f30248a54}{U\+S\+H\+O\+R\+T} \hyperlink{class_communication_1_1_port_a925dfe7c4be16434b5838ba649f1c30f}{m\+\_\+port\+Number\+N}
+\begin{DoxyCompactList}\small\item\em The host set as a network order integer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Represents a port number. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_communication_1_1_port_a4663a9e8dcfa3d078930f83859c6eac8}{}\index{Communication\+::\+Port@{Communication\+::\+Port}!Port@{Port}}
+\index{Port@{Port}!Communication\+::\+Port@{Communication\+::\+Port}}
+\subsubsection[{Port()}]{\setlength{\rightskip}{0pt plus 5cm}Communication\+::\+Port\+::\+Port (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_communication_1_1_port_a4663a9e8dcfa3d078930f83859c6eac8}
+
+
+Initializes the port to the default port number( 0 ) . 
+
+\hypertarget{class_communication_1_1_port_a9f90d334dd5352c2df2b56d7e5b32017}{}\index{Communication\+::\+Port@{Communication\+::\+Port}!Port@{Port}}
+\index{Port@{Port}!Communication\+::\+Port@{Communication\+::\+Port}}
+\subsubsection[{Port(\+U\+S\+H\+O\+R\+T port)}]{\setlength{\rightskip}{0pt plus 5cm}Communication\+::\+Port\+::\+Port (
+\begin{DoxyParamCaption}
+\item[{{\bf U\+S\+H\+O\+R\+T}}]{port}
+\end{DoxyParamCaption}
+)}\label{class_communication_1_1_port_a9f90d334dd5352c2df2b56d7e5b32017}
+
+
+Initializes the port number as a host order port. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em port} & a U\+S\+H\+O\+R\+T Host order port number. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_communication_1_1_port_a8ed813f5c9fced98cde2f7a89fe10ffa}{}\index{Communication\+::\+Port@{Communication\+::\+Port}!Port@{Port}}
+\index{Port@{Port}!Communication\+::\+Port@{Communication\+::\+Port}}
+\subsubsection[{Port(std\+::string port)}]{\setlength{\rightskip}{0pt plus 5cm}Communication\+::\+Port\+::\+Port (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{port}
+\end{DoxyParamCaption}
+)}\label{class_communication_1_1_port_a8ed813f5c9fced98cde2f7a89fe10ffa}
+
+
+Initializes the port number using an std\+::string representing a host order integer. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em port} & A string representing a hsot order integer.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{class_communication_1_1_msg_exception}{Msg\+Exception}} & If the string cannot be converted, if it not within the interger size or if it in not a valid ushort string. \\
+\hline
+\end{DoxyExceptions}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_communication_1_1_port_aced2e6a97ef18d79cb86d81fdd8d71e9}{}\index{Communication\+::\+Port@{Communication\+::\+Port}!get\+Port\+H@{get\+Port\+H}}
+\index{get\+Port\+H@{get\+Port\+H}!Communication\+::\+Port@{Communication\+::\+Port}}
+\subsubsection[{get\+Port\+H() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf U\+S\+H\+O\+R\+T} Communication\+::\+Port\+::get\+Port\+H (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_communication_1_1_port_aced2e6a97ef18d79cb86d81fdd8d71e9}
+
+
+Returns the port number as host order U\+S\+H\+O\+R\+T. 
+
+\begin{DoxyReturn}{Returns}
+a host order U\+S\+H\+O\+R\+T. 
+\end{DoxyReturn}
+\hypertarget{class_communication_1_1_port_adf58b6023f5878d4ac5c3a49431e26de}{}\index{Communication\+::\+Port@{Communication\+::\+Port}!get\+Port\+N@{get\+Port\+N}}
+\index{get\+Port\+N@{get\+Port\+N}!Communication\+::\+Port@{Communication\+::\+Port}}
+\subsubsection[{get\+Port\+N() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf U\+S\+H\+O\+R\+T} Communication\+::\+Port\+::get\+Port\+N (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_communication_1_1_port_adf58b6023f5878d4ac5c3a49431e26de}
+
+
+Returns the port number as network order U\+S\+H\+O\+R\+T. 
+
+\begin{DoxyReturn}{Returns}
+a network order U\+S\+H\+O\+R\+T. 
+\end{DoxyReturn}
+\hypertarget{class_communication_1_1_port_a00ca90bb3c6e6827ee95a2fb3a77a995}{}\index{Communication\+::\+Port@{Communication\+::\+Port}!get\+Port\+S@{get\+Port\+S}}
+\index{get\+Port\+S@{get\+Port\+S}!Communication\+::\+Port@{Communication\+::\+Port}}
+\subsubsection[{get\+Port\+S() const }]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Communication\+::\+Port\+::get\+Port\+S (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_communication_1_1_port_a00ca90bb3c6e6827ee95a2fb3a77a995}
+
+
+Returns representation of the host order port number in a in a string. 
+
+\begin{DoxyReturn}{Returns}
+an std\+::string representing the host order port number. 
+\end{DoxyReturn}
+\hypertarget{class_communication_1_1_port_a8155e8e12d0f28d31c83ddc1f3eaeefc}{}\index{Communication\+::\+Port@{Communication\+::\+Port}!is\+Valid@{is\+Valid}}
+\index{is\+Valid@{is\+Valid}!Communication\+::\+Port@{Communication\+::\+Port}}
+\subsubsection[{is\+Valid() const }]{\setlength{\rightskip}{0pt plus 5cm}bool Communication\+::\+Port\+::is\+Valid (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_communication_1_1_port_a8155e8e12d0f28d31c83ddc1f3eaeefc}
+
+
+Checks if the port number is valid. 
+
+\begin{DoxyReturn}{Returns}
+true if the port number is valid, false otherwise 
+\end{DoxyReturn}
+\hypertarget{class_communication_1_1_port_aeb3f1452a32089d1b6bdddaeeee61693}{}\index{Communication\+::\+Port@{Communication\+::\+Port}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!Communication\+::\+Port@{Communication\+::\+Port}}
+\subsubsection[{operator"!=(const Port \&other) const }]{\setlength{\rightskip}{0pt plus 5cm}bool Communication\+::\+Port\+::operator!= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Port} \&}]{other}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_communication_1_1_port_aeb3f1452a32089d1b6bdddaeeee61693}
+\hypertarget{class_communication_1_1_port_a8d3329e119c8d26914f915904b6c6880}{}\index{Communication\+::\+Port@{Communication\+::\+Port}!operator==@{operator==}}
+\index{operator==@{operator==}!Communication\+::\+Port@{Communication\+::\+Port}}
+\subsubsection[{operator==(const Port \&other) const }]{\setlength{\rightskip}{0pt plus 5cm}bool Communication\+::\+Port\+::operator== (
+\begin{DoxyParamCaption}
+\item[{const {\bf Port} \&}]{other}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_communication_1_1_port_a8d3329e119c8d26914f915904b6c6880}
+\hypertarget{class_communication_1_1_port_afd0c88ba6c23c3a934ad019bb07dd465}{}\index{Communication\+::\+Port@{Communication\+::\+Port}!set\+Port\+H@{set\+Port\+H}}
+\index{set\+Port\+H@{set\+Port\+H}!Communication\+::\+Port@{Communication\+::\+Port}}
+\subsubsection[{set\+Port\+H(\+U\+S\+H\+O\+R\+T Host\+Order\+Port)}]{\setlength{\rightskip}{0pt plus 5cm}void Communication\+::\+Port\+::set\+Port\+H (
+\begin{DoxyParamCaption}
+\item[{{\bf U\+S\+H\+O\+R\+T}}]{Host\+Order\+Port}
+\end{DoxyParamCaption}
+)}\label{class_communication_1_1_port_afd0c88ba6c23c3a934ad019bb07dd465}
+
+
+Sets the port number as a host order port number. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em Host\+Order\+Port} & The U\+S\+H\+O\+R\+T host order port number. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_communication_1_1_port_ab66ce0c328ca87872c8d2762a1445349}{}\index{Communication\+::\+Port@{Communication\+::\+Port}!set\+Port\+N@{set\+Port\+N}}
+\index{set\+Port\+N@{set\+Port\+N}!Communication\+::\+Port@{Communication\+::\+Port}}
+\subsubsection[{set\+Port\+N(\+U\+S\+H\+O\+R\+T Network\+Order\+Port)}]{\setlength{\rightskip}{0pt plus 5cm}void Communication\+::\+Port\+::set\+Port\+N (
+\begin{DoxyParamCaption}
+\item[{{\bf U\+S\+H\+O\+R\+T}}]{Network\+Order\+Port}
+\end{DoxyParamCaption}
+)}\label{class_communication_1_1_port_ab66ce0c328ca87872c8d2762a1445349}
+
+
+Sets the port number as a network order port number. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em Network\+Order\+Port} & The network order U\+S\+H\+O\+R\+T port number. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_communication_1_1_port_adf4eb454c18e39aca860aa530fb02cb1}{}\index{Communication\+::\+Port@{Communication\+::\+Port}!set\+Port\+S@{set\+Port\+S}}
+\index{set\+Port\+S@{set\+Port\+S}!Communication\+::\+Port@{Communication\+::\+Port}}
+\subsubsection[{set\+Port\+S(std\+::string String\+I\+P)}]{\setlength{\rightskip}{0pt plus 5cm}void Communication\+::\+Port\+::set\+Port\+S (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{String\+I\+P}
+\end{DoxyParamCaption}
+)}\label{class_communication_1_1_port_adf4eb454c18e39aca860aa530fb02cb1}
+
+
+Given a string for a host order port number, converts it to a host order U\+S\+H\+O\+R\+T and sets it as a port number. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em String\+I\+P} & a string representing a valid U\+S\+H\+O\+R\+T.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{class_communication_1_1_msg_exception}{Msg\+Exception}} & If the string cannot be converted, if it not within the interger size or if it in not a valid ushort string. \\
+\hline
+\end{DoxyExceptions}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_communication_1_1_port_a925dfe7c4be16434b5838ba649f1c30f}{}\index{Communication\+::\+Port@{Communication\+::\+Port}!m\+\_\+port\+Number\+N@{m\+\_\+port\+Number\+N}}
+\index{m\+\_\+port\+Number\+N@{m\+\_\+port\+Number\+N}!Communication\+::\+Port@{Communication\+::\+Port}}
+\subsubsection[{m\+\_\+port\+Number\+N}]{\setlength{\rightskip}{0pt plus 5cm}{\bf U\+S\+H\+O\+R\+T} Communication\+::\+Port\+::m\+\_\+port\+Number\+N\hspace{0.3cm}{\ttfamily [private]}}\label{class_communication_1_1_port_a925dfe7c4be16434b5838ba649f1c30f}
+
+
+The host set as a network order integer. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/samy/\+Programming/\+Ace/include/\hyperlink{_port_8h}{Port.\+h}\end{DoxyCompactItemize}

@@ -1,0 +1,239 @@
+\hypertarget{class_communication_1_1base_data_buffer}{}\section{Communication\+:\+:base\+Data\+Buffer Class Reference}
+\label{class_communication_1_1base_data_buffer}\index{Communication\+::base\+Data\+Buffer@{Communication\+::base\+Data\+Buffer}}
+
+
+Represents a data package. The data is stored in a char$\ast$. Ownership of this pointer is decided by the set\+Buffer and constructor parameters. This means the destructor will delete the data if it considers that the object owns the data. If the data is created by the class, then it will automatically assume ownership of the data.  
+
+
+
+
+{\ttfamily \#include $<$base\+Data\+Buffer.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_communication_1_1base_data_buffer_a9dc1436f9fe7c913f224b2f80d94ee8b}{base\+Data\+Buffer} ()
+\begin{DoxyCompactList}\small\item\em Initializes the object with a null data buffer. \end{DoxyCompactList}\item 
+\hyperlink{class_communication_1_1base_data_buffer_a4db320396307d4c96728ec04b72fd1a1}{base\+Data\+Buffer} (char $\ast$datas, \hyperlink{typedefs_8h_a2e2c38961834f28c06e17e074eb00bc7}{U\+I\+N\+T} len, bool does\+Own\+Data=false)
+\begin{DoxyCompactList}\small\item\em Initializes the object with data. If does\+Own\+Data is set to true, then the object will delete the data on destruction of of the object. If it is set to false, then it is the responsibility of the caller to delete the object. \end{DoxyCompactList}\item 
+\hyperlink{class_communication_1_1base_data_buffer_a3538180b7bdfe4c6ede28b46e9299428}{base\+Data\+Buffer} (std\+::string datas)
+\begin{DoxyCompactList}\small\item\em Initializes the object with data by copying the data in the datas std\+::string. This implicitly assigns ownership of the copied string to the object. \end{DoxyCompactList}\item 
+\hyperlink{class_communication_1_1base_data_buffer_a87bf29aa5ff79d038eb26360228c3b00}{$\sim$base\+Data\+Buffer} ()
+\begin{DoxyCompactList}\small\item\em When destroying the object, if the m\+\_\+own\+String\+Pointer is true, then the data stored in this object is deleted by the destructor, otherwise nothing is deleted. \end{DoxyCompactList}\item 
+void \hyperlink{class_communication_1_1base_data_buffer_ab4a20cb0dd63824d87e71594d8797c2e}{delete\+Data} ()
+\begin{DoxyCompactList}\small\item\em Forces the deletion of the data stored in the object. \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{class_communication_1_1base_data_buffer_a6c5969f0136efb534ec125ebf1a916f7}{get\+Buffer} ()
+\begin{DoxyCompactList}\small\item\em Gets a pointer to the data. \end{DoxyCompactList}\item 
+\hyperlink{typedefs_8h_a2e2c38961834f28c06e17e074eb00bc7}{U\+I\+N\+T} \hyperlink{class_communication_1_1base_data_buffer_a416262afb4fa686f7d9cbcab0f47239b}{set\+Buffer} (char $\ast$Data\+Array, \hyperlink{typedefs_8h_a2e2c38961834f28c06e17e074eb00bc7}{U\+I\+N\+T} len, bool does\+Own\+Data=false)
+\begin{DoxyCompactList}\small\item\em Sets the data of the object to that specified by Data\+Array. If does\+Own\+Data is set to true, then the object will delete the data on destruction of the object. If it is set to false, then it is the responsibility of the caller to delete the object. \end{DoxyCompactList}\item 
+\hyperlink{typedefs_8h_a2e2c38961834f28c06e17e074eb00bc7}{U\+I\+N\+T} \hyperlink{class_communication_1_1base_data_buffer_a22c8017bc8b0a4e89e70d2708b2dcc2f}{set\+Buffer} (std\+::string data)
+\begin{DoxyCompactList}\small\item\em Sets the data of the data of the object by copying the data in the data std\+::string. This implicitly assigned ownership of the copied string to the object. \end{DoxyCompactList}\item 
+\hyperlink{typedefs_8h_a2e2c38961834f28c06e17e074eb00bc7}{U\+I\+N\+T} \hyperlink{class_communication_1_1base_data_buffer_adc057b73886aa1b1a40a586e01f1f396}{get\+Size\+Of\+Data} ()
+\begin{DoxyCompactList}\small\item\em Returns the U\+I\+N\+T representing the size of the buffer in bytes. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{class_communication_1_1base_data_buffer_a6ebba55d04892bcb4b9d3010d1ed7e42}{to\+String} ()
+\begin{DoxyCompactList}\small\item\em Returns a std\+::string representation of the object. \end{DoxyCompactList}\item 
+void \hyperlink{class_communication_1_1base_data_buffer_affa063df49e1a105a34af21140058117}{reset\+Buffer} ()
+\begin{DoxyCompactList}\small\item\em Resets the data buffer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+char $\ast$ \hyperlink{class_communication_1_1base_data_buffer_aff8ef162426de4ffea7bb676c37afbb7}{m\+\_\+data}
+\item 
+\hyperlink{typedefs_8h_a2e2c38961834f28c06e17e074eb00bc7}{U\+I\+N\+T} \hyperlink{class_communication_1_1base_data_buffer_ab6707a9f4866fb30efd51fc94d34bf49}{m\+\_\+size\+Of\+Array}
+\item 
+char \hyperlink{class_communication_1_1base_data_buffer_a44ddaf7e9a49bb129884d12e49a9a32f}{m\+\_\+does\+Owns\+Data}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Represents a data package. The data is stored in a char$\ast$. Ownership of this pointer is decided by the set\+Buffer and constructor parameters. This means the destructor will delete the data if it considers that the object owns the data. If the data is created by the class, then it will automatically assume ownership of the data. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_communication_1_1base_data_buffer_a9dc1436f9fe7c913f224b2f80d94ee8b}{}\index{Communication\+::base\+Data\+Buffer@{Communication\+::base\+Data\+Buffer}!base\+Data\+Buffer@{base\+Data\+Buffer}}
+\index{base\+Data\+Buffer@{base\+Data\+Buffer}!Communication\+::base\+Data\+Buffer@{Communication\+::base\+Data\+Buffer}}
+\subsubsection[{base\+Data\+Buffer()}]{\setlength{\rightskip}{0pt plus 5cm}Communication\+::base\+Data\+Buffer\+::base\+Data\+Buffer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_communication_1_1base_data_buffer_a9dc1436f9fe7c913f224b2f80d94ee8b}
+
+
+Initializes the object with a null data buffer. 
+
+\hypertarget{class_communication_1_1base_data_buffer_a4db320396307d4c96728ec04b72fd1a1}{}\index{Communication\+::base\+Data\+Buffer@{Communication\+::base\+Data\+Buffer}!base\+Data\+Buffer@{base\+Data\+Buffer}}
+\index{base\+Data\+Buffer@{base\+Data\+Buffer}!Communication\+::base\+Data\+Buffer@{Communication\+::base\+Data\+Buffer}}
+\subsubsection[{base\+Data\+Buffer(char $\ast$datas, U\+I\+N\+T len, bool does\+Own\+Data=false)}]{\setlength{\rightskip}{0pt plus 5cm}Communication\+::base\+Data\+Buffer\+::base\+Data\+Buffer (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{datas, }
+\item[{{\bf U\+I\+N\+T}}]{len, }
+\item[{bool}]{does\+Own\+Data = {\ttfamily false}}
+\end{DoxyParamCaption}
+)}\label{class_communication_1_1base_data_buffer_a4db320396307d4c96728ec04b72fd1a1}
+
+
+Initializes the object with data. If does\+Own\+Data is set to true, then the object will delete the data on destruction of of the object. If it is set to false, then it is the responsibility of the caller to delete the object. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em datas} & A pointer to the data. \\
+\hline
+\mbox{\tt in}  & {\em len} & The length of the data in bytes. \\
+\hline
+\mbox{\tt in}  & {\em does\+Own\+Data} & Whether the object owns the data or not. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_communication_1_1base_data_buffer_a3538180b7bdfe4c6ede28b46e9299428}{}\index{Communication\+::base\+Data\+Buffer@{Communication\+::base\+Data\+Buffer}!base\+Data\+Buffer@{base\+Data\+Buffer}}
+\index{base\+Data\+Buffer@{base\+Data\+Buffer}!Communication\+::base\+Data\+Buffer@{Communication\+::base\+Data\+Buffer}}
+\subsubsection[{base\+Data\+Buffer(std\+::string datas)}]{\setlength{\rightskip}{0pt plus 5cm}Communication\+::base\+Data\+Buffer\+::base\+Data\+Buffer (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{datas}
+\end{DoxyParamCaption}
+)}\label{class_communication_1_1base_data_buffer_a3538180b7bdfe4c6ede28b46e9299428}
+
+
+Initializes the object with data by copying the data in the datas std\+::string. This implicitly assigns ownership of the copied string to the object. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em datas} & A string of the data to store. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_communication_1_1base_data_buffer_a87bf29aa5ff79d038eb26360228c3b00}{}\index{Communication\+::base\+Data\+Buffer@{Communication\+::base\+Data\+Buffer}!````~base\+Data\+Buffer@{$\sim$base\+Data\+Buffer}}
+\index{````~base\+Data\+Buffer@{$\sim$base\+Data\+Buffer}!Communication\+::base\+Data\+Buffer@{Communication\+::base\+Data\+Buffer}}
+\subsubsection[{$\sim$base\+Data\+Buffer()}]{\setlength{\rightskip}{0pt plus 5cm}Communication\+::base\+Data\+Buffer\+::$\sim$base\+Data\+Buffer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_communication_1_1base_data_buffer_a87bf29aa5ff79d038eb26360228c3b00}
+
+
+When destroying the object, if the m\+\_\+own\+String\+Pointer is true, then the data stored in this object is deleted by the destructor, otherwise nothing is deleted. 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_communication_1_1base_data_buffer_ab4a20cb0dd63824d87e71594d8797c2e}{}\index{Communication\+::base\+Data\+Buffer@{Communication\+::base\+Data\+Buffer}!delete\+Data@{delete\+Data}}
+\index{delete\+Data@{delete\+Data}!Communication\+::base\+Data\+Buffer@{Communication\+::base\+Data\+Buffer}}
+\subsubsection[{delete\+Data()}]{\setlength{\rightskip}{0pt plus 5cm}void Communication\+::base\+Data\+Buffer\+::delete\+Data (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_communication_1_1base_data_buffer_ab4a20cb0dd63824d87e71594d8797c2e}
+
+
+Forces the deletion of the data stored in the object. 
+
+\hypertarget{class_communication_1_1base_data_buffer_a6c5969f0136efb534ec125ebf1a916f7}{}\index{Communication\+::base\+Data\+Buffer@{Communication\+::base\+Data\+Buffer}!get\+Buffer@{get\+Buffer}}
+\index{get\+Buffer@{get\+Buffer}!Communication\+::base\+Data\+Buffer@{Communication\+::base\+Data\+Buffer}}
+\subsubsection[{get\+Buffer()}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ Communication\+::base\+Data\+Buffer\+::get\+Buffer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_communication_1_1base_data_buffer_a6c5969f0136efb534ec125ebf1a916f7}
+
+
+Gets a pointer to the data. 
+
+\begin{DoxyReturn}{Returns}
+Returns a char$\ast$ to the data in the buffer. 
+\end{DoxyReturn}
+\hypertarget{class_communication_1_1base_data_buffer_adc057b73886aa1b1a40a586e01f1f396}{}\index{Communication\+::base\+Data\+Buffer@{Communication\+::base\+Data\+Buffer}!get\+Size\+Of\+Data@{get\+Size\+Of\+Data}}
+\index{get\+Size\+Of\+Data@{get\+Size\+Of\+Data}!Communication\+::base\+Data\+Buffer@{Communication\+::base\+Data\+Buffer}}
+\subsubsection[{get\+Size\+Of\+Data()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf U\+I\+N\+T} Communication\+::base\+Data\+Buffer\+::get\+Size\+Of\+Data (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_communication_1_1base_data_buffer_adc057b73886aa1b1a40a586e01f1f396}
+
+
+Returns the U\+I\+N\+T representing the size of the buffer in bytes. 
+
+\begin{DoxyReturn}{Returns}
+Returns a U\+I\+N\+T 
+\end{DoxyReturn}
+\hypertarget{class_communication_1_1base_data_buffer_affa063df49e1a105a34af21140058117}{}\index{Communication\+::base\+Data\+Buffer@{Communication\+::base\+Data\+Buffer}!reset\+Buffer@{reset\+Buffer}}
+\index{reset\+Buffer@{reset\+Buffer}!Communication\+::base\+Data\+Buffer@{Communication\+::base\+Data\+Buffer}}
+\subsubsection[{reset\+Buffer()}]{\setlength{\rightskip}{0pt plus 5cm}void Communication\+::base\+Data\+Buffer\+::reset\+Buffer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_communication_1_1base_data_buffer_affa063df49e1a105a34af21140058117}
+
+
+Resets the data buffer. 
+
+\hypertarget{class_communication_1_1base_data_buffer_a416262afb4fa686f7d9cbcab0f47239b}{}\index{Communication\+::base\+Data\+Buffer@{Communication\+::base\+Data\+Buffer}!set\+Buffer@{set\+Buffer}}
+\index{set\+Buffer@{set\+Buffer}!Communication\+::base\+Data\+Buffer@{Communication\+::base\+Data\+Buffer}}
+\subsubsection[{set\+Buffer(char $\ast$\+Data\+Array, U\+I\+N\+T len, bool does\+Own\+Data=false)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf U\+I\+N\+T} Communication\+::base\+Data\+Buffer\+::set\+Buffer (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{Data\+Array, }
+\item[{{\bf U\+I\+N\+T}}]{len, }
+\item[{bool}]{does\+Own\+Data = {\ttfamily false}}
+\end{DoxyParamCaption}
+)}\label{class_communication_1_1base_data_buffer_a416262afb4fa686f7d9cbcab0f47239b}
+
+
+Sets the data of the object to that specified by Data\+Array. If does\+Own\+Data is set to true, then the object will delete the data on destruction of the object. If it is set to false, then it is the responsibility of the caller to delete the object. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em Data\+Array} & A pointer to the data. \\
+\hline
+\mbox{\tt in}  & {\em len} & The length of the data in bytes. \\
+\hline
+\mbox{\tt in}  & {\em does\+Own\+Data} & Whether the object owns the data or not.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+returns the size of the buffer. 
+\end{DoxyReturn}
+\hypertarget{class_communication_1_1base_data_buffer_a22c8017bc8b0a4e89e70d2708b2dcc2f}{}\index{Communication\+::base\+Data\+Buffer@{Communication\+::base\+Data\+Buffer}!set\+Buffer@{set\+Buffer}}
+\index{set\+Buffer@{set\+Buffer}!Communication\+::base\+Data\+Buffer@{Communication\+::base\+Data\+Buffer}}
+\subsubsection[{set\+Buffer(std\+::string data)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf U\+I\+N\+T} Communication\+::base\+Data\+Buffer\+::set\+Buffer (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{data}
+\end{DoxyParamCaption}
+)}\label{class_communication_1_1base_data_buffer_a22c8017bc8b0a4e89e70d2708b2dcc2f}
+
+
+Sets the data of the data of the object by copying the data in the data std\+::string. This implicitly assigned ownership of the copied string to the object. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em data} & the std\+::string containing the data.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+returns the size of the buffer 
+\end{DoxyReturn}
+\hypertarget{class_communication_1_1base_data_buffer_a6ebba55d04892bcb4b9d3010d1ed7e42}{}\index{Communication\+::base\+Data\+Buffer@{Communication\+::base\+Data\+Buffer}!to\+String@{to\+String}}
+\index{to\+String@{to\+String}!Communication\+::base\+Data\+Buffer@{Communication\+::base\+Data\+Buffer}}
+\subsubsection[{to\+String()}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Communication\+::base\+Data\+Buffer\+::to\+String (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_communication_1_1base_data_buffer_a6ebba55d04892bcb4b9d3010d1ed7e42}
+
+
+Returns a std\+::string representation of the object. 
+
+\begin{DoxyReturn}{Returns}
+returns an std\+::string. 
+\end{DoxyReturn}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_communication_1_1base_data_buffer_aff8ef162426de4ffea7bb676c37afbb7}{}\index{Communication\+::base\+Data\+Buffer@{Communication\+::base\+Data\+Buffer}!m\+\_\+data@{m\+\_\+data}}
+\index{m\+\_\+data@{m\+\_\+data}!Communication\+::base\+Data\+Buffer@{Communication\+::base\+Data\+Buffer}}
+\subsubsection[{m\+\_\+data}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ Communication\+::base\+Data\+Buffer\+::m\+\_\+data\hspace{0.3cm}{\ttfamily [private]}}\label{class_communication_1_1base_data_buffer_aff8ef162426de4ffea7bb676c37afbb7}
+\hypertarget{class_communication_1_1base_data_buffer_a44ddaf7e9a49bb129884d12e49a9a32f}{}\index{Communication\+::base\+Data\+Buffer@{Communication\+::base\+Data\+Buffer}!m\+\_\+does\+Owns\+Data@{m\+\_\+does\+Owns\+Data}}
+\index{m\+\_\+does\+Owns\+Data@{m\+\_\+does\+Owns\+Data}!Communication\+::base\+Data\+Buffer@{Communication\+::base\+Data\+Buffer}}
+\subsubsection[{m\+\_\+does\+Owns\+Data}]{\setlength{\rightskip}{0pt plus 5cm}char Communication\+::base\+Data\+Buffer\+::m\+\_\+does\+Owns\+Data\hspace{0.3cm}{\ttfamily [private]}}\label{class_communication_1_1base_data_buffer_a44ddaf7e9a49bb129884d12e49a9a32f}
+\hypertarget{class_communication_1_1base_data_buffer_ab6707a9f4866fb30efd51fc94d34bf49}{}\index{Communication\+::base\+Data\+Buffer@{Communication\+::base\+Data\+Buffer}!m\+\_\+size\+Of\+Array@{m\+\_\+size\+Of\+Array}}
+\index{m\+\_\+size\+Of\+Array@{m\+\_\+size\+Of\+Array}!Communication\+::base\+Data\+Buffer@{Communication\+::base\+Data\+Buffer}}
+\subsubsection[{m\+\_\+size\+Of\+Array}]{\setlength{\rightskip}{0pt plus 5cm}{\bf U\+I\+N\+T} Communication\+::base\+Data\+Buffer\+::m\+\_\+size\+Of\+Array\hspace{0.3cm}{\ttfamily [private]}}\label{class_communication_1_1base_data_buffer_ab6707a9f4866fb30efd51fc94d34bf49}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/samy/\+Programming/\+Ace/include/\hyperlink{base_data_buffer_8h}{base\+Data\+Buffer.\+h}\end{DoxyCompactItemize}

@@ -1,0 +1,324 @@
+\hypertarget{class_communication_1_1_server}{}\section{Communication\+:\+:Server Class Reference}
+\label{class_communication_1_1_server}\index{Communication\+::\+Server@{Communication\+::\+Server}}
+
+
+Represents the implementation of an internet server. This will bind the given socket to the local machine. The server can be set to listening mode by using the \hyperlink{class_communication_1_1_server_a30f8961c165145504a3c29410c0b643c}{Server\+::start\+Server()} and can wait for incoming connections with \hyperlink{class_communication_1_1_server_aa005d6dfbb2f3d09bb6f5c31c7f61563}{Server\+::start\+Accepting()}. Finally, the server can be shutdown by using \hyperlink{class_communication_1_1_server_a9d80054a0eb0a8f4935a766344f9e076}{Server\+::shutdown\+Server()};.  
+
+
+
+
+{\ttfamily \#include $<$Server.\+h$>$}
+
+
+
+Inheritance diagram for Communication\+:\+:Server\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=246pt]{class_communication_1_1_server__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Communication\+:\+:Server\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_communication_1_1_server__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_communication_1_1_server_a1b8f8c80fa15d3e171ad5807d6c4da42}{Server} (\hyperlink{class_communication_1_1base_socket}{base\+Socket} $\ast$to\+Bind)
+\begin{DoxyCompactList}\small\item\em Initializes the \hyperlink{class_communication_1_1_server}{Server} object using the to\+Bind socket. The socket must be valid and not connected. \end{DoxyCompactList}\item 
+\hyperlink{class_communication_1_1_server_ae0edf16a55b4271c76180deae2137b0a}{Server} (\hyperlink{class_communication_1_1_i_p}{I\+P} ip, \hyperlink{class_communication_1_1_port}{Port} port\+No, \hyperlink{typedefs_8h_a2e2c38961834f28c06e17e074eb00bc7}{U\+I\+N\+T} socket\+Type=S\+O\+C\+K\+\_\+\+S\+T\+R\+E\+A\+M, \hyperlink{typedefs_8h_a2e2c38961834f28c06e17e074eb00bc7}{U\+I\+N\+T} family\+Type=A\+F\+\_\+\+I\+N\+E\+T)
+\item 
+\hyperlink{class_communication_1_1_server_a6cde5340b15595739ffb72ab2f600928}{Server} (\hyperlink{class_communication_1_1_socket_structure}{Socket\+Structure} $\ast$connection\+Destination)
+\item 
+\hyperlink{class_communication_1_1_server_aef74c77dc02436ee1dc6d16310837b12}{$\sim$\+Server} ()
+\item 
+bool \hyperlink{class_communication_1_1_server_a875eb11ac955e00739cd4596aa670e4a}{set\+Socket} (\hyperlink{class_communication_1_1base_socket}{base\+Socket} $\ast$to\+Bind)
+\item 
+bool \hyperlink{class_communication_1_1_server_a30bee0cf7df458c9b0c512bd48129e88}{set\+Socket} (\hyperlink{class_communication_1_1_i_p}{I\+P} ip, \hyperlink{class_communication_1_1_port}{Port} port\+No, \hyperlink{typedefs_8h_a2e2c38961834f28c06e17e074eb00bc7}{U\+I\+N\+T} socket\+Type=S\+O\+C\+K\+\_\+\+S\+T\+R\+E\+A\+M, \hyperlink{typedefs_8h_a2e2c38961834f28c06e17e074eb00bc7}{U\+I\+N\+T} family\+Type=A\+F\+\_\+\+I\+N\+E\+T)
+\item 
+bool \hyperlink{class_communication_1_1_server_aea8579d23e3b7d0090acebec5dffaca9}{set\+Socket} (\hyperlink{class_communication_1_1_socket_structure}{Socket\+Structure} $\ast$connection\+Destination)
+\item 
+bool \hyperlink{class_communication_1_1_server_a30f8961c165145504a3c29410c0b643c}{start\+Server} ()
+\begin{DoxyCompactList}\small\item\em Starts the server by attempting to bind the socket and set it to listening mode. If the socket is already bound and listening, then it will not change their state. \end{DoxyCompactList}\item 
+\hyperlink{class_communication_1_1base_socket}{base\+Socket} $\ast$ \hyperlink{class_communication_1_1_server_aa005d6dfbb2f3d09bb6f5c31c7f61563}{start\+Accepting} ()
+\begin{DoxyCompactList}\small\item\em Attempts to accept a connection from the current socket. the server must have been started, otherwise an exception is thrown.\+When a client is accepted it is added to the internal client list .This function may block if there are no clients to accept. \end{DoxyCompactList}\item 
+bool \hyperlink{class_communication_1_1_server_a9d80054a0eb0a8f4935a766344f9e076}{shutdown\+Server} ()
+\begin{DoxyCompactList}\small\item\em Shuts down the server by closing each connected socket and then closing the server socket. This function can block if any of the connected sockets have data left to be received. \end{DoxyCompactList}\item 
+const \hyperlink{class_communication_1_1base_socket}{base\+Socket} $\ast$ \hyperlink{class_communication_1_1_server_a0a8014847e1d2e241ee30d48e0b307d7}{get\+Socket} ()
+\begin{DoxyCompactList}\small\item\em Returns a constant pointer to the servers listening socket. \end{DoxyCompactList}\item 
+std\+::vector$<$ \hyperlink{class_communication_1_1base_socket}{base\+Socket} $\ast$ $>$ $\ast$ \hyperlink{class_communication_1_1_server_afb6658eb5983662bfc36f13f562f3acf}{get\+Client\+List} ()
+\begin{DoxyCompactList}\small\item\em Returns a pointer a vector of all the currently connected clients. \end{DoxyCompactList}\item 
+void \hyperlink{class_communication_1_1_server_a3f5fc277d677db87a1b3ec8a064cfe7c}{relinquish\+Ownership} ()
+\begin{DoxyCompactList}\small\item\em Relinquishes ownership of the socket by setting m\+\_\+does\+Own\+Bound\+Socket to false. This stops the \hyperlink{class_communication_1_1_server}{Server} from from being deleting the socket on destruction. \end{DoxyCompactList}\item 
+void \hyperlink{class_communication_1_1_server_aa2e19a107eeaa9e4409654c99972b702}{transfer\+Ownership} ()
+\begin{DoxyCompactList}\small\item\em Gives ownership of the socket to the client by setting m\+\_\+does\+Own\+Bound\+Socket to true. This forces the \hyperlink{class_communication_1_1_server}{Server} destructor to destroy the object. \end{DoxyCompactList}\item 
+bool \hyperlink{class_communication_1_1_server_aeb511c766005b9b22208778adb80f66f}{does\+Own\+Socket} ()
+\begin{DoxyCompactList}\small\item\em Checks if the \hyperlink{class_communication_1_1_server}{Server} owns the socket. \end{DoxyCompactList}\item 
+bool \hyperlink{class_communication_1_1_server_a0f85511b0e8445f57f9226b4b1d2579b}{is\+Accepting} ()
+\begin{DoxyCompactList}\small\item\em Checks if the server is currently accepting clients. \end{DoxyCompactList}\item 
+bool \hyperlink{class_communication_1_1_server_ad9e57ab4ca738330f8052978034eea3b}{is\+Running} ()
+\begin{DoxyCompactList}\small\item\em Checks if the server is currently set to listening mode. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_communication_1_1base_socket}{base\+Socket} $\ast$ \hyperlink{class_communication_1_1_server_a9e61ac5bb8ac2471084a4f2ea90347d8}{m\+\_\+to\+Bind}
+\item 
+std\+::vector$<$ \hyperlink{class_communication_1_1base_socket}{base\+Socket} $\ast$ $>$ \hyperlink{class_communication_1_1_server_ac26c1d233eb7a8bef029230bd6b8e18b}{m\+\_\+connected\+Clients}
+\item 
+bool \hyperlink{class_communication_1_1_server_afc99b5efd81c3d7cba80127a1972eec7}{m\+\_\+does\+Own\+Bound\+Socket}
+\item 
+bool \hyperlink{class_communication_1_1_server_a5b9dd26ba6c527a5d9547eeedc1b152b}{m\+\_\+is\+Server\+Up}
+\item 
+bool \hyperlink{class_communication_1_1_server_a9ab2cea7ed0c61b2c4b2833e35a76f75}{m\+\_\+is\+Accepting}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Represents the implementation of an internet server. This will bind the given socket to the local machine. The server can be set to listening mode by using the \hyperlink{class_communication_1_1_server_a30f8961c165145504a3c29410c0b643c}{Server\+::start\+Server()} and can wait for incoming connections with \hyperlink{class_communication_1_1_server_aa005d6dfbb2f3d09bb6f5c31c7f61563}{Server\+::start\+Accepting()}. Finally, the server can be shutdown by using \hyperlink{class_communication_1_1_server_a9d80054a0eb0a8f4935a766344f9e076}{Server\+::shutdown\+Server()};. 
+
+Ownership of the listening socket can be modified according to the \hyperlink{class_communication_1_1_server_a3f5fc277d677db87a1b3ec8a064cfe7c}{Server\+::relinquish\+Ownership()} and \hyperlink{class_communication_1_1_server_aa2e19a107eeaa9e4409654c99972b702}{Server\+::transfer\+Ownership()} functions. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_communication_1_1_server_a1b8f8c80fa15d3e171ad5807d6c4da42}{}\index{Communication\+::\+Server@{Communication\+::\+Server}!Server@{Server}}
+\index{Server@{Server}!Communication\+::\+Server@{Communication\+::\+Server}}
+\subsubsection[{Server(base\+Socket $\ast$to\+Bind)}]{\setlength{\rightskip}{0pt plus 5cm}Communication\+::\+Server\+::\+Server (
+\begin{DoxyParamCaption}
+\item[{{\bf base\+Socket} $\ast$}]{to\+Bind}
+\end{DoxyParamCaption}
+)}\label{class_communication_1_1_server_a1b8f8c80fa15d3e171ad5807d6c4da42}
+
+
+Initializes the \hyperlink{class_communication_1_1_server}{Server} object using the to\+Bind socket. The socket must be valid and not connected. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em to\+Bind} & The socket to use. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_communication_1_1_server_ae0edf16a55b4271c76180deae2137b0a}{}\index{Communication\+::\+Server@{Communication\+::\+Server}!Server@{Server}}
+\index{Server@{Server}!Communication\+::\+Server@{Communication\+::\+Server}}
+\subsubsection[{Server(\+I\+P ip, Port port\+No, U\+I\+N\+T socket\+Type=\+S\+O\+C\+K\+\_\+\+S\+T\+R\+E\+A\+M, U\+I\+N\+T family\+Type=\+A\+F\+\_\+\+I\+N\+E\+T)}]{\setlength{\rightskip}{0pt plus 5cm}Communication\+::\+Server\+::\+Server (
+\begin{DoxyParamCaption}
+\item[{{\bf I\+P}}]{ip, }
+\item[{{\bf Port}}]{port\+No, }
+\item[{{\bf U\+I\+N\+T}}]{socket\+Type = {\ttfamily SOCK\+\_\+STREAM}, }
+\item[{{\bf U\+I\+N\+T}}]{family\+Type = {\ttfamily AF\+\_\+INET}}
+\end{DoxyParamCaption}
+)}\label{class_communication_1_1_server_ae0edf16a55b4271c76180deae2137b0a}
+\hypertarget{class_communication_1_1_server_a6cde5340b15595739ffb72ab2f600928}{}\index{Communication\+::\+Server@{Communication\+::\+Server}!Server@{Server}}
+\index{Server@{Server}!Communication\+::\+Server@{Communication\+::\+Server}}
+\subsubsection[{Server(\+Socket\+Structure $\ast$connection\+Destination)}]{\setlength{\rightskip}{0pt plus 5cm}Communication\+::\+Server\+::\+Server (
+\begin{DoxyParamCaption}
+\item[{{\bf Socket\+Structure} $\ast$}]{connection\+Destination}
+\end{DoxyParamCaption}
+)}\label{class_communication_1_1_server_a6cde5340b15595739ffb72ab2f600928}
+\hypertarget{class_communication_1_1_server_aef74c77dc02436ee1dc6d16310837b12}{}\index{Communication\+::\+Server@{Communication\+::\+Server}!````~Server@{$\sim$\+Server}}
+\index{````~Server@{$\sim$\+Server}!Communication\+::\+Server@{Communication\+::\+Server}}
+\subsubsection[{$\sim$\+Server()}]{\setlength{\rightskip}{0pt plus 5cm}Communication\+::\+Server\+::$\sim$\+Server (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_communication_1_1_server_aef74c77dc02436ee1dc6d16310837b12}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_communication_1_1_server_aeb511c766005b9b22208778adb80f66f}{}\index{Communication\+::\+Server@{Communication\+::\+Server}!does\+Own\+Socket@{does\+Own\+Socket}}
+\index{does\+Own\+Socket@{does\+Own\+Socket}!Communication\+::\+Server@{Communication\+::\+Server}}
+\subsubsection[{does\+Own\+Socket()}]{\setlength{\rightskip}{0pt plus 5cm}bool Communication\+::\+Server\+::does\+Own\+Socket (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_communication_1_1_server_aeb511c766005b9b22208778adb80f66f}
+
+
+Checks if the \hyperlink{class_communication_1_1_server}{Server} owns the socket. 
+
+\begin{DoxyReturn}{Returns}
+Returns true if the \hyperlink{class_communication_1_1_server}{Server} owns the socket, false otherwise. 
+\end{DoxyReturn}
+\hypertarget{class_communication_1_1_server_afb6658eb5983662bfc36f13f562f3acf}{}\index{Communication\+::\+Server@{Communication\+::\+Server}!get\+Client\+List@{get\+Client\+List}}
+\index{get\+Client\+List@{get\+Client\+List}!Communication\+::\+Server@{Communication\+::\+Server}}
+\subsubsection[{get\+Client\+List()}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<${\bf base\+Socket}$\ast$$>$$\ast$ Communication\+::\+Server\+::get\+Client\+List (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_communication_1_1_server_afb6658eb5983662bfc36f13f562f3acf}
+
+
+Returns a pointer a vector of all the currently connected clients. 
+
+\begin{DoxyReturn}{Returns}
+returns a pointer to a vector of \hyperlink{class_communication_1_1base_socket}{base\+Socket} pointers. 
+\end{DoxyReturn}
+\hypertarget{class_communication_1_1_server_a0a8014847e1d2e241ee30d48e0b307d7}{}\index{Communication\+::\+Server@{Communication\+::\+Server}!get\+Socket@{get\+Socket}}
+\index{get\+Socket@{get\+Socket}!Communication\+::\+Server@{Communication\+::\+Server}}
+\subsubsection[{get\+Socket()}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf base\+Socket}$\ast$ Communication\+::\+Server\+::get\+Socket (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_communication_1_1_server_a0a8014847e1d2e241ee30d48e0b307d7}
+
+
+Returns a constant pointer to the servers listening socket. 
+
+\begin{DoxyReturn}{Returns}
+returns a constant pointer to the \hyperlink{class_communication_1_1base_socket}{base\+Socket}. 
+\end{DoxyReturn}
+\hypertarget{class_communication_1_1_server_a0f85511b0e8445f57f9226b4b1d2579b}{}\index{Communication\+::\+Server@{Communication\+::\+Server}!is\+Accepting@{is\+Accepting}}
+\index{is\+Accepting@{is\+Accepting}!Communication\+::\+Server@{Communication\+::\+Server}}
+\subsubsection[{is\+Accepting()}]{\setlength{\rightskip}{0pt plus 5cm}bool Communication\+::\+Server\+::is\+Accepting (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_communication_1_1_server_a0f85511b0e8445f57f9226b4b1d2579b}
+
+
+Checks if the server is currently accepting clients. 
+
+\begin{DoxyReturn}{Returns}
+returns true if the server is accepting clients, false otherwise. 
+\end{DoxyReturn}
+\hypertarget{class_communication_1_1_server_ad9e57ab4ca738330f8052978034eea3b}{}\index{Communication\+::\+Server@{Communication\+::\+Server}!is\+Running@{is\+Running}}
+\index{is\+Running@{is\+Running}!Communication\+::\+Server@{Communication\+::\+Server}}
+\subsubsection[{is\+Running()}]{\setlength{\rightskip}{0pt plus 5cm}bool Communication\+::\+Server\+::is\+Running (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_communication_1_1_server_ad9e57ab4ca738330f8052978034eea3b}
+
+
+Checks if the server is currently set to listening mode. 
+
+\begin{DoxyReturn}{Returns}
+returns true if the server is listening, false otherwise. 
+\end{DoxyReturn}
+\hypertarget{class_communication_1_1_server_a3f5fc277d677db87a1b3ec8a064cfe7c}{}\index{Communication\+::\+Server@{Communication\+::\+Server}!relinquish\+Ownership@{relinquish\+Ownership}}
+\index{relinquish\+Ownership@{relinquish\+Ownership}!Communication\+::\+Server@{Communication\+::\+Server}}
+\subsubsection[{relinquish\+Ownership()}]{\setlength{\rightskip}{0pt plus 5cm}void Communication\+::\+Server\+::relinquish\+Ownership (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_communication_1_1_server_a3f5fc277d677db87a1b3ec8a064cfe7c}
+
+
+Relinquishes ownership of the socket by setting m\+\_\+does\+Own\+Bound\+Socket to false. This stops the \hyperlink{class_communication_1_1_server}{Server} from from being deleting the socket on destruction. 
+
+\hypertarget{class_communication_1_1_server_a875eb11ac955e00739cd4596aa670e4a}{}\index{Communication\+::\+Server@{Communication\+::\+Server}!set\+Socket@{set\+Socket}}
+\index{set\+Socket@{set\+Socket}!Communication\+::\+Server@{Communication\+::\+Server}}
+\subsubsection[{set\+Socket(base\+Socket $\ast$to\+Bind)}]{\setlength{\rightskip}{0pt plus 5cm}bool Communication\+::\+Server\+::set\+Socket (
+\begin{DoxyParamCaption}
+\item[{{\bf base\+Socket} $\ast$}]{to\+Bind}
+\end{DoxyParamCaption}
+)}\label{class_communication_1_1_server_a875eb11ac955e00739cd4596aa670e4a}
+\hypertarget{class_communication_1_1_server_a30bee0cf7df458c9b0c512bd48129e88}{}\index{Communication\+::\+Server@{Communication\+::\+Server}!set\+Socket@{set\+Socket}}
+\index{set\+Socket@{set\+Socket}!Communication\+::\+Server@{Communication\+::\+Server}}
+\subsubsection[{set\+Socket(\+I\+P ip, Port port\+No, U\+I\+N\+T socket\+Type=\+S\+O\+C\+K\+\_\+\+S\+T\+R\+E\+A\+M, U\+I\+N\+T family\+Type=\+A\+F\+\_\+\+I\+N\+E\+T)}]{\setlength{\rightskip}{0pt plus 5cm}bool Communication\+::\+Server\+::set\+Socket (
+\begin{DoxyParamCaption}
+\item[{{\bf I\+P}}]{ip, }
+\item[{{\bf Port}}]{port\+No, }
+\item[{{\bf U\+I\+N\+T}}]{socket\+Type = {\ttfamily SOCK\+\_\+STREAM}, }
+\item[{{\bf U\+I\+N\+T}}]{family\+Type = {\ttfamily AF\+\_\+INET}}
+\end{DoxyParamCaption}
+)}\label{class_communication_1_1_server_a30bee0cf7df458c9b0c512bd48129e88}
+\hypertarget{class_communication_1_1_server_aea8579d23e3b7d0090acebec5dffaca9}{}\index{Communication\+::\+Server@{Communication\+::\+Server}!set\+Socket@{set\+Socket}}
+\index{set\+Socket@{set\+Socket}!Communication\+::\+Server@{Communication\+::\+Server}}
+\subsubsection[{set\+Socket(\+Socket\+Structure $\ast$connection\+Destination)}]{\setlength{\rightskip}{0pt plus 5cm}bool Communication\+::\+Server\+::set\+Socket (
+\begin{DoxyParamCaption}
+\item[{{\bf Socket\+Structure} $\ast$}]{connection\+Destination}
+\end{DoxyParamCaption}
+)}\label{class_communication_1_1_server_aea8579d23e3b7d0090acebec5dffaca9}
+\hypertarget{class_communication_1_1_server_a9d80054a0eb0a8f4935a766344f9e076}{}\index{Communication\+::\+Server@{Communication\+::\+Server}!shutdown\+Server@{shutdown\+Server}}
+\index{shutdown\+Server@{shutdown\+Server}!Communication\+::\+Server@{Communication\+::\+Server}}
+\subsubsection[{shutdown\+Server()}]{\setlength{\rightskip}{0pt plus 5cm}bool Communication\+::\+Server\+::shutdown\+Server (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_communication_1_1_server_a9d80054a0eb0a8f4935a766344f9e076}
+
+
+Shuts down the server by closing each connected socket and then closing the server socket. This function can block if any of the connected sockets have data left to be received. 
+
+\begin{DoxyReturn}{Returns}
+return true if all sockets have been successfully shutdown and closed.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{class_communication_1_1_msg_exception}{Msg\+Exception}} & Throws an exception if any of the \hyperlink{class_communication_1_1base_gateway}{base\+Gateway} functions call a system error. \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{class_communication_1_1_server_aa005d6dfbb2f3d09bb6f5c31c7f61563}{}\index{Communication\+::\+Server@{Communication\+::\+Server}!start\+Accepting@{start\+Accepting}}
+\index{start\+Accepting@{start\+Accepting}!Communication\+::\+Server@{Communication\+::\+Server}}
+\subsubsection[{start\+Accepting()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf base\+Socket}$\ast$ Communication\+::\+Server\+::start\+Accepting (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_communication_1_1_server_aa005d6dfbb2f3d09bb6f5c31c7f61563}
+
+
+Attempts to accept a connection from the current socket. the server must have been started, otherwise an exception is thrown.\+When a client is accepted it is added to the internal client list .This function may block if there are no clients to accept. 
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{class_communication_1_1_msg_exception}{Msg\+Exception}} & Throws an exception if any of the \hyperlink{class_communication_1_1base_gateway}{base\+Gateway} functions call a system error. \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{class_communication_1_1_server_a30f8961c165145504a3c29410c0b643c}{}\index{Communication\+::\+Server@{Communication\+::\+Server}!start\+Server@{start\+Server}}
+\index{start\+Server@{start\+Server}!Communication\+::\+Server@{Communication\+::\+Server}}
+\subsubsection[{start\+Server()}]{\setlength{\rightskip}{0pt plus 5cm}bool Communication\+::\+Server\+::start\+Server (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_communication_1_1_server_a30f8961c165145504a3c29410c0b643c}
+
+
+Starts the server by attempting to bind the socket and set it to listening mode. If the socket is already bound and listening, then it will not change their state. 
+
+\begin{DoxyReturn}{Returns}
+returns true if the server was successfully setup.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{class_communication_1_1_msg_exception}{Msg\+Exception}} & Throws an exception if any of the \hyperlink{class_communication_1_1base_gateway}{base\+Gateway} functions call a system error. \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{class_communication_1_1_server_aa2e19a107eeaa9e4409654c99972b702}{}\index{Communication\+::\+Server@{Communication\+::\+Server}!transfer\+Ownership@{transfer\+Ownership}}
+\index{transfer\+Ownership@{transfer\+Ownership}!Communication\+::\+Server@{Communication\+::\+Server}}
+\subsubsection[{transfer\+Ownership()}]{\setlength{\rightskip}{0pt plus 5cm}void Communication\+::\+Server\+::transfer\+Ownership (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_communication_1_1_server_aa2e19a107eeaa9e4409654c99972b702}
+
+
+Gives ownership of the socket to the client by setting m\+\_\+does\+Own\+Bound\+Socket to true. This forces the \hyperlink{class_communication_1_1_server}{Server} destructor to destroy the object. 
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_communication_1_1_server_ac26c1d233eb7a8bef029230bd6b8e18b}{}\index{Communication\+::\+Server@{Communication\+::\+Server}!m\+\_\+connected\+Clients@{m\+\_\+connected\+Clients}}
+\index{m\+\_\+connected\+Clients@{m\+\_\+connected\+Clients}!Communication\+::\+Server@{Communication\+::\+Server}}
+\subsubsection[{m\+\_\+connected\+Clients}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<${\bf base\+Socket}$\ast$$>$ Communication\+::\+Server\+::m\+\_\+connected\+Clients\hspace{0.3cm}{\ttfamily [private]}}\label{class_communication_1_1_server_ac26c1d233eb7a8bef029230bd6b8e18b}
+\hypertarget{class_communication_1_1_server_afc99b5efd81c3d7cba80127a1972eec7}{}\index{Communication\+::\+Server@{Communication\+::\+Server}!m\+\_\+does\+Own\+Bound\+Socket@{m\+\_\+does\+Own\+Bound\+Socket}}
+\index{m\+\_\+does\+Own\+Bound\+Socket@{m\+\_\+does\+Own\+Bound\+Socket}!Communication\+::\+Server@{Communication\+::\+Server}}
+\subsubsection[{m\+\_\+does\+Own\+Bound\+Socket}]{\setlength{\rightskip}{0pt plus 5cm}bool Communication\+::\+Server\+::m\+\_\+does\+Own\+Bound\+Socket\hspace{0.3cm}{\ttfamily [private]}}\label{class_communication_1_1_server_afc99b5efd81c3d7cba80127a1972eec7}
+\hypertarget{class_communication_1_1_server_a9ab2cea7ed0c61b2c4b2833e35a76f75}{}\index{Communication\+::\+Server@{Communication\+::\+Server}!m\+\_\+is\+Accepting@{m\+\_\+is\+Accepting}}
+\index{m\+\_\+is\+Accepting@{m\+\_\+is\+Accepting}!Communication\+::\+Server@{Communication\+::\+Server}}
+\subsubsection[{m\+\_\+is\+Accepting}]{\setlength{\rightskip}{0pt plus 5cm}bool Communication\+::\+Server\+::m\+\_\+is\+Accepting\hspace{0.3cm}{\ttfamily [private]}}\label{class_communication_1_1_server_a9ab2cea7ed0c61b2c4b2833e35a76f75}
+\hypertarget{class_communication_1_1_server_a5b9dd26ba6c527a5d9547eeedc1b152b}{}\index{Communication\+::\+Server@{Communication\+::\+Server}!m\+\_\+is\+Server\+Up@{m\+\_\+is\+Server\+Up}}
+\index{m\+\_\+is\+Server\+Up@{m\+\_\+is\+Server\+Up}!Communication\+::\+Server@{Communication\+::\+Server}}
+\subsubsection[{m\+\_\+is\+Server\+Up}]{\setlength{\rightskip}{0pt plus 5cm}bool Communication\+::\+Server\+::m\+\_\+is\+Server\+Up\hspace{0.3cm}{\ttfamily [private]}}\label{class_communication_1_1_server_a5b9dd26ba6c527a5d9547eeedc1b152b}
+\hypertarget{class_communication_1_1_server_a9e61ac5bb8ac2471084a4f2ea90347d8}{}\index{Communication\+::\+Server@{Communication\+::\+Server}!m\+\_\+to\+Bind@{m\+\_\+to\+Bind}}
+\index{m\+\_\+to\+Bind@{m\+\_\+to\+Bind}!Communication\+::\+Server@{Communication\+::\+Server}}
+\subsubsection[{m\+\_\+to\+Bind}]{\setlength{\rightskip}{0pt plus 5cm}{\bf base\+Socket}$\ast$ Communication\+::\+Server\+::m\+\_\+to\+Bind\hspace{0.3cm}{\ttfamily [private]}}\label{class_communication_1_1_server_a9e61ac5bb8ac2471084a4f2ea90347d8}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/samy/\+Programming/\+Ace/include/\hyperlink{_server_8h}{Server.\+h}\end{DoxyCompactItemize}
